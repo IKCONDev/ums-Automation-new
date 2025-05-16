@@ -6,5 +6,5 @@ Feature: UMS
     When user is validate Login page "<Username>" "<Password>"
 
     Examples: 
-      | Username                  | Password |
+      | Username                  | Password  |
       | ums-support@ikcontech.com | Test@1234 |

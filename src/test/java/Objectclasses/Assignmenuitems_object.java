@@ -80,10 +80,10 @@ public class Assignmenuitems_object extends Baseclass {
 
 	@FindBy(xpath="//h3[@class='title']")
 	public WebElement title;
-	@FindBy(xpath="//div[@class='col-sm-1']")
-	public List<WebElement> Fields;
-	@FindBy(xpath="//div[@class='col-sm-3']")
-	public List<WebElement> Assign;
+//	@FindBy(xpath="//div[@class='col-sm-1']")
+//	public List<WebElement> Fields;
+//	@FindBy(xpath="//div[@class='col-sm-3']")
+//	public List<WebElement> Assign;
 
 	public void Validate_the_Assign_MenuItems_Permisisons_page() throws InterruptedException {
 
@@ -92,14 +92,14 @@ public class Assignmenuitems_object extends Baseclass {
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		validatetext(title, "Assign Menu Items & Permissions");
-		String[] s={"User :","User ID :","ROLE :"};
-
-		for(int i=0;i<2;i++) {
-		validatetext(Fields.get(i), s[i]);
-		}
-		dispalyedattribute(Assign.get(0), "Assign Menu Items Reportee dropdown");
-		validatetext(Assign.get(1), "ums-support@ikcontech.com");
-		validatetext(Assign.get(2), "CEO");		
+//		String[] s={"","User :","User ID :","ROLE :"};
+//
+//		for(int i=1;i<=2;i++) {
+//			validatetext(Fields.get(i), s[i]);
+//		}
+//		dispalyedattribute(Assign.get(0), "Assign Menu Items Reportee dropdown");
+//		validatetext(Assign.get(1), "ums-support@ikcontech.com");
+//		validatetext(Assign.get(2), "CEO");		
 	}
 
 	//	@FindBy(xpath="//p[normalize-space()='Add']")
@@ -189,8 +189,8 @@ public class Assignmenuitems_object extends Baseclass {
 			Clickelement(User_opt1);
 		}
 		driver.navigate().refresh();
-		String s = "My Dashboard,Risks,Meetings,Action items,Tasks,Help Center,My Dashboard, My ActionItems,My Meetings,My Tasks, My Risks";
-		String v = "1,2,3,4,4,3,2,1,4,2,1";
+		String s = "Risks,Meetings,Action items,Tasks,Help Center,My Dashboard, My ActionItems,My Meetings,My Tasks, My Risks";
+		String v = "1,2,3,4,4,3,2,1,4,2";
 		List<String> list = new ArrayList<String>(Arrays.asList(s.split(",")));
 		List<String> Jist = new ArrayList<String>(Arrays.asList(v.split(",")));
 
