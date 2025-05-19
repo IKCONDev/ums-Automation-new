@@ -68,7 +68,7 @@ public class Actionitem_object extends Baseclass {
 	@FindBy(xpath = "//ng-select[@placeholder='Choose Assignee']//span[@class='ng-arrow-wrapper']")
 	public WebElement Actionitemassigneedrpdwn;
 
-	@FindBy(xpath = "(//span[@class='ng-option-label ng-star-inserted'][normalize-space()='Adam Smith'])[1]")
+	@FindBy(xpath = "(//span[@class='ng-option-label ng-star-inserted'][normalize-space()='Vinod Kethu'])[1]")
 	public WebElement Actionitemassigneeselect;
 
 	@FindBy(xpath = "//input[@name='startDate']")
@@ -175,7 +175,7 @@ public class Actionitem_object extends Baseclass {
 	@FindBy(xpath = "//ng-select[@id='uAcItemOwner']//span[@class='ng-arrow-wrapper']")
 	public WebElement Actionitemupdatedrpdwn;
 
-	@FindBy(xpath = "//span[normalize-space()='Mounika Errolla']")
+	@FindBy(xpath = "//span[normalize-space()='Vinod Kethu']")
 	public WebElement Actionitemassigneeupdate;
 
 	@FindBy(xpath = "//button[@id='update']")
@@ -235,20 +235,20 @@ public class Actionitem_object extends Baseclass {
 	@FindBy(xpath = "(//span[@class='ng-arrow-wrapper'])[2]")
 	public WebElement Taskassignedtodrpdwn;
 
-	@FindBy(xpath = "//span[normalize-space()='Charan U']")
+	@FindBy(xpath = "//span[normalize-space()='Vinod Kethu']")
 	public WebElement Taskassignedtodrpdwnselect;
 
 	@FindBy(xpath = "(//span[@class='ng-arrow-wrapper'])[3]")
 	public WebElement Taskreviewerdrpdwn;
 
-	@FindBy(xpath = "//span[normalize-space()='Mounika Errolla']")
+	@FindBy(xpath = "//span[normalize-space()='Vinod Kethu']")
 	public WebElement Taskreviewerdrpdwnselect;
 
 	@FindBy(xpath = "(//span[@class='ng-arrow-wrapper'])[4]")
 	public WebElement Taskcategorydrpdwn;
 
 
-	@FindBy(xpath = "//span[normalize-space()='Branding']")
+	@FindBy(xpath = "//span[normalize-space()='performance']")
 	public WebElement Taskcategorydrpdwnselect ;
 
 	@FindBy(xpath = "//textarea[@id='taskDescription']")

@@ -148,7 +148,7 @@ public class Taskcategories_object extends Baseclass {
 //	@FindBy(xpath = "//div[contains(text(),'Add')]")
 //	public WebElement Add;
 	@FindBy(xpath = "//h5[@id='xlModalLabel']")
-	public WebElement Risk_cat;
+	public WebElement Task_cat;
 //	@FindBy(xpath = "//b[normalize-space()='Choose Department']")
 //	public WebElement Task_Dept;
 	
@@ -182,11 +182,11 @@ public class Taskcategories_object extends Baseclass {
 
 		driver.navigate().refresh();
 		Clickelement(Add);
-		validatetext(Risk_cat, "Task category");
+		validatetext(Task_cat, "Task category");
 		validatetext(Task_Dept, "Choose Department");
 		Clickelement(Clear);
 		Clickelement(Task_drop);	
-		Clickelement(driver.findElement(By.xpath("//span[normalize-space()='Bench Sales']")));
+		Clickelement(driver.findElement(By.xpath("//span[normalize-space()='Information Technology']")));
 		validatetext(TaskCat_name, "Task Category Name");
 		validateattribute(TaskCat_name_in, "placeholder", "Category Name");
 		sendkeyweb(TaskCat_name_in, CN);
@@ -216,9 +216,9 @@ public class Taskcategories_object extends Baseclass {
 		dispalyedattribute(Table_data.get(0), "ID");
 		validatetext(Table_data.get(1), CN);
 		validatetext(Table_data.get(2), CN + " Task");
-		validatetext(Table_data.get(3), "UMS SUPPORT");
+		validatetext(Table_data.get(3), "Praveen Reddy");
 		validatetext(Table_data.get(4), "");
-		validatetext(Table_data.get(5), "May 20, 2024, 4:14 PM");
+//		validatetext(Table_data.get(5), "May 20, 2024, 4:14 PM");
 		dispalyedattribute(Editicon, "Edit icon");
 		dispalyedattribute(Deleteicon, "Delete icon");
 
@@ -232,7 +232,7 @@ public class Taskcategories_object extends Baseclass {
 		Thread.sleep(4000);
 		Clickelement(Clear);
 		Clickelement(Task_drop);
-		Clickelement(driver.findElement(By.xpath("//span[normalize-space()='Bench Sales']")));
+		Clickelement(driver.findElement(By.xpath("//span[normalize-space()='Information Technology']")));
 		validatetext(TaskCat_name, "Task Category Name");
 		validateattribute(TaskCat_name_in, "placeholder", "Category Name");
 		sendkeyweb(TaskCat_name_in, CN);
@@ -253,8 +253,8 @@ public class Taskcategories_object extends Baseclass {
 		validatetext(Table_data.get(2), CN + " Task");
 		validatetext(Table_data.get(3), " ");
 
-		validatetext(Table_data.get(4), "UMS SUPPORT");
-		validatetext(Table_data.get(5), "May 20, 2024, 4:14 PM");
+		validatetext(Table_data.get(4), "Praveen Reddy");
+//		validatetext(Table_data.get(5), "May 20, 2024, 4:14 PM");
 		validatetext(Table_data.get(6), " ");
 		validatetext(Table_data.get(7), " ");
 

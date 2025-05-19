@@ -1,13 +1,4 @@
-#Feature: UMS
-#
-#@tag1
-#Scenario Outline: Menuitems page
-#Then user checks the menuitems page "<MIN>" "<MIP>" "<MID>"
-#Then user delete the menuitems page "<MIN1>"
-#
-#Examples:
-#| MIN   | MIP           | MID          | MIN1      |
-#| dltee | dlteedatapath | dlteedatades | dlteedata |
+
 #Feature: UMS
 #
   #@tag1

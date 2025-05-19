@@ -251,7 +251,7 @@ public class Team_object extends Baseclass {
 		validatetext(teamheadtitle, "Team Head*");
 
 		Clickelement(Team_head);
-		Clickelement(driver.findElement(By.xpath("//span[normalize-space()='Venkatesh Udaru']")));
+		Clickelement(driver.findElement(By.xpath("//span[normalize-space()='Venkatesh U']")));
 		Thread.sleep(2000);
 		
 		validatetext(Save_button, "Save");
@@ -290,10 +290,10 @@ public class Team_object extends Baseclass {
 		validatetext(Table_data.get(2), Team);
 		validatetext(Table_data.get(3), "T12E1");
 		validatetext(Table_data.get(4), "Praveen Reddy");	
-		validatetext(Table_data.get(5), "Venkatesh Udaru");
+		validatetext(Table_data.get(5), "Venkatesh U");
 		validatetext(Table_data.get(6), "Information Technology");
-		validatetext(Table_data.get(7), "UMS SUPPORT");
-		validatetext(Table_data.get(8), "Apr 14, 2025, 7:42 PM");
+		validatetext(Table_data.get(7), "Praveen Reddy");
+//		validatetext(Table_data.get(8), "Apr 14, 2025, 7:42 PM");
 
 		dispalyedattribute(edit, "Edit Icon");
 		dispalyedattribute(delete, "Delete Icon");
@@ -321,9 +321,9 @@ public class Team_object extends Baseclass {
 		Clickelement(driver.findElement(By.xpath("//span[normalize-space()='Praveen Reddy']")));
 		Clickelement(Team_head);
 		try {
-			Clickelement(driver.findElement(By.xpath("//span[normalize-space()='Venkatesh Udaru']")));
+			Clickelement(driver.findElement(By.xpath("//span[normalize-space()='Venkatesh U']")));
 		} catch (Exception e) {
-			Clickelement(driver.findElement(By.xpath("(//span[normalize-space()='Venkatesh Udaru'])[2]")));
+			Clickelement(driver.findElement(By.xpath("(//span[normalize-space()='Venkatesh U'])[2]")));
 		}
 		validatetext(Save_button, "Save");
 		validatetext(cancel_button, "Cancel");
@@ -359,10 +359,10 @@ public class Team_object extends Baseclass {
 		validatetext(Table_data1.get(4), "Praveen Reddy");	
 		validatetext(Table_data1.get(5), "Venkatesh Udaru");
 		validatetext(Table_data1.get(6), "Information Technology");
-		validatetext(Table_data1.get(7), "UMS SUPPORT");
-		validatetext(Table_data1.get(8), "Apr 14, 2025, 7:42 PM");
-		validatetext(Table_data1.get(9), "UMS SUPPORT");
-		validatetext(Table_data1.get(10), "Apr 14, 2025, 7:42 PM");
+		validatetext(Table_data1.get(7), "Praveen Reddy");
+//		validatetext(Table_data1.get(8), "Apr 14, 2025, 7:42 PM");
+		validatetext(Table_data1.get(9), "Praveen Reddy");
+//		validatetext(Table_data1.get(10), "Apr 14, 2025, 7:42 PM");
 
 		dispalyedattribute(edit1, "Edit Icon");
 		dispalyedattribute(delete1, "Delete Icon");

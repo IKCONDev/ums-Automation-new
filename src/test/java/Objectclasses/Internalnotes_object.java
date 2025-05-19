@@ -91,13 +91,13 @@ public class Internalnotes_object extends Baseclass {
 	@FindBy(xpath = "(//input[@type='text'])[5]")
 	public WebElement Reviewerdrpdwn;
 
-	@FindBy(xpath = "//span[normalize-space()='Charan U']")
+	@FindBy(xpath = "//span[normalize-space()='Venkatesh U']")
 	public WebElement Reviewerselect;
 
 	@FindBy(xpath = "(//input[@type='text'])[6]")
 	public WebElement Approverdrpdwn;
 
-	@FindBy(xpath = "//span[normalize-space()='Adam Smith']")
+	@FindBy(xpath = "//span[normalize-space()='Vinod Kethu']")
 	public WebElement Approverselect;
 
 	@FindBy(xpath = "(//div[contains(@class, 'upload')])[1]")
@@ -174,7 +174,7 @@ public class Internalnotes_object extends Baseclass {
 
 		attributeselected(Table_data.get(0), "Note ID");
 		validatetext(Table_data.get(1), IN);
-		validatetext(Table_data.get(2), "UMS SUPPORT");
+		validatetext(Table_data.get(2), "Praveen Reddy");
 		validatetext(Table_data.get(3), "Under Review");
 		Thread.sleep(3000);
 		attributeselected(Table_data.get(4), "Document");

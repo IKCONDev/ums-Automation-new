@@ -1,13 +1,4 @@
-#Feature: UMS
-#
-#@tag1
-#Scenario Outline: Designations page
-#Then user checks the designation page "<Designation name>"
-#Then user delete the designation page "<Delete designation>"
-#
-#Examples:
-#| Designation name | Delete designation |
-#| Symbol           | Symbol             |
+
 #Feature: UMS
 #
   #@tag1

@@ -10,5 +10,5 @@
     #Then Delete the internal notes "<IN>"
 #
     #Examples: 
-      #| IN         |
-      #| 14Maynotes |
+      #| IN          |
+      #| Sundaynotes |

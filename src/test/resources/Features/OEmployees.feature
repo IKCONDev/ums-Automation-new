@@ -1,12 +1,4 @@
-#Feature: UMS
-#
-#@tag1
-#Scenario Outline: Employee page
-#Then user checks the employees page "<Firstname>" "<Lastname>" "<ID>" "<Email>"
-#
-#Examples:
-#| Firstname | Lastname | ID        | Email                |
-#| Symbol    | S        | Symbol001 | symbol@ikcontech.com |
+
 #Feature: UMS
 #
   #@tag1
@@ -18,5 +10,5 @@
     #Then delete the employee "<Email>"
 #
     #Examples: 
-      #| FN      | LN | EID     | Email                 | DN                     | DSN         | FNs      | GN   |
-      #| Munawar | S  | IKMU012 | Munawar@ikcontech.com | Information Technology | Team Member | Charan U | Male |
+      #| FN      | LN | EID     | Email                 | DN                     | DSN         | FNs         | GN   |
+      #| Munawar | S  | IKMU012 | Munawar@ikcontech.com | Information Technology | QA Engineer | Venkatesh U | Male |

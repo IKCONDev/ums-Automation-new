@@ -16,6 +16,8 @@ public class Risk_steps {
 		@Then("user checks risks page {string} {string}")
 		public void user__check_the_riskpage(String str1, String str2) throws Exception {
 		RO.user_check_risk_page(str1, str2);	
+		
+		
 }
 
 }

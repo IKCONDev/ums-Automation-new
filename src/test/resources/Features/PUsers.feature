@@ -1,8 +1,4 @@
-#Feature: UMS
-#
-#@tag1
-#Scenario Outline: Users page
-#Then user checks the Users page
+
 #Feature: UMS
 #
   #@tag1
@@ -14,5 +10,5 @@
     #Then validate the updated user "<URN>" "<Email>"
 #
     #Examples: 
-      #| RN          | Email                    | URN     |
-      #| TEAM_MEMBER | ivanasingh@ikcontech.com | MANAGER |
+      #| RN    | Email                   | URN    |
+      #| ADMIN | manikumar@ikcontech.com | MEMBER |

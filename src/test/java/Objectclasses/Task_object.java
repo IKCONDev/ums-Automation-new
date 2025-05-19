@@ -84,7 +84,7 @@ public class Task_object extends Baseclass {
 	@FindBy(xpath = "//ng-select[@id='orgTaskOwner']//input[@type='text']")
 	public WebElement Assigneedrpdwn;
 
-	@FindBy(xpath = "//span[normalize-space()='Adam Smith']")
+	@FindBy(xpath = "//span[normalize-space()='Vinod Kethu']")
 	public WebElement Assigneedrpdwnselect;
 
 
@@ -141,17 +141,17 @@ public class Task_object extends Baseclass {
 			System.out.println("No alert present.");
 		}
 
-		Clickelement(deletebtn);
-
-		try {
-			Alert alert = driver.switchTo().alert();
-			Thread.sleep(3000);
-
-			System.out.println("Alert detected: " + alert.getText());
-			alert.accept();
-		} catch (NoAlertPresentException e) {
-			System.out.println("No alert present.");
-		}
+//		Clickelement(deletebtn);
+//
+//		try {
+//			Alert alert = driver.switchTo().alert();
+//			Thread.sleep(3000);
+//
+//			System.out.println("Alert detected: " + alert.getText());
+//			alert.accept();
+//		} catch (NoAlertPresentException e) {
+//			System.out.println("No alert present.");
+//		}
 
 	}
 	@FindBy(xpath = "//div[contains(text(),'Edit Column')]")

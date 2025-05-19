@@ -14,7 +14,7 @@ public class loginpage_steps {
 
 	@Given("user is Navigate Login page")
 	public void user_is_Navigates_loginpage() {
-		driver.get("http://132.145.186.188:4200/#/login");
+		driver.get("http://132.145.186.188:4200/#/login");	
 		driver.manage().window().maximize();
 	}
 

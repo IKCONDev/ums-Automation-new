@@ -1,13 +1,4 @@
-#Feature: UMS
-#
-#@tag1
-#Scenario Outline: Risk Category page
-#Then user checks the Riskcategories page "<RCN>" "<RCD>"
-#Then user delete the Riskcategories page "<Delete Riskcategory>"
-#
-#Examples:
-#| RCN               | RCD           | Delete Riskcategory |
-#| symbolriskcategry | symbolriskdes | symbolriskcategry   |
+
 #Feature: UMS
 #
   #@tag1

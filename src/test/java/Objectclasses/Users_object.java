@@ -79,7 +79,7 @@ public class Users_object extends Baseclass  {
 	@FindBy(xpath = "//ng-select[@id='userEmail']//input[@type='text']")
 	public WebElement add_sel;
 
-	@FindBy(xpath = "//span[normalize-space()='ivanasingh@ikcontech.com']")
+	@FindBy(xpath = "//span[normalize-space()='manikumar@ikcontech.com']")
 	public WebElement email_sel;
 
 	@FindBy(xpath = "//form[@id='formId']//label[contains(text(),'Role')]")
@@ -90,7 +90,7 @@ public class Users_object extends Baseclass  {
 	@FindBy(xpath = "//ng-select[@id='userRole']//input[@type='text']")
 	public WebElement role;
 
-	@FindBy(xpath = "//span[normalize-space()='TEAM_MEMBER']")
+	@FindBy(xpath = "//span[normalize-space()='ADMIN']")
 	public WebElement role_sel;
 	@FindBy(xpath = "//form[@id='formId']//button[@type='button'][normalize-space()='Save']")
 	public WebElement add_save;
@@ -159,7 +159,7 @@ public class Users_object extends Baseclass  {
 		validatetext(Table_data.get(0), Email);
 		Thread.sleep(3000);
 
-		validatetext(Table_data.get(1), "TEAM_MEMBER");
+		validatetext(Table_data.get(1), "ADMIN");
 		Thread.sleep(3000);
 
 		validatetext(Table_data.get(2), "Active");
@@ -263,7 +263,7 @@ public class Users_object extends Baseclass  {
 		validatetext(Table_data.get(0), Email);
 		Thread.sleep(3000);
 
-		validatetext(Table_data.get(1), "MANAGER");
+		validatetext(Table_data.get(1), "MEMBER");
 		Thread.sleep(3000);
 
 		validatetext(Table_data.get(2), "Active");

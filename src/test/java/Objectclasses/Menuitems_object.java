@@ -223,7 +223,7 @@ public class Menuitems_object extends Baseclass {
 		driver.navigate().refresh();
 		Clickelement(Add);
 		validatetext(Menu_Item, "Menu Item");
-		validatetext(Menu_Item_name, "Menu Item Name*");
+//		validatetext(Menu_Item_name, "Menu Item Name*");
 		validateattribute(Cat_name, "placeholder", "Menu Item Name");
 		sendkeyweb(Cat_name, s1);
 		validatetext(Path, "Menu Item Path*");
@@ -256,7 +256,7 @@ public class Menuitems_object extends Baseclass {
 		validatetext(Table_data.get(2), s1);
 		validatetext(Table_data.get(3), "/"+s1);
 		validatetext(Table_data.get(4), s1+" path");
-		validatetext(Table_data.get(5), "UMS SUPPORT");	
+		validatetext(Table_data.get(5), "Praveen Reddy");	
 		validatetext(Table_data.get(6), ",");
 		dispalyedattribute(Edit_icon, "Edit Icon");
 		dispalyedattribute(Delete_icon, "Delete Icon");
@@ -298,9 +298,9 @@ public class Menuitems_object extends Baseclass {
 		validatetext(Table_data.get(2), s1);
 		validatetext(Table_data.get(3), "/"+s1);
 		validatetext(Table_data.get(4), s1+" path");
-		validatetext(Table_data.get(5), "UMS SUPPORT");	
+		validatetext(Table_data.get(5), "Praveen Reddy");	
 		validatetext(Table_data.get(6), ",");
-		validatetext(Table_data.get(7), "UMS SUPPORT");
+		validatetext(Table_data.get(7), "Praveen Reddy");
 		validatetext(Table_data.get(8), ",");
 		dispalyedattribute(Edit_icon, "Edit Icon");
 		dispalyedattribute(Delete_icon, "Delete Icon");

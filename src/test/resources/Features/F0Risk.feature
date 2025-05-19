@@ -5,5 +5,5 @@
     #Then user checks risks page "<Risktitle>" "<Riskdescription>"
 #
     #Examples: 
-      #| Risktitle | Riskdescription |
-      #| Apr9risk  | Apr9description |
+      #| Risktitle | Riskdescription   |
+      #| risk01    | riskdescription01 |

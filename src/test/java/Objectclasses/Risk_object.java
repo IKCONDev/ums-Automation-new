@@ -24,7 +24,7 @@ public class Risk_object extends Baseclass {
 
 	@FindBy(xpath = "//div[normalize-space()='Risks']")
 	public WebElement Risksidemenu;
-
+	
 	@FindBy(xpath = "(//span[@class='ng-arrow-wrapper'])[1]")
 	public WebElement Riskdropdwnarrow;
 
@@ -83,14 +83,14 @@ public class Risk_object extends Baseclass {
 	@FindBy(xpath = "(//span[@class='ng-arrow-wrapper'])[2]")
 	public WebElement RiskAssignedtodrpdwn;
 
-	@FindBy(xpath = "//span[normalize-space()='Adam Smith']")
+	@FindBy(xpath = "//span[normalize-space()='Vinod Kethu']")
 	public WebElement RiskAssignedtoselect;
 
 
 	@FindBy(xpath = "(//span[@class='ng-arrow-wrapper'])[3]")
 	public WebElement Riskcategorydrpdwn;
 
-	@FindBy(xpath = "//span[normalize-space()='Compliance Failure']")
+	@FindBy(xpath = "//span[normalize-space()='functionality missing']")
 	public WebElement Riskcategoryselect;
 
 	@FindBy(xpath = "(//img[@alt='Dropdown icon'])[2]")

@@ -1,13 +1,4 @@
-#Feature: UMS
-#
-#@tag1
-#Scenario Outline: Permission page
-#Then user checks the permissions page "<Permission value>" "<Permission description>"
-#Then user delete the permissions page "<Delete Permission value>"
-#
-#Examples:
-#| Permission value | Permission description           | Delete Permission value |
-#| dltee,dltee      | Access permission to dltee,dltee | dltee,dltee             |
+
 #Feature: UMS
 #
   #@tag1
@@ -21,4 +12,4 @@
 #
     #Examples: 
       #| s1        |
-      #| emotional |
+      #| testlinux |

@@ -1,13 +1,4 @@
-#Feature: UMS
-#
-#@tag1
-#Scenario Outline: Departments page
-#Then user checks the departments page "<Dept name>" "<Dept code>" "<Dept location>"
-#Then user delete the departments page "<Delete dept>"
-#
-#Examples:
-#| Dept name | Dept code | Dept location | Delete dept |
-#| Symbol    | Symbol01  | Hyd           | Symbol      |
+
 #Feature: UMS
 #
   #@tag1
@@ -20,5 +11,5 @@
     #Then delete the department "<DN>"
 #
     #Examples: 
-      #| DN       | FN   | DC    | DL        |
-      #| Allaince | Anil | Al001 | Hyderabad |
+      #| DN       | FN          | DC    | DL        |
+      #| Allaince | Vinod Kethu | Al001 | Hyderabad |

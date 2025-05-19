@@ -301,7 +301,7 @@ public class Employee_object extends Baseclass  {
 		validatetext(Team1, "Choose Team");
 		Clickelement(Team_dd);
 		Clickelement(driver.findElement(By.xpath("//ng-select[@id='employeeTeam']//span[@title='Clear all']")));
-		Clickelement(driver.findElement(By.xpath("//span[normalize-space()='Union']")));
+		Clickelement(driver.findElement(By.xpath("//span[normalize-space()='Quality']")));
 		validatetext(Desig, "Designation");
 		Selectdropdown(Desig_select, DSN);
 		validatetext(Team_ID, "Microsoft Teams ID");
@@ -335,7 +335,7 @@ public class Employee_object extends Baseclass  {
 		validatetext(Emp_Table.get(3), GN);
 		validatetext(Emp_Table.get(4), Email);
 		validatetext(Emp_Table.get(5), FNs);
-		validatetext(Emp_Table.get(6), "Devops");
+		validatetext(Emp_Table.get(6), "Quality");
 		validatetext(Emp_Table.get(7), DN);
 		validatetext(Emp_Table.get(8), DSN);
 		validatetext(Emp_Table.get(9), "Active");
@@ -396,7 +396,7 @@ public class Employee_object extends Baseclass  {
 		validatetext(Emp_Table.get(3), GN);
 		validatetext(Emp_Table.get(4), Email);
 		validatetext(Emp_Table.get(5), FNs);
-		validatetext(Emp_Table.get(6), "Devops");
+		validatetext(Emp_Table.get(6), "Quality");
 		validatetext(Emp_Table.get(7), DN);
 		validatetext(Emp_Table.get(8), DSN);
 		validatetext(Emp_Table.get(9), "Active");

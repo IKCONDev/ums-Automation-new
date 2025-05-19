@@ -74,6 +74,6 @@ public class Menuitems_steps {
 	public void Delete_the_Menu_item(String s1) throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		MO.Delete_the_Menu_item(s1);
-		
+
 	}
 }

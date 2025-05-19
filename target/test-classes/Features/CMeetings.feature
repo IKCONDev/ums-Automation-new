@@ -1,4 +1,3 @@
-
 #Feature: UMS
 #
   #@tag2
@@ -10,5 +9,5 @@
 #
     #Then user check the meeting details page "<MT>"
     #Examples: 
-      #| MT         | UN       | MID  |
-      #| Mondaymeet | Charan U | 1942 |
+      #| MT            | UN          | MID  |
+      #| Meetingsunday | Venkatesh U | 1942 |

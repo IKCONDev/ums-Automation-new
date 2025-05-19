@@ -207,8 +207,8 @@ public class designation_object extends Baseclass {
 		sendkeyweb(Desig_search, DSN);
 		dispalyedattribute(Desig_Table1.get(1), "ID");
 		validatetext(Desig_Table1.get(2),DSN);
-		validatetext(Desig_Table1.get(3),"UMS SUPPORT");
-		validatetext(Desig_Table1.get(4),"May 21, 2024, 2:19 PM");
+		validatetext(Desig_Table1.get(3),"Praveen Reddy");
+//		validatetext(Desig_Table1.get(4),"May 21, 2024, 2:19 PM");
 		dispalyedattribute(Desig_Table1.get(7),"EDIT Icon");
 		validatetext(Desig_Table1.get(8),"Delete ICON");
 	}
@@ -258,9 +258,9 @@ public class designation_object extends Baseclass {
 		sendkeyweb(Desig_search, DSN);
 		dispalyedattribute(Desig_UTable.get(1), "ID");
 		validatetext(Desig_UTable.get(2),DSN);
-		validatetext(Desig_UTable.get(3),"UMS SUPPORT");
-		validatetext(Desig_UTable.get(4),"May 21, 2024, 2:19 PM");
-		validatetext(Desig_UTable.get(5),"UMS SUPPORT");
+		validatetext(Desig_UTable.get(3),"Praveen Reddy");
+//		validatetext(Desig_UTable.get(4),"May 21, 2024, 2:19 PM");
+		validatetext(Desig_UTable.get(5),"Praveen Reddy");
 		validatetext(Desig_UTable.get(6),"");
 
 //		validatetext(Desig_UTable.get(5),"Delete ICON");

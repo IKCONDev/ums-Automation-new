@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-15T19:36:09 IST" name="Default suite" finished-at="2025-05-15T19:37:14 IST" duration-ms="65415">
+  <suite started-at="2025-05-19T18:15:48 IST" name="Default suite" finished-at="2025-05-19T18:17:14 IST" duration-ms="86198">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.Runnerclass@2f67a4d3]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2025-05-15T19:36:09 IST" name="Default test" finished-at="2025-05-15T19:37:14 IST" duration-ms="65415">
+    <test started-at="2025-05-19T18:15:48 IST" name="Default test" finished-at="2025-05-19T18:17:14 IST" duration-ms="86198">
       <class name="Runner.Runnerclass">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Runner.Runnerclass@2f67a4d3]" started-at="2025-05-15T19:36:09 IST" name="setUpClass" finished-at="2025-05-15T19:36:14 IST" duration-ms="5189" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Runner.Runnerclass@2f67a4d3]" started-at="2025-05-19T18:15:48 IST" name="setUpClass" finished-at="2025-05-19T18:15:56 IST" duration-ms="8005" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@4b2acb12]]>
+                <![CDATA[org.testng.TestRunner@6b286640]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.Runnerclass@2f67a4d3]" started-at="2025-05-15T19:36:14 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-05-15T19:36:42 IST" duration-ms="28232" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.Runnerclass@2f67a4d3]" started-at="2025-05-19T18:15:56 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-05-19T18:16:23 IST" duration-ms="27176" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,7 +37,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.Runnerclass@2f67a4d3]" started-at="2025-05-15T19:36:42 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-05-15T19:37:11 IST" duration-ms="28308" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.Runnerclass@2f67a4d3]" started-at="2025-05-19T18:16:23 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-05-19T18:17:12 IST" duration-ms="48619" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -50,10 +50,31 @@
               </value>
             </param>
           </params>
+          <exception class="java.lang.IndexOutOfBoundsException">
+            <message>
+              <![CDATA[Index 1 out of bounds for length 1]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IndexOutOfBoundsException: Index 1 out of bounds for length 1
+at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+at java.base/java.util.Objects.checkIndex(Objects.java:385)
+at java.base/java.util.ArrayList.get(ArrayList.java:427)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:39)
+at jdk.proxy2/jdk.proxy2.$Proxy32.get(Unknown Source)
+at Objectclasses.dashboard_object.Department_Dashboard(dashboard_object.java:382)
+at Stepdefinitions.dashboard_steps.user__checks_the_Departmentdashboardpage(dashboard_steps.java:28)
+at ✽.user checks the Department Dashboard page(file:///C:/Users/PraveenReddyGurram/eclipsenew/UMS_NEW/src/test/resources/Features/BDashboard.feature:7)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IndexOutOfBoundsException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.Runnerclass@2f67a4d3]" started-at="2025-05-15T19:37:11 IST" name="tearDownClass" finished-at="2025-05-15T19:37:14 IST" duration-ms="3597" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.Runnerclass@2f67a4d3]" started-at="2025-05-19T18:17:12 IST" name="tearDownClass" finished-at="2025-05-19T18:17:14 IST" duration-ms="2317" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

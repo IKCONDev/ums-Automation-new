@@ -233,18 +233,43 @@ public class dashboard_object extends Baseclass {
 
 	}
 
+	@FindBy(xpath="//ng-select[@placeholder='Choose Team']//span[@class='ng-arrow-wrapper']")
+	public WebElement chooseteamdropdown;
+	
+	@FindBy(xpath="//span[normalize-space()='Testing']")
+	public WebElement Teamselect;
+	
+	@FindBy(xpath="//ng-select[@placeholder='Choose Employee']//span[@class='ng-arrow-wrapper']")
+	public WebElement chooseemployeedropdown;
 
-
-	public void Team_Dashboard() {
+	@FindBy(xpath="//span[contains(text(),'UMS')]")
+	public WebElement employeeselect;
+	
+	public void Team_Dashboard() throws InterruptedException {
 		Clickelement(dropdown.get(0));
 		WebElement dd_opt =driver.findElement(By.xpath("//span[text()='Team Dashboard']"));
 		Clickelement(dd_opt);
+		Thread.sleep(3000);
+		Clickelement(chooseteamdropdown);
+		Thread.sleep(3000);
+
+		Clickelement(Teamselect);
+		Thread.sleep(3000);
+
+		Clickelement(chooseemployeedropdown);
+		Thread.sleep(3000);
+
+		Clickelement(employeeselect);
+		Thread.sleep(3000);
+
+
 		validatetext(title, "Dashboard");
 		String L="Meetings,Action Items,Risks,Tasks";
 		Table_prop(buttons, L);
 		String M="Total meetings:,Organized:,Attended:,Avg % spent on work:,Avg % spent on meetings:";
 		Table_prop(Count, M);
-		String D="My Meetings,My Open ActionItems, My Open Risks, My Open Tasks";
+
+		String D="Team Meetings,Team Open ActionItems, Team Open Risks, Team Open Tasks";
 		Table_prop(Counts, D);
 		String T="Meeting ID,Title,Organizer,Meeting Type,Start Date & Time,End Date & Time,Timezone,Join";
 		Table_prop(Table, T);
@@ -252,18 +277,18 @@ public class dashboard_object extends Baseclass {
 		Clickelement(buttons.get(1));
 		String M1="Total Action Items:, High:, Medium:,Low:,Total Action Items:,Yet To Start:,InProgress:,Completed:,";
 		Table_prop(Count, M1);
-		String T1="ID,Department,Title,Description,Assigned To,Planned End Date,Actual End Date,Priority,Status,Days Overdue";
+		String T1="ID,Title,Description,Assigned To,Department,Planned End Date & Time,Priority,Status,Over Due Days";
 		Table_prop(Table, T1);
 		///3rd??????
 		Clickelement(buttons.get(2));
 		for(WebElement e:Count) {
 			System.out.println(e.getText());
 		}
-		String M2="Total Risks:,High:,Medium:,Low:,Monthly,Total Risks:,Open:,In Progress:,Closed:";
+		String M2="Total Risks:,Very High:,High:,Medium:,Low:,Total Risks:,Open:,In Progress:,Closed:";
 		Table_prop(Count, M2);
 		String M12="Risk Matrix,Risk Tolerance,Risk Priority";
 		Table_prop(Table1, M12);
-		String T2="Impact/Likelihood,Very Unlikely,Unlikely,Moderate,Major,Critical,Critical,Major,Moderate,Minor,Insignificant";
+		String T2="Impact/Likelihood,Very Unlikely,Unlikely,Likely,Very Likely,Possible,Catastrophic,Major,Moderate,Minor,Insignificant";
 		Table_prop(Table, T2);
 		Clickelement(Table1.get(1));
 		Table_prop(Table, T2);
@@ -271,120 +296,183 @@ public class dashboard_object extends Baseclass {
 		Table_prop(Table, T2);
 		//4th//
 		Clickelement(buttons.get(3));
-		String M3="Total Tasks:,High:,Medium:,Low:,Monthly,Total Tasks:,Yet To Start:,In Progress:,Completed:,";
+		String M3="Total Tasks:,High:,Medium:,Low:,Total Tasks:,Yet To Start:,In Progress:,Completed:";
 		Table_prop(Count, M3);
-		String T3="ID,Department,Title,Description,Assigned To,Planned End Date,Actual End Date,Overdue (Days)";
+		String T3="ID,Department,Title,Description,Assigned To,Planned End Date & Time,Status,Over Due Days";
 		Table_prop(Table, T3);
-		Clickelement(dropdown.get(1));
-		Clickelement(option.get(1));
-		Clickelement(dropdown.get(2));
-		Clickelement(option.get(1));
-		Clickelement(dropdown.get(3));
-		Clickelement(option.get(2));
-		Clickelement(dropdown.get(4));
-		Clickelement(option.get(2));
+//		Clickelement(dropdown.get(1));
+//		Clickelement(option.get(1));
+//		Clickelement(dropdown.get(2));
+//		Clickelement(option.get(1));
+//		Clickelement(dropdown.get(3));
+//		Clickelement(option.get(2));
+//		Clickelement(dropdown.get(4));
+//		Clickelement(option.get(2));
 
 	}
-	public void Department_Dashboard() {
+	@FindBy(xpath="//ng-select[@placeholder='Choose Team']//span[@class='ng-arrow-wrapper']")
+	public WebElement Dptchooseteamdropdown;
+	
+	@FindBy(xpath="//span[normalize-space()='Security Testing QA']")
+	public WebElement DptTeamselect;
+	
+	@FindBy(xpath="//ng-select[@placeholder='Choose Employee']//span[@class='ng-arrow-wrapper']")
+	public WebElement Dptchooseemployeedropdown;
+	
+	@FindBy(xpath="//span[contains(text(),'BHARAT KUMAR')]")
+	public WebElement Dptemployeeselect;
+	
+	public void Department_Dashboard() throws InterruptedException {
 		Clickelement(dropdown.get(0));
 		WebElement dd_opt =driver.findElement(By.xpath("//span[text()='Department Head Dashboard']"));
 		Clickelement(dd_opt);
+		Thread.sleep(3000);
+		Clickelement(Dptchooseteamdropdown);
+		Thread.sleep(3000);
+
+		Clickelement(DptTeamselect);
+		Thread.sleep(3000);
+
+		Clickelement(Dptchooseemployeedropdown);
+		Thread.sleep(3000);
+
+
+		Clickelement(Dptemployeeselect);
+		Thread.sleep(3000);
+
+
 		validatetext(title, "Dashboard");
 		String L="Meetings,Action Items,Risks,Tasks";
 		Table_prop(buttons, L);
-		String M="Meeting Insights,Total meetings:,Organized:,Attended:,Avg % spent on work:,Avg % spent on work:";
+		String M="Total meetings:,Organized:,Attended:,Avg % spent on work:,Avg % spent on work:";
 		Table_prop(Count, M);
-		String D="My Meetings,My Open ActionItems, My Open Risks, My Open Tasks";
+		String D="Department Meetings,Department Open ActionItems, Department Open Risks, Department Open Tasks";
 		Table_prop(Counts, D);
 		String T="Meeting ID,Title,Organizer,Meeting Type,Start Date & Time,End Date & Time,Timezone,Join";
 		Table_prop(Table, T);
 		///2nd??????
 		Clickelement(buttons.get(1));
-		String M1="Total Action Items:, High:, Medium:,Low:,Total Action Items:,Yet To Start:,InProgress:,Completed:,";
+		String M1="Total Action Items:, High:, Medium:,Low:,Total Action Items:,Yet To Start:,In Progress:,Completed:";
 		Table_prop(Count, M1);
-		String T1="ID,Department,Title,Description,Assigned To,Planned End Date,Actual End Date,Priority,Status,Days Overdue";
+		String T1="ID,Title,Description,Assigned To,Department,Planned End Date & Time,Priority,Status,Over Due Days";
 		Table_prop(Table, T1);
 		///3rd??????
 		Clickelement(buttons.get(2));
 		for(WebElement e:Count) {
 			System.out.println(e.getText());
 		}
-		String M2="Total Risks:,High:,Medium:,Low:,Monthly,Total Risks:,Open:,In Progress:,Closed:";
+		String M2="Total Risks:,Very High:,High:,Medium:,Low:,Total Risks:,Open:,In Progress:,Closed:";
 		Table_prop(Count, M2);
 		String M12="Risk Matrix,Risk Tolerance,Risk Priority";
 		Table_prop(Table1, M12);
-		String T2="Impact/Likelihood,Very Unlikely,Unlikely,Moderate,Major,Critical,Critical,Major,Moderate,Minor,Insignificant";
+		String T2="Impact/Likelihood,Very Unlikely,Unlikely,Likely,Very Likely,Possible,Catastrophic,Major,Moderate,Minor,Insignificant";
 		Table_prop(Table, T2);
 		Clickelement(Table1.get(1));
 		Table_prop(Table, T2);
 		Clickelement(Table1.get(2));
 		Table_prop(Table, T2);
 		Clickelement(buttons.get(3));
-		String M3="Total Tasks:,High:,Medium:,Low:,Monthly,Total Tasks:,Yet To Start:,In Progress:,Completed:,";
+		String M3="Total Tasks:,High:,Medium:,Low:,Total Tasks:,Yet To Start:,In Progress:,Completed:";
 		Table_prop(Count, M3);
-		String T3="ID,Department,Title,Description,Assigned To,Planned End Date,Actual End Date,Priority,Status,Overdue (Days)";
+		String T3="ID,Department,Title,Description,Assigned To,Planned End Date & Time,Status,Over Due Days";
 		Table_prop(Table, T3);
-		Clickelement(dropdown.get(1));
-		Clickelement(option.get(1));
-		Clickelement(dropdown.get(2));
-		Clickelement(option.get(1));
-		Clickelement(dropdown.get(3));
-		Clickelement(option.get(2));
-		Clickelement(dropdown.get(4));
-		Clickelement(option.get(2));
-		Clickelement(dropdown.get(5));
-		Clickelement(option.get(2));
+//		Clickelement(dropdown.get(1));
+//		Clickelement(option.get(1));
+//		Clickelement(dropdown.get(2));
+//		Clickelement(option.get(1));
+//		Clickelement(dropdown.get(3));
+//		Clickelement(option.get(2));
+//		Clickelement(dropdown.get(4));
+//		Clickelement(option.get(2));
+//		Clickelement(dropdown.get(5));
+//		Clickelement(option.get(2));
 	}
-
-	public void Executive_Dashboard() {
+	@FindBy(xpath="//div[@class='ng-select-container']//span[@class='ng-arrow-wrapper']")
+	public WebElement choosedptdropdown;
+	
+	@FindBy(xpath="//span[normalize-space()='Information Technology']")
+	public WebElement Dptselect;
+	
+	@FindBy(xpath="//ng-select[@placeholder='Choose Team']//span[@class='ng-arrow-wrapper']")
+	public WebElement chooseteamdrpdwn;
+	
+	@FindBy(xpath="//span[normalize-space()='Information Technology']")
+	public WebElement Teamslct;
+	
+	@FindBy(xpath="//ng-select[@placeholder='Choose Employee']//span[@class='ng-arrow-wrapper']")
+	public WebElement chooseemplyedrpdwn;
+	
+	@FindBy(xpath="//span[normalize-space()='Prabhakaran A']")
+	public WebElement emplyeslct;
+	
+	public void Executive_Dashboard() throws InterruptedException {
 		Clickelement(dropdown.get(0));
 		WebElement dd_opt =driver.findElement(By.xpath("//span[text()='Executive Dashboard ']"));
 		Clickelement(dd_opt);
+		Thread.sleep(3000);
+		Clickelement(choosedptdropdown);
+		Thread.sleep(3000);
+
+		Clickelement(Dptselect);
+		Thread.sleep(3000);
+		
+		Clickelement(chooseteamdrpdwn);
+		Thread.sleep(3000);
+		
+		Clickelement(Teamslct);
+		Thread.sleep(3000);
+		
+		Clickelement(chooseemplyedrpdwn);
+		Thread.sleep(3000);
+		
+		Clickelement(emplyeslct);
+		Thread.sleep(3000);
+
 		validatetext(title, "Dashboard");
 		String L="Meetings,Action Items,Risks,Tasks";
 		Table_prop(buttons, L);
 		String M="Total meetings:,Organized:,Attended:,Avg % spent on work:,Avg % spent on meetings:";
 		Table_prop(Count, M);
-		String D="My Meetings,My Open ActionItems, My Open Risks, My Open Tasks";
+		String D="All Meetings,All Open ActionItems, All Open Risks, All Open Tasks";
 		Table_prop(Counts, D);
 		String T="Meeting ID,Title,Organizer,Meeting Type,Start Date & Time,End Date & Time,Timezone,Join";
 		Table_prop(Table, T);
 		///2nd??????
 		Clickelement(buttons.get(1));
-		String M1="Total Action Items:, High:, Medium:,Low:,Total Action Items:,Yet To Start:,InProgress:,Completed:,";
+		String M1="Total Action Items:, High:, Medium:,Low:,Total Action Items:,Yet To Start:,InProgress:,Completed:";
 		Table_prop(Count, M1);
-		String T1="ID,Department,Title,Description,Assigned To,Planned End Date,Actual End Date,Priority,Status,Days Overdue";
+		String T1="ID,Title,Description,Assigned To,Department,Planned End Date & Time,Priority,Status,Over Due Days";
 		Table_prop(Table, T1);
 		///3rd??????
 		Clickelement(buttons.get(2));
 		for(WebElement e:Count) {
 			System.out.println(e.getText());
 		}
-		String M2="Total Risks:,High:,Medium:,Low:,Monthly,Total Risks:,Open:,In Progress:,Closed:";
+		String M2="Total Risks:,Very High:,High:,Medium:,Low:,Total Risks:,Open:,In Progress:,Closed:";
 		Table_prop(Count, M2);
 		String M12="Risk Matrix,Risk Tolerance,Risk Priority";
 		Table_prop(Table1, M12);
-		String T2="Impact/Likelihood,Very Unlikely,Unlikely,Moderate,Major,Critical,Critical,Major,Moderate,Minor,Insignificant";
+		String T2="Impact/Likelihood,Very Unlikely,Unlikely,Likely,Very Likely,Possible,Catastrophic,Major,Moderate,Minor,Insignificant";
 		Table_prop(Table, T2);
 		Clickelement(Table1.get(1));
 		Table_prop(Table, T2);
 		Clickelement(Table1.get(2));
 		Table_prop(Table, T2);
 		Clickelement(buttons.get(3));
-		String M3="Total Tasks:,High:,Medium:,Low:,Monthly,Total Tasks:,Yet To Start:,In Progress:,Completed:,";
+		String M3="Total Tasks:,High:,Medium:,Low:,Total Tasks:,Yet To Start:,In Progress:,Completed:";
 		Table_prop(Count, M3);
-		String T3="ID,Department,Title,Description,Assigned To,Planned End Date,Actual End Date,Overdue (Days)";
+		String T3="ID,Department,Title,Description,Assigned To,Planned End Date & Time,Status,Over Due Days";
 		Table_prop(Table, T3);
-		Clickelement(dropdown.get(1));
-		Clickelement(option.get(1));
-		Clickelement(dropdown.get(2));
-		Clickelement(option.get(1));
-		Clickelement(dropdown.get(3));
-		Clickelement(option.get(2));
-		Clickelement(dropdown.get(4));
-		Clickelement(option.get(2));
-		Clickelement(dropdown.get(5));
-		Clickelement(option.get(2));
+//		Clickelement(dropdown.get(1));
+//		Clickelement(option.get(1));
+//		Clickelement(dropdown.get(2));
+//		Clickelement(option.get(1));
+//		Clickelement(dropdown.get(3));
+//		Clickelement(option.get(2));
+//		Clickelement(dropdown.get(4));
+//		Clickelement(option.get(2));
+//		Clickelement(dropdown.get(5));
+//		Clickelement(option.get(2));
 	}
 
 

@@ -1,13 +1,4 @@
-#Feature: UMS
-#
-#@tag1
-#Scenario Outline: Task Category page
-#Then user checks the taskcategory page "<TCN>" "<TCD>"
-#Then user delete the taskcategory page "<Delete Taskcategory>"
-#
-#Examples:
-#| TCN               | TCD      | Delete Taskcategory |
-#| symboltaskcategry | symbol01 | symboltaskcategry   |
+
 #Feature: UMS
 #
   #@tag1

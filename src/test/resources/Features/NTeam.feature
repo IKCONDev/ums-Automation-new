@@ -1,13 +1,4 @@
-#Feature: UMS
-#
-#@tag1
-#Scenario Outline: Teams page
-#Then user checks the teams page "<TN>" "<TC>"
-#Then user delete the teams page "<Delete Team>"
-#
-#Examples:
-#| TN         | TC       | Delete Team |
-#| Symbolteam | Symbol01 | Symbolteam  |
+
 #Feature: UMS
 #
   #@tag1
