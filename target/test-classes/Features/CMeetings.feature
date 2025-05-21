@@ -4,10 +4,12 @@
   #Scenario Outline: Meetings Page
     #Then user clicks and validates the meetings page
     #Then user enters the meeting details in create meeting "<MT>" "<UN>"
+    #Then user enters Actionitems tasks and risks undermeeting "<MT>" "<AT>" "<AD>" "<TT>" "<TD>"
+#
     #Then user clicks edit column in meetings page
     #Then user clicks filter in meetings page "<MID>"
-#
+    #
     #Then user check the meeting details page "<MT>"
     #Examples: 
-      #| MT            | UN          | MID  |
-      #| Meetingsunday | Venkatesh U | 1942 |
+      #| MT        | UN              | MID  | AT           | AD                  | TT     | TD                |
+      #| Marketing | Venkatesh Udaru | 1942 | Actionitem01 | Actiondescription01 | Task01 | Taskdescription01 |

@@ -139,97 +139,244 @@ public class Meeting_object extends Baseclass {
 //				Table_properties(web,wordList);
 //				
 //			}
-
-	@FindBy(xpath = "//div[contains(text(),'Edit Column')]")
-	private WebElement Edit_column;
-
-	@FindBy(xpath = "//input[@placeholder='0 of 7 selected']")
-	private WebElement Editcolumn_drpdwn;
 	
-	@FindBy(xpath = "//label[normalize-space()='Select All']")
-	private WebElement Editcolumn_selectall;
+	@FindBy(xpath = "//input[@id='searchForFilter']")
+	private WebElement Search;
 	
-	@FindBy(xpath = "//div[@id='editAllMeetingsColumnModel']//span[normalize-space()='×']")
-	private WebElement Editcolumn_xmark;
-	public void click_on_edit_column() throws InterruptedException {
-		Thread.sleep(3000);
-		
-		Clickelement(Edit_column);
-		Thread.sleep(3000);
+	@FindBy(xpath = "//div[normalize-space()='+']")
+	private WebElement plusbtn;
+	
+	//Action item create
+	
+	@FindBy(xpath = "//img[@alt='Add ActionItem']")
+	private WebElement Actionitemplusbtn;
+	
+	@FindBy(xpath = "(//input[@id='actionItemTitle'])[1]")
+	private WebElement Acitemtitle;
+	
+	@FindBy(xpath = "//ng-select[@placeholder='Choose Assignee']//span[@class='ng-arrow-wrapper']")
+	private WebElement Actionitemassignedrpdwn;
+	
+	@FindBy(xpath = "//span[normalize-space()='Ananthasivan Subramanian']")
+	private WebElement Actitemassigneeselect;
+	
+	@FindBy(xpath = "(//input[@name='startDate'])[1]")
+	private WebElement Actitemstartdate;
+	
+	@FindBy(xpath = "(//input[@name='endDate'])[1]")
+	private WebElement Actitemenddate;
+	
+	@FindBy(xpath = "//form[@id='momform']//img[@alt='Dropdown icon']")
+	private WebElement ActionPrioritydrpdwn;
+	
+	@FindBy(xpath = "(//img[@alt='Priority Icon'])[1]")
+	private WebElement ActionPriorityselect;
+	
+	@FindBy(xpath = "(//textarea[@id='actionItemDescription'])[1]")
+	private WebElement Actionitemdescription;
+	
+	@FindBy(xpath = "(//button[@class='btn btn-primary saveButton ng-tns-c2900108926-12'][normalize-space()='Create'])[1]")
+	private WebElement Createbtn;
+	
+	//Task create
+	@FindBy(xpath = "//input[@id='searchActionFilter']")
+	private WebElement Actionitemsearch;
+	
+	@FindBy(xpath = "(//div[@class='ng-tns-c2900108926-12'][normalize-space()='+'])[1]")
+	private WebElement Taskplusbtn;
+	
 
-		Clickelement(Editcolumn_drpdwn);
-		Thread.sleep(3000);
+	@FindBy(xpath = "//img[@alt='Add Task']")
+	private WebElement Taskplusbtn1;
+	
+	@FindBy(xpath = "//div[@class='input-container']//input[@id='taskTitle']")
+	private WebElement Tasktitle;
+	
+	@FindBy(xpath = "(//span[@class='ng-arrow-wrapper'])[2]")
+	private WebElement Taskassignedtodrpdwn;
+	
+	@FindBy(xpath = "//span[normalize-space()='Charan U']")
+	private WebElement Taskassigneslect;
+	
 
-
-		Clickelement(Editcolumn_selectall);
-		Thread.sleep(3000);
-
-
-		Clickelement(Editcolumn_xmark);
-		Thread.sleep(3000);
-
-	}
+	@FindBy(xpath = "(//span[@class='ng-arrow-wrapper'])[3]")
+	private WebElement Taskreviewrdrpdwn;
 	
-	@FindBy(xpath = "//div[contains(text(),'Filter')]")
-	private WebElement Filter;
+	@FindBy(xpath = "//span[normalize-space()='Charan U']")
+	private WebElement Taskreviewrselect;
 	
-	@FindBy(xpath = "//div[@id='organizedFilterModal']//input[@id='meeting-id-label']")
-	private WebElement Apply_filter;
+	@FindBy(xpath = "(//span[@class='ng-arrow-wrapper'])[4]")
+	private WebElement Taskcatgrydrpdwn;
 	
-	@FindBy(xpath = "//div[@id='organizedFilterModal']//button[@type='button'][normalize-space()='Apply']")
-	private WebElement Apply_btn;
+	@FindBy(xpath = "//span[normalize-space()='Advertising']")
+	private WebElement Taskcatgryselect;
 	
-	@FindBy(xpath = "//div[@id='organizedFilterModal']//button[@type='button'][normalize-space()='Clear']")
-	private WebElement Clear_btn;
+	@FindBy(xpath = "//textarea[@id='taskDescription']")
+	private WebElement Taskdescription;
 	
-	@FindBy(xpath = "//div[@id='organizedFilterModal']//button[@aria-label='Close']")
-	private WebElement Cross_mark;
+	@FindBy(xpath = "//button[@class='btn btn-primary saveButton'][normalize-space()='Create']")
+	private WebElement Createbtn1;
 	
-	
-	public void click_on_filter_in_meetingspage(String MID) throws InterruptedException {
-		Thread.sleep(3000);
-		Clickelement(Filter);
-		Thread.sleep(3000);
-
-		sendkeyweb(Apply_filter, MID);
-		Thread.sleep(3000);
-
-		Clickelement(Apply_btn);
-		Thread.sleep(3000);
-
-		Clickelement(Filter);
-		Thread.sleep(3000);
-		Clickelement(Clear_btn);
-		Thread.sleep(3000);
-
-		Clickelement(Cross_mark);
-		Thread.sleep(3000);
-
-}
-	@FindBy(xpath = "//input[@placeholder='Search']")
-		private WebElement Search;
-	
-	@FindBy(xpath = "//td[normalize-space()='1942']")
-	private WebElement meetingIDclick;
-	
-	@FindBy(xpath = "//button[normalize-space()='Preview MoM']")
-	private WebElement previewmom;
-	
-	@FindBy(xpath = "//div[@id='mommodal']//button[@id='closeSendMoMEmail']")
-	private WebElement previewcancel;
-	
-	public void check_the_meeting_details_page(String MT) throws InterruptedException {
+	public void Creating_Actionitems_Tasks_Risks_Undermeeting(String MT, String AT, String AD, String TT, String TD) throws InterruptedException {
 		Thread.sleep(3000);
 		sendkeyweb(Search, MT);
 		Thread.sleep(3000);
-		Clickelement(meetingIDclick);
+		Clickelement(plusbtn);
+		Thread.sleep(3000);
+		
+		//Action item create
+
+		Clickelement(Actionitemplusbtn);
+		Thread.sleep(3000);
+		
+		sendkeyweb(Acitemtitle, AT);
+		Thread.sleep(3000);
+		Clickelement(Actionitemassignedrpdwn);
+		Clickelement(Actitemassigneeselect);
+		sendkeyweb(Actitemstartdate, D.Datefun(0, 0, 0));
+
+		sendkeyweb(Actitemenddate, D.Datefun(0, 0, 0));
+		Clickelement(ActionPrioritydrpdwn);
+
+		Clickelement(ActionPriorityselect);
+		sendkeyweb(Actionitemdescription, AD);
+		Clickelement(Createbtn);
+		//Task Create
+		
+		sendkeyweb(Actionitemsearch, AT);
+		Thread.sleep(3000);
+		
+		Clickelement(Taskplusbtn);
 		Thread.sleep(3000);
 
-		Clickelement(previewmom);
+		Clickelement(Taskplusbtn1);
 		Thread.sleep(3000);
 
-		Clickelement(previewcancel);
+		sendkeyweb(Tasktitle, TT);
+		Thread.sleep(3000);
+
+		Clickelement(Taskassignedtodrpdwn);
+		Thread.sleep(3000);
+
+		Clickelement(Taskassigneslect);
+		Thread.sleep(3000);
+
+		Clickelement(Taskreviewrdrpdwn);
+		Thread.sleep(3000);
 
 
-}
+		Clickelement(Taskreviewrselect);
+		Thread.sleep(3000);
+
+
+		Clickelement(Taskcatgrydrpdwn);
+		Thread.sleep(3000);
+
+		Clickelement(Taskcatgryselect);
+		Thread.sleep(3000);
+
+
+		sendkeyweb(Taskdescription, TD);
+		Thread.sleep(3000);
+
+		Clickelement(Createbtn1);
+		Thread.sleep(3000);
+
+
+
+	}
+//
+//	@FindBy(xpath = "//div[contains(text(),'Edit Column')]")
+//	private WebElement Edit_column;
+//
+//	@FindBy(xpath = "//input[@placeholder='0 of 7 selected']")
+//	private WebElement Editcolumn_drpdwn;
+//	
+//	@FindBy(xpath = "//label[normalize-space()='Select All']")
+//	private WebElement Editcolumn_selectall;
+//	
+//	@FindBy(xpath = "//div[@id='editAllMeetingsColumnModel']//span[normalize-space()='×']")
+//	private WebElement Editcolumn_xmark;
+//	
+//
+//	public void click_on_edit_column() throws InterruptedException {
+//		Thread.sleep(3000);
+//		
+//		Clickelement(Edit_column);
+//		Thread.sleep(3000);
+//
+//		Clickelement(Editcolumn_drpdwn);
+//		Thread.sleep(3000);
+//
+//
+//		Clickelement(Editcolumn_selectall);
+//		Thread.sleep(3000);
+//
+//
+//		Clickelement(Editcolumn_xmark);
+//		Thread.sleep(3000);
+//
+//	}
+//	
+//	@FindBy(xpath = "//div[contains(text(),'Filter')]")
+//	private WebElement Filter;
+//	
+//	@FindBy(xpath = "//div[@id='organizedFilterModal']//input[@id='meeting-id-label']")
+//	private WebElement Apply_filter;
+//	
+//	@FindBy(xpath = "//div[@id='organizedFilterModal']//button[@type='button'][normalize-space()='Apply']")
+//	private WebElement Apply_btn;
+//	
+//	@FindBy(xpath = "//div[@id='organizedFilterModal']//button[@type='button'][normalize-space()='Clear']")
+//	private WebElement Clear_btn;
+//	
+//	@FindBy(xpath = "//div[@id='organizedFilterModal']//button[@aria-label='Close']")
+//	private WebElement Cross_mark;
+//	
+//	
+//	public void click_on_filter_in_meetingspage(String MID) throws InterruptedException {
+//		Thread.sleep(3000);
+//		Clickelement(Filter);
+//		Thread.sleep(3000);
+//
+//		sendkeyweb(Apply_filter, MID);
+//		Thread.sleep(3000);
+//
+//		Clickelement(Apply_btn);
+//		Thread.sleep(3000);
+//
+//		Clickelement(Filter);
+//		Thread.sleep(3000);
+//		Clickelement(Clear_btn);
+//		Thread.sleep(3000);
+//
+//		Clickelement(Cross_mark);
+//		Thread.sleep(3000);
+//
+//}
+////	@FindBy(xpath = "//input[@placeholder='Search']")
+////		private WebElement Search;
+//	
+//	@FindBy(xpath = "//td[normalize-space()='1942']")
+//	private WebElement meetingIDclick;
+//	
+//	@FindBy(xpath = "//button[normalize-space()='Preview MoM']")
+//	private WebElement previewmom;
+//	
+//	@FindBy(xpath = "//div[@id='mommodal']//button[@id='closeSendMoMEmail']")
+//	private WebElement previewcancel;
+//	
+//	public void check_the_meeting_details_page(String MT) throws InterruptedException {
+//		Thread.sleep(3000);
+//		sendkeyweb(Search, MT);
+//		Thread.sleep(3000);
+//		Clickelement(meetingIDclick);
+//		Thread.sleep(3000);
+//
+//		Clickelement(previewmom);
+//		Thread.sleep(3000);
+//
+//		Clickelement(previewcancel);
+
+
 }
