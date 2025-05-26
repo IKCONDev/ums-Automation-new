@@ -14,7 +14,7 @@ plugin = {"pretty","html:target/cucu-report.html","json:target/cuc"}
 //"org.simplestudio.cucumber.XlsFormatter"}
 ,monochrome = true
 		,publish = true)
-
+ 
 public class Runnerclass extends AbstractTestNGCucumberTests {
 
 }

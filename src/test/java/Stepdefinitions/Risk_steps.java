@@ -52,4 +52,31 @@ public class Risk_steps {
 
 	}
 
+	@Then("user checks the risk filters {string}")
+
+	public void user__checks_the_filters_in_riskpage(String RT) throws Exception {
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+
+		RO.user_checks_filters_in_risk_page(RT);	
+
+	}
+
+	@Then("user checks the risk details {string} {string}")
+
+	public void user_checks_risk_details(String RT, String RD) throws Exception {
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+
+		RO.user_checks_risk_details(RT,RD);	
+
+	}
+
+	@Then("user checks edit columns in risk page")
+
+	public void user_checks_Editcolumn_in_risk_page() throws Exception {
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+
+		RO.user_checks_Editcolumn_in_risk_page();	
+
+	}
+
 }
