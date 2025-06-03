@@ -30,6 +30,16 @@ public class Risk_steps {
 
 
 	}
+	
+	@Then("user validate the added risk {string}")
+
+	public void Validate_the_addedRisk(String RT) throws Exception {
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+
+		RO.Validate_the_addedRisk(RT);	
+
+
+	}
 	@Then("user update risks page {string} {string}")
 
 
