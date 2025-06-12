@@ -54,7 +54,7 @@ public class Internalnotes_object extends Baseclass {
 		validatetext(Edit_column, "Edit Column");
 
 
-		String s= "Note ID,Note Title,Created By,Status,View Document,Edit,Delete";
+		String s= "ID,Title,Created By,Status,View Document,Edit,Delete";
 
 		List<String> list = new ArrayList<String>(Arrays.asList(s.split(",")));
 		for (int i = 1; i < 7; i++) {
@@ -91,13 +91,13 @@ public class Internalnotes_object extends Baseclass {
 	@FindBy(xpath = "(//input[@type='text'])[5]")
 	public WebElement Reviewerdrpdwn;
 
-	@FindBy(xpath = "//span[normalize-space()='Venkatesh U']")
+	@FindBy(xpath = "//span[normalize-space()='UMS SUPPORT']")
 	public WebElement Reviewerselect;
 
 	@FindBy(xpath = "(//input[@type='text'])[6]")
 	public WebElement Approverdrpdwn;
 
-	@FindBy(xpath = "//span[normalize-space()='Vinod Kethu']")
+	@FindBy(xpath = "//span[normalize-space()='Adam Smith']")
 	public WebElement Approverselect;
 
 	@FindBy(xpath = "(//div[contains(@class, 'upload')])[1]")
@@ -122,6 +122,7 @@ public class Internalnotes_object extends Baseclass {
 		validatetext(Create_btn, "Create");
 		validatetext(Cancel_btn, "Cancel");
 		sendkeyweb(Title, IN);
+		Thread.sleep(3000);
 		Clickelement(Reviewerdrpdwn);
 		Thread.sleep(3000);
 		Clickelement(Reviewerselect);
@@ -155,6 +156,8 @@ public class Internalnotes_object extends Baseclass {
 		robot.keyRelease(KeyEvent.VK_ENTER);	
 
 		Clickelement(Createbtn);
+		Thread.sleep(3000);
+
 
 	}
 
@@ -168,14 +171,16 @@ public class Internalnotes_object extends Baseclass {
 	public WebElement Delete_icon;
 
 	public void Validate_the_Added_Internalnotes(String IN) throws InterruptedException {
-
+		driver.navigate().refresh();
 
 		sendkeyweb(Search, IN);
+		Thread.sleep(3000);
 
-		attributeselected(Table_data.get(0), "Note ID");
+
+		attributeselected(Table_data.get(0), "ID");
 		validatetext(Table_data.get(1), IN);
-		validatetext(Table_data.get(2), "Praveen Reddy");
-		validatetext(Table_data.get(3), "Under Review");
+		validatetext(Table_data.get(2), "UMS SUPPORT");
+		validatetext(Table_data.get(3), "In Review");
 		Thread.sleep(3000);
 		attributeselected(Table_data.get(4), "Document");
 
@@ -194,6 +199,15 @@ public class Internalnotes_object extends Baseclass {
 
 	@FindBy(xpath = "(//button[@id='closeCreateMeetingModal'])[2]")
 	public WebElement Cancelbtn;
+	
+	@FindBy(xpath = "(//input[@id='subject'])[2]")
+	public WebElement Updateinternalnotestitle;
+	
+	@FindBy(xpath = "//div[@class='select-box-prority']//img[@alt='Dropdown icon']")
+	public WebElement reviewerstatusdrpdwn;
+	
+	@FindBy(xpath = "//div[normalize-space()='Reviewed - Approved']")
+	public WebElement reviewerstatusselect;
 
 	public void update_the_Internalnotes_page(String IN) throws InterruptedException {
 		sendkeyweb(Search, IN);
@@ -202,6 +216,11 @@ public class Internalnotes_object extends Baseclass {
 		validatetext(Updateinternalnotes, "Update Internal Notes");
 		validatetext(Updatebtn, "Update");
 		validatetext(Cancelbtn, "Cancel");
+		sendkeyweb(Updateinternalnotestitle, IN);
+		Clickelement(reviewerstatusdrpdwn);
+		Clickelement(reviewerstatusselect);
+
+
 		Clickelement(Updatebtn);
 
 
@@ -213,13 +232,13 @@ public class Internalnotes_object extends Baseclass {
 		Validate_the_Added_Internalnotes(IN);
 
 	}
-	
+
 
 	public void Delete_the_Internalnotes(String IN) throws InterruptedException {
 		sendkeyweb(Search, IN);
 
-				Clickelement(driver.findElement(By.xpath("(//td[normalize-space()='" + IN + "']/following-sibling::td//button[@id='trashIcon'])[2]")));
-		
+		Clickelement(driver.findElement(By.xpath("(//td[normalize-space()='" + IN + "']/following-sibling::td//button[@id='trashIcon'])")));
+
 		try {
 			Alert alert = driver.switchTo().alert();
 			System.out.println("Alert detected: " + alert.getText());

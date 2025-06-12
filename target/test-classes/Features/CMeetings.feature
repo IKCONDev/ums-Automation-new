@@ -11,5 +11,5 @@
     #
     #Then user check the meeting details page "<MT>"
     #Examples: 
-      #| MT        | UN              | MID  | AT           | AD                  | TT     | TD                |
-      #| Marketing | Venkatesh Udaru | 1942 | Actionitem01 | Actiondescription01 | Task01 | Taskdescription01 |
+      #| MT          | UN              | MID  | AT            | AD                   | TT     | TD                |
+      #| Partnership | Venkatesh Udaru | 1942 | Actionitem101 | Actiondescription101 | Task15 | Taskdescription15 |

@@ -165,28 +165,28 @@ public class Menuitems_object extends Baseclass {
 		driver = RC;
 		PageFactory.initElements(RC, this);
 	}
-	
+
 	@FindBy(xpath="//div[normalize-space()='Setup']")
 	public WebElement Settings;
-	
+
 	@FindBy(xpath="//a[normalize-space()='Menu Items']")
 	public WebElement menuitem;
-	
+
 	@FindBy(xpath="//h3[contains(normalize-space(),'Menu Items')]")
 	public WebElement Title;
 	@FindBy(xpath="//div[@id='createBtnDiv']")
 	public WebElement Add;
 	@FindBy(xpath="//div[contains(@id,'deleteDesgBtn')]")
 	public WebElement Delete_button;
-//	@FindBy(xpath="//thead//th")
-//	public List<WebElement> Table;
-	
+	//	@FindBy(xpath="//thead//th")
+	//	public List<WebElement> Table;
+
 	@FindBy(xpath="//table//tr[1]/th")
 	public List<WebElement> Table;
-	
+
 	public void validate_the_menu_items_page() throws InterruptedException {
 		Clickelement(Settings);
-		
+
 		Clickelement(menuitem);
 
 
@@ -223,7 +223,7 @@ public class Menuitems_object extends Baseclass {
 		driver.navigate().refresh();
 		Clickelement(Add);
 		validatetext(Menu_Item, "Menu Item");
-//		validatetext(Menu_Item_name, "Menu Item Name*");
+		//		validatetext(Menu_Item_name, "Menu Item Name*");
 		validateattribute(Cat_name, "placeholder", "Menu Item Name");
 		sendkeyweb(Cat_name, s1);
 		validatetext(Path, "Menu Item Path*");
@@ -256,7 +256,7 @@ public class Menuitems_object extends Baseclass {
 		validatetext(Table_data.get(2), s1);
 		validatetext(Table_data.get(3), "/"+s1);
 		validatetext(Table_data.get(4), s1+" path");
-		validatetext(Table_data.get(5), "Praveen Reddy");	
+		validatetext(Table_data.get(5), "UMS SUPPORT");	
 		validatetext(Table_data.get(6), ",");
 		dispalyedattribute(Edit_icon, "Edit Icon");
 		dispalyedattribute(Delete_icon, "Delete Icon");
@@ -298,9 +298,9 @@ public class Menuitems_object extends Baseclass {
 		validatetext(Table_data.get(2), s1);
 		validatetext(Table_data.get(3), "/"+s1);
 		validatetext(Table_data.get(4), s1+" path");
-		validatetext(Table_data.get(5), "Praveen Reddy");	
+		validatetext(Table_data.get(5), "UMS SUPPORT");	
 		validatetext(Table_data.get(6), ",");
-		validatetext(Table_data.get(7), "Praveen Reddy");
+		validatetext(Table_data.get(7), "UMS SUPPORT");
 		validatetext(Table_data.get(8), ",");
 		dispalyedattribute(Edit_icon, "Edit Icon");
 		dispalyedattribute(Delete_icon, "Delete Icon");
@@ -311,36 +311,37 @@ public class Menuitems_object extends Baseclass {
 		driver.navigate().refresh();
 		sendkeyweb(Search, s1);
 		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + s1 + "']/following-sibling::td//button[@id='trashmenuIcon']")));
-//		validatealert("Are you sure, you really want to delete the menu item ?");
-//		driver.switchTo().alert().dismiss();
-//		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + s1 + "']/preceding-sibling::td//input[@type='checkbox']"))
-//				);
-//		Clickelement(Delete_button);
-//		validatealert("Are you sure, you really want to delete selected menu items ?");
-//		driver.switchTo().alert().accept();
+		//		validatealert("Are you sure, you really want to delete the menu item ?");
+		//		driver.switchTo().alert().dismiss();
+		//		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + s1 + "']/preceding-sibling::td//input[@type='checkbox']"))
+		//				);
+		//		Clickelement(Delete_button);
+		//		validatealert("Are you sure, you really want to delete selected menu items ?");
+		//		driver.switchTo().alert().accept();
 
 		try {
-		    Alert alert = driver.switchTo().alert();
-		    System.out.println("Alert detected: " + alert.getText());
-		    alert.dismiss();
+			Alert alert = driver.switchTo().alert();
+			System.out.println("Alert detected: " + alert.getText());
+			alert.dismiss();
 		} catch (NoAlertPresentException e) {
-		    System.out.println("No alert present.");
+			System.out.println("No alert present.");
 		}
 
-	
-	
-	Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + s1 + "']/following-sibling::td//button[@id='trashmenuIcon']"))
-			);
-	
-	try {
-	    Alert alert = driver.switchTo().alert();
-	    System.out.println("Alert detected: " + alert.getText());
-	    alert.accept(); // or alert.dismiss();
-	} catch (NoAlertPresentException e) {
-	    System.out.println("No alert present.");
-	    
+
+
+		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + s1 + "']/following-sibling::td//button[@id='trashmenuIcon']"))
+				);
+
+		try {
+			Alert alert = driver.switchTo().alert();
+			System.out.println("Alert detected: " + alert.getText());
+			alert.accept(); // or alert.dismiss();
+		} catch (NoAlertPresentException e) {
+			System.out.println("No alert present.");
+
+
+		}
 	}
-	}
-	}
+}
 
 

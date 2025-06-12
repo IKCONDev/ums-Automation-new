@@ -73,6 +73,6 @@ public class Permission_steps {
 	@Then("Delete the Permissions {string}")
 	public void Delete_the_Permissions(String s1) throws InterruptedException {
 		PO.Delete_the_Permissions(s1);
-		
+
 	}
 }

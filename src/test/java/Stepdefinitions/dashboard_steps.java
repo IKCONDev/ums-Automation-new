@@ -31,5 +31,6 @@ public class dashboard_steps {
 	@Then("user checks the Exective Dashboard page")
 	public void user__checks_the_Executivedashboardpage() throws Exception {
 		DO.Executive_Dashboard();
+		
 	}
 }

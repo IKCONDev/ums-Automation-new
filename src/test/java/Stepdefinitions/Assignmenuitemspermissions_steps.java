@@ -60,7 +60,6 @@ public class Assignmenuitemspermissions_steps {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		TO.Update_the_Assign_MenuItems_Permisisons();
 		
-
 	}
 }
 

@@ -30,7 +30,7 @@ public class Risk_steps {
 
 
 	}
-	
+
 	@Then("user validate the added risk {string}")
 
 	public void Validate_the_addedRisk(String RT) throws Exception {

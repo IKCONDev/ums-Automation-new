@@ -387,7 +387,7 @@ public class dashboard_object extends Baseclass {
 //		Clickelement(dropdown.get(5));
 //		Clickelement(option.get(2));
 	}
-	@FindBy(xpath="//div[@class='ng-select-container']//span[@class='ng-arrow-wrapper']")
+	@FindBy(xpath="//ng-select[@placeholder='Choose Department']//span[@class='ng-arrow-wrapper']")
 	public WebElement choosedptdropdown;
 	
 	@FindBy(xpath="//span[normalize-space()='Information Technology']")
@@ -407,7 +407,10 @@ public class dashboard_object extends Baseclass {
 	
 	public void Executive_Dashboard() throws InterruptedException {
 		Clickelement(dropdown.get(0));
-		WebElement dd_opt =driver.findElement(By.xpath("//span[text()='Executive Dashboard ']"));
+		Thread.sleep(3000);
+//		WebElement dd_opt =driver.findElement(By.xpath("//span[text()='Executive Dashboard ']"));
+		WebElement dd_opt =driver.findElement(By.xpath("//span[normalize-space()='Executive Dashboard']"));
+
 		Clickelement(dd_opt);
 		Thread.sleep(3000);
 		Clickelement(choosedptdropdown);
@@ -439,7 +442,7 @@ public class dashboard_object extends Baseclass {
 		Table_prop(Table, T);
 		///2nd??????
 		Clickelement(buttons.get(1));
-		String M1="Total Action Items:, High:, Medium:,Low:,Total Action Items:,Yet To Start:,InProgress:,Completed:";
+		String M1="Total Action Items:, High:, Medium:,Low:,Total Action Items:,Yet To Start:,In Progress:,Completed:";
 		Table_prop(Count, M1);
 		String T1="ID,Title,Description,Assigned To,Department,Planned End Date & Time,Priority,Status,Over Due Days";
 		Table_prop(Table, T1);

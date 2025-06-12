@@ -10,5 +10,5 @@
     #Then Delete the internal notes "<IN>"
 #
     #Examples: 
-      #| IN          |
-      #| Sundaynotes |
+      #| IN       |
+      #| Alliance |

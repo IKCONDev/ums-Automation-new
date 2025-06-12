@@ -1,4 +1,3 @@
-
 #Feature: UMS
 #
   #@tag1
@@ -11,5 +10,5 @@
     #Then Delete the Permissions "<s1>"
 #
     #Examples: 
-      #| s1        |
-      #| testlinux |
+      #| s1       |
+      #| Solution |

@@ -246,7 +246,7 @@ public class Roles_object extends Baseclass {
 		attributeselected(Table_data.get(1), "ID");
 		validatetext(Table_data.get(2), RN);
 		validatetext(Table_data.get(3), "View");
-		validatetext(Table_data.get(4), "Praveen Reddy");
+		validatetext(Table_data.get(4), "UMS SUPPORT");
 //		validatetext(Table_data.get(5), "May 16, 2024, 4:38 PM");
 		Thread.sleep(3000);
 		attributeselected(Edit_icon, "Edit icon");
@@ -308,9 +308,9 @@ public class Roles_object extends Baseclass {
 		attributeselected(Table_data1.get(1), "ID");
 		validatetext(Table_data1.get(2), RN);
 		validatetext(Table_data1.get(3), "View");
-		validatetext(Table_data1.get(4), "Praveen Reddy");
+		validatetext(Table_data1.get(4), "UMS SUPPORT");
 //		validatetext(Table_data1.get(5), "May 16, 2024, 4:38 PM");
-		validatetext(Table_data1.get(6), "Praveen Reddy");
+		validatetext(Table_data1.get(6), "UMS SUPPORT");
 //		validatetext(Table_data1.get(7), "May 16, 2024, 4:38 PM");
 		attributeselected(UEdit_icon, "Edit icon");
 		attributeselected(UDelete_icon, "Delete icon");

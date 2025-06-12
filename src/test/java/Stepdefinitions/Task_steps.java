@@ -39,7 +39,6 @@ public class Task_steps {
 		@Then("user clicks filter in the task page {string}")
 		public void user__clicks_filter_in_the_task_page(String TT) throws Exception {
 		TO.user_clicks_filter_in_Task_page(TT);
-
 	
 		}
 }

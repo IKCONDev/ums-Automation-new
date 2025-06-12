@@ -1,4 +1,3 @@
-
 #Feature: UMS
 #
   #@tag1
@@ -11,5 +10,5 @@
     #Then Delete the Menu item "<Menuitem>"
 #
     #Examples: 
-      #| Menuitem |
-      #| landing  |
+      #| Menuitem      |
+      #| Outsidethebox |

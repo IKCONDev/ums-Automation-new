@@ -210,9 +210,10 @@ public class Risk_object extends Baseclass {
 		driver.navigate().refresh();
 		sendkeyweb(Risksearch,RT);
 		String RID = driver.findElement(By.xpath("(//td[normalize-space()='"+RT+"']/preceding-sibling::td)[2]")).getText();
-		String[] S = { "NA",RT,"UMS SUPPORT",",",",","Likely","Minor","Open","Very High","NA"};
+		String[] S = {"NA",RT,"UMS SUPPORT","","","Likely","Minor","Open","Very High","NA"};
 		List<WebElement> valid=driver.findElements(By.xpath("//td[normalize-space()='" + RID + "']/following-sibling::td"));
-		int i=1;
+		valid.size();
+		int i=0;
 		for(WebElement e:valid) {
 			validatetext(e, S[i]);
 			i++;
