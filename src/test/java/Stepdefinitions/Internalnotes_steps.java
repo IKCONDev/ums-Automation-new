@@ -55,6 +55,5 @@ public class Internalnotes_steps {
 	public void Delete_the__Internalnotes(String IN) throws InterruptedException, AWTException {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		IO.Delete_the_Internalnotes(IN);
-
 	}
 }
