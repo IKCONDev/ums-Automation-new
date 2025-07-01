@@ -88,7 +88,6 @@ public class Roles_steps {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		RO.Delete_the_role(RN);
 		
-
 	}
 }
 

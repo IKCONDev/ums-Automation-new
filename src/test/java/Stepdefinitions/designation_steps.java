@@ -74,7 +74,6 @@ public class designation_steps {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		DO.delete_the_designation(DSN);
 		
-
 }
 
 }

@@ -78,7 +78,7 @@ public class Departments_steps {
 	public void delete_the_department(String DN) throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));	
 		DO.delete_the_department(DN);
-	
+
 	}
 
 }

@@ -578,8 +578,54 @@ public class Meeting_object extends Baseclass {
 		Clickelement(Meeting_ID);
 
 
-
-
-
 	}
+	
+	//Scheduled Meetings
+	
+	@FindBy(xpath = "//div[normalize-space()='Meetings']")
+	private WebElement Meetingssidemenu;
+	
+	@FindBy(xpath = "//div[@aria-expanded='true']")
+	private WebElement Meetingsdrpdwn;
+	
+	@FindBy(xpath = "//span[normalize-space()='Scheduled Meetings']")
+	private WebElement Scheduledmeetings;
+	
+	@FindBy(xpath = "//div[contains(text(),'Filter')]")
+	private WebElement Meetingsfilter;
+	
+	@FindBy(xpath = "//ng-select[@placeholder='Choose Participation Role']//span[@class='ng-arrow-wrapper']")
+	private WebElement Participationroledrpdwn;
+	
+	@FindBy(xpath = "//span[normalize-space()='My Organized Meetings']")
+	private WebElement Participationroleselect;
+	
+	
+	@FindBy(xpath = "//div[@id='scheduledFilterModal']//button[@type='button'][normalize-space()='Apply']")
+	private WebElement Applybtn;
+	
+	public void check_the_ScheduledMeetings_page() throws InterruptedException {
+		Clickelement(Meetingssidemenu);
+		Thread.sleep(3000);
+		
+		Clickelement(Meetingsdrpdwn);
+		Thread.sleep(3000);
+
+		Clickelement(Scheduledmeetings);
+		Thread.sleep(3000);
+
+		Clickelement(Meetingsfilter);
+		Thread.sleep(3000);
+
+		Clickelement(Participationroledrpdwn);
+		Thread.sleep(3000);
+
+		Clickelement(Participationroleselect);
+		Thread.sleep(3000);
+
+		Clickelement(Applybtn);
+		Thread.sleep(3000);
+
+
+}
 }

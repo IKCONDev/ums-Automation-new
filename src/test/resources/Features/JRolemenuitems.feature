@@ -6,5 +6,5 @@
     #And add the Role Menu Items "<Role>"
 #
     #Examples: 
-      #| Role   |
-      #| MEMBER |
+      #| Role    |
+      #| SYNERGY |

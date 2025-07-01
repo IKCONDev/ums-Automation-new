@@ -68,7 +68,7 @@ public class Actionitem_object extends Baseclass {
 	@FindBy(xpath = "//ng-select[@placeholder='Choose Assignee']//span[@class='ng-arrow-wrapper']")
 	public WebElement Actionitemassigneedrpdwn;
 
-	@FindBy(xpath = "(//span[@class='ng-option-label ng-star-inserted'][normalize-space()='Vinod Kethu'])[1]")
+	@FindBy(xpath = "(//span[@class='ng-option-label ng-star-inserted'][normalize-space()='Vinod Reddy Kethu'])[1]")
 	public WebElement Actionitemassigneeselect;
 
 	@FindBy(xpath = "//input[@name='startDate']")

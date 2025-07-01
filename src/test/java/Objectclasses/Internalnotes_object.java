@@ -128,7 +128,7 @@ public class Internalnotes_object extends Baseclass {
 		Clickelement(Reviewerselect);
 		Thread.sleep(3000);
 		Clickelement(Approverdrpdwn);
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 
 		Clickelement(Approverselect);
 		Thread.sleep(3000);
@@ -199,13 +199,13 @@ public class Internalnotes_object extends Baseclass {
 
 	@FindBy(xpath = "(//button[@id='closeCreateMeetingModal'])[2]")
 	public WebElement Cancelbtn;
-	
+
 	@FindBy(xpath = "(//input[@id='subject'])[2]")
 	public WebElement Updateinternalnotestitle;
-	
+
 	@FindBy(xpath = "//div[@class='select-box-prority']//img[@alt='Dropdown icon']")
 	public WebElement reviewerstatusdrpdwn;
-	
+
 	@FindBy(xpath = "//div[normalize-space()='Reviewed - Approved']")
 	public WebElement reviewerstatusselect;
 
@@ -229,16 +229,34 @@ public class Internalnotes_object extends Baseclass {
 
 
 	public void validate_the_updated_Internalnotes_page(String IN) throws InterruptedException {
-		Validate_the_Added_Internalnotes(IN);
+		driver.navigate().refresh();
+
+		sendkeyweb(Search, IN);
+		Thread.sleep(3000);
+
+
+		attributeselected(Table_data.get(0), "ID");
+		validatetext(Table_data.get(1), IN);
+		validatetext(Table_data.get(2), "UMS SUPPORT");
+		validatetext(Table_data.get(3), "Under Approval");
+		Thread.sleep(3000);
+		attributeselected(Table_data.get(4), "Document");
+
+		attributeselected(Edit_icon, "Edit icon");
+		Thread.sleep(3000);
+
+		attributeselected(Delete_icon, "Delete icon");
+		Thread.sleep(3000);
 
 	}
 
 
 	public void Delete_the_Internalnotes(String IN) throws InterruptedException {
+		driver.navigate().refresh();
+
 		sendkeyweb(Search, IN);
 
-		Clickelement(driver.findElement(By.xpath("(//td[normalize-space()='" + IN + "']/following-sibling::td//button[@id='trashIcon'])")));
-
+		Clickelement(driver.findElement(By.xpath("(//td[normalize-space()='" + IN + "']/following-sibling::td//button[@id='trashIcon'])[2]")));
 		try {
 			Alert alert = driver.switchTo().alert();
 			System.out.println("Alert detected: " + alert.getText());
@@ -247,7 +265,7 @@ public class Internalnotes_object extends Baseclass {
 			System.out.println("No alert present.");
 		}
 
-		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + IN + "']/following-sibling::td//button[@id='trashIcon']")));
+		Clickelement(driver.findElement(By.xpath("(//td[normalize-space()='" + IN + "']/following-sibling::td//button[@id='trashIcon'])[2]")));
 
 		try {
 			Alert alert = driver.switchTo().alert();
@@ -256,6 +274,34 @@ public class Internalnotes_object extends Baseclass {
 		} catch (NoAlertPresentException e) {
 			System.out.println("No alert present.");
 		}
+	}
+
+
+	@FindBy(xpath = "//div[contains(text(),'Edit Column')]")
+	public WebElement Editcolumn;
+
+	@FindBy(xpath = "//input[@placeholder='0 of 8 selected']")
+	public WebElement Editcolumndrpdwn;
+
+	@FindBy(xpath = "//label[normalize-space()='Select All']")
+	public WebElement Editcolumnselectall;
+
+	@FindBy(xpath = "//div[@id='editAllActionColumnModel']//div[@role='document']//div[@class='modal-content']//div//span[@aria-hidden='true'][normalize-space()='×']")
+	public WebElement Editcolumnxmark;
+
+	public void Editcolumn_in_Internalnotes() throws InterruptedException {
+		Thread.sleep(3000);
+		Clickelement(Editcolumn);
+		Thread.sleep(3000);
+		Clickelement(Editcolumndrpdwn);
+		Thread.sleep(3000);
+
+		Clickelement(Editcolumnselectall);
+		Thread.sleep(3000);
+
+		Clickelement(Editcolumnxmark);
+		Thread.sleep(3000);
+
 	}
 }
 

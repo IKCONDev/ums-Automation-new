@@ -56,4 +56,10 @@ public class Internalnotes_steps {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		IO.Delete_the_Internalnotes(IN);
 	}
+	
+	@Then("Edit column in internal notes")
+	public void Editcolumn_in_Internalnotes() throws InterruptedException, AWTException {
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		IO.Editcolumn_in_Internalnotes();
+	}
 }

@@ -247,7 +247,7 @@ public class Roles_object extends Baseclass {
 		validatetext(Table_data.get(2), RN);
 		validatetext(Table_data.get(3), "View");
 		validatetext(Table_data.get(4), "UMS SUPPORT");
-//		validatetext(Table_data.get(5), "May 16, 2024, 4:38 PM");
+		//		validatetext(Table_data.get(5), "May 16, 2024, 4:38 PM");
 		Thread.sleep(3000);
 		attributeselected(Edit_icon, "Edit icon");
 		Thread.sleep(3000);
@@ -285,7 +285,7 @@ public class Roles_object extends Baseclass {
 		validatetext(U_Role, "Update Role");
 		validatetext(U_Rolename, "Role Name*");
 		sendkeyweb(RN_in, RN);
-//		validatetext(UASP, "Assign Permission*");
+		//		validatetext(UASP, "Assign Permission*");
 		selectdropindexmultipleweb(U_Rper, PN);
 		validatetext(UCancel, "Cancel");
 		validatetext(USave, "Save");
@@ -309,9 +309,9 @@ public class Roles_object extends Baseclass {
 		validatetext(Table_data1.get(2), RN);
 		validatetext(Table_data1.get(3), "View");
 		validatetext(Table_data1.get(4), "UMS SUPPORT");
-//		validatetext(Table_data1.get(5), "May 16, 2024, 4:38 PM");
+		//		validatetext(Table_data1.get(5), "May 16, 2024, 4:38 PM");
 		validatetext(Table_data1.get(6), "UMS SUPPORT");
-//		validatetext(Table_data1.get(7), "May 16, 2024, 4:38 PM");
+		//		validatetext(Table_data1.get(7), "May 16, 2024, 4:38 PM");
 		attributeselected(UEdit_icon, "Edit icon");
 		attributeselected(UDelete_icon, "Delete icon");
 
@@ -329,17 +329,17 @@ public class Roles_object extends Baseclass {
 			System.out.println("No alert present.");
 		}
 
-//		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + RN + "']/preceding-sibling::td//input[@type='checkbox']")));
-//		driver.findElement(By.xpath("//div[@class='edit-column'][normalize-space()='Delete']")).click();
-		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + RN + "']/following-sibling::td//button[@id='trashIcon']")));
-
-		try {
-			Alert alert = driver.switchTo().alert();
-			System.out.println("Alert detected: " + alert.getText());
-			alert.accept();
-		} catch (NoAlertPresentException e) {
-			System.out.println("No alert present.");
-		}
+		//		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + RN + "']/preceding-sibling::td//input[@type='checkbox']")));
+		//		driver.findElement(By.xpath("//div[@class='edit-column'][normalize-space()='Delete']")).click();
+		//		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + RN + "']/following-sibling::td//button[@id='trashIcon']")));
+		//
+		//		try {
+		//			Alert alert = driver.switchTo().alert();
+		//			System.out.println("Alert detected: " + alert.getText());
+		//			alert.accept();
+		//		} catch (NoAlertPresentException e) {
+		//			System.out.println("No alert present.");
+		//		}
 
 		//		driver.findElement(By.xpath("//div[@class='edit-column'][normalize-space()='Delete']")).click();
 		//		validatealert("Are you sure you want to delete this role ?");

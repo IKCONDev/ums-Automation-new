@@ -1,14 +1,16 @@
-#Feature: UMS
-#
-  #@tag1
-  #Scenario Outline: Action items Page
-    #Then user checks the action items page "<AT>" "<AD>"
+Feature: UMS
+
+  @tag1
+  Scenario Outline: Action items Page
+    Then user checks the action items page "<AT>" "<AD>"
+
+    #
     #Then user update the action items page "<AT>"
     #Then user delete the action items page "<AT>"
     #Then user create task in action items page "<AT>" "<TT>" "<TD>"
     #Then user click on editcolumn in action items page
     #Then user click on filter in action items page "<AT>"
-#
-    #Examples: 
-      #| AT           | AD                      | TT     | TD                |
-      #| Actionitem22 | Actionitemdescription22 | Task22 | Taskdescription22 |
+    #
+    Examples: 
+      | AT           | AD                      | TT     | TD                |
+      | Actionitem24 | Actionitemdescription24 | Task24 | Taskdescription25 |

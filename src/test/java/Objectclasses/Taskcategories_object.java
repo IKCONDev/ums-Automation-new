@@ -115,6 +115,7 @@ public class Taskcategories_object extends Baseclass {
 
 	@FindBy(xpath = "//h3[@class='title']")
 	public WebElement Header;
+	
 	@FindBy(xpath = "//div[contains(text(),'Add')]")
 	public WebElement Add;
 	@FindBy(xpath = "//div[@class='edit-column'][normalize-space()='Delete']")
@@ -139,7 +140,7 @@ public class Taskcategories_object extends Baseclass {
 		//		}
 
 		List<String> list = new ArrayList<String>(Arrays.asList(s.split(",")));
-		for (int i = 1; i <= 11; i++) {
+		for (int i = 0; i <= 10; i++) {
 			validatetext(Table.get(i), list.get(i));
 		}
 
@@ -181,7 +182,10 @@ public class Taskcategories_object extends Baseclass {
 	public void add_the_category(String CN) throws InterruptedException {
 
 		driver.navigate().refresh();
+		Thread.sleep(3000);
 		Clickelement(Add);
+		Thread.sleep(3000);
+
 		validatetext(Task_cat, "Task category");
 		validatetext(Task_Dept, "Choose Department");
 		Clickelement(Clear);

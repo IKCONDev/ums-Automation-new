@@ -308,7 +308,7 @@ public class department_object extends Baseclass {
 //		} catch (Exception e) {
 //			Clickelement(driver.findElement(By.xpath("(//span[@class='ng-option-label'][contains(.,'" + FN + "')])[1]")));
 //		}
-		Clickelement(driver.findElement(By.xpath("//span[normalize-space()='Vinod Kethu']")));
+		Clickelement(driver.findElement(By.xpath("//span[normalize-space()='Vinod Reddy Kethu']")));
 		
 		validatetext(dept_code, "Department Code");
 		sendkeyweb(UDC, DC);

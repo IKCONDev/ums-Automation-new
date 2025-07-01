@@ -62,7 +62,7 @@ public class Risk_object extends Baseclass {
 		Thread.sleep(3000);
 
 
-		String s = "checkbox,Risk ID,Meeting ID,Risk Title,Assigned To,Planned Start Date & Time,Planned End Date & Time,Probability,Severity,Status,Priority,Over Due Days,Edit,Delete";
+		String s = "checkbox,Risk ID,Meeting ID,Title,Assigned To,Planned Start Date & Time,Planned End Date & Time,Probability,Severity,Status,Priority,Over Due Days,Edit,Delete";
 		List<String> list = new ArrayList<String>(Arrays.asList(s.split(",")));
 		for (int i = 1; i < 14; i++) {
 			validatetext(risktable.get(i), list.get(i));
@@ -213,7 +213,7 @@ public class Risk_object extends Baseclass {
 		String[] S = {"NA",RT,"UMS SUPPORT","","","Likely","Minor","Open","Very High","NA"};
 		List<WebElement> valid=driver.findElements(By.xpath("//td[normalize-space()='" + RID + "']/following-sibling::td"));
 		valid.size();
-		int i=0;
+		int i=1;
 		for(WebElement e:valid) {
 			validatetext(e, S[i]);
 			i++;

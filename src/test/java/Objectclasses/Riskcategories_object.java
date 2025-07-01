@@ -59,7 +59,7 @@ public class Riskcategories_object extends Baseclass  {
 		String s = "checkbox,ID,Risk Category Title,Category Description,Created By,Created Date,Status,Modified By,Modified Date,Edit,Delete";
 
 		List<String> list = new ArrayList<String>(Arrays.asList(s.split(",")));
-		for (int i = 1; i <= 11; i++) {
+		for (int i = 0; i <= 10; i++) {
 			validatetext(table.get(i), list.get(i));
 		}
 	}

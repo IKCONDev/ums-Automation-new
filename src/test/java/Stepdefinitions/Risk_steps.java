@@ -86,7 +86,7 @@ public class Risk_steps {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		RO.user_checks_Editcolumn_in_risk_page();	
-
+		
 	}
 
 }
