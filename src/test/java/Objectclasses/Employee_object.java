@@ -162,8 +162,9 @@ public class Employee_object extends Baseclass  {
 		driver = RC;
 		PageFactory.initElements(RC, this);
 	}
+	
 	@FindBy(xpath = "//div[normalize-space()='Setup']")
-	public WebElement Settings;
+	public WebElement Setup;
 
 	@FindBy(xpath = "//a[normalize-space()='Employee Profiles']")
 	public WebElement Employee_profiles;
@@ -187,9 +188,12 @@ public class Employee_object extends Baseclass  {
 	public List<WebElement> Table;
 
 	public void validate_the_employee_profiles_page() throws InterruptedException {
+		
+		driver.navigate().refresh();
+
+		Clickelement(Setup);
 		Thread.sleep(3000);
-		Clickelement(Settings);
-		Thread.sleep(3000);
+		
 		Clickelement(Employee_profiles);
 		Thread.sleep(3000);
 
@@ -203,8 +207,7 @@ public class Employee_object extends Baseclass  {
 		}
 	}
 
-//	@FindBy(xpath = "//div[contains(text(),'Add')]")
-//	public WebElement Add_button1;
+	
 	@FindBy(xpath = "//h5[normalize-space()='Add Employee']")
 	public WebElement Add_emp;
 	@FindBy(xpath = "//div[@id='addEmployeeModal']//label[contains(text(),'First Name')]")
@@ -267,8 +270,11 @@ public class Employee_object extends Baseclass  {
 
 	public void add_the_employee_profile(String FN, String LN, String EID, String Email, String DN, String DSN,
 			String FNs, String GN) throws InterruptedException {
-//		driver.navigate().refresh();
+		
+		Thread.sleep(3000);
 		Clickelement(Add_button);
+		Thread.sleep(3000);
+
 		validatetext(Add_emp, "Add Employee");
 		validatetext(First_name, "First Name");
 		validateattribute(First_namein, "placeholder","First Name");

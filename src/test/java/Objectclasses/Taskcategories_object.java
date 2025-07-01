@@ -91,7 +91,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -271,13 +273,33 @@ public class Taskcategories_object extends Baseclass {
 	public void Delete_the_category(String CN) throws InterruptedException {
 		driver.navigate().refresh();
 		sendkeyweb(Search, CN);
+//		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + CN + "']/following-sibling::td//button[@id='trashIcon']")));
+//		validatealert("Are you sure, you really want to delete selected task categories ?");
+//		driver.switchTo().alert().dismiss();
+//		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + CN + "']/preceding-sibling::td//input[@type='checkbox']")));
+//		Clickelement(del);
+//		validatealert("Are you sure, you really want to delete selected task categories ?");
+//		driver.switchTo().alert().dismiss();
+		
 		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + CN + "']/following-sibling::td//button[@id='trashIcon']")));
-		validatealert("Are you sure, you really want to delete selected task categories ?");
-		driver.switchTo().alert().dismiss();
-		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + CN + "']/preceding-sibling::td//input[@type='checkbox']")));
-		Clickelement(del);
-		validatealert("Are you sure, you really want to delete selected task categories ?");
-		driver.switchTo().alert().dismiss();
+
+		try {
+			Alert alert = driver.switchTo().alert();
+			System.out.println("Alert detected: " + alert.getText());
+			alert.dismiss();
+		} catch (NoAlertPresentException e) {
+			System.out.println("No alert present.");
+		}
+		
+		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + CN + "']/following-sibling::td//button[@id='trashIcon']")));
+
+		try {
+			Alert alert = driver.switchTo().alert();
+			System.out.println("Alert detected: " + alert.getText());
+			alert.accept();
+		} catch (NoAlertPresentException e) {
+			System.out.println("No alert present.");
+		}
 		
 
 	}

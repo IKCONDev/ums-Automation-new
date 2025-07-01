@@ -258,7 +258,7 @@ public class department_object extends Baseclass {
 		validatetext(Table_data.get(3), DC);
 		validatetext(Table_data.get(4), FN);
 		validatetext(Table_data.get(5), DL);
-		validatetext(Table_data.get(6), "Praveen Reddy");
+		validatetext(Table_data.get(6), "UMS SUPPORT");
 //		validatetext(Table_data.get(7), "May 21, 2024, 5:14 PM");
 		dispalyedattribute(edit, "Edit icon");
 		dispalyedattribute(delete, "Delete icon");
@@ -334,9 +334,9 @@ public class department_object extends Baseclass {
 		validatetext(Table_data.get(3), DC);
 		validatetext(Table_data.get(4), FN);
 		validatetext(Table_data.get(5), DL);
-		validatetext(Table_data.get(6), "Praveen Reddy");
+		validatetext(Table_data.get(6), "UMS SUPPORT");
 //		validatetext(Table_data.get(7), "May 21, 2024, 5:14 PM");
-		validatetext(Table_data.get(8), "Praveen Reddy");
+		validatetext(Table_data.get(8), "UMS SUPPORT");
 //		validatetext(Table_data.get(9), "May 21, 2024, 6:56 PM");
 		dispalyedattribute(edit, "Edit icon");
 		dispalyedattribute(delete, "Delete icon");
