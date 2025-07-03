@@ -585,7 +585,7 @@ public class Meeting_object extends Baseclass {
 	@FindBy(xpath = "//div[normalize-space()='Meetings']")
 	private WebElement Meetingssidemenu;
 	
-	@FindBy(xpath = "//div[@aria-expanded='true']")
+	@FindBy(xpath = "(//span[@class='ng-arrow-wrapper'])[1]")
 	private WebElement Meetingsdrpdwn;
 	
 	@FindBy(xpath = "//span[normalize-space()='Scheduled Meetings']")
@@ -593,6 +593,12 @@ public class Meeting_object extends Baseclass {
 	
 	@FindBy(xpath = "//div[contains(text(),'Filter')]")
 	private WebElement Meetingsfilter;
+	
+	@FindBy(xpath = "//ng-select[@placeholder='Choose Meeting Scope Selection']//span[@class='ng-arrow-wrapper']")
+	private WebElement Meetingscopeselectiondrpdwn;
+	
+	@FindBy(xpath = "//span[normalize-space()='My Meetings']")
+	private WebElement Meetingscopeselectionselect;
 	
 	@FindBy(xpath = "//ng-select[@placeholder='Choose Participation Role']//span[@class='ng-arrow-wrapper']")
 	private WebElement Participationroledrpdwn;
@@ -617,9 +623,15 @@ public class Meeting_object extends Baseclass {
 		Clickelement(Meetingsfilter);
 		Thread.sleep(3000);
 
-		Clickelement(Participationroledrpdwn);
+		Clickelement(Meetingscopeselectiondrpdwn);
 		Thread.sleep(3000);
 
+		Clickelement(Meetingscopeselectionselect);
+		Thread.sleep(3000);
+		
+		Clickelement(Participationroledrpdwn);
+		Thread.sleep(3000);
+		
 		Clickelement(Participationroleselect);
 		Thread.sleep(3000);
 
