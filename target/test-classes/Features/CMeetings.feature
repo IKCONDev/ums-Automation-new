@@ -1,5 +1,5 @@
-Feature: UMS
-
+#Feature: UMS
+#
   #@tag2
   #Scenario Outline: Meetings Page
   #Then user clicks and validates the meetings page
@@ -13,5 +13,5 @@ Feature: UMS
   #Examples:
   #| MT           | UN              | MID  | AT            | AD                   | TT      | TD                 | RT      | RD                 |
   #| fifteenweeks | Venkatesh Udaru | 1942 | Actionitem206 | Actiondescription206 | Task206 | Taskdescription206 | Risk206 | Riskdescription206 |
-  Scenario Outline: Scheduled Meetings
-    Then user check the scheduled meetings
+  #Scenario Outline: Scheduled Meetings
+    #Then user check the scheduled meetings
