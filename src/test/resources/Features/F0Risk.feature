@@ -1,10 +1,10 @@
-#Feature: UMS
-#
-  #@tag2
-  #Scenario Outline: Risk Page
-    #Then user validates risks page
-    #Then user add risks page "<RT>" "<RD>"
-#
+Feature: UMS
+
+  @tag2
+  Scenario Outline: Risk Page
+    Then user validates risks page
+    Then user add risks page "<RT>" "<RD>"
+
     #Then user validate the added risk "<RT>"
     #Then user update risks page "<RT>" "<RD>"
     #Then user delete risks page "<RT>"
@@ -12,6 +12,6 @@
     #Then user checks edit columns in risk page
     #Then user checks the risk filters "<RT>"
     #
-    #Examples: 
-      #| RT      | RD                 |
-      #| risk225 | riskdescription225 |
+    Examples: 
+      | RT      | RD                 |
+      | risk231 | riskdescription231 |

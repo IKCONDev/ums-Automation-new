@@ -1,28 +1,3 @@
-//package Stepdefinitions;
-//
-//import org.openqa.selenium.WebDriver;
-//
-//import Drivemanager.Driver;
-//import Objectclasses.Employee_object;
-//import Objectclasses.Team_object;
-//import io.cucumber.java.en.Then;
-//
-//public class Employees_steps {
-//
-//
-//
-//
-//	WebDriver driver = Driver.getDriver();
-//
-//	Employee_object EO = new Employee_object(driver);
-//
-//	@Then("user checks the employees page {string} {string} {string} {string}")
-//	public void user_check_the_Employees_page(String str1, String str2, String str3, String str4) throws Exception {
-//		EO.user_checks_Employees_page(str1, str2, str3, str4);
-//
-//	}
-//
-//}
 
 package Stepdefinitions;
 
@@ -49,9 +24,6 @@ public class Employees_steps {
 			String FNs, String GN) throws InterruptedException {
 		EO.validate_the_added_employees(FN, LN, EID, Email, DN, DSN, FNs, GN);
 	}
-
-
-
 
 	@Then("update the employee profile {string} {string} {string} {string} {string} {string} {string} {string}")
 	public void update_the_employee_profile(String FN, String LN, String EID,String Email, String DN, String DSN, String FNs, String GN) throws InterruptedException {

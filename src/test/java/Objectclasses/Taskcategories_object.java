@@ -111,13 +111,13 @@ public class Taskcategories_object extends Baseclass {
 	}
 	@FindBy(xpath = "//div[normalize-space()='Setup']")
 	public WebElement Setup;
-	
+
 	@FindBy(xpath = "//a[normalize-space()='Task Categories']")
 	public WebElement Taskcategories;
 
 	@FindBy(xpath = "//h3[@class='title']")
 	public WebElement Header;
-	
+
 	@FindBy(xpath = "//div[contains(text(),'Add')]")
 	public WebElement Add;
 	@FindBy(xpath = "//div[@class='edit-column'][normalize-space()='Delete']")
@@ -125,7 +125,7 @@ public class Taskcategories_object extends Baseclass {
 
 	@FindBy(xpath = "//thead//tr//th")
 	public List<WebElement> Table;
-	
+
 	public void validate_the_task_category_page() {
 		Clickelement(Setup);
 		Clickelement(Taskcategories);
@@ -134,7 +134,7 @@ public class Taskcategories_object extends Baseclass {
 		validatetext(Add, "Add");
 		validatetext(Delete, "Delete");
 
-		String s = "checkbox,ID,Risk Category Title,Category Description,Created By,Created Date,Status,Modified By,Modified Date,Edit,Delete";
+		String s = ",ID,Title,Description,Department,Created By,Created Date & Time,Modified By,Modified Date & Time,Edit,Delete";
 		//		List<String> list = new ArrayList<String>(Arrays.asList(s.split(",")));
 		//		for (int i = 2; i <= 11; i++) {
 		//			validatetext(driver.findElement(By.xpath("(//thead[@id='TaskCategoryThead']//tr//th)[" + i + "]")),list.get(i));
@@ -148,29 +148,29 @@ public class Taskcategories_object extends Baseclass {
 
 
 	}
-//	@FindBy(xpath = "//div[contains(text(),'Add')]")
-//	public WebElement Add;
+	//	@FindBy(xpath = "//div[contains(text(),'Add')]")
+	//	public WebElement Add;
 	@FindBy(xpath = "//h5[@id='xlModalLabel']")
 	public WebElement Task_cat;
-//	@FindBy(xpath = "//b[normalize-space()='Choose Department']")
-//	public WebElement Task_Dept;
-	
+	//	@FindBy(xpath = "//b[normalize-space()='Choose Department']")
+	//	public WebElement Task_Dept;
+
 	@FindBy(xpath = "//label[text()='Choose Department']")
 	public WebElement Task_Dept;
 	@FindBy(xpath = "//span[@title='Clear all']")
 	public WebElement Clear;
 	@FindBy(xpath = "//ng-select[@id='categoryDept']//span[@class='ng-arrow-wrapper']")
 	public WebElement Task_drop;
-//	@FindBy(xpath = "//b[normalize-space()='Task Category Name']")
-//	public WebElement TaskCat_name;
-	
+	//	@FindBy(xpath = "//b[normalize-space()='Task Category Name']")
+	//	public WebElement TaskCat_name;
+
 	@FindBy(xpath = "//label[text()='Task Category Name']")
 	public WebElement TaskCat_name;
 	@FindBy(xpath = "//input[@id='categoryName']")
 	public WebElement TaskCat_name_in;
-//	@FindBy(xpath = "//b[normalize-space()='Task Category Description']")
-//	public WebElement Task_desc;
-	
+	//	@FindBy(xpath = "//b[normalize-space()='Task Category Description']")
+	//	public WebElement Task_desc;
+
 	@FindBy(xpath = "//label[text()='Task Category Description']")
 	public WebElement Task_desc;
 	@FindBy(xpath = "//textarea[@id='categoryDesc']")
@@ -188,7 +188,7 @@ public class Taskcategories_object extends Baseclass {
 		Clickelement(Add);
 		Thread.sleep(3000);
 
-		validatetext(Task_cat, "Task category");
+		validatetext(Task_cat, "Task Category");
 		validatetext(Task_Dept, "Choose Department");
 		Clickelement(Clear);
 		Clickelement(Task_drop);	
@@ -207,9 +207,9 @@ public class Taskcategories_object extends Baseclass {
 
 	@FindBy(xpath = "//input[@placeholder='Search']")
 	public WebElement Search;
-//	@FindBy(xpath = "//td[contains(@class,'thTaskCategory1 sorting_')]")
-//	public List<WebElement> Table_data;
-	
+	//	@FindBy(xpath = "//td[contains(@class,'thTaskCategory1 sorting_')]")
+	//	public List<WebElement> Table_data;
+
 	@FindBy(xpath = "//td")
 	public List<WebElement> Table_data;
 	@FindBy(xpath = "//button[@id='editIcon']//*[name()='svg']")
@@ -221,10 +221,9 @@ public class Taskcategories_object extends Baseclass {
 		sendkeyweb(Search, CN);
 		dispalyedattribute(Table_data.get(0), "ID");
 		validatetext(Table_data.get(1), CN);
-		validatetext(Table_data.get(2), CN + " Task");
-		validatetext(Table_data.get(3), "Praveen Reddy");
-		validatetext(Table_data.get(4), "");
-//		validatetext(Table_data.get(5), "May 20, 2024, 4:14 PM");
+		validatetext(Table_data.get(2), CN + " Task");		
+		validatetext(Table_data.get(4), "UMS SUPPORT");
+		//		validatetext(Table_data.get(5), "May 20, 2024, 4:14 PM");
 		dispalyedattribute(Editicon, "Edit icon");
 		dispalyedattribute(Deleteicon, "Delete icon");
 
@@ -259,8 +258,8 @@ public class Taskcategories_object extends Baseclass {
 		validatetext(Table_data.get(2), CN + " Task");
 		validatetext(Table_data.get(3), " ");
 
-		validatetext(Table_data.get(4), "Praveen Reddy");
-//		validatetext(Table_data.get(5), "May 20, 2024, 4:14 PM");
+		validatetext(Table_data.get(4), "UMS SUPPORT");
+		//		validatetext(Table_data.get(5), "May 20, 2024, 4:14 PM");
 		validatetext(Table_data.get(6), " ");
 		validatetext(Table_data.get(7), " ");
 
@@ -269,18 +268,18 @@ public class Taskcategories_object extends Baseclass {
 	}
 	@FindBy(xpath = "//div[@class='edit-column'][normalize-space()='Delete']")
 	public WebElement del;
-	
+
 	public void Delete_the_category(String CN) throws InterruptedException {
 		driver.navigate().refresh();
 		sendkeyweb(Search, CN);
-//		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + CN + "']/following-sibling::td//button[@id='trashIcon']")));
-//		validatealert("Are you sure, you really want to delete selected task categories ?");
-//		driver.switchTo().alert().dismiss();
-//		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + CN + "']/preceding-sibling::td//input[@type='checkbox']")));
-//		Clickelement(del);
-//		validatealert("Are you sure, you really want to delete selected task categories ?");
-//		driver.switchTo().alert().dismiss();
-		
+		//		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + CN + "']/following-sibling::td//button[@id='trashIcon']")));
+		//		validatealert("Are you sure, you really want to delete selected task categories ?");
+		//		driver.switchTo().alert().dismiss();
+		//		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + CN + "']/preceding-sibling::td//input[@type='checkbox']")));
+		//		Clickelement(del);
+		//		validatealert("Are you sure, you really want to delete selected task categories ?");
+		//		driver.switchTo().alert().dismiss();
+
 		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + CN + "']/following-sibling::td//button[@id='trashIcon']")));
 
 		try {
@@ -290,7 +289,7 @@ public class Taskcategories_object extends Baseclass {
 		} catch (NoAlertPresentException e) {
 			System.out.println("No alert present.");
 		}
-		
+
 		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + CN + "']/following-sibling::td//button[@id='trashIcon']")));
 
 		try {
@@ -300,7 +299,7 @@ public class Taskcategories_object extends Baseclass {
 		} catch (NoAlertPresentException e) {
 			System.out.println("No alert present.");
 		}
-		
+
 
 	}
 }

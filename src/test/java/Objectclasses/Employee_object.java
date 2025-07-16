@@ -1,143 +1,8 @@
-//package Objectclasses;
-//
-//import org.openqa.selenium.WebDriver;
-//import org.openqa.selenium.WebElement;
-//import org.openqa.selenium.support.FindBy;
-//import org.openqa.selenium.support.PageFactory;
-//
-//import Datepicker.Dateformatter;
-//import Drivemanager.Driver;
-//import hooks.Baseclass;
-//
-//
-//public class Employee_object extends Baseclass  {
-//
-//
-//	WebDriver driver = Driver.getDriver();
-//	public Employee_object(WebDriver RC) {
-//		driver = RC;
-//		PageFactory.initElements(RC, this);
-//	}
-//
-//	@FindBy(xpath = "//div[normalize-space()='Settings']")
-//	public WebElement Settingssidemenu;
-//
-//	@FindBy(xpath = "//a[normalize-space()='Employee Profiles']")
-//	public WebElement Employeeprofilesselect;
-//
-//	@FindBy(xpath = "//div[@name='addEmpButton']")
-//	public WebElement Employeesaddbtn;
-//
-//	@FindBy(xpath = "//input[@id='firstName']")
-//	public WebElement Employeefirstname;
-//
-//	@FindBy(xpath = "//input[@id='lastName']")
-//	public WebElement Employeelastname;
-//
-//	@FindBy(xpath = "//div[@id='addEmployeeModal']//input[@id='employeeId']")
-//	public WebElement EmployeeID;
-//
-//	@FindBy(xpath = "//input[@id='genderMale']")
-//	public WebElement EmployeeGender;
-//
-//	@FindBy(xpath = "//input[@id='employeeEmail']")
-//	public WebElement Employeeemail;
-//
-//	@FindBy(xpath = "//div[@id='addEmployeeModal']//input[@id='datePicker']")
-//	public WebElement EmployeeDOJ;
-//
-//	@FindBy(xpath = "//ng-select[@id='reportingManager']//span[@class='ng-arrow-wrapper']")
-//	public WebElement EmployeeReportingmngrdrpdwn;
-//
-//	@FindBy(xpath = "//span[normalize-space()='ANURADHA GUPTA']")
-//	public WebElement EmployeeReportingmngrselect;
-//
-//	@FindBy(xpath = "//ng-select[@id='employeeDept']//span[@class='ng-arrow-wrapper']")
-//	public WebElement EmployeeDepartmentdrpdwn;
-//
-//	@FindBy(xpath = "//span[normalize-space()='Department 1']")
-//	public WebElement EmployeeDepartmentselect;
-//
-//	@FindBy(xpath = "//ng-select[@id='employeeTeam']//span[@class='ng-arrow-wrapper']")
-//	public WebElement Chooseteamdrpdwn;
-//
-//	@FindBy(xpath = "//span[normalize-space()='Team One']")
-//	public WebElement teamselect;
-//
-//	@FindBy(xpath = "//ng-select[@id='employeeDesgn']//span[@class='ng-arrow-wrapper']")
-//	public WebElement employeedesignationdrpdwn;
-//
-//	@FindBy(xpath = "//span[normalize-space()='IT - Intern']")
-//	public WebElement employeedesignationselect;
-//
-//	@FindBy(xpath = "//div[@id='addEmployeeModal']//button[@type='button'][normalize-space()='Save']")
-//	public WebElement employeesavebtn;
-//
-//
-//	Dateformatter da=new Dateformatter();
-//
-//
-//	public void user_checks_Employees_page(String str1, String str2, String str3, String str4) throws InterruptedException {
-//		Clickelement(Settingssidemenu);
-//		Thread.sleep(3000);
-//
-//		Clickelement(Employeeprofilesselect);
-//		Thread.sleep(3000);
-//
-//		Clickelement(Employeesaddbtn);
-//		Thread.sleep(3000);
-//
-//		sendkeyweb(Employeefirstname, str1);
-//		Thread.sleep(3000);
-//
-//		sendkeyweb(Employeelastname, str2);
-//		Thread.sleep(3000);
-//
-//		sendkeyweb(EmployeeID, str3);
-//		Thread.sleep(3000);
-//
-//		Clickelement(EmployeeGender);
-//		Thread.sleep(3000);
-//
-//		sendkeyweb(Employeeemail, str4);
-//		Thread.sleep(3000);
-//
-//		sendkeyweb(EmployeeDOJ, da.Datefun(1,0,0) );	
-//		Thread.sleep(3000);
-//
-//		Clickelement(EmployeeReportingmngrdrpdwn);
-//		Thread.sleep(3000);
-//
-//		Clickelement(EmployeeReportingmngrselect);
-//		Thread.sleep(3000);
-//
-//		Clickelement(EmployeeDepartmentdrpdwn);
-//		Thread.sleep(3000);
-//
-//		Clickelement(EmployeeDepartmentselect);
-//		Thread.sleep(3000);
-//
-//		Clickelement(Chooseteamdrpdwn);
-//		Thread.sleep(3000);
-//
-//		Clickelement(teamselect);
-//		Thread.sleep(3000);
-//
-//		Clickelement(employeedesignationdrpdwn);
-//		Thread.sleep(3000);
-//
-//
-//		Clickelement(employeedesignationselect);
-//		Thread.sleep(3000);
-//
-//		Clickelement(employeesavebtn);
-//		Thread.sleep(3000);
-//	}
-//}
 
 package Objectclasses;
 
 import java.util.ArrayList;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -189,7 +54,7 @@ public class Employee_object extends Baseclass  {
 
 	public void validate_the_employee_profiles_page() throws InterruptedException {
 		
-		driver.navigate().refresh();
+//		driver.navigate().refresh();
 
 		Clickelement(Setup);
 		Thread.sleep(3000);

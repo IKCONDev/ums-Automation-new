@@ -153,7 +153,7 @@ public class department_object extends Baseclass {
 		validatetext(Deletebtn, "Delete");
 
 
-		String s = "checkbox,ID,Department Name,Department Code,Department Head,Department Location,Created By,Created Date,Modified By,Modified Date,Edit,Delete";
+		String s = ",ID,Department Name,Department Code,Department Head,Department Location,Created By,Created Date,Modified By,Modified Date,Edit,Delete";
 		Table_prop(Organization, s);
 
 	}
