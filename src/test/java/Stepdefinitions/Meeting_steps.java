@@ -79,6 +79,7 @@ public class Meeting_steps {
 	@Then("user check the scheduled meetings")
 	public void check_the_ScheduledMeetings_page() throws Exception {
 		MO. check_the_ScheduledMeetings_page();
+		
 	}
 }
 

@@ -240,9 +240,9 @@ public class Roles_object extends Baseclass {
 	@FindBy(xpath = "//button[@id='trashIcon']//*[name()='svg']")
 	public WebElement Delete_icon;
 	public void validate_the_added_role_data(String RN) throws InterruptedException {
-
+		driver.navigate().refresh();
 		sendkeyweb(Search, RN);
-
+		Thread.sleep(3000);
 		attributeselected(Table_data.get(1), "ID");
 		validatetext(Table_data.get(2), RN);
 		validatetext(Table_data.get(3), "View");
@@ -278,6 +278,7 @@ public class Roles_object extends Baseclass {
 
 	public void update_the_role(String RN, String PN) throws InterruptedException {
 		sendkeyweb(Search, RN);
+		Thread.sleep(3000);
 		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + RN + "']/following-sibling::td//button[@id='editIcon']")));
 		//		add_the_role(RN, PN);
 
@@ -305,6 +306,7 @@ public class Roles_object extends Baseclass {
 
 	public void validate_the_updated_role_data(String RN) throws InterruptedException {
 		sendkeyweb(updateSearch, RN);
+		Thread.sleep(3000);
 		attributeselected(Table_data1.get(1), "ID");
 		validatetext(Table_data1.get(2), RN);
 		validatetext(Table_data1.get(3), "View");

@@ -1,44 +1,3 @@
-//package Stepdefinitions;
-//
-//import java.time.Duration;
-//
-//import org.openqa.selenium.WebDriver;
-//
-//import Drivemanager.Driver;
-//import Objectclasses.Actionitem_object;
-//import Objectclasses.Roles_object;
-//import io.cucumber.java.en.Then;
-//
-//public class Roles_steps {
-//
-//	WebDriver driver = Driver.getDriver();
-//
-//	Roles_object RO = new Roles_object(driver);
-//
-//	@Then("user checks the roles page {string}")
-//	public void user__check_the_roles_page(String str) throws Exception {
-//		//		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-//		RO.user_check_the_roles_page(str);
-//
-//	}
-//	@Then("user update the roles page {string}")
-//	public void user__update_the_roles_page(String str1) throws Exception {
-//		//		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-//
-//		RO.user_update_the_roles_page(str1);
-//
-//	}
-//
-//	@Then("user delete the roles page {string}")
-//	public void user__delete_the_roles_page(String str2) throws Exception {
-//		//		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-//
-//		RO.user_delete_the_roles_page(str2);
-//
-//	}
-//}
-
-
 
 package Stepdefinitions;
 
@@ -55,8 +14,6 @@ public class Roles_steps {
 
 	WebDriver driver = Driver.getDriver();
 	Roles_object RO = new Roles_object(driver);
-
-
 
 	@Then("validate the roles page")
 	public void validate_the_roles_page() throws InterruptedException {
@@ -87,7 +44,7 @@ public class Roles_steps {
 	public void Delete_the_role(String RN) throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		RO.Delete_the_role(RN);
-		
+
 	}
 }
 

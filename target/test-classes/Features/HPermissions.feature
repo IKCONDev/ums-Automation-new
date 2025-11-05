@@ -10,5 +10,5 @@ Feature: UMS
     Then Delete the Permissions "<s1>"
 
     Examples: 
-      | s1      |
-      | Harmony |
+      | s1   |
+      | Tech |

@@ -238,7 +238,7 @@ public class Internalnotes_object extends Baseclass {
 		attributeselected(Table_data.get(0), "ID");
 		validatetext(Table_data.get(1), IN);
 		validatetext(Table_data.get(2), "UMS SUPPORT");
-		validatetext(Table_data.get(3), "Under Approval");
+		validatetext(Table_data.get(3), "In Review");
 		Thread.sleep(3000);
 		attributeselected(Table_data.get(4), "Document");
 

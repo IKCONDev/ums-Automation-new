@@ -40,11 +40,11 @@ import Objectclasses.designation_object;
 import io.cucumber.java.en.Then;
 
 public class designation_steps {
-	
-		
-		WebDriver driver = Driver.getDriver();
-		
-		designation_object DO = new designation_object(driver);
+
+
+	WebDriver driver = Driver.getDriver();
+
+	designation_object DO = new designation_object(driver);
 	@Then("validate the designations page")
 	public void validate_the_designations_page() throws InterruptedException {
 		DO.validate_the_designations_page();
@@ -73,8 +73,7 @@ public class designation_steps {
 	public void delete_the_designation(String DSN) throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		DO.delete_the_designation(DSN);
-		
-}
 
+	}
 }
 

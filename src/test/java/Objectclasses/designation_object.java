@@ -149,7 +149,7 @@ public class designation_object extends Baseclass {
 		validatetext(Desig_Add,"Add");
 		validatetext(Desig_Delete,"Delete");
 		//		validatetext(Desig_editcol,"Edit Column");
-		String s = "checkbox,ID,Designation Name,Created By,Created Date,Modified By,Modified Date,Edit,Delete";
+		String s = "checkbox,ID,Designation Name,Created By,Created Date & Time,Modified By,Modified Date & Time,Edit,Delete";
 		//		Table_prop(Desig_table, s);
 		List<String> list = new ArrayList<String>(Arrays.asList(s.split(",")));
 		for (int i = 1; i < 9; i++) {
@@ -214,11 +214,11 @@ public class designation_object extends Baseclass {
 	}
 
 
-	//	@FindBy(xpath = "//div[@id='updateModal']//h5[@id='xlModalLabel']")
-	//	public WebElement Desig_update;
-
-	@FindBy(xpath = "//button[@id='editDesgIcon']//*[name()='svg']")
+	@FindBy(xpath = "//div[@id='updateModal']//h5[@id='xlModalLabel']")
 	public WebElement Desig_update;
+
+	//	@FindBy(xpath = "//button[@id='editDesgIcon']//*[name()='svg']")
+	//	public WebElement Desig_update;
 	//	@FindBy(xpath = "//div[@id='updateModal']//b[contains(text(),'Designation Name')]")
 	//	public WebElement Desig_uname;
 
@@ -298,11 +298,12 @@ public class designation_object extends Baseclass {
 		} catch (NoAlertPresentException e) {
 			System.out.println("No alert present.");
 		}
-
+		Thread.sleep(3000);
 
 
 		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + DSN + "']/following-sibling::td//button[@id='trashDesgIcon']")));
 
+		Thread.sleep(3000);
 
 		try {
 			Alert alert = driver.switchTo().alert();

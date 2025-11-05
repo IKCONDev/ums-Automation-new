@@ -27,7 +27,7 @@ public class Employee_object extends Baseclass  {
 		driver = RC;
 		PageFactory.initElements(RC, this);
 	}
-	
+
 	@FindBy(xpath = "//div[normalize-space()='Setup']")
 	public WebElement Setup;
 
@@ -53,12 +53,12 @@ public class Employee_object extends Baseclass  {
 	public List<WebElement> Table;
 
 	public void validate_the_employee_profiles_page() throws InterruptedException {
-		
-//		driver.navigate().refresh();
+
+		//		driver.navigate().refresh();
 
 		Clickelement(Setup);
 		Thread.sleep(3000);
-		
+
 		Clickelement(Employee_profiles);
 		Thread.sleep(3000);
 
@@ -67,12 +67,12 @@ public class Employee_object extends Baseclass  {
 		validatetext(delete_button, "Delete");
 		String s = "checkbox,ID,First Name,Last Name,Gender,Email ID,Reporting Manager,Team,Department,Designation,Status,Batch Process Status,Edit,Delete";
 		List<String> list = new ArrayList<String>(Arrays.asList(s.split(",")));
-		for (int i = 1; i <= 14; i++) {
+		for (int i = 1; i <= 13; i++) {
 			validatetext(Table.get(i), list.get(i));
 		}
 	}
 
-	
+
 	@FindBy(xpath = "//h5[normalize-space()='Add Employee']")
 	public WebElement Add_emp;
 	@FindBy(xpath = "//div[@id='addEmployeeModal']//label[contains(text(),'First Name')]")
@@ -110,8 +110,12 @@ public class Employee_object extends Baseclass  {
 	//	@FindBy(xpath = "//select[@id='employeeDept']")
 	//	public WebElement DEP_select;
 
-	@FindBy(xpath = "//ng-select[@id='employeeDept']//span[@class='ng-arrow-wrapper']")
-	public WebElement DEP_select;
+//	@FindBy(xpath = "//ng-select[@id='employeeDept']//span[@class='ng-arrow-wrapper']")
+//	public WebElement DEP_select;
+
+		@FindBy(xpath = "//ng-select[@id='employeeDept']//input[@type='text']")
+		public WebElement DEP_select;
+
 	@FindBy(xpath = "//div[@id='addEmployeeModal']//label[contains(text(),'Choose Team')]")
 	public WebElement Team1;
 	@FindBy(xpath = "//ng-select[@id='employeeTeam']//span[@class='ng-arrow-wrapper']")
@@ -135,7 +139,7 @@ public class Employee_object extends Baseclass  {
 
 	public void add_the_employee_profile(String FN, String LN, String EID, String Email, String DN, String DSN,
 			String FNs, String GN) throws InterruptedException {
-		
+
 		Thread.sleep(3000);
 		Clickelement(Add_button);
 		Thread.sleep(3000);
@@ -146,7 +150,9 @@ public class Employee_object extends Baseclass  {
 		sendkeyweb(First_namein, FN);
 		validatetext(Last_name, "Last Name");
 		validateattribute(Last_namein, "placeholder","First Name");
-		sendkeyweb(Last_namein, LN+" ");
+		//		sendkeyweb(Last_namein, LN+" ");
+		sendkeyweb(Last_namein, LN);
+
 		validatetext(Emp_Id, "Employee ID");
 		validateattribute(Emp_Id_in, "placeholder","Employee ID");
 		sendkeyweb(Emp_Id_in, EID);
@@ -158,7 +164,7 @@ public class Employee_object extends Baseclass  {
 		validateattribute(Email_in, "placeholder","Email");
 		sendkeyweb(Email_in, Email);
 		validatetext(DOJ, "Date of Joining");
-		sendkeyweb(DOJ_in, D.Datefun(1,9,10));
+		sendkeyweb(DOJ_in, D.Datefun(1,1,1));
 
 		validatetext(RPM, "Reporting Manager");
 		Clickelement(RPM_dd);
@@ -168,7 +174,11 @@ public class Employee_object extends Baseclass  {
 			Clickelement(driver.findElement(By.xpath("//span[@class='ng-option-label'][contains(.,'" + FNs + "')]")));
 		}
 		validatetext(DEP, "Department");
+		Thread.sleep(3000);
+
 		Selectdropdown(DEP_select, DN);
+		Thread.sleep(3000);
+
 		validatetext(Team1, "Choose Team");
 		Clickelement(Team_dd);
 		Clickelement(driver.findElement(By.xpath("//ng-select[@id='employeeTeam']//span[@title='Clear all']")));

@@ -9,7 +9,7 @@ import Objectclasses.Logout_object;
 import io.cucumber.java.en.Then;
 
 public class Logout_steps {
-	
+
 	WebDriver driver = Driver.getDriver();
 	Logout_object LO = new Logout_object(driver);
 
@@ -22,3 +22,4 @@ public class Logout_steps {
 	}
 
 }
+

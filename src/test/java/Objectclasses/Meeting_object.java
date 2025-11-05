@@ -238,7 +238,7 @@ public class Meeting_object extends Baseclass {
 	@FindBy(xpath = "//ng-select[@placeholder='Choose Assignee']//span[@class='ng-arrow-wrapper']")
 	private WebElement Actionitemassignedrpdwn;
 
-	@FindBy(xpath = "//span[normalize-space()='Ananthasivan Subramanian']")
+	@FindBy(xpath = "//span[normalize-space()='Adam Smith']")
 	private WebElement Actitemassigneeselect;
 
 	@FindBy(xpath = "(//input[@name='startDate'])[1]")
@@ -280,14 +280,14 @@ public class Meeting_object extends Baseclass {
 	@FindBy(xpath = "(//span[@class='ng-arrow-wrapper'])[2]")
 	private WebElement Taskassignedtodrpdwn;
 
-	@FindBy(xpath = "//span[normalize-space()='Charan U']")
+	@FindBy(xpath = "//span[normalize-space()='Mounika Errolla']")
 	private WebElement Taskassigneslect;
 
 
 	@FindBy(xpath = "(//span[@class='ng-arrow-wrapper'])[3]")
 	private WebElement Taskreviewrdrpdwn;
 
-	@FindBy(xpath = "//span[normalize-space()='Mounika Errolla']")
+	@FindBy(xpath = "//span[normalize-space()='Meenakshi S']")
 	private WebElement Taskreviewrselect;
 
 	@FindBy(xpath = "(//span[@class='ng-arrow-wrapper'])[4]")
@@ -304,7 +304,7 @@ public class Meeting_object extends Baseclass {
 
 	//Risk create
 
-	@FindBy(xpath = "(//button[contains(text(),'Risks')])[1]")
+	@FindBy(xpath = "(//button[normalize-space()='Risks'])[1]")
 	private WebElement Risk;
 
 	@FindBy(xpath = "//img[@alt='Add Risk']")
@@ -579,41 +579,41 @@ public class Meeting_object extends Baseclass {
 
 
 	}
-	
+
 	//Scheduled Meetings
-	
+
 	@FindBy(xpath = "//div[normalize-space()='Meetings']")
 	private WebElement Meetingssidemenu;
-	
+
 	@FindBy(xpath = "(//span[@class='ng-arrow-wrapper'])[1]")
 	private WebElement Meetingsdrpdwn;
-	
+
 	@FindBy(xpath = "//span[normalize-space()='Scheduled Meetings']")
 	private WebElement Scheduledmeetings;
-	
+
 	@FindBy(xpath = "//div[contains(text(),'Filter')]")
 	private WebElement Meetingsfilter;
-	
+
 	@FindBy(xpath = "//ng-select[@placeholder='Choose Meeting Scope Selection']//span[@class='ng-arrow-wrapper']")
 	private WebElement Meetingscopeselectiondrpdwn;
-	
+
 	@FindBy(xpath = "//span[normalize-space()='My Meetings']")
 	private WebElement Meetingscopeselectionselect;
-	
+
 	@FindBy(xpath = "//ng-select[@placeholder='Choose Participation Role']//span[@class='ng-arrow-wrapper']")
 	private WebElement Participationroledrpdwn;
-	
+
 	@FindBy(xpath = "//span[normalize-space()='My Organized Meetings']")
 	private WebElement Participationroleselect;
-	
-	
+
+
 	@FindBy(xpath = "//div[@id='scheduledFilterModal']//button[@type='button'][normalize-space()='Apply']")
 	private WebElement Applybtn;
-	
+
 	public void check_the_ScheduledMeetings_page() throws InterruptedException {
 		Clickelement(Meetingssidemenu);
 		Thread.sleep(3000);
-		
+
 		Clickelement(Meetingsdrpdwn);
 		Thread.sleep(3000);
 
@@ -628,10 +628,10 @@ public class Meeting_object extends Baseclass {
 
 		Clickelement(Meetingscopeselectionselect);
 		Thread.sleep(3000);
-		
+
 		Clickelement(Participationroledrpdwn);
 		Thread.sleep(3000);
-		
+
 		Clickelement(Participationroleselect);
 		Thread.sleep(3000);
 
@@ -639,5 +639,5 @@ public class Meeting_object extends Baseclass {
 		Thread.sleep(3000);
 
 
-}
+	}
 }

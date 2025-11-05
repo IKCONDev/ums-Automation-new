@@ -33,7 +33,7 @@ public class Login_object extends Baseclass {
 	public WebElement forgotpasstxtval;
 
 	public void user_validating_login_page() throws InterruptedException {
-		validatetext(logintxtval, "Login");
+		validatetext(logintxtval, "Login to UMS");
 		validateattribute(emailidplaceholdertxtval, "placeholder", "Email ID");
 		validateattribute(passwordplaceholdertxtval, "placeholder", "Password");
 		validatetext(loginbuttontxtval, "Login");
@@ -55,7 +55,7 @@ public class Login_object extends Baseclass {
 		sendkeyweb(passwordtextbox, Password);
 		Clickelement(loginbuttonclick);
 		Thread.sleep(3000);
-		
+
 	}
 
 }

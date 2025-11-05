@@ -97,7 +97,7 @@ public class Risk_object extends Baseclass {
 	@FindBy(xpath = "//ng-select[@id='addRiskOwner']//span[@class='ng-arrow-wrapper']")
 	public WebElement RiskAssignedtodrpdwn;
 
-	@FindBy(xpath = "(//span[@class='ng-option-label ng-star-inserted'][contains(text(),'UMS')])[2]")
+	@FindBy(xpath = "//span[normalize-space()='UMS SUPPORT']")
 	public WebElement RiskAssignedtoselect;
 
 

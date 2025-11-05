@@ -247,11 +247,11 @@ public class Team_object extends Baseclass {
 		validatetext(teamleadtitle, "Team Lead*");
 
 		Clickelement(Team_lead);
-		Clickelement(driver.findElement(By.xpath("//span[normalize-space()='Prabhakaran A']")));
+		Clickelement(driver.findElement(By.xpath("//span[contains(text(),'Harsha Vardhan Reddy')]")));
 		validatetext(teamheadtitle, "Team Head*");
 
 		Clickelement(Team_head);
-		Clickelement(driver.findElement(By.xpath("//span[normalize-space()='Venkatesh Udaru']")));
+		Clickelement(driver.findElement(By.xpath("//span[contains(text(),'Harsha Vardhan Reddy')]")));
 		Thread.sleep(2000);
 		
 		validatetext(Save_button, "Save");
@@ -409,8 +409,6 @@ public class Team_object extends Baseclass {
 	    System.out.println("No alert present.");
 	}
 		
-	}
-
-	
+	}	
 }
 

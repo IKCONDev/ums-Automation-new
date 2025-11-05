@@ -3,9 +3,9 @@ package Stepdefinitions;
 
 import org.openqa.selenium.WebDriver;
 
+
 import Drivemanager.Driver;
 import Objectclasses.Employee_object;
-import Objectclasses.Team_object;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 
@@ -13,6 +13,11 @@ public class Employees_steps {
 	WebDriver driver = Driver.getDriver();
 
 	Employee_object EO = new Employee_object(driver);
+
+	@And("validate the employee profile page")
+	public void validate_the_employee_profiles_page() throws InterruptedException {
+		EO.validate_the_employee_profiles_page();
+	}
 
 	@And("add the employee profile {string} {string} {string} {string} {string} {string} {string} {string}")
 	public void add_the_employee_profile(String FN, String LN, String EID, String Email, String DN, String DSN,
@@ -40,7 +45,7 @@ public class Employees_steps {
 	public void delete_the_employee(String Email) throws InterruptedException {
 
 		EO.delete_the_employee(Email);
-
+		
 	}
 
 }
