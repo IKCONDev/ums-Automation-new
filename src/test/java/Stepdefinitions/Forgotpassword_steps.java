@@ -21,6 +21,7 @@ public class Forgotpassword_steps {
 		driver.manage().window().maximize();
 		FO.validate_the_Forgotpassword_page();
 
+		
 	}
 }
 

@@ -196,8 +196,7 @@ public class Actionitem_object extends Baseclass {
 		Thread.sleep(3000);
 
 		Clickelement(updatebtn);
-		Thread.sleep(3000);
-
+		Thread.sleep(3000); 
 	}
 
 	@FindBy(xpath = "//button[@id='trashIcon']//*[name()='svg']")
@@ -373,6 +372,6 @@ public class Actionitem_object extends Baseclass {
 
 		Clickelement(Crossmark);
 		Thread.sleep(3000);
-
+		
 	}
 }

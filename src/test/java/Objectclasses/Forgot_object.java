@@ -23,6 +23,7 @@ public class Forgot_object extends Baseclass  {
 		PageFactory.initElements(RC, this);
 	}
 
+	
 	@FindBy(xpath = "//a[normalize-space()='Forgot Password?']")
 	public WebElement Forgotpassword;
 

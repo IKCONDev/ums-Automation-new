@@ -18,6 +18,7 @@ public class Riskcategories_steps {
 	@Then("Validate the risk category page")
 	public void validate_the_risk_category_page() throws InterruptedException {
 		RO.validate_the_risk_category_page();
+	
 	}
 
 	@Then("Add the Riskcategory {string}")

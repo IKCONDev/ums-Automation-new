@@ -49,6 +49,7 @@ public class designation_steps {
 	public void validate_the_designations_page() throws InterruptedException {
 		DO.validate_the_designations_page();
 	}
+	
 	@Then("add the designation {string}")
 	public void add_the_designation(String DSN) throws InterruptedException {
 		DO.add_the_designation(DSN);

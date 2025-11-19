@@ -17,5 +17,6 @@ plugin = {"pretty","html:target/cucu-report.html","json:target/cuc"}
  
 public class Runnerclass extends AbstractTestNGCucumberTests {
 
+	
 }
   

@@ -26,7 +26,6 @@ public class Risk_object extends Baseclass {
 		PageFactory.initElements(RC, this);
 	}
 
-
 	@FindBy(xpath = "//div[normalize-space()='Risks']")
 	public WebElement Risksidemenu;
 
@@ -97,14 +96,14 @@ public class Risk_object extends Baseclass {
 	@FindBy(xpath = "//ng-select[@id='addRiskOwner']//span[@class='ng-arrow-wrapper']")
 	public WebElement RiskAssignedtodrpdwn;
 
-	@FindBy(xpath = "//span[normalize-space()='UMS SUPPORT']")
+	@FindBy(xpath = "//span[normalize-space()='Gowri Durga Nakka']")
 	public WebElement RiskAssignedtoselect;
 
 
 	@FindBy(xpath = "//ng-select[@id='addriskCategory']//span[@class='ng-arrow-wrapper']")
 	public WebElement Riskcategorydrpdwn;
 
-	@FindBy(xpath = "//span[normalize-space()='Data Loss']")
+	@FindBy(xpath = "//span[normalize-space()='Operational Risks']")
 	public WebElement Riskcategoryselect;
 
 	@FindBy(xpath = "(//img[@alt='Dropdown icon'])[2]")
@@ -161,10 +160,10 @@ public class Risk_object extends Baseclass {
 		validatetext(valcancelbtn, "Cancel");
 
 		sendkeyweb(Risktitle, RT);
-
+		Thread.sleep(3000);
 		Clickelement(RiskAssignedtodrpdwn);
 
-
+		Thread.sleep(3000);
 		Clickelement(RiskAssignedtoselect);
 
 
@@ -199,12 +198,12 @@ public class Risk_object extends Baseclass {
 
 
 	}
-	
+
 	@FindBy(xpath = "//button[@id='editIcon']//*[name()='svg']")
 	public WebElement Edit_icon;
 	@FindBy(xpath = "//button[@id='trashIcon']//*[name()='svg']")
 	public WebElement Delete_icon;
-	
+
 	public void Validate_the_addedRisk(String RT) throws InterruptedException  {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		driver.navigate().refresh();
@@ -218,7 +217,7 @@ public class Risk_object extends Baseclass {
 			validatetext(e, S[i]);
 			i++;
 		}
-		
+
 		attributeselected(Edit_icon, "Edit icon");
 		Thread.sleep(3000);
 
@@ -603,7 +602,7 @@ public class Risk_object extends Baseclass {
 		Clickelement(riskprobabilitydrpdwnselect);
 		Thread.sleep(3000);
 
-		
+
 		Clickelement(riskfltrApplybtn);
 		Thread.sleep(3000);
 
@@ -713,8 +712,6 @@ public class Risk_object extends Baseclass {
 		Clickelement(riskreporteedrpdwn);
 
 		Thread.sleep(3000);
-
-
 		Clickelement(riskfltrxmark);
 
 

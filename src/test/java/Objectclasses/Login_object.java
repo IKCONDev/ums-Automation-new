@@ -16,6 +16,7 @@ public class Login_object extends Baseclass {
 		PageFactory.initElements(RC, this);
 	}
 
+	
 	@FindBy(xpath = "//label[@id='loginHeading']")
 	public WebElement logintxtval;
 

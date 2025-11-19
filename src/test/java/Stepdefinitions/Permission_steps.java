@@ -40,7 +40,6 @@ import io.cucumber.java.en.Then;
 
 public class Permission_steps {
 
-
 	WebDriver driver = Driver.getDriver();
 
 	Permission_object PO = new Permission_object(driver);

@@ -24,13 +24,11 @@ public class Meeting_steps {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		MO. ValidatingcreateMeetingFields();
-
 	}
 
 	@Then("user enters the meeting details in create meeting {string} {string}")
 	public void user__enter_the_details_in_Meetingspage(String MT, String UN) throws Exception {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-
 		MO. Enter_the_details(MT, UN);
 
 	}

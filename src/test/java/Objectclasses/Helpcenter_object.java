@@ -15,6 +15,7 @@ public class Helpcenter_object extends Baseclass {
 		PageFactory.initElements(RC, this);
 	}
 
+	
 	@FindBy(xpath = "//div[normalize-space()='Help Center']")
 	public WebElement Helpcenter;
 

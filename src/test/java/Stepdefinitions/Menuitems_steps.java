@@ -48,6 +48,7 @@ public class Menuitems_steps {
 	public void validate_the_menu_items_page() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		MO.validate_the_menu_items_page();
+		
 	}
 	@And("Add menu items {string}")
 	public void Add_menu_items(String s1) throws InterruptedException {

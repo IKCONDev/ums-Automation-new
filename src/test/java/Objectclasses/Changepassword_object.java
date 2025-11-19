@@ -19,6 +19,7 @@ public class Changepassword_object extends Baseclass {
 	@FindBy(xpath = "//div[@id='profile-icon']//img[@alt='profile pic']")
 	public WebElement Profile;
 
+	
 	@FindBy(xpath = "//a[@id='changePassword']")
 	public WebElement ChangePassword;
 

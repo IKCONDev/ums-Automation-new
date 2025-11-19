@@ -15,6 +15,7 @@ public class Notifications_object extends Baseclass {
 		driver = RC;
 		PageFactory.initElements(RC, this);
 	}
+	
 	@FindBy(xpath = "//*[name()='path' and @id='notification-icon']")
 	public WebElement Notifications;
 

@@ -18,6 +18,7 @@ public class Employees_steps {
 	public void validate_the_employee_profiles_page() throws InterruptedException {
 		EO.validate_the_employee_profiles_page();
 	}
+	
 
 	@And("add the employee profile {string} {string} {string} {string} {string} {string} {string} {string}")
 	public void add_the_employee_profile(String FN, String LN, String EID, String Email, String DN, String DSN,
@@ -44,8 +45,7 @@ public class Employees_steps {
 	@Then("delete the employee {string}")
 	public void delete_the_employee(String Email) throws InterruptedException {
 
-		EO.delete_the_employee(Email);
-		
+		EO.delete_the_employee(Email);		
 	}
 
 }

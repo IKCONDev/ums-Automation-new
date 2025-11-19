@@ -109,6 +109,7 @@ public class Taskcategories_object extends Baseclass {
 		driver = RC;
 		PageFactory.initElements(RC, this);
 	}
+	
 	@FindBy(xpath = "//div[normalize-space()='Setup']")
 	public WebElement Setup;
 

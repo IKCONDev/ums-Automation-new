@@ -44,6 +44,7 @@ public class Users_steps {
 	public void validate_the_users_page() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		UO.validate_the_users_page();
+	
 	}
 
 	@Then("add the user {string} {string}")

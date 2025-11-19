@@ -38,6 +38,7 @@ public class Dateformatter {
 	public static String elementcapsre(WebElement web) {
 		String bs4 = web.getScreenshotAs(OutputType.BASE64);
 		return bs4;
+		
 	}
 	
 }

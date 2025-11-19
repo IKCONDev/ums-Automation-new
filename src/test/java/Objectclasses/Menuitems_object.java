@@ -166,6 +166,7 @@ public class Menuitems_object extends Baseclass {
 		PageFactory.initElements(RC, this);
 	}
 
+	
 	@FindBy(xpath="//div[normalize-space()='Setup']")
 	public WebElement Settings;
 

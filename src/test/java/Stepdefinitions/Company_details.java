@@ -18,7 +18,6 @@ public class Company_details {
 			CO.validate_the_company_details_page();
 		}
 		
-
 		@Then("add the company details")
 		public void add_the_company_details() throws InterruptedException {
 			CO.add_the_company_details();

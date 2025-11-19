@@ -36,6 +36,7 @@ public class batchprocess_object  extends Baseclass{
 
 	@FindBy(xpath="//button[normalize-space()='Save']")
 	public WebElement Savebtn;
+	
 
 	@FindBy(xpath="//button[@id='closeUpdateModal']")
 	public WebElement Cancel;

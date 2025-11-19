@@ -16,6 +16,7 @@ public class Logout_object extends Baseclass{
 		PageFactory.initElements(RC, this);
 	}
 
+	
 	@FindBy(xpath = "//div[@id='profile-icon']//img[@alt='profile pic']")
 	public WebElement Profile;
 

@@ -49,7 +49,6 @@ public class Taskcategories_steps {
 	@Then("Validate the task category page")
 	public void validate_the_task_category_page() {
 		TO.validate_the_task_category_page();
-
 	}
 
 	@Then("add the category {string}")

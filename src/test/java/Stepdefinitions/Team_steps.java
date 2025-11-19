@@ -81,6 +81,7 @@ public class Team_steps {
 	@Then("validate the teams page")
 	public void validate_the_teams_page() throws InterruptedException {
 		TO.Validate_Teams_page();
+		
 	}
 	@Then("add the team {string}")
 	public void add_the_designation(String Team) throws InterruptedException {

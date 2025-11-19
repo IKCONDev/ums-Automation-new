@@ -51,6 +51,7 @@ public class Departments_steps {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		DO.validate_the_departments_page();
 	}
+	
 
 	@Then("add the department {string} {string} {string} {string}")
 	public void add_the_department(String DN, String FN, String DC, String DL) throws InterruptedException {

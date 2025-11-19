@@ -1,9 +1,9 @@
 package Drivemanager;
- 
+
 import java.util.HashMap;
 
 import java.util.Map;
- 
+
 import org.openqa.selenium.WebDriver;
 
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,13 +11,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
- 
+
 public class Driver {
 
-	
+
 	public static WebDriver driver;
 
-		static {		
+	static {		
 
 		WebDriverManager.chromedriver().setup();
 
@@ -48,7 +48,6 @@ public class Driver {
 		return driver;
 
 	}
- 
+
 }
 
- 

@@ -184,7 +184,6 @@ public class dashboard_object extends Baseclass {
 	@FindBy(xpath="//thead//tr//th")
 	public List<WebElement> table0;
 
-
 	public void My_Dashboard() {
 		validatetext(title, "Dashboard");
 		String L="Meetings,Action Items,Risks,Tasks";

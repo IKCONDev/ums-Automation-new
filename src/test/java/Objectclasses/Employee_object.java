@@ -28,6 +28,7 @@ public class Employee_object extends Baseclass  {
 		PageFactory.initElements(RC, this);
 	}
 
+	
 	@FindBy(xpath = "//div[normalize-space()='Setup']")
 	public WebElement Setup;
 
@@ -113,8 +114,12 @@ public class Employee_object extends Baseclass  {
 //	@FindBy(xpath = "//ng-select[@id='employeeDept']//span[@class='ng-arrow-wrapper']")
 //	public WebElement DEP_select;
 
-		@FindBy(xpath = "//ng-select[@id='employeeDept']//input[@type='text']")
-		public WebElement DEP_select;
+//		@FindBy(xpath = "//ng-select[@id='employeeDept']//input[@type='text']")
+//		public WebElement DEP_select;
+	
+	@FindBy(xpath = "//div[contains(text(),'Select Department')]")
+	public WebElement DEP_select;
+	//ng-select[@id='employeeDept']//div[@class='ng-select-container']
 
 	@FindBy(xpath = "//div[@id='addEmployeeModal']//label[contains(text(),'Choose Team')]")
 	public WebElement Team1;
@@ -174,7 +179,7 @@ public class Employee_object extends Baseclass  {
 			Clickelement(driver.findElement(By.xpath("//span[@class='ng-option-label'][contains(.,'" + FNs + "')]")));
 		}
 		validatetext(DEP, "Department");
-		Thread.sleep(3000);
+		Thread.sleep(6000);
 
 		Selectdropdown(DEP_select, DN);
 		Thread.sleep(3000);

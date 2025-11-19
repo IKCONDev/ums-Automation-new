@@ -19,6 +19,7 @@ public class Notifications_steps {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		NO.validate_the_Notifications_page();
 
+		
 	}
 
 }

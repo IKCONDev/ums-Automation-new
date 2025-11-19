@@ -22,6 +22,7 @@ public class Internalnotes_steps {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		IO.validate_the_Internalnotes_page();
 
+		
 	}
 	@Then("add the Internalnotes page {string}")
 	public void add_the_Internalnotes_page(String IN) throws InterruptedException, AWTException {

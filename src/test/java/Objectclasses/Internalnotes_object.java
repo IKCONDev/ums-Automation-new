@@ -29,6 +29,7 @@ public class Internalnotes_object extends Baseclass {
 	public Internalnotes_object (WebDriver RC) {
 		driver = RC;
 		PageFactory.initElements(RC, this);
+		
 	}
 	@FindBy(xpath = "//div[normalize-space()='Internal Notes']")
 	public WebElement Internalnotes;
