@@ -45,7 +45,6 @@ public class Roles_steps {
 	public void Delete_the_role(String RN) throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		RO.Delete_the_role(RN);
-
 	}
 }
 

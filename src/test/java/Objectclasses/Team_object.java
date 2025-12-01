@@ -248,11 +248,15 @@ public class Team_object extends Baseclass {
 		validatetext(teamleadtitle, "Team Lead*");
 
 		Clickelement(Team_lead);
-		Clickelement(driver.findElement(By.xpath("//span[contains(text(),'Harsha Vardhan Reddy')]")));
+		Thread.sleep(2000);
+
+		Clickelement(driver.findElement(By.xpath("//span[contains(text(),'Dummy D')]")));
 		validatetext(teamheadtitle, "Team Head*");
 
 		Clickelement(Team_head);
-		Clickelement(driver.findElement(By.xpath("//span[contains(text(),'Harsha Vardhan Reddy')]")));
+		Thread.sleep(2000);
+
+		Clickelement(driver.findElement(By.xpath("//span[contains(text(),'dwarak chandra Jarathi')]")));
 		Thread.sleep(2000);
 		
 		validatetext(Save_button, "Save");
@@ -290,8 +294,8 @@ public class Team_object extends Baseclass {
 		dispalyedattribute(Table_data.get(1), "ID");
 		validatetext(Table_data.get(2), Team);
 		validatetext(Table_data.get(3), "T12E1");
-		validatetext(Table_data.get(4), "Prabhakaran A");	
-		validatetext(Table_data.get(5), "Venkatesh Udaru");
+		validatetext(Table_data.get(4), "Dummy D");	
+		validatetext(Table_data.get(5), "dwarak chandra jarathi");
 		validatetext(Table_data.get(6), "Information Technology");
 		validatetext(Table_data.get(7), "UMS SUPPORT");
 //		validatetext(Table_data.get(8), "Apr 14, 2025, 7:42 PM");

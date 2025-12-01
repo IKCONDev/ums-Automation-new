@@ -45,7 +45,7 @@ public class Employees_steps {
 	@Then("delete the employee {string}")
 	public void delete_the_employee(String Email) throws InterruptedException {
 
-		EO.delete_the_employee(Email);		
+		EO.delete_the_employee(Email);	
 	}
 
 }

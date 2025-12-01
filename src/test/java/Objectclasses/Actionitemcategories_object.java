@@ -26,7 +26,7 @@ public class Actionitemcategories_object extends Baseclass {
 	@FindBy(xpath = "//div[normalize-space()='Setup']")
 	public WebElement Setup;
 
-	@FindBy(xpath = "//a[normalize-space()='ActionItem Categories']")
+	@FindBy(xpath = "//a[normalize-space()='Action Item Categories']")
 	public WebElement Actionitemcategories;
 
 	@FindBy(xpath = "//h3[@class='title']")

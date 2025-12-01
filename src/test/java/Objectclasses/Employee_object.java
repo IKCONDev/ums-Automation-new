@@ -169,6 +169,7 @@ public class Employee_object extends Baseclass  {
 		validateattribute(Email_in, "placeholder","Email");
 		sendkeyweb(Email_in, Email);
 		validatetext(DOJ, "Date of Joining");
+
 		sendkeyweb(DOJ_in, D.Datefun(1,1,1));
 
 		validatetext(RPM, "Reporting Manager");
@@ -258,6 +259,7 @@ public class Employee_object extends Baseclass  {
 		sendkeyweb(Update_FN, FN);
 		sendkeyweb(Update_LN, LN+"  ");
 		Clickelement(driver.findElement(By.xpath("//input[@id='gender" + GN + "Update']")));
+
 		sendkeyweb(Update_DOJ, D.Datefun(1,7,6));
 		Clickelement(Update_Reportee);
 		try {

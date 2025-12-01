@@ -77,7 +77,7 @@ public class Taskcategories_steps {
 	@Then("Delete the category {string}")
 	public void Delete_the_category(String CN) throws InterruptedException {
 		TO.Delete_the_category(CN);
-		
+
 	}
 }
 

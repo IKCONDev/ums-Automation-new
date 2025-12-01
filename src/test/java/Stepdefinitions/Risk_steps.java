@@ -24,7 +24,6 @@ public class Risk_steps {
 
 	public void user__add_the_riskpage(String RT, String RD) throws Exception {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-
 		RO.user_add_risk_page(RT, RD);	
 
 	}
@@ -35,7 +34,6 @@ public class Risk_steps {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		RO.Validate_the_addedRisk(RT);	
-
 
 	}
 	@Then("user update risks page {string} {string}")
@@ -64,7 +62,6 @@ public class Risk_steps {
 
 	public void user__checks_the_filters_in_riskpage(String RT) throws Exception {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-
 		RO.user_checks_filters_in_risk_page(RT);	
 
 	}
@@ -73,16 +70,12 @@ public class Risk_steps {
 
 	public void user_checks_risk_details(String RT, String RD) throws Exception {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-
 		RO.user_checks_risk_details(RT,RD);	
-
 	}
 
 	@Then("user checks edit columns in risk page")
-
 	public void user_checks_Editcolumn_in_risk_page() throws Exception {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		RO.user_checks_Editcolumn_in_risk_page();	
-
 	}
 }

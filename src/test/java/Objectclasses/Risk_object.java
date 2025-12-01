@@ -1,6 +1,7 @@
 package Objectclasses;
 
 import java.time.Duration;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -13,10 +14,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import Datepicker.Dateformatter;
 import Drivemanager.Driver;
 import hooks.Baseclass;
+import org.openqa.selenium.JavascriptExecutor;
+
 
 
 public class Risk_object extends Baseclass {
@@ -96,14 +101,14 @@ public class Risk_object extends Baseclass {
 	@FindBy(xpath = "//ng-select[@id='addRiskOwner']//span[@class='ng-arrow-wrapper']")
 	public WebElement RiskAssignedtodrpdwn;
 
-	@FindBy(xpath = "//span[normalize-space()='Gowri Durga Nakka']")
-	public WebElement RiskAssignedtoselect;
+//	@FindBy(xpath = "//span[normalize-space()='Amani Velidi']")
+//	public WebElement RiskAssignedtoselect;
 
 
 	@FindBy(xpath = "//ng-select[@id='addriskCategory']//span[@class='ng-arrow-wrapper']")
 	public WebElement Riskcategorydrpdwn;
 
-	@FindBy(xpath = "//span[normalize-space()='Operational Risks']")
+	@FindBy(xpath = "//span[normalize-space()='ABCD']")
 	public WebElement Riskcategoryselect;
 
 	@FindBy(xpath = "(//img[@alt='Dropdown icon'])[2]")
@@ -163,8 +168,19 @@ public class Risk_object extends Baseclass {
 		Thread.sleep(3000);
 		Clickelement(RiskAssignedtodrpdwn);
 
-		Thread.sleep(3000);
-		Clickelement(RiskAssignedtoselect);
+		Thread.sleep(5000);
+//		Clickelement(RiskAssignedtoselect);
+		
+//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+//		wait.until(ExpectedConditions.elementToBeClickable(RiskAssignedtoselect));
+
+		WebElement element = driver.findElement(By.xpath("//span[normalize-space()='Amani Velidi']"));
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+
+
+
+
+
 
 
 		Clickelement(Riskcategorydrpdwn);

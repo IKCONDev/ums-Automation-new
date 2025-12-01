@@ -109,7 +109,7 @@ public class Taskcategories_object extends Baseclass {
 		driver = RC;
 		PageFactory.initElements(RC, this);
 	}
-	
+
 	@FindBy(xpath = "//div[normalize-space()='Setup']")
 	public WebElement Setup;
 
@@ -220,10 +220,12 @@ public class Taskcategories_object extends Baseclass {
 
 	public void validate_the_added_task_category(String CN) throws InterruptedException {
 		sendkeyweb(Search, CN);
-		dispalyedattribute(Table_data.get(0), "ID");
-		validatetext(Table_data.get(1), CN);
-		validatetext(Table_data.get(2), CN + " Task");		
-		validatetext(Table_data.get(4), "UMS SUPPORT");
+		dispalyedattribute(Table_data.get(1), "ID");
+		validatetext(Table_data.get(2), CN);
+		validatetext(Table_data.get(3), CN + " Task");
+		validatetext(Table_data.get(4), "Information Technology");
+
+		validatetext(Table_data.get(5), "UMS SUPPORT");
 		//		validatetext(Table_data.get(5), "May 20, 2024, 4:14 PM");
 		dispalyedattribute(Editicon, "Edit icon");
 		dispalyedattribute(Deleteicon, "Delete icon");
@@ -246,7 +248,7 @@ public class Taskcategories_object extends Baseclass {
 		validateattribute(Task_desc_in, "placeholder", "Category Description");
 		sendkeyweb(Task_desc_in, CN+ " Task");
 		validatetext(Task_save, "Save");
-		validatetext(Task_cancel, "Close");
+		validatetext(Task_cancel, "Cancel");
 		Clickelement(Task_save);
 
 	}
@@ -254,15 +256,17 @@ public class Taskcategories_object extends Baseclass {
 
 	public void validate_the_updated_task_category(String CN) throws InterruptedException {
 		sendkeyweb(Search, CN);
-		dispalyedattribute(Table_data.get(0), "ID");
-		validatetext(Table_data.get(1), CN);
-		validatetext(Table_data.get(2), CN + " Task");
-		validatetext(Table_data.get(3), " ");
+		dispalyedattribute(Table_data.get(1), "ID");
+		validatetext(Table_data.get(2), CN);
+		validatetext(Table_data.get(3), CN + " Task");
+		validatetext(Table_data.get(4), "Information Technology");
 
-		validatetext(Table_data.get(4), "UMS SUPPORT");
+		validatetext(Table_data.get(5), "UMS SUPPORT");
 		//		validatetext(Table_data.get(5), "May 20, 2024, 4:14 PM");
 		validatetext(Table_data.get(6), " ");
-		validatetext(Table_data.get(7), " ");
+		validatetext(Table_data.get(7), "UMS SUPPORT ");
+
+		validatetext(Table_data.get(8), " ");
 
 		dispalyedattribute(Editicon, "Edit icon");
 		dispalyedattribute(Deleteicon, "Delete icon");

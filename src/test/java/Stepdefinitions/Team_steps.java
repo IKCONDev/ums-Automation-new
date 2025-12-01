@@ -108,6 +108,7 @@ public class Team_steps {
 	public void delete_the_team(String Team) throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		TO.Delete_the_Team(Team);	
+		
 }
 
 }

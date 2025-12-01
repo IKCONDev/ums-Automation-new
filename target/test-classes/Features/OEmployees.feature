@@ -10,5 +10,5 @@
     #Then delete the employee "<Email>"
 #
     #Examples: 
-      #| FN     | LN     | EID     | Email                | DN                     | DSN       | FNs             | GN   |
-      #| Krunal | Shekar | IKMU012 | krunal@ikcontech.com | Information Technology | Senior QA | Venkatesh Udaru | Male |
+      #| FN     | LN     | EID     | Email                | DN                 | DSN       | FNs        | GN   |
+      #| Krunal | Shekar | IKMU012 | krunal@ikcontech.com | Accounts & Finance | Senior QA | Adam Smith | Male |

@@ -10,5 +10,5 @@
     #Then delete the team "<Team>"
 #
     #Examples: 
-      #| Team  |
-      #| Union |
+      #| Team     |
+      #| solution |
