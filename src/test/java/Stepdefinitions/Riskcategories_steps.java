@@ -45,6 +45,7 @@ public class Riskcategories_steps {
 	@Then("Delete the Risk categories {string}")
 	public void delete_the_risk_categories(String s1) throws InterruptedException {
 		RO.delete_the_risk_categories(s1);
+		
 	}
 }
 

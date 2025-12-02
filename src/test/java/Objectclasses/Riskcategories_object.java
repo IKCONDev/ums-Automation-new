@@ -57,16 +57,26 @@ public class Riskcategories_object extends Baseclass  {
 		//		List<String> list = new ArrayList<String>(Arrays.asList(s.split(",")));
 		//		for (int i = 2; i <= 11; i++) {
 		//			validatetext(driver.findElement(By.xpath("(//thead[@id='RiskCategoryThead']//tr//th)[" + i + "]")),list.get(i));
-		String s = ",ID,Risk Category Title,Category Description,Created By,Created Date,Status,Modified By,Modified Date,Edit,Delete";
+		String s = ",ID,Risk Category Title,Category Description,Department,Created By,Created Date & Time,Status,Modified By,Modified Date & Time,Edit,Delete";
 
 		List<String> list = new ArrayList<String>(Arrays.asList(s.split(",")));
-		for (int i = 0; i <= 10; i++) {
+		for (int i = 0; i <= 11; i++) {
 			validatetext(table.get(i), list.get(i));
 		}
 	}
 
 	@FindBy(xpath = "//div[@id='addRiskModal']//h5[@id='xlModalLabel']")
 	public WebElement Risk_cat;
+	
+	@FindBy(xpath = "//div[@id='addRiskModal']//label[1]")
+	public WebElement Choose_dept;
+	
+	@FindBy(xpath = "//div[@id='addRiskModal']//span[@class='ng-arrow-wrapper']")
+	public WebElement Choose_dept_drpdwn;
+	
+	@FindBy(xpath = "//span[normalize-space()='Accounts & Finance']")
+	public WebElement dept_select;
+	
 	@FindBy(xpath = "//div[@id='addRiskModal']//label[contains(text(),'Risk Category Name')]")
 	public WebElement Risk_catname;
 	@FindBy(xpath = "//div[@id='addRiskModal']//input[@id='categoryName']")
@@ -83,6 +93,11 @@ public class Riskcategories_object extends Baseclass  {
 		driver.navigate().refresh();
 		Clickelement(Add);
 		validatetext(Risk_cat, "Risk Category");
+		validatetext(Choose_dept, "Choose Department");
+		Clickelement(Choose_dept_drpdwn);
+		
+		Clickelement(dept_select);
+
 		validatetext(Risk_catname, "Risk Category Name");
 		validateattribute(Risk_catname_in, "placeholder", "Category Name");
 		sendkeyweb(Risk_catname_in, s1);
