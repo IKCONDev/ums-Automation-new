@@ -43,8 +43,13 @@ public class Risk_steps {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		RO.user_update_risk_page(RT,RD);	
+	}
+	
+	@Then("user validate the updated risk in risks page {string} {string}")
+	public void user__validate_the_updated_risk_in_riskspage(String RT, String RD) throws Exception {
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
-
+		RO.user_validate_the_updated_risk_in_Risks_page(RT,RD);	
 	}
 
 	@Then("user delete risks page {string}")
@@ -77,5 +82,11 @@ public class Risk_steps {
 	public void user_checks_Editcolumn_in_risk_page() throws Exception {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		RO.user_checks_Editcolumn_in_risk_page();	
+	}
+	
+	@Then("user navigates to all risks page")
+	public void user_clicks_Allrisks_in_risk_page() throws Exception {
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		RO.user_clicks_on_All_risks_dropdown();	
 	}
 }

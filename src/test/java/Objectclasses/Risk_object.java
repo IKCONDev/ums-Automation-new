@@ -92,7 +92,7 @@ public class Risk_object extends Baseclass {
 	@FindBy(xpath = "//button[normalize-space()='Create']")
 	public WebElement valcreatebtn;
 
-	@FindBy(xpath = "//button[@id='closeAddModal']")
+	@FindBy(xpath = "(//button[normalize-space()='Cancel'])[1]")
 	public WebElement valcancelbtn;
 
 	@FindBy(xpath = "//input[@id='riskTitle']")
@@ -101,8 +101,8 @@ public class Risk_object extends Baseclass {
 	@FindBy(xpath = "//ng-select[@id='addRiskOwner']//span[@class='ng-arrow-wrapper']")
 	public WebElement RiskAssignedtodrpdwn;
 
-//	@FindBy(xpath = "//span[normalize-space()='Amani Velidi']")
-//	public WebElement RiskAssignedtoselect;
+	@FindBy(xpath = "//span[normalize-space()='UMS SUPPORT']")
+	public List<WebElement> RiskAssignedtoselect;
 
 
 	@FindBy(xpath = "//ng-select[@id='addriskCategory']//span[@class='ng-arrow-wrapper']")
@@ -145,12 +145,15 @@ public class Risk_object extends Baseclass {
 	@FindBy(xpath = "//button[normalize-space()='Create']")
 	public WebElement Riskcreatebtn;
 
+
+
 	Dateformatter da=new Dateformatter();
 
 	public void user_add_risk_page(String RT, String RD) throws InterruptedException {
 
 
 		Clickelement(RiskAddbtn);
+		Thread.sleep(3000);
 
 		validatetext(valaddrisk, "Add Risk");
 
@@ -169,18 +172,7 @@ public class Risk_object extends Baseclass {
 		Clickelement(RiskAssignedtodrpdwn);
 
 		Thread.sleep(5000);
-//		Clickelement(RiskAssignedtoselect);
-		
-//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-//		wait.until(ExpectedConditions.elementToBeClickable(RiskAssignedtoselect));
-
-		WebElement element = driver.findElement(By.xpath("//span[normalize-space()='Amani Velidi']"));
-		((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
-
-
-
-
-
+		clickmultipleweb(RiskAssignedtoselect);
 
 
 		Clickelement(Riskcategorydrpdwn);
@@ -224,15 +216,23 @@ public class Risk_object extends Baseclass {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		driver.navigate().refresh();
 		sendkeyweb(Risksearch,RT);
+
 		String RID = driver.findElement(By.xpath("(//td[normalize-space()='"+RT+"']/preceding-sibling::td)[2]")).getText();
 		String[] S = {"NA",RT,"UMS SUPPORT","","","Likely","Minor","Open","Very High","NA"};
 		List<WebElement> valid=driver.findElements(By.xpath("//td[normalize-space()='" + RID + "']/following-sibling::td"));
 		valid.size();
-		int i=1;
-		for(WebElement e:valid) {
-			validatetext(e, S[i]);
-			i++;
+
+		try {
+			int i=0;
+			for(WebElement e:valid) {
+				validatetext(e, S[i]);
+				i++;
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
+
 
 		attributeselected(Edit_icon, "Edit icon");
 		Thread.sleep(3000);
@@ -243,6 +243,21 @@ public class Risk_object extends Baseclass {
 
 	@FindBy(xpath = "//input[@placeholder='Search']")
 	public WebElement Risksearch;
+
+	@FindBy(xpath = "//input[@id='updateriskTitle']")
+	public WebElement Updaterisktitle;
+
+	@FindBy(xpath = "//ng-select[@id='updateRiskOwner']//span[@class='ng-arrow-wrapper']")
+	public WebElement Updateriskassidedtodrpdwn;
+
+	@FindBy(xpath = "//span[contains(text(),'UMS TEST')]")
+	public WebElement Updateriskassidedtoselect;
+
+	@FindBy(xpath = "//ng-select[@id='updateriskCategory']//span[@class='ng-arrow-wrapper']")
+	public WebElement Updateriskcategorydrpdwn;
+
+	@FindBy(xpath = "//span[normalize-space()='Financial Risk']")
+	public WebElement Updateriskcategoryselect;
 
 	@FindBy(xpath = "//input[@id='targetCompletionDate']")
 	public WebElement Risktargetdate;
@@ -266,10 +281,20 @@ public class Risk_object extends Baseclass {
 		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + RT + "']/following-sibling::td//button[@id='editIcon']")));
 		Thread.sleep(3000);
 
+		sendkeyweb(Updaterisktitle, RT);
+
+		Clickelement(Updateriskassidedtodrpdwn);
+
+		Clickelement(Updateriskassidedtoselect);
+
+		Clickelement(Updateriskcategorydrpdwn);
+
+		Clickelement(Updateriskcategoryselect);
+
 		sendkeyweb(Risktargetdate, da.Datefun(0,2,0) );
 		Thread.sleep(3000);
 
-		sendkeyweb(Addcmntdes, "Comment");
+		sendkeyweb(Addcmntdes, "Commentlkjhg");
 		Thread.sleep(3000);
 		Clickelement(Addcmntbtn);
 		Thread.sleep(3000);
@@ -278,8 +303,42 @@ public class Risk_object extends Baseclass {
 		Thread.sleep(4000);
 
 
-
 	}
+
+	public void user_validate_the_updated_risk_in_Risks_page(String RT, String RD) throws InterruptedException {
+
+		sendkeyweb(Risksearch, RT);
+		Thread.sleep(4000);
+
+
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		driver.navigate().refresh();
+		sendkeyweb(Risksearch,RT);
+
+		String RID = driver.findElement(By.xpath("(//td[normalize-space()='"+RT+"']/preceding-sibling::td)[2]")).getText();
+		String[] S = {"NA",RT,"UMS TEST","","","Likely","Minor","Open","Very High","NA"};
+		List<WebElement> valid=driver.findElements(By.xpath("//td[normalize-space()='" + RID + "']/following-sibling::td"));
+		valid.size();
+
+		try {
+			int i=0;
+			for(WebElement e:valid) {
+				validatetext(e, S[i]);
+				i++;
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+
+		attributeselected(Edit_icon, "Edit icon");
+		Thread.sleep(3000);
+
+		attributeselected(Delete_icon, "Delete icon");
+		Thread.sleep(3000);
+	}
+
 
 
 	public void user_delete_risk_page(String RT) throws InterruptedException {
@@ -323,26 +382,20 @@ public class Risk_object extends Baseclass {
 	@FindBy(xpath = "(//input[@type='text'])[1]")
 	public WebElement RD_risktitle;
 
-	@FindBy(xpath = "(//img[@alt='Dropdown icon'])[4]")
-	public WebElement RD_status;
+	@FindBy(xpath = "(//h6[normalize-space()='Details']/following::span)[12]")
+	public WebElement RD_Assignedtodrpdwn;
 
-	@FindBy(xpath = "//div[@class='options-container']//div[1]")
-	public WebElement RD_statusslct;
+	@FindBy(xpath = "//span[contains(text(),'UMS SUPPORT')]")
+	public List<WebElement> RD_Assignedtoselect;
 
-	@FindBy(xpath = "(//*[name()='svg'])[13]")
+	@FindBy(xpath = "(//h6[normalize-space()='Details']/following::span)[1]")
 	public WebElement RD_save;
 
-	@FindBy(xpath = "//textarea[@class='form-control ng-untouched ng-pristine ng-valid']")
-	public WebElement RD_des;
+	@FindBy(xpath = "//textarea[@class='form-control ng-untouched ng-pristine ng-valid ng-star-inserted']")
+	public WebElement RD_riskdes;
 
-	@FindBy(xpath = "(//*[name()='svg'])[15]")
-	public WebElement RD_dessave;
-
-	@FindBy(xpath = "//input[@id='addCommentDescription']")
-	public WebElement RD_cmments;
-
-	@FindBy(xpath = "(//*[name()='svg'][@class='comment-button'])[1]")
-	public WebElement RD_cmmentsave;
+	@FindBy(xpath = "(//h6[normalize-space()='Details']/following::span)[22]")
+	public WebElement RD_description_save;
 
 	public void user_checks_risk_details(String RT, String RD) throws InterruptedException {
 		sendkeyweb(Risksearch, RT);
@@ -362,12 +415,22 @@ public class Risk_object extends Baseclass {
 		Clickelement(RD_edit.get(0));
 
 		sendkeyweb(RD_risktitle, RT);
-		//		Clickelement(RD_status);
-		//		Clickelement(RD_statusslct);
+		Thread.sleep(2000);
+		//		Clickelement(RD_Assignedtodrpdwn);
+		//		Thread.sleep(3000);
+		//		clickmultipleweb(RD_Assignedtoselect);
+		//		Thread.sleep(4000);
+
+		Clickelement(RD_save);
 		Thread.sleep(4000);
 
-		//		Clickelement(RD_save);
-		//		Thread.sleep(4000);
+		Clickelement(RD_edit.get(1));
+		Thread.sleep(4000);
+
+		sendkeyweb(RD_riskdes, RD);
+		Thread.sleep(4000);
+
+		Clickelement(RD_description_save);
 		//
 		//
 		//		Clickelement(RD_edit.get(1));
@@ -387,7 +450,7 @@ public class Risk_object extends Baseclass {
 		//		Thread.sleep(4000);
 
 
-		driver.navigate().back();
+		//		driver.navigate().back();
 
 	}
 
@@ -759,4 +822,17 @@ public class Risk_object extends Baseclass {
 		Clickelement(Editcolumncancel);
 		Thread.sleep(3000);
 	}
+	
+	
+	@FindBy(xpath = "//span[normalize-space()='All Risks']")
+	public WebElement Allrisks;
+	
+	public void user_clicks_on_All_risks_dropdown() throws InterruptedException {
+		Thread.sleep(3000);
+		Clickelement(Riskdropdwnarrow);
+		Thread.sleep(3000);
+		Clickelement(Allrisks);
+		
+	
+}
 }
