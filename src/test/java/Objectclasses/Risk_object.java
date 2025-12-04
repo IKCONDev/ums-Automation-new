@@ -218,20 +218,23 @@ public class Risk_object extends Baseclass {
 		sendkeyweb(Risksearch,RT);
 
 		String RID = driver.findElement(By.xpath("(//td[normalize-space()='"+RT+"']/preceding-sibling::td)[2]")).getText();
-		String[] S = {"NA",RT,"UMS SUPPORT","","","Likely","Minor","Open","Very High","NA"};
-		List<WebElement> valid=driver.findElements(By.xpath("//td[normalize-space()='" + RID + "']/following-sibling::td"));
-		valid.size();
+		String[] S = {"UMS SUPPORT","","","Likely","Minor","Open","Very High","NA"};
+		
 
-		try {
-			int i=0;
-			for(WebElement e:valid) {
-				validatetext(e, S[i]);
-				i++;
+		List<WebElement> valid=driver.findElements(By.xpath("//td[normalize-space()='" + RT + "']/following-sibling::td"));
+		valid.size();
+		
+			try {
+				int i=0;
+				for(WebElement e:valid) {
+					
+					validatetext(e, S[i]);
+					i++;
+				}
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 
 
 		attributeselected(Edit_icon, "Edit icon");
@@ -315,21 +318,40 @@ public class Risk_object extends Baseclass {
 		driver.navigate().refresh();
 		sendkeyweb(Risksearch,RT);
 
+//		String RID = driver.findElement(By.xpath("(//td[normalize-space()='"+RT+"']/preceding-sibling::td)[2]")).getText();
+//		String[] S = {"NA",RT,"UMS TEST","","","Likely","Minor","Open","Very High","NA"};
+//		List<WebElement> valid=driver.findElements(By.xpath("//td[normalize-space()='" + RID + "']/following-sibling::td"));
+//		valid.size();
+//
+//		try {
+//			int i=0;
+//			for(WebElement e:valid) {
+//				validatetext(e, S[i]);
+//				i++;
+//			}
+//		} catch (Exception e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+		
 		String RID = driver.findElement(By.xpath("(//td[normalize-space()='"+RT+"']/preceding-sibling::td)[2]")).getText();
-		String[] S = {"NA",RT,"UMS TEST","","","Likely","Minor","Open","Very High","NA"};
-		List<WebElement> valid=driver.findElements(By.xpath("//td[normalize-space()='" + RID + "']/following-sibling::td"));
-		valid.size();
+		String[] S = {"UMS TEST","","","Likely","Minor","Open","Very High","NA"};
+		
 
-		try {
-			int i=0;
-			for(WebElement e:valid) {
-				validatetext(e, S[i]);
-				i++;
+		List<WebElement> valid=driver.findElements(By.xpath("//td[normalize-space()='" + RT + "']/following-sibling::td"));
+		valid.size();
+		
+			try {
+				int i=0;
+				for(WebElement e:valid) {
+					
+					validatetext(e, S[i]);
+					i++;
+				}
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 
 
 		attributeselected(Edit_icon, "Edit icon");
@@ -834,5 +856,25 @@ public class Risk_object extends Baseclass {
 		Clickelement(Allrisks);
 		
 	
+}
+	
+	@FindBy(xpath = "//span[normalize-space()='My Risks']")
+	public WebElement Myrisks;
+	
+	public void user_clicks_on_My_risks_dropdown() throws InterruptedException {
+		Thread.sleep(3000);
+		Clickelement(Riskdropdwnarrow);
+		Thread.sleep(3000);
+		Clickelement(Myrisks);
+}
+	
+	@FindBy(xpath = "//span[contains(text(),'Assigned To')]")
+	public WebElement AssignedTorisks;
+	
+	public void user_clicks_on_Assignedto_risks_dropdown() throws InterruptedException {
+		Thread.sleep(3000);
+		Clickelement(Riskdropdwnarrow);
+		Thread.sleep(3000);
+		Clickelement(AssignedTorisks);
 }
 }

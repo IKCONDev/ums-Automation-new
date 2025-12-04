@@ -89,4 +89,16 @@ public class Risk_steps {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		RO.user_clicks_on_All_risks_dropdown();	
 	}
+	
+	@Then("user navigates to my risks page")
+	public void user_clicks_Myrisks_in_risk_page() throws Exception {
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		RO.user_clicks_on_My_risks_dropdown();	
+	}
+	
+	@Then("user navigates to Assignedto risks page")
+	public void user_clicks_Assignedtorisks_in_risk_page() throws Exception {
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		RO.user_clicks_on_Assignedto_risks_dropdown();	
+	}
 }
