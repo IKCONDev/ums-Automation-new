@@ -1,6 +1,12 @@
 package Objectclasses;
 
+import java.time.Duration;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -27,6 +33,35 @@ public class Actionitem_object extends Baseclass {
 
 	@FindBy(xpath = "//span[normalize-space()='Created By']")
 	public WebElement Actionitemscreatedbyclick;
+
+
+	Dateformatter da=new Dateformatter();
+
+	public void user_navigates_to_Actionitem_page() throws InterruptedException {
+		Thread.sleep(3000);
+		Clickelement(Actionitemssidemenu);
+		Thread.sleep(3000);
+		Clickelement(Actionitemsdropdwnarrow);
+		Thread.sleep(3000);
+
+
+		Clickelement(Actionitemscreatedbyclick);
+
+	}
+
+
+	@FindBy(xpath = "//tr//th")
+	public List<WebElement> risktable;
+
+
+	public void user_validates_the_Actionitem_page() throws InterruptedException {
+		String s = " ,Action Item ID,Meeting ID,Title,Assigned To,Planned Start Date & Time,Planned End Date & Time,Priority,Status,Over Due Days,Edit,Delete";
+		List<String> list = new ArrayList<String>(Arrays.asList(s.split(",")));
+		for (int i = 1; i <= 11; i++) {
+			validatetext(risktable.get(i), list.get(i));
+		}
+
+	}
 
 	@FindBy(xpath = "//div[contains(text(),'Add')]")
 	public WebElement ActionitemsAddbutton;
@@ -59,7 +94,7 @@ public class Actionitem_object extends Baseclass {
 	@FindBy(xpath = "(//button[@type='submit'][normalize-space()='Create'])[1]")
 	public WebElement Valcreatebutton;
 
-	@FindBy(xpath = "(//button[@id='closeAddModal'])[1]")
+	@FindBy(xpath = "(//button[@id='closeAddModal'])[2]")
 	public WebElement Valcancelbutton;
 
 	@FindBy(xpath = "//input[@id='actionItemTitle']")
@@ -68,8 +103,21 @@ public class Actionitem_object extends Baseclass {
 	@FindBy(xpath = "//ng-select[@placeholder='Choose Assignee']//span[@class='ng-arrow-wrapper']")
 	public WebElement Actionitemassigneedrpdwn;
 
-	@FindBy(xpath = "(//span[@class='ng-option-label ng-star-inserted'][normalize-space()='Vinod Reddy Kethu'])[1]")
-	public WebElement Actionitemassigneeselect;
+	@FindBy(xpath = "//span[normalize-space()='UMS SUPPORT']")
+	public List<WebElement> Actionitemassigneeselect;
+
+	@FindBy(xpath = "(//span[@class='ng-arrow-wrapper'])[7]")
+	public WebElement Actionitemreviewerdrpdwn;
+
+
+	@FindBy(xpath = "//span[normalize-space()='Adam Smith']")
+	public WebElement Actionitemreviewerselect;
+
+	@FindBy(xpath = "(//span[@class='ng-arrow-wrapper'])[8]")
+	public WebElement Actionitemcategorydrpdwn;
+
+	@FindBy(xpath = "//span[normalize-space()='API Enhancement']")
+	public WebElement Actionitemcategoryselect;
 
 	@FindBy(xpath = "//input[@name='startDate']")
 	public WebElement Actionitemstartdate;
@@ -90,19 +138,11 @@ public class Actionitem_object extends Baseclass {
 	public WebElement Actionitemcreate;
 
 
-	Dateformatter da=new Dateformatter();
 
-	public void user_check_Actionitem_page(String AT, String AD) throws InterruptedException {
+	public void user_adds_actioinitem_in_Actionitem_page(String AT, String AD) throws InterruptedException {
 		Thread.sleep(3000);
 
-		Clickelement(Actionitemssidemenu);
-		Thread.sleep(4000);
 
-		Clickelement(Actionitemsdropdwnarrow);
-		Thread.sleep(4000);
-
-		Clickelement(Actionitemscreatedbyclick);
-		Thread.sleep(4000);
 
 		Clickelement(ActionitemsAddbutton);
 		Thread.sleep(4000);
@@ -143,7 +183,19 @@ public class Actionitem_object extends Baseclass {
 		Clickelement(Actionitemassigneedrpdwn);
 		Thread.sleep(4000);
 
-		Clickelement(Actionitemassigneeselect);
+		clickmultipleweb(Actionitemassigneeselect);
+		Thread.sleep(4000);
+
+		Clickelement(Actionitemreviewerdrpdwn);
+		Thread.sleep(4000);
+
+		Clickelement(Actionitemreviewerselect);
+		Thread.sleep(4000);
+
+		Clickelement(Actionitemcategorydrpdwn);
+		Thread.sleep(4000);
+
+		Clickelement(Actionitemcategoryselect);
 		Thread.sleep(4000);
 
 		sendkeyweb(Actionitemstartdate, da.Datefun(0,0,0) );
@@ -167,15 +219,51 @@ public class Actionitem_object extends Baseclass {
 
 	}
 	@FindBy(xpath = "//input[@id='searchActionFilter']")
-	public WebElement Actionitemsearch;
-
+	public WebElement Actionitem_search;
 	@FindBy(xpath = "//*[name()='g' and @id='edit']//*[name()='path' and @id='Vector']")
-	public WebElement Actionitemedit;
+	public WebElement Edit_icon;
+	@FindBy(xpath = "//button[@id='trashIcon']//*[name()='svg']")
+	public WebElement Delete_icon;
+
+	public void user_validate_the_added_actionitem_in_Actionitems_page(String AT) throws InterruptedException {
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		driver.navigate().refresh();
+		sendkeyweb(Actionitem_search,AT);
+
+		String AID = driver.findElement(By.xpath("(//td[normalize-space()='"+AT+"']/preceding-sibling::td)[2]")).getText();
+		String[] S = {"UMS SUPPORT","","","High","Yet to start","NA"};
+
+
+		List<WebElement> valid=driver.findElements(By.xpath("//td[normalize-space()='" + AT + "']/following-sibling::td"));
+		valid.size();
+
+		try {
+			int i=0;
+			for(WebElement e:valid) {
+
+				validatetext(e, S[i]);
+				i++;
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+
+		attributeselected(Edit_icon, "Edit icon");
+		Thread.sleep(3000);
+
+		attributeselected(Delete_icon, "Delete icon");
+		Thread.sleep(3000);
+	}
+
+	@FindBy(xpath = "//input[@id='searchActionFilter']")
+	public WebElement Actionitemsearch;
 
 	@FindBy(xpath = "//ng-select[@id='uAcItemOwner']//span[@class='ng-arrow-wrapper']")
 	public WebElement Actionitemupdatedrpdwn;
 
-	@FindBy(xpath = "//span[normalize-space()='Vinod Kethu']")
+	@FindBy(xpath = "//span[normalize-space()='UMS TEST']")
 	public WebElement Actionitemassigneeupdate;
 
 	@FindBy(xpath = "//button[@id='update']")
@@ -186,7 +274,7 @@ public class Actionitem_object extends Baseclass {
 		sendkeyweb(Actionitemsearch, AT);
 		Thread.sleep(3000);
 
-		Clickelement(Actionitemedit);
+		Clickelement(Edit_icon);
 		Thread.sleep(3000);
 
 		Clickelement(Actionitemupdatedrpdwn);
@@ -197,6 +285,13 @@ public class Actionitem_object extends Baseclass {
 
 		Clickelement(updatebtn);
 		Thread.sleep(3000); 
+	}
+
+
+	public void user_validate_the_Updated_actionitem_in_Actionitems_page(String AT) throws InterruptedException {
+
+		user_validate_the_added_actionitem_in_Actionitems_page(AT);
+
 	}
 
 	@FindBy(xpath = "//button[@id='trashIcon']//*[name()='svg']")
@@ -225,7 +320,7 @@ public class Actionitem_object extends Baseclass {
 	@FindBy(xpath = "//div[normalize-space()='+']")
 	public WebElement Actionitemplusbtn;
 
-	@FindBy(xpath = "//img[@alt='Add Task']")
+	@FindBy(xpath = "//img[@alt='Add ActionItem']")
 	public WebElement Actionitemtaskplusbtn;
 
 	@FindBy(xpath = "//div[@class='input-container']//input[@id='taskTitle']")
@@ -234,20 +329,20 @@ public class Actionitem_object extends Baseclass {
 	@FindBy(xpath = "(//span[@class='ng-arrow-wrapper'])[2]")
 	public WebElement Taskassignedtodrpdwn;
 
-	@FindBy(xpath = "//span[normalize-space()='Vinod Kethu']")
-	public WebElement Taskassignedtodrpdwnselect;
+	@FindBy(xpath = "//span[normalize-space()='UMS SUPPORT']")
+	public List<WebElement> Taskassignedtodrpdwnselect;
 
 	@FindBy(xpath = "(//span[@class='ng-arrow-wrapper'])[3]")
 	public WebElement Taskreviewerdrpdwn;
 
-	@FindBy(xpath = "//span[normalize-space()='Vinod Kethu']")
-	public WebElement Taskreviewerdrpdwnselect;
+	@FindBy(xpath = "//span[normalize-space()='UMS SUPPORT']")
+	public List<WebElement> Taskreviewerdrpdwnselect;
 
 	@FindBy(xpath = "(//span[@class='ng-arrow-wrapper'])[4]")
 	public WebElement Taskcategorydrpdwn;
 
 
-	@FindBy(xpath = "//span[normalize-space()='performance']")
+	@FindBy(xpath = "//span[normalize-space()='jhxcvkjhgfhj']")
 	public WebElement Taskcategorydrpdwnselect ;
 
 	@FindBy(xpath = "//textarea[@id='taskDescription']")
@@ -256,14 +351,7 @@ public class Actionitem_object extends Baseclass {
 	@FindBy(xpath = "//button[@class='btn btn-primary saveButton'][normalize-space()='Create']")
 	public WebElement ActionitemTaskcreatebtn ;
 
-	@FindBy(xpath = "//div[normalize-space()='Due Today']")
-	public WebElement ActionitemDuetoday ;
 
-	@FindBy(xpath = "//div[normalize-space()='Over Due']")
-	public WebElement Actionitemoverdue ;
-
-	@FindBy(xpath = "//div[normalize-space()='Upcoming']")
-	public WebElement Actionitemupcoming ;
 
 
 	public void user_create_task_in_Actionitem_page(String AT, String TT, String TD) throws InterruptedException {
@@ -286,13 +374,13 @@ public class Actionitem_object extends Baseclass {
 		Thread.sleep(4000);
 
 
-		Clickelement(Taskassignedtodrpdwnselect);
+		clickmultipleweb(Taskassignedtodrpdwnselect);
 		Thread.sleep(4000);
 
 		Clickelement(Taskreviewerdrpdwn);
 		Thread.sleep(4000);
 
-		Clickelement(Taskreviewerdrpdwnselect);
+		clickmultipleweb(Taskreviewerdrpdwnselect);
 		Thread.sleep(4000);
 
 		Clickelement(Taskcategorydrpdwn);
@@ -307,17 +395,27 @@ public class Actionitem_object extends Baseclass {
 		Clickelement(ActionitemTaskcreatebtn);
 		Thread.sleep(4000);
 
-		driver.navigate().refresh();
-		Thread.sleep(3000);
+//		driver.navigate().refresh();
+//		Thread.sleep(3000);
 
-		Clickelement(ActionitemDuetoday);
-		Thread.sleep(3000);
-		Clickelement(Actionitemoverdue);
-		Thread.sleep(3000);
+	}
+	
+	@FindBy(xpath = "//input[@class='search-box']")
+	public WebElement tasksearch ;
+	
+	@FindBy(xpath = "//button[@id='editIcon']//*[name()='svg']")
+	public WebElement taskediticon ;
+	
+	@FindBy(xpath = "//input[@id='orgTaskTitle']")
+	public WebElement updatetasktitle ;
 
-		Clickelement(Actionitemupcoming);
-		Thread.sleep(3000);
+	public void user_update_task_in_Actionitem_page(String AT, String TT, String TD) throws InterruptedException {
+		
 
+		sendkeyweb(tasksearch, TT);
+		Thread.sleep(4000);
+		
+		
 	}
 	@FindBy(xpath = "//div[contains(text(),'Edit Column')]")
 	public WebElement Editcolumn ;
@@ -344,6 +442,15 @@ public class Actionitem_object extends Baseclass {
 
 
 	}
+
+	//@FindBy(xpath = "//div[normalize-space()='Due Today']")
+	//	public WebElement ActionitemDuetoday ;
+	//
+	//	@FindBy(xpath = "//div[normalize-space()='Over Due']")
+	//	public WebElement Actionitemoverdue ;
+	//
+	//	@FindBy(xpath = "//div[normalize-space()='Upcoming']")
+	//	public WebElement Actionitemupcoming ;
 	@FindBy(xpath = "//div[contains(text(),'Filter')]")
 	public WebElement Filter;
 
@@ -360,6 +467,14 @@ public class Actionitem_object extends Baseclass {
 	public WebElement Crossmark;
 	public void user_click_filter_in_Actionitem_page(String AT) throws InterruptedException {
 
+		//		Clickelement(ActionitemDuetoday);
+		//		Thread.sleep(3000);
+		//		Clickelement(Actionitemoverdue);
+		//		Thread.sleep(3000);
+		//
+		//		Clickelement(Actionitemupcoming);
+		//		Thread.sleep(3000);
+
 		Clickelement(Filter);
 		Thread.sleep(3000);
 		sendkeyweb(FilterApply, AT);
@@ -372,6 +487,45 @@ public class Actionitem_object extends Baseclass {
 
 		Clickelement(Crossmark);
 		Thread.sleep(3000);
-		
+
+	}
+
+	@FindBy(xpath = "//span[normalize-space()='All Action Items']")
+	public WebElement Allactionitems;
+
+	public void user_navigates__to_All_Actionitem_page() throws InterruptedException {
+
+		Clickelement(Actionitemsdropdwnarrow);
+		Thread.sleep(3000);
+
+		Clickelement(Allactionitems);
+		Thread.sleep(3000);
+
+	}
+
+	@FindBy(xpath = "//span[normalize-space()='My Action Items']")
+	public WebElement Myactionitems;
+
+	public void user_navigates__to_My_Actionitem_page() throws InterruptedException {
+
+		Clickelement(Actionitemsdropdwnarrow);
+		Thread.sleep(3000);
+
+		Clickelement(Myactionitems);
+		Thread.sleep(3000);
+
+	}
+
+	@FindBy(xpath = "//span[contains(text(),'Assigned To')]")
+	public WebElement Assignedtoactionitems;
+
+	public void user_navigates__to_Assignedto_Actionitem_page() throws InterruptedException {
+
+		Clickelement(Actionitemsdropdwnarrow);
+		Thread.sleep(3000);
+
+		Clickelement(Assignedtoactionitems);
+		Thread.sleep(3000);
+
 	}
 }

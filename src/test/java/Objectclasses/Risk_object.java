@@ -206,6 +206,7 @@ public class Risk_object extends Baseclass {
 
 
 	}
+	
 
 	@FindBy(xpath = "//button[@id='editIcon']//*[name()='svg']")
 	public WebElement Edit_icon;
