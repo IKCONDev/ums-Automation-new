@@ -399,6 +399,12 @@ JavascriptExecutor js = (JavascriptExecutor) driver;
         }
         driver.switchTo().window(originalTab);
 	}
+	public void Filtersendkeysmultipleweb(List<WebElement> elements, String text) {
+	    elements.stream()
+	            .filter(WebElement::isDisplayed)
+	            .findFirst() // Stops processing the stream once the first match is found
+	            .ifPresent(e -> sendkeyweb(e, text));
+	}
 
 	
 }
