@@ -1,27 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
   <suite started-at="2026-01-09T18:29:30 IST" name="Default suite" finished-at="2026-01-09T18:30:24 IST" duration-ms="53155">
+=======
+  <suite started-at="2026-01-02T14:37:44 IST" name="Default suite" finished-at="2026-01-02T14:43:22 IST" duration-ms="337769">
+>>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.Runnerclass@2f67a4d3]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.Runnerclass@4a668b6e]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
+<<<<<<< HEAD
     <test started-at="2026-01-09T18:29:30 IST" name="Default test" finished-at="2026-01-09T18:30:24 IST" duration-ms="53155">
+=======
+    <test started-at="2026-01-02T14:37:44 IST" name="Default test" finished-at="2026-01-02T14:43:22 IST" duration-ms="337769">
+>>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
       <class name="Runner.Runnerclass">
+<<<<<<< HEAD
         <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Runner.Runnerclass@2f67a4d3]" started-at="2026-01-09T18:29:30 IST" name="setUpClass" finished-at="2026-01-09T18:29:39 IST" duration-ms="8773" status="PASS">
+=======
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Runner.Runnerclass@4a668b6e]" started-at="2026-01-02T14:37:44 IST" name="setUpClass" finished-at="2026-01-02T14:37:52 IST" duration-ms="7588" status="PASS">
+>>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
           <params>
             <param index="0">
               <value>
+<<<<<<< HEAD
                 <![CDATA[org.testng.TestRunner@52285a5f]]>
+=======
+                <![CDATA[org.testng.TestRunner@12209826]]>
+>>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
+<<<<<<< HEAD
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.Runnerclass@2f67a4d3]" started-at="2026-01-09T18:29:39 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-09T18:30:07 IST" duration-ms="27759" status="PASS">
+=======
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.Runnerclass@4a668b6e]" started-at="2026-01-02T14:37:52 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-02T14:38:15 IST" duration-ms="23501" status="PASS">
+>>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
           <params>
             <param index="0">
               <value>
@@ -30,30 +50,63 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA["UMS"]]>
+                <![CDATA["UMS Filter"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
+<<<<<<< HEAD
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.Runnerclass@2f67a4d3]" started-at="2026-01-09T18:30:07 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-09T18:30:19 IST" duration-ms="12116" status="PASS">
+=======
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.Runnerclass@4a668b6e]" started-at="2026-01-02T14:38:15 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-02T14:43:18 IST" duration-ms="303162" status="FAIL">
+>>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
           <params>
             <param index="0">
               <value>
+<<<<<<< HEAD
                 <![CDATA["CopilotProcessing page"]]>
+=======
+                <![CDATA["Task Page"]]>
+>>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["UMS"]]>
+                <![CDATA["UMS Filter"]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.IndexOutOfBoundsException">
+            <message>
+              <![CDATA[Index 2 out of bounds for length 0]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IndexOutOfBoundsException: Index 2 out of bounds for length 0
+at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+at java.base/java.util.Objects.checkIndex(Objects.java:385)
+at java.base/java.util.ArrayList.get(ArrayList.java:427)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:39)
+at jdk.proxy2/jdk.proxy2.$Proxy34.get(Unknown Source)
+at Objectclasses.Filter_objects.Meeting_Filters(Filter_objects.java:84)
+at Stepdefinitions.Filters.Meeting_Filters(Filters.java:49)
+at ✽.Meeting Filters "ums-support@ikcontech.com" "Test@123456"(file:///C:/Users/VenkateshUdaru/Downloads/UMSAutom/ums-Automation-new/src/test/resources/Features/Filter.feature:14)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IndexOutOfBoundsException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
+<<<<<<< HEAD
         <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.Runnerclass@2f67a4d3]" started-at="2026-01-09T18:30:19 IST" name="tearDownClass" finished-at="2026-01-09T18:30:24 IST" duration-ms="4351" status="PASS">
+=======
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.Runnerclass@4a668b6e]" started-at="2026-01-02T14:43:18 IST" name="tearDownClass" finished-at="2026-01-02T14:43:22 IST" duration-ms="3392" status="PASS">
+>>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

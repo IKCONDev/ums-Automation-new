@@ -22,7 +22,7 @@ public class Driver {
 		WebDriverManager.chromedriver().setup();
 
 		ChromeOptions options = new ChromeOptions();
-
+//		options.addArguments("--headless=new");
 		options.setAcceptInsecureCerts(true); 
 
 		options.addArguments("force-device-scale-factor=0.70");
