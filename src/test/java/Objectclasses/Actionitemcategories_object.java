@@ -107,7 +107,7 @@ public class Actionitemcategories_object extends Baseclass {
 		Clickelement(Actionitem_drop);	
 		Clickelement(driver.findElement(By.xpath("//span[normalize-space()='Information Technology']")));
 		validatetext(ActionitemCat_name, "ActionItem Category Name");
-		validateattribute(ActionitemCat_name_in, "placeholder", "Category Name");
+		validateattribute(ActionitemCat_name_in, "placeholder", "Category Title");
 		sendkeyweb(ActionitemCat_name_in, ACN);
 		validatetext(Actionitem_desc, "ActionItem Category Description");
 		validateattribute(Actionitem_desc_in, "placeholder", "Category Description");
@@ -141,7 +141,7 @@ public class Actionitemcategories_object extends Baseclass {
 		validatetext(Table_data.get(3), ACN + " Task");	
 		validatetext(Table_data.get(4), "Information Technology");	
 
-		validatetext(Table_data.get(5), "UMS SUPPORT");
+		validatetext(Table_data.get(5), "UMS TEST");
 		//		validatetext(Table_data.get(5), "May 20, 2024, 4:14 PM");
 		validatetext(Table_data.get(6), "");
 		validatetext(Table_data.get(7), "");
@@ -172,7 +172,7 @@ public class Actionitemcategories_object extends Baseclass {
 		validatetext(ActionitemCat_name, "ActionItem Category Name");
 		Thread.sleep(4000);
 
-		validateattribute(ActionitemCat_name_in, "placeholder", "Category Name");
+		validateattribute(ActionitemCat_name_in, "placeholder", "Category Title");
 		sendkeyweb(ActionitemCat_name_in, ACN);
 		validatetext(Actionitem_desc, "ActionItem Category Description");
 		validateattribute(Actionitem_desc_in, "placeholder", "Category Description");
@@ -191,9 +191,9 @@ public class Actionitemcategories_object extends Baseclass {
 		validatetext(Table_data.get(2), ACN);
 		validatetext(Table_data.get(3), ACN + " Task");
 		validatetext(Table_data.get(4), "Information Technology");
-		validatetext(Table_data.get(5), "UMS SUPPORT");
+		validatetext(Table_data.get(5), "UMS TEST");
 		validatetext(Table_data.get(6), " ");
-		validatetext(Table_data.get(7), "UMS SUPPORT ");
+		validatetext(Table_data.get(7), "UMS TEST");
 		validatetext(Table_data.get(8), " ");
 
 

@@ -30,7 +30,7 @@ public class Hooks {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
         // Initialize ExtentReports and configure it once
-        ExtentSparkReporter srp = new ExtentSparkReporter("Reports/DNS_Report.html")
+        ExtentSparkReporter srp = new ExtentSparkReporter("Reports/UMS_Report.html")
                 .viewConfigurer()
                 .viewOrder()
                 .as(new ViewName[] { ViewName.DASHBOARD, ViewName.TEST, ViewName.CATEGORY })

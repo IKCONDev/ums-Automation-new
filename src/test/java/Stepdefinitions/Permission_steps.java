@@ -53,7 +53,6 @@ public class Permission_steps {
 		PO.Add_the_Permissions(s1);	
 	}
 
-
 	@Then("Validate the added permission data {string}")
 	public void validate_the_added_permission_data(String s1) throws InterruptedException {
 		PO.validate_the_added_permission_data(s1);

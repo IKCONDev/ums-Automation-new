@@ -7,7 +7,11 @@
         <methods>
           <include name="setUpClass"/>
           <include name="tearDownClass"/>
+<<<<<<< HEAD
           <include name="runScenario" invocation-numbers="1 2 3 4 5 6"/>
+=======
+          <include name="runScenario" invocation-numbers="1"/>
+>>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
         </methods>
       </class> <!-- Runner.Runnerclass -->
     </classes>

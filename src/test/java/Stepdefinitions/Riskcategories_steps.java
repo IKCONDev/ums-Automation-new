@@ -18,7 +18,7 @@ public class Riskcategories_steps {
 	@Then("Validate the risk category page")
 	public void validate_the_risk_category_page() throws InterruptedException {
 		RO.validate_the_risk_category_page();
-	
+
 	}
 
 	@Then("Add the Riskcategory {string}")
@@ -44,8 +44,7 @@ public class Riskcategories_steps {
 
 	@Then("Delete the Risk categories {string}")
 	public void delete_the_risk_categories(String s1) throws InterruptedException {
-		RO.delete_the_risk_categories(s1);
-		
+		RO.delete_the_risk_categories(s1);		
 	}
 }
 

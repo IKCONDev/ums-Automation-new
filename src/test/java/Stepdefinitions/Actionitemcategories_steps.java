@@ -21,7 +21,6 @@ public class Actionitemcategories_steps {
 		AICO.add_the_actionitem_category(ACN);
 	}
 
-
 	@Then("validate the added actionitem category {string}")
 	public void validate_the_added_actionitemcategory(String ACN) throws InterruptedException {
 		AICO.validate_the_added_actionitem_category(ACN);

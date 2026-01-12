@@ -10,5 +10,5 @@
     #Then Delete the actionitem category "<ACN>"
 #
     #Examples: 
-      #| ACN         |
+      #| ACN   |
       #| kjkjj |
