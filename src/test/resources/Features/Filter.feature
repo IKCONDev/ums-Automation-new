@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #Feature: UMS Filter
 #
  #@tag1
@@ -16,7 +15,6 @@
     #Examples: 
       #| Username                  | Password    |
       #| ums-support@ikcontech.com | Test@123456 |
-=======
 Feature: UMS Filter
 
   @tag1
@@ -61,4 +59,3 @@ Feature: UMS Filter
     Examples:
       | Username                  | Password    |
       | ums-support@ikcontech.com | Test@123456 |
->>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
