@@ -6,7 +6,7 @@
   <properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<tools-systemPath>
-			C:\Users\PraveenReddyGurram\Desktop\UMS-Automation\UMS-Automation\tools\tools-1.5.0.jar</tools-systemPath>
+			C:\Users\VinodKethu\Downloads\tools-1.5.0.jar</tools-systemPath>
 	</properties>
 	<dependencies>
 	<dependency>

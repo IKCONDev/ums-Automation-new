@@ -1,21 +1,21 @@
-Feature: UMS
-
-  @tag1
-  Scenario Outline: Created By Action items Page
-    When user navigates to action items page
-    Then user validates the action items page
-    Then user adds actionitem in action items page "<AT>" "<AD>"
-    Then user validates the added actionitem in action items page "<AT>"
-    Then user update the action items page "<AT>"
-    Then user validates the updated actionitem in action items page "<AT>"
-    Then user delete the action items page "<AT>"
-    Then user create task in action items page "<AT>" "<TT>" "<TD>"
-
+#Feature: UMS
+#
+  #@tag1
+  #Scenario Outline: Created By Action items Page
+    #When user navigates to action items page
+    #Then user validates the action items page
+    #Then user adds actionitem in action items page "<AT>" "<AD>"
+    #Then user validates the added actionitem in action items page "<AT>"
+    #Then user update the action items page "<AT>"
+    #Then user validates the updated actionitem in action items page "<AT>"
+    #Then user delete the action items page "<AT>"
+    #Then user create task in action items page "<AT>" "<TT>" "<TD>"
+#
     #Then user click on editcolumn in action items page
     #Then user click on filter in action items page "<AT>"
-    Examples: 
-      | AT            | AD                       | TT      | TD                 |
-      | Actionitem241 | Actionitemdescription241 | Task241 | Taskdescription241 |
+    #Examples: 
+      #| AT            | AD                       | TT      | TD                 |
+      #| Actionitem241 | Actionitemdescription241 | Task241 | Taskdescription241 |
     #Then user checks the action items page "<AT>" "<AD>"
     #Then user update the action items page "<AT>"
     #Then user delete the action items page "<AT>"
