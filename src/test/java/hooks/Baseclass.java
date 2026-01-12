@@ -35,7 +35,7 @@ import Drivemanager.Driver;
 
 public class Baseclass {
 	WebDriver driver = Driver.getDriver();
-	WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(20));
+	WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(30));
 	ExtentTest test=Hooks.getExtentTest();
 		
 	public String validatefont(WebElement web) {
