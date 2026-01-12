@@ -10,5 +10,5 @@
     #Then Delete the Risk categories "<s1>"
 #
     #Examples: 
-      #| s1     |
-      #| effort |
+      #| s1        |
+      #| Coalition |

@@ -25,7 +25,7 @@ public class Projects_object extends Baseclass {
 		driver = RC;
 		PageFactory.initElements(RC, this);
 	}
-	
+
 
 	@FindBy(xpath = "//div[normalize-space()='Setup']")
 	private WebElement Setup;
@@ -77,7 +77,7 @@ public class Projects_object extends Baseclass {
 	@FindBy(xpath="(//span[@class='ng-arrow-wrapper'])[1]")
 	public WebElement Programnamedrpdwn;
 
-	@FindBy(xpath="//span[normalize-space()='Dignity']")
+	@FindBy(xpath="//span[normalize-space()='Whitebox']")
 	public WebElement Programnamedrpdwnselect;
 
 	@FindBy(xpath="(//label[contains(text(),'Project Code')])[1]")
@@ -89,7 +89,7 @@ public class Projects_object extends Baseclass {
 	@FindBy(xpath="(//span[@class='ng-arrow-wrapper'])[2]")
 	public WebElement Projectownerdrpdwn;
 
-	@FindBy(xpath="//span[normalize-space()='Adam Smith']")
+	@FindBy(xpath="//span[normalize-space()='Ananth raj']")
 	public WebElement Projectownerselect;
 
 	@FindBy(xpath="(//label[contains(text(),'Start Date & Time')])[1]")
@@ -161,14 +161,14 @@ public class Projects_object extends Baseclass {
 		attributeselected(Table_data.get(1), "ID");
 		validatetext(Table_data.get(2), PN);
 		validatetext(Table_data.get(3), PC);
-		validatetext(Table_data.get(4), "Dignity");
-		validatetext(Table_data.get(5), "Adam Smith");
+		validatetext(Table_data.get(4), "Whitebox");
+		validatetext(Table_data.get(5), "Ananth raj");
 
 		validatetext(Table_data.get(6), PD);
 		validatetext(Table_data.get(7), "");
 		validatetext(Table_data.get(8), "");
 		validatetext(Table_data.get(9), "Active");
-		validatetext(Table_data.get(10), "UMS SUPPORT");
+		validatetext(Table_data.get(10), "UMS TEST");
 		validatetext(Table_data.get(11), "");
 		validatetext(Table_data.get(12), "");
 		validatetext(Table_data.get(13), "");
@@ -239,16 +239,16 @@ public class Projects_object extends Baseclass {
 		attributeselected(Table_data.get(1), "ID");
 		validatetext(Table_data.get(2), PN);
 		validatetext(Table_data.get(3), PC);
-		validatetext(Table_data.get(4), "Dignity");
-		validatetext(Table_data.get(5), "Adam Smith");
+		validatetext(Table_data.get(4), "Whitebox");
+		validatetext(Table_data.get(5), "Ananth raj");
 		validatetext(Table_data.get(6), PD);
 		validatetext(Table_data.get(7), "");
 		validatetext(Table_data.get(8), "");
 
-		validatetext(Table_data.get(9), "Active");
-		validatetext(Table_data.get(10), "UMS SUPPORT");
+		validatetext(Table_data.get(9), "Completed");
+		validatetext(Table_data.get(10), "UMS TEST");
 		validatetext(Table_data.get(11), "");
-		validatetext(Table_data.get(12), "UMS SUPPORT");
+		validatetext(Table_data.get(12), "UMS TEST");
 		validatetext(Table_data.get(13), "");
 
 		attributeselected(Edit_icon, "Edit icon");

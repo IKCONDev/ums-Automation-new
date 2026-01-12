@@ -81,8 +81,8 @@ public class Programs_object extends Baseclass {
 	@FindBy(xpath="(//span[@class='ng-arrow-wrapper'])[1]")
 	public WebElement Programownerdrpdwn;
 
-//	@FindBy(xpath="//span[contains(text(),'Adam Smith')]")
-//	public WebElement Programownerselect;
+	@FindBy(xpath="//span[normalize-space()='Harsha Vardhan']")
+	public WebElement Programownerselect;
 
 
 	@FindBy(xpath="(//label[contains(text(),'Start Date & Time')])[1]")
@@ -122,13 +122,13 @@ public class Programs_object extends Baseclass {
 		validatetext(Programownertxt,"Program Owner");
 		Clickelement(Programownerdrpdwn);
 		Thread.sleep(3000);
-		
-		Actions actions = new Actions(driver);
-		WebElement menu = driver.findElement(By.xpath("//span[contains(text(),'Adam Smith')]"));
-		actions.moveToElement(menu).perform();
 
-//		Clickelement(Programownerselect);
-//		Thread.sleep(3000);
+		//		Actions actions = new Actions(driver);
+		//		WebElement menu = driver.findElement(By.xpath("//span[contains(text(),'Ananth raj')]"));
+		//		actions.moveToElement(menu).perform();
+
+		Clickelement(Programownerselect);
+		Thread.sleep(3000);
 
 		validatetext(Programstartdatetxt,"Start Date & Time");
 
@@ -162,13 +162,13 @@ public class Programs_object extends Baseclass {
 		sendkeyweb(Search, PN);
 		attributeselected(Table_data.get(1), "ID");
 		validatetext(Table_data.get(2), PN);
-		validatetext(Table_data.get(3), "Charan U");
+		validatetext(Table_data.get(3), "Harsha Vardhan");
 		validatetext(Table_data.get(4), PC);
 		validatetext(Table_data.get(5), PD);
 		validatetext(Table_data.get(6), "");
 		validatetext(Table_data.get(7), "");
 		validatetext(Table_data.get(8), "Active");
-		validatetext(Table_data.get(9), "UMS SUPPORT");
+		validatetext(Table_data.get(9), "UMS TEST");
 		validatetext(Table_data.get(10), "");
 		validatetext(Table_data.get(11), "");
 		validatetext(Table_data.get(12), "");
@@ -193,7 +193,7 @@ public class Programs_object extends Baseclass {
 	@FindBy(xpath = "(//span[@class='ng-arrow-wrapper'])[2]")
 	public WebElement progrmownerdrpdwn;
 
-	@FindBy(xpath = "//span[normalize-space()='Adam Smith']")
+	@FindBy(xpath = "//span[normalize-space()='Ananth raj']")
 	public WebElement progrmownerselect;
 
 	@FindBy(xpath = "(//input[@id='programStartDate'])[2]")
@@ -262,15 +262,15 @@ public class Programs_object extends Baseclass {
 		sendkeyweb(Search, PN);
 		attributeselected(Table_data.get(1), "ID");
 		validatetext(Table_data.get(2), PN);
-		validatetext(Table_data.get(3), "Adam Smith");
+		validatetext(Table_data.get(3), "Ananth raj");
 		validatetext(Table_data.get(4), PC);
 		validatetext(Table_data.get(5), PD);
 		validatetext(Table_data.get(6), "");
 		validatetext(Table_data.get(7), "");
 		validatetext(Table_data.get(8), "Completed");
-		validatetext(Table_data.get(9), "UMS SUPPORT");
+		validatetext(Table_data.get(9), "UMS TEST");
 		validatetext(Table_data.get(10), "");
-		validatetext(Table_data.get(11), "UMS SUPPORT");
+		validatetext(Table_data.get(11), "UMS TEST");
 		validatetext(Table_data.get(12), "");
 	}
 

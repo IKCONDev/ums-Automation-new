@@ -26,17 +26,34 @@ public class batchprocess_object  extends Baseclass{
 
 	@FindBy(xpath="//div[@id='modalHeader']/h5[@class='modal-title']")
 	public WebElement Batch_Process_Time;
-	//	@FindBy(xpath="//b[contains(text(),'Currently scheduled to run after')]")
-	//	public WebElement Batch_current_Time;
-	@FindBy(xpath="//label")
+
+	@FindBy(xpath="//label[normalize-space()='Choose Integrated Meeting Tool']")
+	public WebElement Choosetool;
+
+	@FindBy(xpath="//div[@class='ng-select-container ng-has-value']//span[@class='ng-arrow-wrapper']")
+	public WebElement Meetingtoolselectdrpdwn;
+
+	@FindBy(xpath="//span[normalize-space()='Microsoft Teams']")
+	public WebElement Microsoftteams;
+
+	@FindBy(xpath="//span[normalize-space()='Zoom']")
+	public WebElement Zoom;
+
+	@FindBy(xpath="//span[normalize-space()='Cisco Webex']")
+	public WebElement Webex;
+
+	@FindBy(xpath="//span[normalize-space()='Google Meet']")
+	public WebElement Googlemeet;
+
+	@FindBy(xpath="//label[normalize-space()='Choose Time']")
 	public WebElement Choose_Time;
 
-	@FindBy(xpath="//span[contains(text(),'Currently scheduled to run after every 5 hour(s) 0')]")
-	public WebElement  Batch_current_Time;
+	@FindBy(xpath="//select[@id='batchMinute']")
+	public WebElement  timesetup;
 
 	@FindBy(xpath="//button[normalize-space()='Save']")
 	public WebElement Savebtn;
-	
+
 
 	@FindBy(xpath="//button[@id='closeUpdateModal']")
 	public WebElement Cancel;
@@ -46,13 +63,79 @@ public class batchprocess_object  extends Baseclass{
 		Clickelement(Batchprocesstime);
 
 		validatetext(Batch_Process_Time,"Batch Process Time");
-		validatetext(Batch_current_Time,"Currently scheduled to run after every 5 hour(s) 0 minute(s)");
-		validatetext(Choose_Time,"Choose Time*");
+		validatetext(Choosetool, "Choose Integrated Meeting Tool");
+		Clickelement(Meetingtoolselectdrpdwn);
+
+		Clickelement(Microsoftteams);
+		validatetext(Microsoftteams, "Microsoft Teams");
+		validatetext(Choose_Time,"Choose Time");
+		Selectdropdown(timesetup,"25");
 		validatetext(Savebtn, "Save");
 		validatetext(Cancel, "Cancel");
-		Clickelement(Cancel);
-	}
+		Clickelement(Savebtn);
+		Thread.sleep(3000);
 
+		Clickelement(Batchprocesstime);
+
+		validatetext(Batch_Process_Time,"Batch Process Time");
+		validatetext(Choosetool, "Choose Integrated Meeting Tool");
+		Clickelement(Meetingtoolselectdrpdwn);
+
+		Clickelement(Zoom);
+		validatetext(Zoom, "Zoom");
+
+		validatetext(Choose_Time,"Choose Time");
+		Thread.sleep(3000);
+
+		Selectdropdown(timesetup,"25");
+		Thread.sleep(3000);
+
+		validatetext(Savebtn, "Save");
+		validatetext(Cancel, "Cancel");
+		Clickelement(Savebtn);
+
+		Thread.sleep(3000);
+
+		Clickelement(Batchprocesstime);
+
+		validatetext(Batch_Process_Time,"Batch Process Time");
+		validatetext(Choosetool, "Choose Integrated Meeting Tool");
+		Clickelement(Meetingtoolselectdrpdwn);
+
+		Clickelement(Webex);
+		validatetext(Webex, "Cisco Webex");
+
+		validatetext(Choose_Time,"Choose Time");
+		Thread.sleep(3000);
+		Selectdropdown(timesetup,"25");
+		Thread.sleep(3000);
+
+		validatetext(Savebtn, "Save");
+		validatetext(Cancel, "Cancel");
+		Clickelement(Savebtn);
+
+		Thread.sleep(3000);
+
+		Clickelement(Batchprocesstime);
+
+		validatetext(Batch_Process_Time,"Batch Process Time");
+		validatetext(Choosetool, "Choose Integrated Meeting Tool");
+		Clickelement(Meetingtoolselectdrpdwn);
+
+		Clickelement(Googlemeet);
+		validatetext(Googlemeet, "Google Meet");
+		validatetext(Choose_Time,"Choose Time");
+		Thread.sleep(3000);
+
+		Selectdropdown(timesetup,"25");
+		Thread.sleep(3000);
+
+		validatetext(Savebtn, "Save");
+		validatetext(Cancel, "Cancel");
+		Clickelement(Savebtn);
+
+
+	}
 }
 //System.out.println(vc.findElement(By.xpath("//div[@id='modalHeader']/h5[@class='modal-title']")).getText().equals("Batch Process Time") 
 //? "Batch process title is matched" 
