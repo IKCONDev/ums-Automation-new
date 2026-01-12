@@ -52,7 +52,7 @@ public class Programs_steps {
 		PO.Validate_the_Updated_Program_in_programs_page(PN,PC,PD);
 
 	}
-	
+
 	@Then("user delete the Program in programs page {string}")
 	public void delete_the_Program_in_programs_page(String PN) throws Exception {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));

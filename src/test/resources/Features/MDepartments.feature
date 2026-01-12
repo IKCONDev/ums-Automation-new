@@ -10,5 +10,5 @@
     #Then delete the department "<DN>"
 #
     #Examples: 
-      #| DN      | FN                | DC    | DL        |
-      #| Harmony | Vinod Reddy Kethu | Al001 | Hyderabad |
+      #| DN      | FN          | DC    | DL        |
+      #| Harmony | Vinod Kethu | Al001 | Hyderabad |

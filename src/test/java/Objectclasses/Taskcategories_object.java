@@ -195,7 +195,7 @@ public class Taskcategories_object extends Baseclass {
 		Clickelement(Task_drop);	
 		Clickelement(driver.findElement(By.xpath("//span[normalize-space()='Information Technology']")));
 		validatetext(TaskCat_name, "Task Category Name");
-		validateattribute(TaskCat_name_in, "placeholder", "Category Name");
+		validateattribute(TaskCat_name_in, "placeholder", "Category Title");
 		sendkeyweb(TaskCat_name_in, CN);
 		validatetext(Task_desc, "Task Category Description");
 		validateattribute(Task_desc_in, "placeholder", "Category Description");
@@ -225,7 +225,7 @@ public class Taskcategories_object extends Baseclass {
 		validatetext(Table_data.get(3), CN + " Task");
 		validatetext(Table_data.get(4), "Information Technology");
 
-		validatetext(Table_data.get(5), "UMS SUPPORT");
+		validatetext(Table_data.get(5), "UMS TEST");
 		//		validatetext(Table_data.get(5), "May 20, 2024, 4:14 PM");
 		dispalyedattribute(Editicon, "Edit icon");
 		dispalyedattribute(Deleteicon, "Delete icon");
@@ -242,7 +242,7 @@ public class Taskcategories_object extends Baseclass {
 		Clickelement(Task_drop);
 		Clickelement(driver.findElement(By.xpath("//span[normalize-space()='Information Technology']")));
 		validatetext(TaskCat_name, "Task Category Name");
-		validateattribute(TaskCat_name_in, "placeholder", "Category Name");
+		validateattribute(TaskCat_name_in, "placeholder", "Category Title");
 		sendkeyweb(TaskCat_name_in, CN);
 		validatetext(Task_desc, "Task Category Description");
 		validateattribute(Task_desc_in, "placeholder", "Category Description");
@@ -261,10 +261,10 @@ public class Taskcategories_object extends Baseclass {
 		validatetext(Table_data.get(3), CN + " Task");
 		validatetext(Table_data.get(4), "Information Technology");
 
-		validatetext(Table_data.get(5), "UMS SUPPORT");
+		validatetext(Table_data.get(5), "UMS TEST");
 		//		validatetext(Table_data.get(5), "May 20, 2024, 4:14 PM");
 		validatetext(Table_data.get(6), " ");
-		validatetext(Table_data.get(7), "UMS SUPPORT ");
+		validatetext(Table_data.get(7), "UMS TEST");
 
 		validatetext(Table_data.get(8), " ");
 

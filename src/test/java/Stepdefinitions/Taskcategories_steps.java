@@ -73,7 +73,6 @@ public class Taskcategories_steps {
 		TO.validate_the_updated_task_category(CN);
 	}
 
-
 	@Then("Delete the category {string}")
 	public void Delete_the_category(String CN) throws InterruptedException {
 		TO.Delete_the_category(CN);

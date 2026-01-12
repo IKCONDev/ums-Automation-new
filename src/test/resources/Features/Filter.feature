@@ -1,3 +1,22 @@
+<<<<<<< HEAD
+#Feature: UMS Filter
+#
+ #@tag1
+  #Scenario Outline: Login page
+    #Given user is Navigate Login page
+    #When user is validate Login page "<Username>" "<Password>"
+#
+    #Examples: 
+      #| Username                  | Password    |
+      #| ums-support@ikcontech.com | Test@123456 |
+#
+  #@tag2
+  #Scenario Outline: Task Page
+    #Then Meeting Filters "<Username>" "<Password>"
+    #Examples: 
+      #| Username                  | Password    |
+      #| ums-support@ikcontech.com | Test@123456 |
+=======
 Feature: UMS Filter
 
   @tag1
@@ -42,3 +61,4 @@ Feature: UMS Filter
     Examples:
       | Username                  | Password    |
       | ums-support@ikcontech.com | Test@123456 |
+>>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git

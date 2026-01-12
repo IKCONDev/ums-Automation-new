@@ -43,7 +43,6 @@ public class Rolemenuitems_steps {
 	@Then("Validate Role Menu Items")
 	public void Validate_Role_Menu_Items() throws InterruptedException {
 			RO.Validate_Role_Menu_Items();
-
 	}
 	
 	@And("add the Role Menu Items {string}")

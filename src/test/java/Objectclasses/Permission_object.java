@@ -131,7 +131,7 @@ public class Permission_object extends Baseclass {
 		driver = RC;
 		PageFactory.initElements(RC, this);
 	}
-	
+
 
 	@FindBy(xpath="//div[normalize-space()='Setup']")
 	public WebElement Settings;
@@ -236,7 +236,7 @@ public class Permission_object extends Baseclass {
 		sendkeyweb(Search, s1);
 		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + s1 + "']/following-sibling::td//button[@id='editIcon']")));
 
-//		Cat_name.clear();
+		//		Cat_name.clear();
 		Thread.sleep(3000);
 		sendkeyweb(Cat_name, s1);
 		sendkeyweb(Desc,"Access permissions to " + s1);

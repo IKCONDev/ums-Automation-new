@@ -44,7 +44,6 @@ public class Actionitem_object extends Baseclass {
 		Clickelement(Actionitemsdropdwnarrow);
 		Thread.sleep(3000);
 
-
 		Clickelement(Actionitemscreatedbyclick);
 
 	}
@@ -103,20 +102,20 @@ public class Actionitem_object extends Baseclass {
 	@FindBy(xpath = "//ng-select[@placeholder='Choose Assignee']//span[@class='ng-arrow-wrapper']")
 	public WebElement Actionitemassigneedrpdwn;
 
-	@FindBy(xpath = "//span[normalize-space()='UMS SUPPORT']")
+	@FindBy(xpath = "//span[normalize-space()='UMS TEST']")
 	public List<WebElement> Actionitemassigneeselect;
 
 	@FindBy(xpath = "(//span[@class='ng-arrow-wrapper'])[7]")
 	public WebElement Actionitemreviewerdrpdwn;
 
 
-	@FindBy(xpath = "//span[normalize-space()='Adam Smith']")
-	public WebElement Actionitemreviewerselect;
+	@FindBy(xpath = "//span[normalize-space()='Anupama Shetty']")
+	public List<WebElement> Actionitemreviewerselect;
 
 	@FindBy(xpath = "(//span[@class='ng-arrow-wrapper'])[8]")
 	public WebElement Actionitemcategorydrpdwn;
 
-	@FindBy(xpath = "//span[normalize-space()='API Enhancement']")
+	@FindBy(xpath = "//span[normalize-space()='Testing']")
 	public WebElement Actionitemcategoryselect;
 
 	@FindBy(xpath = "//input[@name='startDate']")
@@ -189,7 +188,7 @@ public class Actionitem_object extends Baseclass {
 		Clickelement(Actionitemreviewerdrpdwn);
 		Thread.sleep(4000);
 
-		Clickelement(Actionitemreviewerselect);
+		clickmultipleweb(Actionitemreviewerselect);
 		Thread.sleep(4000);
 
 		Clickelement(Actionitemcategorydrpdwn);
@@ -395,27 +394,27 @@ public class Actionitem_object extends Baseclass {
 		Clickelement(ActionitemTaskcreatebtn);
 		Thread.sleep(4000);
 
-//		driver.navigate().refresh();
-//		Thread.sleep(3000);
+		//		driver.navigate().refresh();
+		//		Thread.sleep(3000);
 
 	}
-	
+
 	@FindBy(xpath = "//input[@class='search-box']")
 	public WebElement tasksearch ;
-	
+
 	@FindBy(xpath = "//button[@id='editIcon']//*[name()='svg']")
 	public WebElement taskediticon ;
-	
+
 	@FindBy(xpath = "//input[@id='orgTaskTitle']")
 	public WebElement updatetasktitle ;
 
 	public void user_update_task_in_Actionitem_page(String AT, String TT, String TD) throws InterruptedException {
-		
+
 
 		sendkeyweb(tasksearch, TT);
 		Thread.sleep(4000);
-		
-		
+
+
 	}
 	@FindBy(xpath = "//div[contains(text(),'Edit Column')]")
 	public WebElement Editcolumn ;

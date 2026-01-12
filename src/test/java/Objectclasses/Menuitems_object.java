@@ -166,7 +166,7 @@ public class Menuitems_object extends Baseclass {
 		PageFactory.initElements(RC, this);
 	}
 
-	
+
 	@FindBy(xpath="//div[normalize-space()='Setup']")
 	public WebElement Settings;
 
@@ -194,7 +194,7 @@ public class Menuitems_object extends Baseclass {
 		validatetext(Title, "Menu Items");
 		validatetext(Add, "Add");
 		validatetext(Delete_button, "Delete");
-		String s = ",MenuItem ID,MenuItem Name,Menu Path,Menu Description,Added By,Created Date & Time,Modified By,Modified Date & Time,Edit,Delete";
+		String s = ",MenuItem ID,MenuItem Name,Menu Path,Menu Description,Created By,Created Date & Time,Modified By,Modified Date & Time,Edit,Delete";
 
 		List<String> list = new ArrayList<String>(Arrays.asList(s.split(",")));
 		for (int i = 0; i < 11; i++) {
@@ -257,7 +257,7 @@ public class Menuitems_object extends Baseclass {
 		validatetext(Table_data.get(2), s1);
 		validatetext(Table_data.get(3), "/"+s1);
 		validatetext(Table_data.get(4), s1+" path");
-		validatetext(Table_data.get(5), "UMS SUPPORT");	
+		validatetext(Table_data.get(5), "UMS TEST");	
 		validatetext(Table_data.get(6), ",");
 		dispalyedattribute(Edit_icon, "Edit Icon");
 		dispalyedattribute(Delete_icon, "Delete Icon");
@@ -299,9 +299,9 @@ public class Menuitems_object extends Baseclass {
 		validatetext(Table_data.get(2), s1);
 		validatetext(Table_data.get(3), "/"+s1);
 		validatetext(Table_data.get(4), s1+" path");
-		validatetext(Table_data.get(5), "UMS SUPPORT");	
+		validatetext(Table_data.get(5), "UMS TEST");	
 		validatetext(Table_data.get(6), ",");
-		validatetext(Table_data.get(7), "UMS SUPPORT");
+		validatetext(Table_data.get(7), "UMS TEST");
 		validatetext(Table_data.get(8), ",");
 		dispalyedattribute(Edit_icon, "Edit Icon");
 		dispalyedattribute(Delete_icon, "Delete Icon");

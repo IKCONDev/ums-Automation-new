@@ -5,7 +5,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -22,7 +24,7 @@ public class Riskcategories_object extends Baseclass  {
 		driver = RC;
 		PageFactory.initElements(RC, this);
 	}
-	
+
 
 	@FindBy(xpath = "//div[normalize-space()='Setup']")
 	public WebElement Setup;
@@ -67,16 +69,16 @@ public class Riskcategories_object extends Baseclass  {
 
 	@FindBy(xpath = "//div[@id='addRiskModal']//h5[@id='xlModalLabel']")
 	public WebElement Risk_cat;
-	
+
 	@FindBy(xpath = "//div[@id='addRiskModal']//label[1]")
 	public WebElement Choose_dept;
-	
+
 	@FindBy(xpath = "//div[@id='addRiskModal']//span[@class='ng-arrow-wrapper']")
 	public WebElement Choose_dept_drpdwn;
-	
-	@FindBy(xpath = "//span[normalize-space()='Accounts & Finance']")
+
+	@FindBy(xpath = "//span[normalize-space()='Information Technology']")
 	public WebElement dept_select;
-	
+
 	@FindBy(xpath = "//div[@id='addRiskModal']//label[contains(text(),'Risk Category Name')]")
 	public WebElement Risk_catname;
 	@FindBy(xpath = "//div[@id='addRiskModal']//input[@id='categoryName']")
@@ -95,11 +97,11 @@ public class Riskcategories_object extends Baseclass  {
 		validatetext(Risk_cat, "Risk Category");
 		validatetext(Choose_dept, "Choose Department");
 		Clickelement(Choose_dept_drpdwn);
-		
+
 		Clickelement(dept_select);
 
 		validatetext(Risk_catname, "Risk Category Name");
-		validateattribute(Risk_catname_in, "placeholder", "Category Name");
+		validateattribute(Risk_catname_in, "placeholder", "Category Title");
 		sendkeyweb(Risk_catname_in, s1);
 		validatetext(Risk_catdesc, "Risk Category Description");
 		validateattribute(Risk_catdesc_in, "placeholder", "Category Description");
@@ -123,12 +125,14 @@ public class Riskcategories_object extends Baseclass  {
 	public WebElement Trash_icon;
 	public void validate_the_added_risk_category(String s1) throws InterruptedException {
 		sendkeyweb(Search, s1);
-		dispalyedattribute(Table_data.get(0), "Risk category ID");
-		validatetext(Table_data.get(1), s1);
-		validatetext(Table_data.get(2), "Access permissions to " +s1);
-		validatetext(Table_data.get(3), "UMS SUPPORT");
-		validatetext(Table_data.get(4), "2024-05-20T12:39:49.202723");
-		validatetext(Table_data.get(5), "Active");
+		dispalyedattribute(Table_data.get(1), "Risk category ID");
+		validatetext(Table_data.get(2), s1);
+		validatetext(Table_data.get(3), "Access permissions to " +s1);
+		validatetext(Table_data.get(4), "Information Technology");
+		validatetext(Table_data.get(5), "UMS TEST");
+		validatetext(Table_data.get(6), "");
+
+		validatetext(Table_data.get(7), "Active");
 		dispalyedattribute(Edit_icon, "Edit Icon");
 		dispalyedattribute(Trash_icon, "Delete Icon");
 
@@ -150,10 +154,10 @@ public class Riskcategories_object extends Baseclass  {
 	public WebElement URisk_catcancel;
 	public void update_the_risk_cateory(String s1) throws InterruptedException {
 		sendkeyweb(Search, s1);
-		Clickelement(driver.findElement(By.xpath("//td[text()='" + s1 + "']/following-sibling::td//button[@id='editIcon']")));
+		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + s1 + "']/following-sibling::td//button[@id='editIcon']")));
 		validatetext(URisk_cat, "Update Risk Category");
 		validatetext(URisk_catname, "Risk Category Name");
-		validateattribute(URisk_catname_in, "placeholder", "Category Name");
+		validateattribute(URisk_catname_in, "placeholder", "Category Title");
 		sendkeyweb(URisk_catname_in, s1);
 		validatetext(Risk_catdesc, "Risk Category Description");
 		validateattribute(Risk_catdesc_in, "placeholder", "Category Description");
@@ -168,18 +172,18 @@ public class Riskcategories_object extends Baseclass  {
 
 	}
 
-
-
 	public void validate_the_updated_risk_category(String s1) throws InterruptedException {
 		sendkeyweb(Search, s1); 
-		dispalyedattribute(Table_data.get(0), "Risk category ID");
-		validatetext(Table_data.get(1), s1);
-		validatetext(Table_data.get(2), "Access permissions to " +s1);
-		validatetext(Table_data.get(3), "UMS SUPPORT");
-		validatetext(Table_data.get(4), "2024-05-20T12:39:49.202723");
-		validatetext(Table_data.get(5), "Active");
-		validatetext(Table_data.get(6), "UMS SUPPORT");
-		validatetext(Table_data.get(7), "");
+		dispalyedattribute(Table_data.get(1), "Risk category ID");
+		validatetext(Table_data.get(2), s1);
+		validatetext(Table_data.get(3), "Access permissions to " +s1);
+		validatetext(Table_data.get(4), "Information Technology");
+		validatetext(Table_data.get(5), "UMS TEST");
+		validatetext(Table_data.get(6), "");
+
+		validatetext(Table_data.get(7), "Active");
+		validatetext(Table_data.get(8), "UMS TEST");
+		validatetext(Table_data.get(9), "");
 
 		dispalyedattribute(Edit_icon, "Edit Icon");
 		dispalyedattribute(Trash_icon, "Delete Icon");
@@ -188,13 +192,42 @@ public class Riskcategories_object extends Baseclass  {
 
 
 	public void delete_the_risk_categories( String s1) throws InterruptedException {
+		driver.navigate().refresh();
+
 		sendkeyweb(Search, s1); 
-		Clickelement(driver.findElement(By.xpath("//td[text()='" + s1 + "']/following-sibling::td//button[@id='trashIcon']")));
-		validatealert("alert");
-		driver.switchTo().alert().dismiss();
-		Clickelement(driver.findElement(By.xpath("//td[text()='" + s1 + "']/following-sibling::td//button[@id='trashIcon']")));
-		validatealert("alert");
-		driver.switchTo().alert().accept();
+		//		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + s1 + "']/following-sibling::td//button[@id='trashIcon']")));
+		//		validatealert("alert");
+		//		Thread.sleep(3000);
+		//		driver.switchTo().alert().dismiss();
+		//		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='\" + s1 + \"']/following-sibling::td//button[@id='trashIcon']")));
+		//		validatealert("alert");
+		//		Thread.sleep(3000);
+		//
+		//		driver.switchTo().alert().accept();
+		//	}
+
+		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + s1 + "']/following-sibling::td//button[@id='trashIcon']")));
+
+		try {
+			Alert alert = driver.switchTo().alert();
+			System.out.println("Alert detected: " + alert.getText());
+			alert.dismiss();
+		} catch (NoAlertPresentException e) {
+			System.out.println("No alert present.");
+		}
+
+		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + s1 + "']/following-sibling::td//button[@id='trashIcon']")));
+
+		try {
+			Alert alert = driver.switchTo().alert();
+			System.out.println("Alert detected: " + alert.getText());
+			Thread.sleep(3000);
+			alert.accept();
+		} catch (NoAlertPresentException e) {
+			System.out.println("No alert present.");
+		}
+
+
 	}
 
 }

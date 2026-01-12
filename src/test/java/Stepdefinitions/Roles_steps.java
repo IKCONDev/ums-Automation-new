@@ -28,7 +28,6 @@ public class Roles_steps {
 	public void validate_the_added_role_data(String RN) throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		RO.validate_the_added_role_data(RN);
-	
 	}
 	@Then("Update the role {string} {string}")
 	public void update_the_role(String RN, String PN) throws InterruptedException {
