@@ -31,10 +31,25 @@ public class Filters extends Baseclass {
 		
 	}
 	
+	@Then("navigate to Meetings")
+	public void Meetings() {
+		EO.Meetings();
+	}
+	@Then("navigate to Actionitems")
+	public void Actionitems() {
+		EO.Actionitems();
+	}
+	@Then("navigate to Tasks")
+	public void Tasks() {
+		EO.Taskss();
+	}
+	@Then("navigate to Risks")
+	public void Risks() {
+		EO.Risks();
+	}
 	
 	@And("Meeting Filters {string} {string}")
 	public void Meeting_Filters(String AC,String MT) throws InterruptedException {
-		
 		EO.Meeting_Filters(AC, MT);
 	}
 
@@ -44,7 +59,7 @@ public class Filters extends Baseclass {
 		
 		
 	}
-	@And("Task Filters {string} {string}")
+	@And("Task Filters  {string} {string}")
 	public void Task_Filters(String AC,String TT) throws InterruptedException {
 		EO.Task_Filters(AC, TT);
 	}

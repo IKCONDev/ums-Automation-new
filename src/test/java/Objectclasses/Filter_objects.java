@@ -2,9 +2,10 @@ package Objectclasses;
 
 import java.util.List;
 
-import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import Datepicker.Dateformatter;
@@ -20,11 +21,34 @@ public class Filter_objects extends Baseclass {
 		driver = RC;
 		PageFactory.initElements(RC, this);
 	}
+	Actions ac=new Actions(driver);
 
 	@FindBy(xpath = "//div[normalize-space()='Meetings']")
 	private WebElement Meetings;
+	@FindBy(xpath = "//div[normalize-space()='Action Items']")
+	private WebElement Action_items;
+	@FindBy(xpath = "//div[normalize-space()='Tasks']")
+	private WebElement Tasks;
+	@FindBy(xpath = "//div[normalize-space()='Risks']")
+	private WebElement Risks;
 
-	@FindBy(xpath = "//div[contains(@id,'ilter')]//*[name()='svg']")
+	public void Meetings() {
+		Clickelement(Meetings);
+	}
+
+	public void Actionitems() {
+		Clickelement(Action_items);
+	}
+
+	public void Taskss() {
+		Clickelement(Tasks);
+	}
+
+	public void Risks() {
+		Clickelement(Risks);
+	}
+
+	@FindBy(xpath = "//div[contains(@data-target,'ilter')]//*[name()='svg']")
 	private WebElement filtericon;
 	@FindBy(xpath = "//div[contains(@id,'Filter')]//input[@placeholder='Meeting ID']")
 	private List<WebElement> Meeting_ID;
@@ -67,7 +91,6 @@ public class Filter_objects extends Baseclass {
 	private List<WebElement> participationrole;
 
 	public void Meeting_Filters(String AC, String MT) throws InterruptedException {
-		Clickelement(Meetings);
 		Clickelement(filtericon);
 		Thread.sleep(2000);
 		try {
@@ -78,22 +101,23 @@ public class Filter_objects extends Baseclass {
 		sendkeysmultipleweb(Meeting_Title, MT);
 		clickmultipleweb(Meeting_Type);
 		Clickelement(options.get(2));
-		clickmultipleweb(Meeting_Reportees);
-		Clickelement(options.get(2));
+		
 		clickmultipleweb(Meeting_Program);
 		Clickelement(options.get(2));
 		clickmultipleweb(Meeting_Department);
-		Clickelement(options.get(45));
+		Clickelement(options.get(2));
 		clickmultipleweb(Meeting_Project);
 		Clickelement(options.get(2));
 		clickmultipleweb(Meeting_team);
-		Clickelement(options.get(1));
+		Clickelement(options.get(options.size()-1));
 		clickmultipleweb(Meeting_Location);
 		Clickelement(options.get(2));
 		clickmultipleweb(Meeting_Organizer);
 		Clickelement(options.get(2));
 		sendkeysmultipleweb(Meeting_startdate, D.Datefun(0, -3, 0));
 		sendkeysmultipleweb(Meeting_enddate, D.Datefun(0, 5, 0));
+		clickmultipleweb(Meeting_Reportees);
+		Clickelement(options.get(options.size()-1));
 		try {
 			clickmultipleweb(Timezone);
 			Clickelement(options.get(1));
@@ -123,7 +147,7 @@ public class Filter_objects extends Baseclass {
 	private List<WebElement> Act_id;
 	@FindBy(xpath = "//div[contains(@id,'ilter')]//input[@placeholder='Meeting ID']")
 	private List<WebElement> Act_Mid;
-	@FindBy(xpath = "//div[contains(@id,'ilter')]//input[@placeholder='Action Item Title']")
+	@FindBy(xpath = "//div[contains(@id,'ilter')]//input[@placeholder='Title']")
 	private List<WebElement> Act_title;
 	@FindBy(xpath = "//div[contains(@id,'Filter')]//div[contains(normalize-space(),'Select Priority')]/span[@class='ng-arrow-wrapper']")
 	private List<WebElement> Act_Priority;
@@ -131,7 +155,7 @@ public class Filter_objects extends Baseclass {
 	private List<WebElement> Act_status;// Choose Reviewer Status
 	@FindBy(xpath = "//div[contains(@id,'Filter')]//ng-select[@placeholder='Choose Reviewer Status']//span[@class='ng-arrow-wrapper']")
 	private List<WebElement> Act_reviewstatus;//
-	@FindBy(xpath = "//div[contains(@id,'Filter')]//ng-select[@placeholder='Over Due Days']//span[@class='ng-arrow-wrapper']")
+	@FindBy(xpath = "//div[contains(@id,'Filter')]//input[@placeholder='Over Due Days']")
 	private List<WebElement> Act_Overdue;//
 	@FindBy(xpath = "//div[contains(@id,'Filter')]//div[contains(normalize-space(),'Select Created by')]/span[@class='ng-arrow-wrapper']")
 	private List<WebElement> Act_Createdby;//
@@ -149,33 +173,31 @@ public class Filter_objects extends Baseclass {
 	private List<WebElement> Act_Reportees;//
 	@FindBy(xpath = "//div[h6[contains(text(),'Planned Start Date & Time')]]/following-sibling::div[div[text()='From']]//input[@type='datetime-local']")
 	private List<WebElement> Act_plann_from;//
-	@FindBy(xpath = "//div[h6[contains(text(),'Planned End Date & Time')]]/following-sibling::div[div[text()='From']]//input[@type='datetime-local']")
+	@FindBy(xpath = "//div[h6[contains(text(),'Planned Start Date & Time')]]/following-sibling::div[div[text()='To']]//input[@type='datetime-local']")
 	private List<WebElement> Act_plann_to;//
 	@FindBy(xpath = "//div[h6[contains(text(),'Planned End Date & Time')]]/following-sibling::div[div[text()='From']]//input[@type='datetime-local']")
 	private List<WebElement> Act_End_From;//
-	@FindBy(xpath = "//div[h6[contains(text(),'Planned End Date & Time')]]/following-sibling::div[div[text()='From']]//input[@type='datetime-local']")
+	@FindBy(xpath = "//div[h6[contains(text(),'Planned End Date & Time')]]/following-sibling::div[div[text()='To']]//input[@type='datetime-local']")
 	private List<WebElement> Act_End_To;//
 
 	public void Action_Item_Filters(String AC, String AT) throws InterruptedException {
 
-		Clickelement(Meetings);
 		Clickelement(filtericon);
 		Thread.sleep(4000);
 		sendkeysmultipleweb(Act_id, AT);
 		sendkeysmultipleweb(Act_Mid, AT);
-		sendkeysmultipleweb(Act_title, AT);
+		sendkeysmultipleweb(Act_title, "Title");
 		clickmultipleweb(Act_Priority);
 		Clickelement(options.get(2));
 		clickmultipleweb(Act_status);// status
 		Clickelement(options.get(2));
 		clickmultipleweb(Act_reviewstatus);// review status
 		Clickelement(options.get(2));
-		Filtersendkeysmultipleweb(Act_plann_from,D.Datefun(0, -3, 0));
-		Filtersendkeysmultipleweb(Act_plann_to,D.Datefun(0, -3, 0));
-		Filtersendkeysmultipleweb(Act_End_From,D.Datefun(0, -3, 0));
-		Filtersendkeysmultipleweb(Act_End_To,D.Datefun(0, -3, 0));
-		clickmultipleweb(Act_Overdue);// overdue
-		Clickelement(options.get(2));
+		Filtersendkeysmultipleweb(Act_plann_from, D.Datefun(0, -4, 0));
+		Filtersendkeysmultipleweb(Act_plann_to, D.Datefun(0, 3, 0));
+		Filtersendkeysmultipleweb(Act_End_From, D.Datefun(0, -3, 0));
+		Filtersendkeysmultipleweb(Act_End_To, D.Datefun(0, 4, 0));
+		sendkeysmultipleweb(Act_Overdue, "2");
 		clickmultipleweb(Act_Createdby);// createdby
 		Clickelement(options.get(2));
 		clickmultipleweb(Act_assignedto);// asiigned to
@@ -186,11 +208,16 @@ public class Filter_objects extends Baseclass {
 		Clickelement(options.get(2));
 		clickmultipleweb(Act_Department);// department
 		Clickelement(options.get(2));
-		clickmultipleweb(Act_Team);// team
-		Clickelement(options.get(2));
+		try {
+			clickmultipleweb(Act_Team);// team
+			
+			Clickelement(options.get(options.size()-1));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		try {
 			clickmultipleweb(Act_Reportees);// Reportees
-			Clickelement(options.get(2));
+			Clickelement(options.get(options.size()-1));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -201,6 +228,7 @@ public class Filter_objects extends Baseclass {
 		}
 
 	}
+
 	@FindBy(xpath = "//div[contains(@id,'ilter')]//input[@placeholder='Task ID']")
 	private List<WebElement> Task_id;
 	@FindBy(xpath = "//div[contains(@id,'ilter')]//input[@placeholder='Task Title']")
@@ -211,11 +239,11 @@ public class Filter_objects extends Baseclass {
 	private List<WebElement> Task_Priority;
 	@FindBy(xpath = "//div[contains(@id,'Filter')]//ng-select[@placeholder='Select Status']//span[@class='ng-arrow-wrapper']")
 	private List<WebElement> Task_status;// Choose Reviewer Status
-	@FindBy(xpath = "//div[contains(@id,'Filter')]//ng-select[@placeholder='Over Due Days']//span[@class='ng-arrow-wrapper']")
+	@FindBy(xpath = "//div[contains(@id,'Filter')]//input[@placeholder='Over Due Days']")
 	private List<WebElement> Task_Overdue;//
 	@FindBy(xpath = "//div[contains(@id,'Filter')]//div[contains(normalize-space(),'Select Reviewer Status')]/span[@class='ng-arrow-wrapper']")
 	private List<WebElement> Task_Reviewerstatus;
-	@FindBy(xpath = "//div[contains(@id,'Filter')]//div[contains(normalize-space(),'//Select Created by')]/span[@class='ng-arrow-wrapper']")
+	@FindBy(xpath = "//div[contains(@id,'Filter')]//div[contains(normalize-space(),'Select Created by')]/span[@class='ng-arrow-wrapper']")
 	private List<WebElement> Task_Createdby;//
 	@FindBy(xpath = "//div[contains(@id,'Filter')]//div[contains(normalize-space(),'Select Assignee')]/span[@class='ng-arrow-wrapper']")
 	private List<WebElement> Task_assignedto;//
@@ -227,9 +255,8 @@ public class Filter_objects extends Baseclass {
 	private List<WebElement> Task_Team;//
 	@FindBy(xpath = "//div[contains(@id,'Filter')]//div[contains(normalize-space(),'Select Reportee')]/span[@class='ng-arrow-wrapper']")
 	private List<WebElement> Task_Reportees;//
-	
+
 	public void Task_Filters(String AC, String TT) throws InterruptedException {
-		Clickelement(Meetings);
 		Clickelement(filtericon);
 		Thread.sleep(4000);
 		sendkeysmultipleweb(Task_id, AC);
@@ -244,12 +271,12 @@ public class Filter_objects extends Baseclass {
 		Clickelement(options.get(2));
 		clickmultipleweb(Task_Reviewerstatus);// review status
 		Clickelement(options.get(2));
-		Filtersendkeysmultipleweb(Act_plann_from,D.Datefun(0, -3, 0));
-		Filtersendkeysmultipleweb(Act_plann_to,D.Datefun(0, -3, 0));
-		Filtersendkeysmultipleweb(Act_End_From,D.Datefun(0, -3, 0));
-		Filtersendkeysmultipleweb(Act_End_To,D.Datefun(0, -3, 0));
-		clickmultipleweb(Risk_Overdue);// overdue
-		Clickelement(options.get(2));
+		Filtersendkeysmultipleweb(Act_plann_from, D.Datefun(0, -7, 0));
+		Filtersendkeysmultipleweb(Act_plann_to, D.Datefun(0, 4, 0));
+		Filtersendkeysmultipleweb(Act_End_From, D.Datefun(0, -5, 0));
+		Filtersendkeysmultipleweb(Act_End_To, D.Datefun(0, 5, 0));
+		clickmultipleweb(Task_Overdue);// overdue
+		sendkeysmultipleweb(Task_Overdue, "10");
 		clickmultipleweb(Task_Createdby);// createdby
 		Clickelement(options.get(2));
 		clickmultipleweb(Task_assignedto);// asiigned to
@@ -257,21 +284,24 @@ public class Filter_objects extends Baseclass {
 		clickmultipleweb(Task_Reviewer);// reviewer
 		Clickelement(options.get(2));
 		clickmultipleweb(Task_Department);// department
+		ac.sendKeys(Keys.PAGE_DOWN).build().perform();
 		Clickelement(options.get(2));
+		//div[@role='listbox']//span
 		clickmultipleweb(Task_Team);// team
-		Clickelement(options.get(2));
+		Clickelement(options.get(options.size()-1));
 		try {
+			Thread.sleep(10000);
 			clickmultipleweb(Task_Reportees);// Reportees
-			Clickelement(options.get(2));
+			Clickelement(options.get(options.size()-1));
+		} catch (Exception e) {
+		}
+		try {
+			Thread.sleep(10000);
+			clickmultipleweb(Task_Reportees);// Reportees
+			Clickelement(options.get(options.size()-1));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		Filtersendkeysmultipleweb(driver.findElements(By.xpath(
-				"//div[contains(@class,'date-range') and contains(normalize-space(),'From')]//input[@type='datetime-local'] ")),
-				D.Datefun(0, -3, 0));
-		sendkeysmultipleweb(driver.findElements(By.xpath(
-				"//div[contains(@class,'date-range') and contains(normalize-space(),'To')]//input[@type='datetime-local'] ")),
-				D.Datefun(0, 5, 0));
 		clickmultipleweb(Apply);
 		try {
 			clickmultipleweb(close);
@@ -279,10 +309,10 @@ public class Filter_objects extends Baseclass {
 		}
 
 	}
-	
+
 	@FindBy(xpath = "//div[contains(@id,'ilter')]//input[@placeholder='Risk ID']")
 	private List<WebElement> Risk_id;
-	@FindBy(xpath = "//div[contains(@id,'ilter')]//input[@placeholder='Risk Title']")
+	@FindBy(xpath = "//div[contains(@id,'ilter')]//input[@placeholder='Title']")
 	private List<WebElement> Risk_title;
 	@FindBy(xpath = "//div[contains(@id,'Filter')]//div[contains(normalize-space(),'Select Priority')]/span[@class='ng-arrow-wrapper']")
 	private List<WebElement> Risk_Priority;//
@@ -292,9 +322,9 @@ public class Filter_objects extends Baseclass {
 	private List<WebElement> Risk_Probability;
 	@FindBy(xpath = "//div[contains(@id,'Filter')]//div[contains(normalize-space(),'Select Severity')]/span[@class='ng-arrow-wrapper']")
 	private List<WebElement> Risk_severity;//
-	@FindBy(xpath = "//div[contains(@id,'Filter')]//ng-select[@placeholder='Over Due Days']//span[@class='ng-arrow-wrapper']")
+	@FindBy(xpath = "//div[contains(@id,'Filter')]//input[@placeholder='Over Due Days']")
 	private List<WebElement> Risk_Overdue;//
-	@FindBy(xpath = "//div[contains(@id,'Filter')]//ng-select[@placeholder='Select Created by']//span[@class='ng-arrow-wrapper']")
+	@FindBy(xpath = "//div[contains(@id,'Filter')]//div[contains(normalize-space(),'Select Created by')]/span[@class='ng-arrow-wrapper']")
 	private List<WebElement> Risk_Createdby;//
 	@FindBy(xpath = "//div[contains(@id,'Filter')]//div[contains(normalize-space(),'Select Assignee')]/span[@class='ng-arrow-wrapper']")
 	private List<WebElement> Risk_assignedto;//
@@ -308,10 +338,10 @@ public class Filter_objects extends Baseclass {
 	private List<WebElement> Risk_Reportees;//
 	@FindBy(xpath = "//div[h6[contains(text(),'Identified Date & Time')]]/following-sibling::div[div[text()='From']]//input[@type='datetime-local']")
 	private List<WebElement> Risk_identify_From;//
-	@FindBy(xpath = "//div[h6[contains(text(),'Identified Date & Time')]]/following-sibling::div[div[text()='From']]//input[@type='datetime-local']")
+	@FindBy(xpath = "//div[h6[contains(text(),'Identified Date & Time')]]/following-sibling::div[div[text()='To']]//input[@type='datetime-local']")
 	private List<WebElement> Risk_identify_To;//
-	public void Risk_Filters(String AC,String TT) throws InterruptedException {
-		Clickelement(Meetings);
+
+	public void Risk_Filters(String AC, String TT) throws InterruptedException {
 		Clickelement(filtericon);
 		Thread.sleep(4000);
 		sendkeysmultipleweb(Risk_id, AC);
@@ -325,14 +355,14 @@ public class Filter_objects extends Baseclass {
 		Clickelement(options.get(2));
 		clickmultipleweb(Risk_severity);// review status
 		Clickelement(options.get(2));
-		Filtersendkeysmultipleweb(Risk_identify_From,D.Datefun(0, -3, 0));
-		Filtersendkeysmultipleweb(Risk_identify_To,D.Datefun(0, -3, 0));
-		Filtersendkeysmultipleweb(Act_plann_from,D.Datefun(0, -3, 0));
-		Filtersendkeysmultipleweb(Act_plann_to,D.Datefun(0, -3, 0));
-		Filtersendkeysmultipleweb(Act_End_From,D.Datefun(0, -3, 0));
-		Filtersendkeysmultipleweb(Act_End_To,D.Datefun(0, -3, 0));
+		Filtersendkeysmultipleweb(Risk_identify_From, D.Datefun(0, -7, 0));
+		Filtersendkeysmultipleweb(Risk_identify_To, D.Datefun(0, 3, 0));
+		Filtersendkeysmultipleweb(Act_plann_from, D.Datefun(0, -4, 0));
+		Filtersendkeysmultipleweb(Act_plann_to, D.Datefun(0, 4, 0));
+		Filtersendkeysmultipleweb(Act_End_From, D.Datefun(0, -3, 0));
+		Filtersendkeysmultipleweb(Act_End_To, D.Datefun(0, 5, 0));
 		clickmultipleweb(Risk_Overdue);// overdue
-		Clickelement(options.get(2));
+		sendkeysmultipleweb(Risk_Overdue, "2");
 		clickmultipleweb(Risk_Createdby);// createdby
 		Clickelement(options.get(2));
 		clickmultipleweb(Risk_assignedto);// asiigned to
@@ -341,20 +371,20 @@ public class Filter_objects extends Baseclass {
 		Clickelement(options.get(2));
 		clickmultipleweb(Risk_Department);// department
 		Clickelement(options.get(2));
-		clickmultipleweb(Risk_Team);// team
-		Clickelement(options.get(2));
+			clickmultipleweb(Risk_Team);// team
+			Clickelement(options.get(options.size()-1));
 		try {
 			clickmultipleweb(Risk_Reportees);// Reportees
-			Clickelement(options.get(2));
+			Clickelement(options.get(options.size()-1));
 		} catch (Exception e) {
-			e.printStackTrace();
 		}
-		Filtersendkeysmultipleweb(driver.findElements(By.xpath(
-				"//div[contains(@class,'date-range') and contains(normalize-space(),'From')]//input[@type='datetime-local'] ")),
-				D.Datefun(0, -3, 0));
-		sendkeysmultipleweb(driver.findElements(By.xpath(
-				"//div[contains(@class,'date-range') and contains(normalize-space(),'To')]//input[@type='datetime-local'] ")),
-				D.Datefun(0, 5, 0));
+		try {
+			Thread.sleep(10000);
+			clickmultipleweb(Risk_Reportees);// Reportees
+			Clickelement(options.get(options.size()-1));
+		} catch (Exception e) {
+		}
+		
 		clickmultipleweb(Apply);
 		try {
 			clickmultipleweb(close);
