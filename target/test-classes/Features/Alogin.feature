@@ -7,14 +7,9 @@ Feature: UMS
 
     Examples: 
 <<<<<<< HEAD
-      | Username               | Password  |
-      | ums-test@ikcontech.com | Test@1234 |
-=======
-<<<<<<< HEAD
       | Username             | Password |
       | bharat@ikcontech.com | Test@123 |
 =======
       | Username               | Password |
       | ums-test@ikcontech.com | Test@123 |
->>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
 >>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
