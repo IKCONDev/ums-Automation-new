@@ -1,10 +1,5 @@
 #Feature: UMS
 #
-#@tag1
-#Scenario Outline: Assignmenuitems page
-#Then user checks the Assignmenuitems page
-#Feature: UMS
-#
   #@tag1
   #Scenario Outline: Assignmenuitems page
     #And Validate the Assign MenuItems Permisisons page

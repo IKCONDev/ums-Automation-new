@@ -22,7 +22,5 @@ public class Profile_steps {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		PO.validate_the_Profile_page();
 
-		
 	}
-
 }

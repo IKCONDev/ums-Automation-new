@@ -1,4 +1,3 @@
-
 #Feature: UMS
 #
   #@tag1
@@ -10,5 +9,5 @@
     #Then validate the updated user "<URN>" "<Email>"
 #
     #Examples: 
-      #| RN    | Email                   | URN    |
-      #| ADMIN | manikumar@ikcontech.com | MEMBER |
+      #| RN    | Email                | URN         |
+      #| ADMIN | sravan@ikcontech.com | TEAM_MEMBER |
