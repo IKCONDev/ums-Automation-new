@@ -19,7 +19,6 @@ public class Changepassword_steps {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		CO.validate_the_Changepassword_page(Oldpass,Newpass, ConfirmNewpass);
 
-		
 	}
 
 }

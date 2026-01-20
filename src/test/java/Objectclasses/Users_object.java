@@ -26,7 +26,7 @@ public class Users_object extends Baseclass  {
 		driver = RC;
 		PageFactory.initElements(RC, this);
 	}
-	
+
 	@FindBy(xpath = "//div[normalize-space()='Setup']")
 	public WebElement Setup;
 
@@ -80,7 +80,7 @@ public class Users_object extends Baseclass  {
 	@FindBy(xpath = "//ng-select[@id='userEmail']//input[@type='text']")
 	public WebElement add_sel;
 
-	@FindBy(xpath = "//span[normalize-space()='manikumar@ikcontech.com']")
+	@FindBy(xpath = "//span[normalize-space()='sravan@ikcontech.com']")
 	public WebElement email_sel;
 
 	@FindBy(xpath = "//form[@id='formId']//label[contains(text(),'Role')]")
@@ -264,7 +264,7 @@ public class Users_object extends Baseclass  {
 		validatetext(Table_data.get(0), Email);
 		Thread.sleep(3000);
 
-		validatetext(Table_data.get(1), "MEMBER");
+		validatetext(Table_data.get(1), "TEAM_MEMBER");
 		Thread.sleep(3000);
 
 		validatetext(Table_data.get(2), "Active");

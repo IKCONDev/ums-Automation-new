@@ -16,10 +16,10 @@ public class Changepassword_object extends Baseclass {
 		PageFactory.initElements(RC, this);
 	}
 
-	@FindBy(xpath = "//div[@id='profile-icon']//img[@alt='profile pic']")
+	@FindBy(xpath = "//div[@data-target='#profileModal']")
 	public WebElement Profile;
 
-	
+
 	@FindBy(xpath = "//a[@id='changePassword']")
 	public WebElement ChangePassword;
 

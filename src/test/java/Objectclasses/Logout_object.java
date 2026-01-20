@@ -9,15 +9,15 @@ import Drivemanager.Driver;
 import hooks.Baseclass;
 
 public class Logout_object extends Baseclass{
-	
+
 	WebDriver driver = Driver.getDriver();
 	public Logout_object(WebDriver RC) {
 		driver = RC;
 		PageFactory.initElements(RC, this);
 	}
 
-	
-	@FindBy(xpath = "//div[@id='profile-icon']//img[@alt='profile pic']")
+
+	@FindBy(xpath = "//div[@data-target='#profileModal']")
 	public WebElement Profile;
 
 	@FindBy(xpath = "//button[@id='logoutRef']")
@@ -34,6 +34,6 @@ public class Logout_object extends Baseclass{
 		Thread.sleep(3000);
 
 
-	
+
 	}
 }

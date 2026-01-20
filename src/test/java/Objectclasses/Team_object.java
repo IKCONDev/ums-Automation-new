@@ -304,6 +304,27 @@ public class Team_object extends Baseclass {
 		dispalyedattribute(delete, "Delete Icon");
 	}
 
+	@FindBy(xpath = "//div[@id='updateModal']//input[@id='teamName']")
+	public WebElement update_teamname;
+
+	@FindBy(xpath = "//div[@id='updateModal']//input[@id='teamCode']")
+	public WebElement update_teamcode;
+
+	@FindBy(xpath = "//div[@id='updateModal']//ng-select[@id='teamDept']//span[@class='ng-arrow-wrapper']")
+	public WebElement updatedept_drpdwn;
+
+	@FindBy(xpath = "(//span[@class='ng-arrow-wrapper'])[5]")
+	public WebElement updateteamlead_drpdwn;
+
+	@FindBy(xpath = "(//span[@class='ng-arrow-wrapper'])[6]")
+	public WebElement updateteamhead_drpdwn;
+
+	@FindBy(xpath = "//div[@id='updateModal']//button[@id='saveButton']")
+	public WebElement updatesavebtn;
+
+	@FindBy(xpath = "//button[@id='closeUpdateModal']")
+	public WebElement updatecancelbtn;
+
 	public void Update_the_Team(String Team) throws InterruptedException {
 		sendkeyweb(Search, Team);
 		Thread.sleep(3000);
@@ -316,23 +337,21 @@ public class Team_object extends Baseclass {
 		//			
 		//		}
 
-		validateattribute(Team_name, "placeholder", "Team Name");
-		sendkeyweb(Team_name, Team);
-		validateattribute(Team_code, "placeholder", "Team Code");
-		sendkeyweb(Team_code, "T12E1");
-		Clickelement(Team_dept);
-		Clickelement(driver.findElement(By.xpath("//span[normalize-space()='Information Technology']")));
-		Clickelement(Team_lead);
+		//		validateattribute(Team_name, "placeholder", "Team Name");
+		sendkeyweb(update_teamname, Team);
+		//		validateattribute(Team_code, "placeholder", "Team Code");
+		sendkeyweb(update_teamcode, "T12E1");
+		Clickelement(updatedept_drpdwn);
+		Clickelement(driver.findElement(By.xpath("//span[@class='ng-option-label ng-star-inserted'][normalize-space()='Information Technology']")));
+		Clickelement(updateteamlead_drpdwn);
 		Clickelement(driver.findElement(By.xpath("//span[normalize-space()='Sunil Kumar']")));
-		Clickelement(Team_head);
-		try {
-			Clickelement(driver.findElement(By.xpath("//span[normalize-space()='Sunil Kumar']")));
-		} catch (Exception e) {
-			Clickelement(driver.findElement(By.xpath("(//span[normalize-space()='Sunil Kumar'])[2]")));
-		}
-		validatetext(Save_button, "Save");
-		validatetext(cancel_button, "Cancel");
-		Clickelement(Save_button);
+		Clickelement(updateteamhead_drpdwn);
+
+		Clickelement(driver.findElement(By.xpath("//span[@class='ng-option-label ng-star-inserted'][normalize-space()='Kiran Kumar']")));
+
+		validatetext(updatesavebtn, "Save");
+		validatetext(updatecancelbtn, "Cancel");
+		Clickelement(updatesavebtn);
 
 
 	}
@@ -350,13 +369,13 @@ public class Team_object extends Baseclass {
 	public void validate_the_Updated_Team(String Team) throws InterruptedException {
 		sendkeyweb(Search, Team);
 		Thread.sleep(3000);
-//				String TID =driver.findElements(By.xpath("//td[normalize-space()='"+Team+"']/preceding-sibling::td")).get(1).getText();
-//				String[] s= {Team,"T12E1","Praveen Reddy","Venkatesh Udaru","Information Technology","UMS SUPPORT","","","","",""};
-//				//String[] v= {"Team Name","Team Code","Team Lead","Team Head","Department Name","Added by","Created Date","Modified By","Modified Date","Edit","Delete"};
-//				for(int i=0;i<11;i++) {
-//					validatetext(driver.findElements(By.xpath("//td[normalize-space()='"+TID+"']/following-sibling::td")).get(i),s[i]);
-//					
-//				}
+		//				String TID =driver.findElements(By.xpath("//td[normalize-space()='"+Team+"']/preceding-sibling::td")).get(1).getText();
+		//				String[] s= {Team,"T12E1","Praveen Reddy","Venkatesh Udaru","Information Technology","UMS SUPPORT","","","","",""};
+		//				//String[] v= {"Team Name","Team Code","Team Lead","Team Head","Department Name","Added by","Created Date","Modified By","Modified Date","Edit","Delete"};
+		//				for(int i=0;i<11;i++) {
+		//					validatetext(driver.findElements(By.xpath("//td[normalize-space()='"+TID+"']/following-sibling::td")).get(i),s[i]);
+		//					
+		//				}
 		dispalyedattribute(Table_data1.get(0), "checkbox");
 		dispalyedattribute(Table_data1.get(1), "ID");
 		validatetext(Table_data1.get(2), Team);

@@ -40,6 +40,7 @@ public class Employee_object extends Baseclass  {
 
 	@FindBy(xpath = "//h3[@class='title']")
 	public WebElement Title;
+	
 
 	//	@FindBy(xpath = "//p[normalize-space()='Add']")
 	//	public WebElement Add_button;
@@ -106,6 +107,7 @@ public class Employee_object extends Baseclass  {
 	public WebElement RPM;
 	@FindBy(xpath = "//ng-select[@id='reportingManager']//input[@type='text']")
 	public WebElement RPM_dd;
+	
 	@FindBy(xpath = "//div[@id='addEmployeeModal']//label[contains(text(),'Department')]")
 	public WebElement DEP;
 	//	@FindBy(xpath = "//select[@id='employeeDept']")
@@ -145,7 +147,9 @@ public class Employee_object extends Baseclass  {
 	public void add_the_employee_profile(String FN, String LN, String EID, String Email, String DN, String DSN,
 			String FNs, String GN) throws InterruptedException {
 
+	
 		Thread.sleep(3000);
+
 		Clickelement(Add_button);
 		Thread.sleep(3000);
 
@@ -177,8 +181,11 @@ public class Employee_object extends Baseclass  {
 		try {
 			Clickelement(driver.findElement(By.xpath("//span[contains(.,'" + FNs + "')]")));
 		} catch (Exception e) {
-			Clickelement(driver.findElement(By.xpath("//span[@class='ng-option-label'][contains(.,'" + FNs + "')]")));
+			Clickelement(driver.findElement(By.xpath("//span[contains(@class,'ng-option-label')]//span[contains(.,'" + FNs + "')]")));
 		}
+		Thread.sleep(3000);
+//		Clickelement(driver.findElement(By.xpath("//span[contains(@class,'ng-option-label')]//span[contains(.,'" + FNs + "')]")));
+
 		validatetext(DEP, "Department");
 		Thread.sleep(6000);
 
@@ -188,7 +195,7 @@ public class Employee_object extends Baseclass  {
 		validatetext(Team1, "Choose Team");
 		Clickelement(Team_dd);
 		Clickelement(driver.findElement(By.xpath("//ng-select[@id='employeeTeam']//span[@title='Clear all']")));
-		Clickelement(driver.findElement(By.xpath("//span[normalize-space()='Quality']")));
+		Clickelement(driver.findElement(By.xpath("//span[normalize-space()='Dev Team']")));
 		validatetext(Desig, "Designation");
 		Selectdropdown(Desig_select, DSN);
 		validatetext(Team_ID, "Microsoft Teams ID");
@@ -299,26 +306,18 @@ public class Employee_object extends Baseclass  {
 
 
 		try {
-			Clickelement(driver.findElement(
-					By.xpath("//td[normalize-space()='" + Email + "']/following-sibling::td//button[@id='trashIcon']"))
-					);
+			Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + Email + "']/following-sibling::td//button[@id='trashIcon']")));
 		} catch (Exception e) {
 			driver.findElement(By.xpath("//a[normalize-space()='2']"));
-			Clickelement(driver.findElement(
-					By.xpath("//td[normalize-space()='" + Email + "']/following-sibling::td//button[@id='trashIcon']"))
-					);
+			Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + Email + "']/following-sibling::td//button[@id='trashIcon']")));
 		}
 		driver.switchTo().alert().dismiss();
 		try {
-			Clickelement(driver.findElement(
-					By.xpath("//td[normalize-space()='" + Email + "']/preceding-sibling::td//input[@type='checkbox']"))
-					);
+			Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + Email + "']/preceding-sibling::td//input[@type='checkbox']")));
 		} catch (Exception e) {
 			driver.findElement(By.xpath("//a[normalize-space()='2']"));
 			Thread.sleep(4000);
-			Clickelement(driver.findElement(
-					By.xpath("//td[normalize-space()='" + Email + "']/preceding-sibling::td//input[@type='checkbox']"))
-					);
+			Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + Email + "']/preceding-sibling::td//input[@type='checkbox']")));
 		}
 		Clickelement(Delete_Button);
 		validatealert("");
