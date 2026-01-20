@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <<<<<<< HEAD
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+=======
+<<<<<<< HEAD
 <testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
 =======
 <testng-results ignored="0" total="7" passed="1" failed="6" skipped="0">
 >>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
+>>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
+  <suite started-at="2026-01-16T12:52:01 IST" name="Default suite" finished-at="2026-01-16T13:02:27 IST" duration-ms="626722">
+=======
 <<<<<<< HEAD
   <suite started-at="2026-01-14T16:37:39 IST" name="Default suite" finished-at="2026-01-14T16:38:46 IST" duration-ms="67350">
 =======
@@ -15,11 +22,15 @@
   <suite started-at="2026-01-12T18:29:11 IST" name="Default suite" finished-at="2026-01-12T18:29:51 IST" duration-ms="40111">
 >>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
 >>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
+>>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.Runnerclass@12591ac8]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
+<<<<<<< HEAD
+    <test started-at="2026-01-16T12:52:01 IST" name="Default test" finished-at="2026-01-16T13:02:27 IST" duration-ms="626722">
+=======
 <<<<<<< HEAD
     <test started-at="2026-01-14T16:37:39 IST" name="Default test" finished-at="2026-01-14T16:38:46 IST" duration-ms="67350">
 =======
@@ -29,7 +40,11 @@
     <test started-at="2026-01-12T18:29:11 IST" name="Default test" finished-at="2026-01-12T18:29:51 IST" duration-ms="40111">
 >>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
 >>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
+>>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
       <class name="Runner.Runnerclass">
+<<<<<<< HEAD
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Runner.Runnerclass@12591ac8]" started-at="2026-01-16T12:52:01 IST" name="setUpClass" finished-at="2026-01-16T12:52:10 IST" duration-ms="9373" status="PASS">
+=======
 <<<<<<< HEAD
         <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Runner.Runnerclass@2f67a4d3]" started-at="2026-01-14T16:37:39 IST" name="setUpClass" finished-at="2026-01-14T16:37:44 IST" duration-ms="4833" status="PASS">
 =======
@@ -39,9 +54,13 @@
         <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Runner.Runnerclass@2f67a4d3]" started-at="2026-01-12T18:29:11 IST" name="setUpClass" finished-at="2026-01-12T18:29:14 IST" duration-ms="3578" status="PASS">
 >>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
 >>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
+>>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
           <params>
             <param index="0">
               <value>
+<<<<<<< HEAD
+                <![CDATA[org.testng.TestRunner@1dd443c1]]>
+=======
 <<<<<<< HEAD
                 <![CDATA[org.testng.TestRunner@224d537d]]>
 =======
@@ -51,6 +70,7 @@
                 <![CDATA[org.testng.TestRunner@66715ca9]]>
 >>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
 >>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
+>>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
               </value>
             </param>
           </params>
@@ -58,12 +78,16 @@
           </reporter-output>
         </test-method> <!-- setUpClass -->
 <<<<<<< HEAD
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.Runnerclass@12591ac8]" started-at="2026-01-16T12:52:10 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-16T12:53:01 IST" duration-ms="50560" status="PASS">
+=======
+<<<<<<< HEAD
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.Runnerclass@2f67a4d3]" started-at="2026-01-14T16:37:44 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-14T16:38:09 IST" duration-ms="25114" status="PASS">
 =======
 <<<<<<< HEAD
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.Runnerclass@12591ac8]" started-at="2026-01-12T18:44:23 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-12T18:44:37 IST" duration-ms="13356" status="PASS">
 =======
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.Runnerclass@2f67a4d3]" started-at="2026-01-12T18:29:14 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-12T18:29:38 IST" duration-ms="23571" status="PASS">
+>>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
 >>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
 >>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
           <params>
@@ -82,6 +106,9 @@
           </reporter-output>
         </test-method> <!-- runScenario -->
 <<<<<<< HEAD
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.Runnerclass@12591ac8]" started-at="2026-01-16T12:53:01 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-16T13:02:22 IST" duration-ms="561591" status="PASS">
+=======
+<<<<<<< HEAD
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.Runnerclass@2f67a4d3]" started-at="2026-01-14T16:38:09 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-14T16:38:43 IST" duration-ms="33919" status="FAIL">
 =======
 <<<<<<< HEAD
@@ -90,16 +117,23 @@
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.Runnerclass@2f67a4d3]" started-at="2026-01-12T18:29:38 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-12T18:29:48 IST" duration-ms="9715" status="PASS">
 >>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
 >>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
+>>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
           <params>
             <param index="0">
               <value>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                 <![CDATA["Employee page"]]>
 =======
 <<<<<<< HEAD
+>>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
                 <![CDATA["All Task Page"]]>
+<<<<<<< HEAD
+=======
 =======
                 <![CDATA["Jira Configuration page"]]>
+>>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
 >>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
 >>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
               </value>
@@ -110,6 +144,8 @@
               </value>
             </param>
           </params>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
           <exception class="org.openqa.selenium.support.ui.UnexpectedTagNameException">
             <message>
@@ -156,9 +192,13 @@ at ✽.user validates the task page "invitation"(file:///C:/Users/VinodKethu/Dow
             </full-stacktrace>
           </exception> <!-- java.lang.IndexOutOfBoundsException -->
 >>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
+>>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
+<<<<<<< HEAD
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.Runnerclass@12591ac8]" started-at="2026-01-16T13:02:22 IST" name="tearDownClass" finished-at="2026-01-16T13:02:27 IST" duration-ms="5003" status="PASS">
+=======
 <<<<<<< HEAD
         <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.Runnerclass@2f67a4d3]" started-at="2026-01-14T16:38:43 IST" name="tearDownClass" finished-at="2026-01-14T16:38:46 IST" duration-ms="3398" status="PASS">
 =======
@@ -351,6 +391,7 @@ at ✽.user validates the task page "invitation"(file:///C:/Users/VinodKethu/Dow
         <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.Runnerclass@12591ac8]" started-at="2026-01-12T18:46:19 IST" name="tearDownClass" finished-at="2026-01-12T18:46:23 IST" duration-ms="3979" status="PASS">
 =======
         <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.Runnerclass@2f67a4d3]" started-at="2026-01-12T18:29:48 IST" name="tearDownClass" finished-at="2026-01-12T18:29:51 IST" duration-ms="3184" status="PASS">
+>>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
 >>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
 >>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
           <reporter-output>
