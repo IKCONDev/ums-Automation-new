@@ -1,7 +1,7 @@
 package hooks;
 
 import java.awt.AWTException;
-
+import org.openqa.selenium.support.ui.FluentWait;
 import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
@@ -24,7 +24,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
@@ -35,7 +34,10 @@ import Drivemanager.Driver;
 
 public class Baseclass {
 	WebDriver driver = Driver.getDriver();
-	WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(30));
+	FluentWait<WebDriver> wait = new FluentWait<>(driver)
+	        .withTimeout(Duration.ofSeconds(60))   // Max wait time
+	        .pollingEvery(Duration.ofSeconds(2))   // Polling interval
+	        .ignoring(NoSuchElementException.class);
 	ExtentTest test=Hooks.getExtentTest();
 		
 	public String validatefont(WebElement web) {
@@ -348,16 +350,16 @@ public class Baseclass {
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(selection, null);
 		Robot robot = new Robot();
 		// Wait for the file dialog to appear
-		robot.delay(2000);
+		robot.delay(4000);
 		// Paste the file path
 		robot.keyPress(KeyEvent.VK_CONTROL);
-		Thread.sleep(4000);
+		robot.delay(4000);
 		robot.keyPress(KeyEvent.VK_V);
-		Thread.sleep(4000);
+		robot.delay(4000);
 		robot.keyRelease(KeyEvent.VK_V);
-		Thread.sleep(4000);
+		robot.delay(4000);
 		robot.keyRelease(KeyEvent.VK_CONTROL);
-		Thread.sleep(4000);
+		robot.delay(4000);
 		// Press Enter to close the file dialog
 		robot.keyPress(KeyEvent.VK_ENTER);
 		robot.keyRelease(KeyEvent.VK_ENTER);
@@ -389,8 +391,7 @@ JavascriptExecutor js = (JavascriptExecutor) driver;
         // Switch to the new tab only if it's found
         if (newTab != null) {
             driver.switchTo().window(newTab);
-            Thread.sleep(1000); // Just to ensure it's loaded properly
-
+            wait.until(driver -> driver.getWindowHandles().size() == 1);
             // Close the new tab
             driver.close();
 

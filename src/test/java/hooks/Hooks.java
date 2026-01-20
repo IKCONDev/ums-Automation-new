@@ -27,7 +27,8 @@ public class Hooks {
     @BeforeAll
     public static void before_all() throws Exception {
         System.out.println("================ BEFORE ALL ================");
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
 
         // Initialize ExtentReports and configure it once
         ExtentSparkReporter srp = new ExtentSparkReporter("Reports/UMS_Report.html")

@@ -8,8 +8,7 @@ import org.openqa.selenium.WebDriver;
 
 import Drivemanager.Driver;
 import Objectclasses.Internalnotes_object;
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Then;
+import io.cucumber.java.en.*;
 
 public class Internalnotes_steps {
 
