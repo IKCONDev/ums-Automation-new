@@ -4,7 +4,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
-features = {"src/test/resources/Features"}
+features = {"src/test/resources/Features/Alogin.feature","src/test/resources/Features/ETask.feature"}
 ///Registrar Loginpage.feature","src/test/resources/prakash/Registrar Dashboard.feature","src/test/resources/prakash/Registrar Applications.feature","src/test/resources/prakash/Registrar Domainpage.feature","src/test/resources/prakash/Registrar Invoice.feature","src/test/resources/prakash/Registar settings DRuserManagement.feature","src/test/resources/prakash/Registrar settings Registrantusermanagement.feature","src/test/resources/prakash/Registrar settings Registrantofficers.feature","src/test/resources/prakash/Registrar settings Roles.feature","src/test/resources/prakash/Registrar settings Department.feature"}
 		,
 glue = {"Stepdefinitions","hooks"},

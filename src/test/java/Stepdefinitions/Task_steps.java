@@ -88,6 +88,10 @@ public class Task_steps {
 		public void user_clicks_review() throws Exception {
 		TO.user_clicks_review();
 		}
+		@Then("user clicks fortyeight in the task page")
+		public void task_details_page() throws Exception {
+		TO.task_details_page();
+		}
 				
 }
 

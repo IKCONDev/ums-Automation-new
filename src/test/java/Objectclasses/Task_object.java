@@ -54,7 +54,7 @@ public class Task_object extends Baseclass {
 
 		String s = "Task ID,Action Item ID,Meeting ID,Title,Assigned To,Planned Start Date & Time,Planned End Date & Time,Priority,Status,Over Due Days,Edit,Delete";
 		List<String> list = new ArrayList<String>(Arrays.asList(s.split(",")));
-		for (int i = 0; i <= s.length()-1;i++) {
+		for (int i = 0; i <= 11;i++) {
 			validatetext(tasktable.get(i), list.get(i));
 		}
 	}
@@ -355,6 +355,43 @@ public class Task_object extends Baseclass {
 
 		Thread.sleep(3000);
 		Clickelement(Reviewer);
+
+	}	
+	
+	@FindBy(xpath = "//td[normalize-space()='48']")
+	public WebElement fortyeight;
+	
+	@FindBy(xpath = "//button[@id='editIcon']//span[@class='ng-star-inserted']//*[name()='svg']")
+	public WebElement Editbutton;
+	
+	@FindBy(xpath = "//div[@class='card shadowcard']//div[1]//div[2]//div[1]//div[1]//img[2]")
+	public WebElement Prioritydropdown;
+	
+	@FindBy(xpath = "//div[@class='options-container ng-star-inserted']//div[2]")
+	public WebElement Selectpriority;
+	
+	@FindBy(xpath = "//body/app-root/app-main-layout/div[@class='content-area']/app-task-details[@class='ng-star-inserted']/div[@class='container-fluid']/div[@class='row']/div[@class='col-sm-7']/div[@class='card shadowcard']/div[@class='row']/div[@class='col-sm-6']/span[1]//*[name()='svg']")
+	public WebElement Clicksave;
+	
+	@FindBy(xpath = "//textarea[@id='addCommentDescription']")
+	public WebElement Addcomment;
+
+	public void task_details_page() throws InterruptedException {
+
+		Thread.sleep(3000);
+		Clickelement(fortyeight);
+		
+		Thread.sleep(3000);
+		Clickelement(Editbutton);
+		
+		Thread.sleep(3000);
+		Clickelement(Prioritydropdown);
+		
+		Thread.sleep(3000);
+		Clickelement(Selectpriority);
+		
+		Thread.sleep(3000);
+		Clickelement(Clicksave);
 
 	}	
 }
