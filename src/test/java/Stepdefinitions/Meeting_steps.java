@@ -13,21 +13,17 @@ public class Meeting_steps {
 
 	@Then("user clicks and validates the meetings page")
 	public void user__clicks_the_Meetingspage() throws Exception {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-
 		MO. ValidatingcreateMeetingFields();
 	}
 
 	@Then("user enters the meeting details in create meeting {string} {string}")
 	public void user__enter_the_details_in_Meetingspage(String MT, String UN) throws Exception {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		MO. Enter_the_details(MT, UN);
 
 	}
 
 	@Then("user adds project and programs under meeting {string}")
 	public void Add_Project_and_Program_Undermeeting(String MT) throws Exception {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		MO. Add_Project_and_Program_Undermeeting(MT);
 
@@ -35,7 +31,6 @@ public class Meeting_steps {
 
 	@Then("user enters Actionitems tasks and risks undermeeting {string} {string} {string} {string} {string} {string} {string}")
 	public void user__enter_Actionitems_Tasks_Risks_in_Meetingspage(String MT, String AT, String AD, String TT, String TD, String RT, String RD) throws Exception {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		MO. Creating_Actionitems_Tasks_Risks_Undermeeting(MT,AT,AD,TT,TD,RT,RD);
 

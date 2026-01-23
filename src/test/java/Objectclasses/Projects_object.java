@@ -117,9 +117,7 @@ public class Projects_object extends Baseclass {
 	public WebElement Cancelbtn;
 
 	public void Add_Projects_in_projects_page(String PN, String PC, String PD) throws InterruptedException {
-		Thread.sleep(3000);
 		Clickelement(Addbtn);
-		Thread.sleep(3000);
 
 		validatetext(Project,"Project");
 		validateattribute(Projectnameplaceholder, "placeholder", "Project Name");
@@ -175,10 +173,8 @@ public class Projects_object extends Baseclass {
 
 
 		attributeselected(Edit_icon, "Edit icon");
-		Thread.sleep(3000);
 
 		attributeselected(Delete_icon, "Delete icon");
-		Thread.sleep(3000);
 	}
 
 	@FindBy(xpath = "//div[@id='updateModel']//input[@id='projectName']")
@@ -252,10 +248,8 @@ public class Projects_object extends Baseclass {
 		validatetext(Table_data.get(13), "");
 
 		attributeselected(Edit_icon, "Edit icon");
-		Thread.sleep(3000);
 
 		attributeselected(Delete_icon, "Delete icon");
-		Thread.sleep(3000);
 
 	}
 
@@ -264,8 +258,6 @@ public class Projects_object extends Baseclass {
 		driver.navigate().refresh();
 
 		sendkeyweb(Search, PN);
-		Thread.sleep(3000);
-
 
 		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + PN + "']/following-sibling::td//button[@id='trashIcon']")));
 
@@ -282,7 +274,6 @@ public class Projects_object extends Baseclass {
 
 		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + PN + "']/following-sibling::td//button[@id='trashIcon']")));
 
-		Thread.sleep(3000);
 		//		Clickelement(Deletebtn);
 		try {
 			Alert alert = driver.switchTo().alert();

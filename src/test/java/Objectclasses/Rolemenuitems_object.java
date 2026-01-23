@@ -145,7 +145,6 @@ public class Rolemenuitems_object extends Baseclass  {
 			actions.moveToElement(webpc);
 			actions.perform();
 			validatetext(driver.findElement(By.xpath("(//div[normalize-space()='" + list.get(i) + "'])")),list.get(i));
-			Thread.sleep(1200);
 			attributeselected(Check, "select box");
 			Clickelement(webpc);
 			attributeselected(Check, "select box");

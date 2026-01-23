@@ -16,7 +16,6 @@ public class Notifications_steps {
 
 	@Then("Validate the Notifications page")
 	public void Validate_the_Notifications_page() throws InterruptedException {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		NO.validate_the_Notifications_page();
 
 		

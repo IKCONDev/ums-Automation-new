@@ -19,7 +19,6 @@ public class Profile_steps {
 
 	@Then("Validate the Profile page")
 	public void Validate_the_Profile_page() throws InterruptedException, AWTException {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		PO.validate_the_Profile_page();
 
 	}

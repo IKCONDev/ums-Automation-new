@@ -6,6 +6,7 @@ Feature: UMS
     When user is validate Login page "<Username>" "<Password>"
 
     Examples: 
+<<<<<<< HEAD
       | Username             | Password |
       | bharat@ikcontech.com | Test@123 |
       | Username               | Password  |
@@ -14,3 +15,7 @@ Feature: UMS
       
       Scenario Outline: fghjkjh
       Given Delete the role RN
+=======
+      | Username              | Password |
+      | umstest@ikcontech.com | Test@123 |
+>>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git

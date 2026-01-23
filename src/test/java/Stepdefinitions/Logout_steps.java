@@ -15,7 +15,6 @@ public class Logout_steps {
 
 	@Then("validate the Logout page")
 	public void validate_the_Logout_page() throws InterruptedException {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
 		LO.user_validating_logout_page();
 	}
 

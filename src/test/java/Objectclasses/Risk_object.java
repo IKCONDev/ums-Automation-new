@@ -153,7 +153,6 @@ public class Risk_object extends Baseclass {
 
 
 		Clickelement(RiskAddbtn);
-		Thread.sleep(3000);
 
 		validatetext(valaddrisk, "Add Risk");
 
@@ -168,10 +167,8 @@ public class Risk_object extends Baseclass {
 		validatetext(valcancelbtn, "Cancel");
 
 		sendkeyweb(Risktitle, RT);
-		Thread.sleep(3000);
 		Clickelement(RiskAssignedtodrpdwn);
 
-		Thread.sleep(5000);
 		clickmultipleweb(RiskAssignedtoselect);
 
 
@@ -201,7 +198,6 @@ public class Risk_object extends Baseclass {
 		sendkeyweb(Riskdescription, RD);
 
 		Clickelement(Riskcreatebtn);
-		Thread.sleep(4000);
 
 
 
@@ -239,10 +235,8 @@ public class Risk_object extends Baseclass {
 
 
 		attributeselected(Edit_icon, "Edit icon");
-		Thread.sleep(3000);
 
 		attributeselected(Delete_icon, "Delete icon");
-		Thread.sleep(3000);
 	}
 
 	@FindBy(xpath = "//input[@placeholder='Search']")
@@ -279,11 +273,9 @@ public class Risk_object extends Baseclass {
 	public void user_update_risk_page(String RT, String RD) throws InterruptedException {
 
 		sendkeyweb(Risksearch, RT);
-		Thread.sleep(4000);
 
 
 		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + RT + "']/following-sibling::td//button[@id='editIcon']")));
-		Thread.sleep(3000);
 
 		sendkeyweb(Updaterisktitle, RT);
 
@@ -296,15 +288,11 @@ public class Risk_object extends Baseclass {
 		Clickelement(Updateriskcategoryselect);
 
 		sendkeyweb(Risktargetdate, da.Datefun(0,2,0) );
-		Thread.sleep(3000);
 
 		sendkeyweb(Addcmntdes, "Commentlkjhg");
-		Thread.sleep(3000);
 		Clickelement(Addcmntbtn);
-		Thread.sleep(3000);
 
 		Clickelement(Updatebtn);
-		Thread.sleep(4000);
 
 
 	}
@@ -312,7 +300,6 @@ public class Risk_object extends Baseclass {
 	public void user_validate_the_updated_risk_in_Risks_page(String RT, String RD) throws InterruptedException {
 
 		sendkeyweb(Risksearch, RT);
-		Thread.sleep(4000);
 
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
@@ -356,21 +343,17 @@ public class Risk_object extends Baseclass {
 
 
 		attributeselected(Edit_icon, "Edit icon");
-		Thread.sleep(3000);
 
 		attributeselected(Delete_icon, "Delete icon");
-		Thread.sleep(3000);
 	}
 
 
 
 	public void user_delete_risk_page(String RT) throws InterruptedException {
 		sendkeyweb(Risksearch, RT);
-		Thread.sleep(4000);
 
 
 		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + RT + "']/following-sibling::td//button[@id='trashIcon']")));
-		Thread.sleep(3000);
 
 		try {
 			Alert alert = driver.switchTo().alert();
@@ -379,7 +362,6 @@ public class Risk_object extends Baseclass {
 		} catch (NoAlertPresentException e) {
 			System.out.println("No alert present.");
 		}
-		Thread.sleep(3000);
 
 		//		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + RT + "']/following-sibling::td//button[@id='trashIcon']")));
 		//		Thread.sleep(3000);
@@ -422,7 +404,6 @@ public class Risk_object extends Baseclass {
 
 	public void user_checks_risk_details(String RT, String RD) throws InterruptedException {
 		sendkeyweb(Risksearch, RT);
-		Thread.sleep(4000);
 
 		WebElement Risk_ID=driver.findElement(By.xpath("(//td[normalize-space()='"+RT+"']/preceding-sibling::td)[2]"));
 		Clickelement(Risk_ID);
@@ -438,20 +419,16 @@ public class Risk_object extends Baseclass {
 		Clickelement(RD_edit.get(0));
 
 		sendkeyweb(RD_risktitle, RT);
-		Thread.sleep(2000);
 		//		Clickelement(RD_Assignedtodrpdwn);
 		//		Thread.sleep(3000);
 		//		clickmultipleweb(RD_Assignedtoselect);
 		//		Thread.sleep(4000);
 
 		Clickelement(RD_save);
-		Thread.sleep(4000);
 
 		Clickelement(RD_edit.get(1));
-		Thread.sleep(4000);
 
 		sendkeyweb(RD_riskdes, RD);
-		Thread.sleep(4000);
 
 		Clickelement(RD_description_save);
 		//
@@ -606,7 +583,6 @@ public class Risk_object extends Baseclass {
 	public void user_checks_filters_in_risk_page(String RT) throws InterruptedException {
 
 		driver.navigate().refresh();
-		Thread.sleep(3000);
 
 		Clickelement(Duetoday);
 		Clickelement(Overdue);
@@ -622,198 +598,140 @@ public class Risk_object extends Baseclass {
 		Clickelement(Duefiltersdrpdwn);
 
 		Clickelement(Customdate);
-		Thread.sleep(3000);
 		sendkeyweb(Duedatefrom, da.Datefun(0,-1,0) );
 		sendkeyweb(Duedateto, da.Datefun(0,-1,0) );
 		Clickelement(Applybtn);
-		Thread.sleep(3000);
 
 		Clickelement(cancelbtn);
 
 		Clickelement(Filter);
 
 		sendkeyweb(RiskID, "574");
-		Thread.sleep(3000);
 
 		Clickelement(riskfltrApplybtn);
-		Thread.sleep(3000);
 
 		Clickelement(riskfltrclrbtn);
-		Thread.sleep(3000);
 
 		sendkeyweb(MeetingID, "633");
-		Thread.sleep(3000);
 
 		Clickelement(riskfltrApplybtn);
-		Thread.sleep(3000);
 
 		Clickelement(riskfltrclrbtn);
-		Thread.sleep(3000);
 
 
 		sendkeyweb(Risktitlefltr, RT);
-		Thread.sleep(3000);
 
 		Clickelement(riskfltrApplybtn);
-		Thread.sleep(3000);
 
 		Clickelement(riskfltrclrbtn);
-		Thread.sleep(3000);
 
 
 		sendkeyweb(Risktitlefltr, RT);
-		Thread.sleep(3000);
 
 		Clickelement(riskfltrApplybtn);
-		Thread.sleep(3000);
 
 		Clickelement(riskfltrclrbtn);
-		Thread.sleep(3000);
 
 
 		Clickelement(prtydrpdwnfltr);
-		Thread.sleep(3000);
 
 		Clickelement(prtyslctfltr);
-		Thread.sleep(3000);
 
 		Clickelement(riskfltrApplybtn);
-		Thread.sleep(3000);
 
 		Clickelement(riskfltrclrbtn);
-		Thread.sleep(3000);
 
 
 
 		Clickelement(riskstatusdrpdwnfltr);
-		Thread.sleep(3000);
 
 		Clickelement(riskstatusslctfltr);
-		Thread.sleep(3000);
 
 		Clickelement(riskfltrApplybtn);
-		Thread.sleep(3000);
 
 		Clickelement(riskfltrclrbtn);
-		Thread.sleep(3000);
 
 
 		Clickelement(riskprobabilitydrpdwnfltr);
-		Thread.sleep(3000);
 
 		Clickelement(riskprobabilitydrpdwnselect);
-		Thread.sleep(3000);
 
 
 		Clickelement(riskfltrApplybtn);
-		Thread.sleep(3000);
 
 		Clickelement(riskfltrclrbtn);
-		Thread.sleep(3000);
 
 
 		Clickelement(riskseveritydrpdwnfltr);
-		Thread.sleep(3000);
 
 		Clickelement(riskseveritydrpdwnselect);
-		Thread.sleep(3000);
 
 		Clickelement(riskfltrApplybtn);
-		Thread.sleep(3000);
 
 		Clickelement(riskfltrclrbtn);
-		Thread.sleep(3000);
 
 
 		sendkeyweb(riskidentieddatefrom, da.Datefun(0,0,0) );
-		Thread.sleep(3000);
 
 		sendkeyweb(riskidentieddateto, da.Datefun(0,1,0) );
-		Thread.sleep(3000);
 
 		Clickelement(riskfltrApplybtn);
-		Thread.sleep(3000);
 
 		Clickelement(riskfltrclrbtn);
-		Thread.sleep(3000);
 
 
 		sendkeyweb(plannedstartdatefrom, da.Datefun(0,0,0) );
-		Thread.sleep(3000);
 
 		sendkeyweb(plannedstartdateto, da.Datefun(0,1,0) );
-		Thread.sleep(3000);
 
 		Clickelement(riskfltrApplybtn);
-		Thread.sleep(3000);
 
 		Clickelement(riskfltrclrbtn);
-		Thread.sleep(3000);
 
 
 		sendkeyweb(plannedenddatefrom, da.Datefun(0,0,0) );
-		Thread.sleep(3000);
 
 		sendkeyweb(plannedenddateto, da.Datefun(0,1,0) );
-		Thread.sleep(3000);
 
 		Clickelement(riskfltrApplybtn);
-		Thread.sleep(3000);
 
 		Clickelement(riskfltrclrbtn);
-		Thread.sleep(3000);
 
 
 		sendkeyweb(overduedays, "18");
-		Thread.sleep(3000);
 
 		Clickelement(riskfltrApplybtn);
-		Thread.sleep(3000);
 
 		Clickelement(riskfltrclrbtn);
-		Thread.sleep(3000);
 
 
 		Clickelement(Createdbydrpdwn);
-		Thread.sleep(3000);
 
 
 		Clickelement(Assignedtodrpdwn);
-		Thread.sleep(3000);
 
 		Clickelement(riskcategorydrpdwn);
-		Thread.sleep(3000);
-
 
 
 		Clickelement(riskdeptdrpdwn);
-		Thread.sleep(3000);
 
 		Clickelement(riskdeptselect);
-		Thread.sleep(3000);
 
 		Clickelement(riskfltrApplybtn);
-		Thread.sleep(3000);
 
 		Clickelement(riskfltrclrbtn);
-		Thread.sleep(3000);
 
 
 		Clickelement(riskteamdrpdwn);
-		Thread.sleep(3000);
 
 		Clickelement(riskteamselect);
-		Thread.sleep(3000);
 
 		Clickelement(riskfltrApplybtn);
-		Thread.sleep(3000);
 
 		Clickelement(riskfltrclrbtn);
-		Thread.sleep(3000);
 
 		Clickelement(riskreporteedrpdwn);
 
-		Thread.sleep(3000);
 		Clickelement(riskfltrxmark);
 
 
@@ -833,17 +751,13 @@ public class Risk_object extends Baseclass {
 
 	public void user_checks_Editcolumn_in_risk_page() throws InterruptedException {
 		Clickelement(Editcolumn);
-		Thread.sleep(3000);
 
 
 		Clickelement(Editcolumndrpdwn);
-		Thread.sleep(3000);
 
 		Clickelement(Editcolumnselectall);
-		Thread.sleep(3000);
 
 		Clickelement(Editcolumncancel);
-		Thread.sleep(3000);
 	}
 	
 	
@@ -851,9 +765,7 @@ public class Risk_object extends Baseclass {
 	public WebElement Allrisks;
 	
 	public void user_clicks_on_All_risks_dropdown() throws InterruptedException {
-		Thread.sleep(3000);
 		Clickelement(Riskdropdwnarrow);
-		Thread.sleep(3000);
 		Clickelement(Allrisks);
 		
 	
@@ -863,9 +775,7 @@ public class Risk_object extends Baseclass {
 	public WebElement Myrisks;
 	
 	public void user_clicks_on_My_risks_dropdown() throws InterruptedException {
-		Thread.sleep(3000);
 		Clickelement(Riskdropdwnarrow);
-		Thread.sleep(3000);
 		Clickelement(Myrisks);
 }
 	
@@ -873,9 +783,7 @@ public class Risk_object extends Baseclass {
 	public WebElement AssignedTorisks;
 	
 	public void user_clicks_on_Assignedto_risks_dropdown() throws InterruptedException {
-		Thread.sleep(3000);
 		Clickelement(Riskdropdwnarrow);
-		Thread.sleep(3000);
 		Clickelement(AssignedTorisks);
 }
 }

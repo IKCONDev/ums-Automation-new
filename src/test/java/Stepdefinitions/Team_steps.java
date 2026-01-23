@@ -89,24 +89,20 @@ public class Team_steps {
 	}
 	@Then("validate the added team {string}")
 	public void validate_the_added_team(String Team) throws InterruptedException {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		TO.validate_the_Team(Team);
 	}
 	@Then("update the team {string}")
 	public void update_the_team(String Team) throws InterruptedException {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		TO.Update_the_Team(Team);
 	}
 	
 	@Then("validate the updated team {string}")
 	public void validate_the_Updated_Team(String Team) throws InterruptedException {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		TO.Update_the_Team(Team);
 	}
 
 	@Then("delete the team {string}")
 	public void delete_the_team(String Team) throws InterruptedException {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		TO.Delete_the_Team(Team);		
 }
 
