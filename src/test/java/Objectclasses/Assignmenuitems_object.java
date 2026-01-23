@@ -43,16 +43,12 @@ public class Assignmenuitems_object extends Baseclass {
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		validatetext(title, "Assign Menu Items & Permissions");
-		Thread.sleep(3000);		
 		String[] s={"User :","User ID :","ROLE :"};
-		Thread.sleep(3000);
 //		String[] s={"User :","User ID :","ROLE :"};
 
 
 		for(int i=0;i<3;i++) {
-			Thread.sleep(3000);
 			validatetext(Fields.get(i), s[i]);
-			Thread.sleep(3000);		
 			}
 		dispalyedattribute(Assign.get(0), "Assign Menu Items Reportee dropdown");
 		validatetext(Assign.get(1), "ums-test@ikcontech.com");
@@ -95,9 +91,7 @@ public class Assignmenuitems_object extends Baseclass {
 	public void add_the_Assign_MenuItems_Permisisons() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Clickelement(dropdwnclick);
-		Thread.sleep(3000);
 		Clickelement(dropdwnselect);
-		Thread.sleep(3000);
 
 		validatetext(Add, "Add");
 		Clickelement(Add);
@@ -176,7 +170,6 @@ public class Assignmenuitems_object extends Baseclass {
 			}catch (Exception e) {
 
 			}
-			Thread.sleep(5000);
 			WebElement per1 = driver.findElement(By.xpath("(//table//td[normalize-space()='" + list.get(i)	+ "']/following-sibling::td//span[@class='checkmark'])[" + Jist.get(j) + "]"));
 			if(per1.isSelected()) {
 				System.out.println("Check box is selected");
@@ -184,7 +177,6 @@ public class Assignmenuitems_object extends Baseclass {
 				System.out.println("Check box is not selected");
 			}
 			per1.click();
-			Thread.sleep(8000);
 //			validatealert("Are you sure, you want to update the permission ?");
 //			Thread.sleep(3000);
 			driver.switchTo().alert().accept();

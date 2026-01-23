@@ -16,7 +16,6 @@ public class Changepassword_steps {
 
 	@Then("Validate the Change Password page {string} {string} {string}")
 	public void Validate_the_Changepassword_page(String Oldpass, String Newpass, String ConfirmNewpass) throws InterruptedException{
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		CO.validate_the_Changepassword_page(Oldpass,Newpass, ConfirmNewpass);
 
 	}

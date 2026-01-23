@@ -46,15 +46,11 @@ public class Users_object extends Baseclass  {
 	public void validate_the_users_page() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Clickelement(Setup);
-		Thread.sleep(3000);
 		Clickelement(Users);
-		Thread.sleep(3000);
 
 		validatetext(User_page, "Users");
-		Thread.sleep(3000);
 
 		validatetext(add_button, "Add");
-		Thread.sleep(3000);
 
 		//		String s = "null,User ID / Mail ID,Role,User Status,Account Status,Enable / Disable,Edit";
 		//		List<WebElement> list=driver.findElements(By.xpath("//thead[@id='UserThead']//tr//th"));
@@ -99,38 +95,27 @@ public class Users_object extends Baseclass  {
 	public WebElement add_cancel;
 
 	public void add_the_user(String RN, String Email) throws InterruptedException {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		driver.navigate().refresh();
-		Thread.sleep(3000);
 
 		Clickelement(add_button);
-		Thread.sleep(3000);
 
 		validatetext(add_user, "Add User");
-		Thread.sleep(3000);
 
 		validatetext(add_Email, "Email");
-		Thread.sleep(3000);
 
 		Clickelement(add_sel);
-		Thread.sleep(3000);
 
 		Clickelement(email_sel);
-		Thread.sleep(3000);
 
 		validatetext(add_Role, "Role");
-		Thread.sleep(3000);
 
 		//		Selectdropdown(role, RN);
 		Clickelement(role);
-		Thread.sleep(3000);
 
 		Clickelement(role_sel);
-		Thread.sleep(3000);
 
 
 		validatetext(add_save, "Save");
-		Thread.sleep(3000);
 
 		validatetext(add_cancel, "Cancel");
 		Clickelement(add_save);
@@ -152,22 +137,16 @@ public class Users_object extends Baseclass  {
 	public void validate_the_added_user(String RN, String Email) throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		driver.navigate().refresh();
-		Thread.sleep(3000);
 
 		sendkeyweb(Search, Email);
-		Thread.sleep(3000);
 
 		validatetext(Table_data.get(0), Email);
-		Thread.sleep(3000);
 
 		validatetext(Table_data.get(1), "ADMIN");
-		Thread.sleep(3000);
 
 		validatetext(Table_data.get(2), "Active");
-		Thread.sleep(3000);
 
 		validatetext(Table_data.get(3), "Login Enabled");
-		Thread.sleep(3000);
 
 		if(driver.findElement(By.xpath("//span[@class='slider round']")).isEnabled()) {
 			System.out.println("User is enabled");
@@ -207,41 +186,30 @@ public class Users_object extends Baseclass  {
 	public WebElement Close_modal;
 	public void update_the_user(String URN, String Email) throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		Thread.sleep(3000);
 
 		driver.navigate().refresh();
-		Thread.sleep(3000);
 
 		sendkeyweb(Search, Email);
 		//		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + Email + "']/following-sibling::td//button[@class='edit-icon']")));
 
 		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + Email + "']/following-sibling::td//button[@class='edit-icon ng-star-inserted']")));
-		Thread.sleep(3000);
 
 		validatetext(User_details1, "User Details");
-		Thread.sleep(3000);
 
 		validatetext(User_access, "User Access");
-		Thread.sleep(3000);
 
 		validatetext(Email1, "Email ID");
-		Thread.sleep(3000);
 
 		//		validatetext(User_ID, "User ID");
 		validatetext(First_name, "First Name");
-		Thread.sleep(3000);
 
 		validatetext(Last_name, "Last Name");
-		Thread.sleep(3000);
 
 		validatetext(Role_text, "Role");
-		Thread.sleep(3000);
 
 		validatetext(Action_text, "Action");
-		Thread.sleep(3000);
 
 		validatetext(User_Access, "User Access");
-		Thread.sleep(3000);
 
 		Clickelement(driver.findElement(By.xpath("//div[normalize-space()='"+URN+"']/following-sibling::div//button[@class='btn-success']")));
 		//		validatealert(Email);
@@ -262,16 +230,12 @@ public class Users_object extends Baseclass  {
 		driver.navigate().refresh();
 		sendkeyweb(Search, Email);
 		validatetext(Table_data.get(0), Email);
-		Thread.sleep(3000);
 
 		validatetext(Table_data.get(1), "TEAM_MEMBER");
-		Thread.sleep(3000);
 
 		validatetext(Table_data.get(2), "Active");
-		Thread.sleep(3000);
 
 		validatetext(Table_data.get(3), "Login Enabled");
-		Thread.sleep(3000);
 
 		if(driver.findElement(By.xpath("//span[@class='slider round']")).isEnabled()) {
 			System.out.println("User is enabled");

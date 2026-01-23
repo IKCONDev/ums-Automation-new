@@ -48,22 +48,16 @@ public class Changepassword_object extends Baseclass {
 		Clickelement(ChangePassword);
 		validatetext(Changepassheader, "Change Password");
 		validateattribute(Currentpassplaceholder, "placeholder", "Enter Current Password ");
-		Thread.sleep(3000);
 		sendkeyweb(Currentpassplaceholder, Oldpass);
-		Thread.sleep(3000);
 
 		validateattribute(newpassplaceholder, "placeholder", "Enter New Password ");
-		Thread.sleep(3000);
 
 		sendkeyweb(newpassplaceholder, Newpass);
-		Thread.sleep(3000);
 
 
 		validateattribute(confirmnewpassplaceholder, "placeholder", "Confirm New Password ");
-		Thread.sleep(3000);
 
 		sendkeyweb(confirmnewpassplaceholder, ConfirmNewpass);
-		Thread.sleep(3000);
 
 
 		validatetext(Updatebtn, "Update");

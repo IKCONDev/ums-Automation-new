@@ -42,20 +42,17 @@ public class Users_steps {
 
 	@Then("validate the users page")
 	public void validate_the_users_page() throws InterruptedException {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		UO.validate_the_users_page();
 	
 	}
 
 	@Then("add the user {string} {string}")
 	public void add_the_user(String RN, String Email) throws InterruptedException {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		UO.add_the_user(RN, Email);
 
 	}
 	@Then("validate the added user {string} {string}")
 	public void validate_the_added_user(String RN, String Email) throws InterruptedException {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		UO.validate_the_added_user(RN, Email);
 	}
 
@@ -63,13 +60,11 @@ public class Users_steps {
 
 	@Then("update the user {string} {string}")
 	public void update_the_user(String URN, String Email) throws InterruptedException {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		UO.update_the_user(URN, Email);
 
 	}
 	@Then("validate the updated user {string} {string}")
 	public void validate_the_updated_user(String URN, String Email) throws InterruptedException {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		UO.validate_the_updated_user(URN, Email);
 
 	}

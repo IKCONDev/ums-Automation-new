@@ -73,7 +73,6 @@ public class batchprocess_object  extends Baseclass{
 		validatetext(Savebtn, "Save");
 		validatetext(Cancel, "Cancel");
 		Clickelement(Savebtn);
-		Thread.sleep(3000);
 
 		Clickelement(Batchprocesstime);
 
@@ -85,16 +84,13 @@ public class batchprocess_object  extends Baseclass{
 		validatetext(Zoom, "Zoom");
 
 		validatetext(Choose_Time,"Choose Time");
-		Thread.sleep(3000);
 
 		Selectdropdown(timesetup,"25");
-		Thread.sleep(3000);
 
 		validatetext(Savebtn, "Save");
 		validatetext(Cancel, "Cancel");
 		Clickelement(Savebtn);
 
-		Thread.sleep(3000);
 
 		Clickelement(Batchprocesstime);
 
@@ -106,15 +102,12 @@ public class batchprocess_object  extends Baseclass{
 		validatetext(Webex, "Cisco Webex");
 
 		validatetext(Choose_Time,"Choose Time");
-		Thread.sleep(3000);
 		Selectdropdown(timesetup,"25");
-		Thread.sleep(3000);
 
 		validatetext(Savebtn, "Save");
 		validatetext(Cancel, "Cancel");
 		Clickelement(Savebtn);
 
-		Thread.sleep(3000);
 
 		Clickelement(Batchprocesstime);
 
@@ -125,10 +118,8 @@ public class batchprocess_object  extends Baseclass{
 		Clickelement(Googlemeet);
 		validatetext(Googlemeet, "Google Meet");
 		validatetext(Choose_Time,"Choose Time");
-		Thread.sleep(3000);
 
 		Selectdropdown(timesetup,"25");
-		Thread.sleep(3000);
 
 		validatetext(Savebtn, "Save");
 		validatetext(Cancel, "Cancel");

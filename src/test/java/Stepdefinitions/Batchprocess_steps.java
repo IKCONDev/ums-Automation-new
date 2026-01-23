@@ -3,6 +3,7 @@ package Stepdefinitions;
 
 import java.time.Duration;
 
+
 import org.openqa.selenium.WebDriver;
 
 import Drivemanager.Driver;
@@ -15,7 +16,6 @@ public class Batchprocess_steps {
 
 	@And("Validate the Batch process page")
 	public void Validate_the_Batch_process_page() throws InterruptedException {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		BO.Validate_the_Batch_process_page();
 
 	}

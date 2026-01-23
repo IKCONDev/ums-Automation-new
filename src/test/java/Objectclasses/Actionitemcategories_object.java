@@ -97,9 +97,7 @@ public class Actionitemcategories_object extends Baseclass {
 	public void add_the_actionitem_category(String ACN) throws InterruptedException {
 
 		driver.navigate().refresh();
-		Thread.sleep(3000);
 		Clickelement(Add);
-		Thread.sleep(3000);
 
 		validatetext(Actionitem_cat, "ActionItem Category");
 		validatetext(Actionitem_Dept, "Choose Department");
@@ -135,7 +133,6 @@ public class Actionitemcategories_object extends Baseclass {
 
 	public void validate_the_added_actionitem_category(String ACN) throws InterruptedException {
 		sendkeyweb(Search, ACN);
-		Thread.sleep(4000);
 		dispalyedattribute(Table_data.get(1), "ID");
 		validatetext(Table_data.get(2), ACN);
 		validatetext(Table_data.get(3), ACN + " Task");	
@@ -148,7 +145,6 @@ public class Actionitemcategories_object extends Baseclass {
 		validatetext(Table_data.get(8), "");
 		dispalyedattribute(Editicon, "Edit icon");
 		dispalyedattribute(Deleteicon, "Delete icon");
-		Thread.sleep(3000);
 
 
 	}
@@ -157,20 +153,14 @@ public class Actionitemcategories_object extends Baseclass {
 
 	public void update_the_actionitem_category(String ACN) throws InterruptedException {
 		sendkeyweb(Search, ACN);
-		Thread.sleep(3000);
 		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + ACN + "']/following-sibling::td//button[@id='editIcon']")));
-		Thread.sleep(4000);
 		Clickelement(Clear);
-		Thread.sleep(4000);
 
 		Clickelement(Actionitem_drop);
-		Thread.sleep(4000);
 
 		Clickelement(driver.findElement(By.xpath("//span[normalize-space()='Information Technology']")));
-		Thread.sleep(4000);
 
 		validatetext(ActionitemCat_name, "ActionItem Category Name");
-		Thread.sleep(4000);
 
 		validateattribute(ActionitemCat_name_in, "placeholder", "Category Title");
 		sendkeyweb(ActionitemCat_name_in, ACN);
@@ -180,13 +170,11 @@ public class Actionitemcategories_object extends Baseclass {
 		validatetext(Actionitem_save, "Save");
 		validatetext(Actionitem_cancel, "Cancel");
 		Clickelement(Actionitem_save);
-		Thread.sleep(5000);
 
 	}
 
 	public void validate_the_updated_actionitem_category(String ACN) throws InterruptedException {
 		sendkeyweb(Search, ACN);
-		Thread.sleep(4000);
 		dispalyedattribute(Table_data.get(1), "ID");
 		validatetext(Table_data.get(2), ACN);
 		validatetext(Table_data.get(3), ACN + " Task");
@@ -208,7 +196,6 @@ public class Actionitemcategories_object extends Baseclass {
 	public void Delete_the_actionitem_category(String ACN) throws InterruptedException {
 		driver.navigate().refresh();
 		sendkeyweb(Search, ACN);
-		Thread.sleep(3000);
 		//		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + CN + "']/following-sibling::td//button[@id='trashIcon']")));
 		//		validatealert("Are you sure, you really want to delete selected task categories ?");
 		//		driver.switchTo().alert().dismiss();

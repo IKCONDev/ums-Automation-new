@@ -48,36 +48,30 @@ public class Departments_steps {
 		department_object DO = new department_object(driver);
 	@Then("Validate the departments page")
 	public void validate_the_departments_page() throws InterruptedException {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		DO.validate_the_departments_page();
 	}
 	
 
 	@Then("add the department {string} {string} {string} {string}")
 	public void add_the_department(String DN, String FN, String DC, String DL) throws InterruptedException {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		DO.add_the_department(DN, FN, DC, DL);
 	}
 	@Then("validate the added department  {string} {string} {string} {string}")
 	public void validate_the_added_department(String DN, String FN, String DC, String DL) throws InterruptedException {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		DO.validate_the_added_department(DN, FN, DC, DL);
 	}
 
 	@Then("update the department {string} {string} {string} {string}")
 	public void update_the_department(String DN, String FN, String DC, String DL) throws InterruptedException {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		DO.update_the_department(DN, FN, DC, DL);
 	}
 	@Then("validate the updated department  {string} {string} {string} {string}")
 	public void validate_the_updated_department(String DN, String FN, String DC, String DL) throws InterruptedException {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		DO.validate_the_updated_department(DN, FN, DC, DL);
 	}
 
 	@Then("delete the department {string}")
 	public void delete_the_department(String DN) throws InterruptedException {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));	
 		DO.delete_the_department(DN);
 	}
 }

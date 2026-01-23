@@ -6,10 +6,5 @@ Feature: UMS
     When user is validate Login page "<Username>" "<Password>"
 
     Examples: 
-<<<<<<< HEAD
-      | Username             | Password |
-      | bharat@ikcontech.com | Test@123 |
-=======
-      | Username               | Password  |
-      | ums-test@ikcontech.com | Test@1234 |
->>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
+      | Username              | Password |
+      | umstest@ikcontech.com | Test@123 |

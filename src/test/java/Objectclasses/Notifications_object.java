@@ -31,16 +31,12 @@ public class Notifications_object extends Baseclass {
 	public void validate_the_Notifications_page() throws InterruptedException {
 
 		Clickelement(Notifications);
-		Thread.sleep(3000);
 	
 		validatetext(Notificationsheader, "Notifications");
-		Thread.sleep(3000);
 
 		validatetext(Notificationspage, "No Unread Notifications !");
-		Thread.sleep(3000);
 
 		Clickelement(crossmark);	
-		Thread.sleep(3000);
 
 
 	}

@@ -56,23 +56,19 @@ public class designation_steps {
 	}
 	@Then("validate the added designation {string}")
 	public void validate_the_added_designation(String DSN) throws InterruptedException {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		DO.validate_the_added_designation(DSN);
 	}
 	@Then("update the designation {string}")
 	public void update_the_designation(String DSN) throws InterruptedException {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		DO.update_the_designation(DSN);
 	}
 
 	@Then("validate the updated designation {string}")
 	public void validate_the_updated_designation(String DSN) throws InterruptedException {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		DO.validate_the_updated_designation(DSN);
 	}
 	@Then("delete the designation {string}")
 	public void delete_the_designation(String DSN) throws InterruptedException {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		DO.delete_the_designation(DSN);
 	}
 }

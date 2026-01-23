@@ -121,14 +121,12 @@ public class Programs_object extends Baseclass {
 		sendkeyweb(Programcodeplaceholder, PC);
 		validatetext(Programownertxt,"Program Owner");
 		Clickelement(Programownerdrpdwn);
-		Thread.sleep(3000);
 
 		//		Actions actions = new Actions(driver);
 		//		WebElement menu = driver.findElement(By.xpath("//span[contains(text(),'Ananth raj')]"));
 		//		actions.moveToElement(menu).perform();
 
 		Clickelement(Programownerselect);
-		Thread.sleep(3000);
 
 		validatetext(Programstartdatetxt,"Start Date & Time");
 
@@ -175,10 +173,8 @@ public class Programs_object extends Baseclass {
 
 
 		attributeselected(Edit_icon, "Edit icon");
-		Thread.sleep(3000);
 
 		attributeselected(Delete_icon, "Delete icon");
-		Thread.sleep(3000);
 	}
 
 	@FindBy(xpath = "//div[@id='updateModal']//h5[@id='xlModalLabel']")
@@ -222,34 +218,24 @@ public class Programs_object extends Baseclass {
 		validatetext(UpdateProgramtxt, "Program");
 
 		sendkeyweb(UpdateProgramname, PN);
-		Thread.sleep(3000);
 		sendkeyweb(UpdateProgramcode, PC);
-		Thread.sleep(3000);
 
 		sendkeyweb(Updateprogramdes, PD);
-		Thread.sleep(3000);
 
 		Clickelement(progrmownerdrpdwn);
-		Thread.sleep(3000);
 
 		Clickelement(progrmownerselect);
-		Thread.sleep(3000);
 
 
 		sendkeyweb(updatestartdateandtime, D.Datefun(0, 1, 0));
-		Thread.sleep(3000);
 
 		sendkeyweb(updateenddateandtime, D.Datefun(0, 2, 0));
-		Thread.sleep(3000);
 
 		Clickelement(statusdrpdwn);
-		Thread.sleep(3000);
 
 		Clickelement(statusselect);
-		Thread.sleep(3000);
 
 		Clickelement(Updatesavebtn);
-		Thread.sleep(3000);
 
 	}
 
@@ -283,8 +269,6 @@ public class Programs_object extends Baseclass {
 		driver.navigate().refresh();
 
 		sendkeyweb(Search, PN);
-		Thread.sleep(3000);
-
 
 		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + PN + "']/following-sibling::td//button[@id='trashIcon']")));
 
@@ -300,8 +284,6 @@ public class Programs_object extends Baseclass {
 		//		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + PN + "']/preceding-sibling::td//input[@type='checkbox']")));
 
 		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + PN + "']/following-sibling::td//button[@id='trashIcon']")));
-
-		Thread.sleep(3000);
 		//		Clickelement(Deletebtn);
 		try {
 			Alert alert = driver.switchTo().alert();

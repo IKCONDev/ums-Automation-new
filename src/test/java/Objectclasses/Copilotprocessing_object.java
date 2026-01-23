@@ -48,10 +48,8 @@ public class Copilotprocessing_object extends Baseclass {
 	public WebElement copilotselect;
 
 	public void user_validates_the_Copilot_Processing_page() throws InterruptedException {
-		Thread.sleep(3000);
 		Clickelement(Setup);
 		validatetext(CopilotProcessing, "Copilot Processing");
-		Thread.sleep(3000);
 		Clickelement(CopilotProcessing);
 		validatetext(Copilotheadertxt, "Configure Copilot to Parse Transcript");
 		validatetext(transcript, "Choose option to process Transcript");
