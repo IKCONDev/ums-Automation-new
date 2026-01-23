@@ -184,9 +184,7 @@ public class Permission_object extends Baseclass {
 	public void Add_the_Permissions(String s1) throws InterruptedException {
 		driver.navigate().refresh();
 		Clickelement(Add);
-		Thread.sleep(4000);
 		validatetext(Permission, "Permission");
-		Thread.sleep(4000);
 
 		validatetext(Permission_value, "Permission Value*");
 		validateattribute(Cat_name,"placeholder", "Permission Value");
@@ -210,10 +208,8 @@ public class Permission_object extends Baseclass {
 	public WebElement Delete_icon;
 
 	public void validate_the_added_permission_data(String s1) throws InterruptedException {
-		Thread.sleep(4000);
 
 		sendkeyweb(Search, s1);
-		Thread.sleep(2000);
 
 		//		List<WebElement> Table_data1=driver.findElements(By.xpath("//td[contains(.,'" + s1 + "')]/following-sibling::td"));
 
@@ -237,7 +233,6 @@ public class Permission_object extends Baseclass {
 		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + s1 + "']/following-sibling::td//button[@id='editIcon']")));
 
 		//		Cat_name.clear();
-		Thread.sleep(3000);
 		sendkeyweb(Cat_name, s1);
 		sendkeyweb(Desc,"Access permissions to " + s1);
 		Clickelement(Save);
@@ -246,7 +241,6 @@ public class Permission_object extends Baseclass {
 
 	public void validate_the_updated_permission_data(String s1) throws InterruptedException {
 
-		Thread.sleep(3000);	
 		driver.navigate().refresh();
 
 		sendkeyweb(Search, s1);
@@ -270,10 +264,8 @@ public class Permission_object extends Baseclass {
 
 
 		driver.navigate().refresh();
-		Thread.sleep(3000);
 
 		sendkeyweb(Search, s1);
-		Thread.sleep(3000);
 		//		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + s1 + "']/following-sibling::td//button[@id='trashIcon']")));
 
 		//		Clickelement(del_btn);
@@ -296,7 +288,6 @@ public class Permission_object extends Baseclass {
 		//		Thread.sleep(3000);
 
 		Clickelement(del_btn);
-		Thread.sleep(3000);
 
 
 
@@ -315,7 +306,6 @@ public class Permission_object extends Baseclass {
 		}
 
 		Clickelement(del_btn);
-		Thread.sleep(3000);
 
 		try {
 			Alert alert = driver.switchTo().alert();

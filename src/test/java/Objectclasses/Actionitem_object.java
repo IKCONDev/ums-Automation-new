@@ -7,6 +7,7 @@ import java.util.List;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -38,12 +39,8 @@ public class Actionitem_object extends Baseclass {
 	Dateformatter da=new Dateformatter();
 
 	public void user_navigates_to_Actionitem_page() throws InterruptedException {
-		Thread.sleep(3000);
 		Clickelement(Actionitemssidemenu);
-		Thread.sleep(3000);
 		Clickelement(Actionitemsdropdwnarrow);
-		Thread.sleep(3000);
-
 		Clickelement(Actionitemscreatedbyclick);
 
 	}
@@ -54,9 +51,9 @@ public class Actionitem_object extends Baseclass {
 
 
 	public void user_validates_the_Actionitem_page() throws InterruptedException {
-		String s = " ,Action Item ID,Meeting ID,Title,Assigned To,Planned Start Date & Time,Planned End Date & Time,Priority,Status,Over Due Days,Edit,Delete";
+		String s = " ,Action Item ID,Meeting ID,Title,Assigned To,Planned Start Date & Time,Planned End Date & Time,Priority,Status,Over Due Days,Edit,Delete,Jira";
 		List<String> list = new ArrayList<String>(Arrays.asList(s.split(",")));
-		for (int i = 1; i <= 11; i++) {
+		for (int i = 1; i <= 12; i++) {
 			validatetext(risktable.get(i), list.get(i));
 		}
 
@@ -109,7 +106,7 @@ public class Actionitem_object extends Baseclass {
 	public WebElement Actionitemreviewerdrpdwn;
 
 
-	@FindBy(xpath = "//span[normalize-space()='Anupama Shetty']")
+	@FindBy(xpath = "//span[normalize-space()='Kethu Vinod']")
 	public List<WebElement> Actionitemreviewerselect;
 
 	@FindBy(xpath = "(//span[@class='ng-arrow-wrapper'])[8]")
@@ -139,81 +136,59 @@ public class Actionitem_object extends Baseclass {
 
 
 	public void user_adds_actioinitem_in_Actionitem_page(String AT, String AD) throws InterruptedException {
-		Thread.sleep(3000);
-
-
 
 		Clickelement(ActionitemsAddbutton);
-		Thread.sleep(4000);
 
 		validatetext(ValAddActionitems, "Add Action Item");
-		Thread.sleep(3000);
 
 		validateattribute(ValActionitemtitleplaceholder, "placeholder", "Enter action item title");
-		Thread.sleep(3000);
 
 		validatetext(ValPlannedstartdateandtime, "Planned Start Date & Time*");
-		Thread.sleep(3000);
 
 		validatetext(ValPlannedenddateandtime, "Planned End Date & Time*");
-		Thread.sleep(3000);
 
 		validatetext(ValPriority, "Priority*");
-		Thread.sleep(3000);
 
 		validatetext(ValStatus, "Status");
-		Thread.sleep(3000);
+
 
 		validatetext(Valdescription, "Description*");
-		Thread.sleep(3000);
+
 
 		validateattribute(Valdescriptionplaceholder, "placeholder", "Enter description");
-		Thread.sleep(3000);
+
 
 		validatetext(Valcreatebutton, "Create");
-		Thread.sleep(3000);
-
 		validatetext(Valcancelbutton, "Cancel");
-		Thread.sleep(3000);
 
 		sendkeyweb(Actionitemstitle, AT);
-		Thread.sleep(4000);
 
 		Clickelement(Actionitemassigneedrpdwn);
-		Thread.sleep(4000);
 
 		clickmultipleweb(Actionitemassigneeselect);
-		Thread.sleep(4000);
+
 
 		Clickelement(Actionitemreviewerdrpdwn);
-		Thread.sleep(4000);
+
 
 		clickmultipleweb(Actionitemreviewerselect);
-		Thread.sleep(4000);
+
 
 		Clickelement(Actionitemcategorydrpdwn);
-		Thread.sleep(4000);
 
 		Clickelement(Actionitemcategoryselect);
-		Thread.sleep(4000);
 
 		sendkeyweb(Actionitemstartdate, da.Datefun(0,0,0) );
-		Thread.sleep(4000);
 
 		sendkeyweb(Actionitemenddate, da.Datefun(0,1,0) );
-		Thread.sleep(4000);
 
 		Clickelement(Actionitemprioritydrpdwn);
-		Thread.sleep(4000);
 
 		Clickelement(Actionitempriorityselect);
-		Thread.sleep(4000);
 
 		sendkeyweb(Actionitemdescription, AD);
-		Thread.sleep(4000);
 
 		Clickelement(Actionitemcreate);
-		Thread.sleep(4000);
 
 
 	}
@@ -225,12 +200,11 @@ public class Actionitem_object extends Baseclass {
 	public WebElement Delete_icon;
 
 	public void user_validate_the_added_actionitem_in_Actionitems_page(String AT) throws InterruptedException {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		driver.navigate().refresh();
-		sendkeyweb(Actionitem_search,AT);
+		sendkeyweb(Actionitem_search,AT+Keys.ENTER);
 
 		String AID = driver.findElement(By.xpath("(//td[normalize-space()='"+AT+"']/preceding-sibling::td)[2]")).getText();
-		String[] S = {"UMS SUPPORT","","","High","Yet to start","NA"};
+		String[] S = {"UMS TEST","","","High","Yet to start","NA"};
 
 
 		List<WebElement> valid=driver.findElements(By.xpath("//td[normalize-space()='" + AT + "']/following-sibling::td"));
@@ -250,10 +224,8 @@ public class Actionitem_object extends Baseclass {
 
 
 		attributeselected(Edit_icon, "Edit icon");
-		Thread.sleep(3000);
 
 		attributeselected(Delete_icon, "Delete icon");
-		Thread.sleep(3000);
 	}
 
 	@FindBy(xpath = "//input[@id='searchActionFilter']")
@@ -269,21 +241,15 @@ public class Actionitem_object extends Baseclass {
 	public WebElement updatebtn;
 
 	public void user_Update_Actionitem_page(String AT) throws InterruptedException {
-		Thread.sleep(3000);
-		sendkeyweb(Actionitemsearch, AT);
-		Thread.sleep(3000);
+		sendkeyweb(Actionitemsearch, AT+Keys.ENTER);
 
 		Clickelement(Edit_icon);
-		Thread.sleep(3000);
 
 		Clickelement(Actionitemupdatedrpdwn);
-		Thread.sleep(3000);
 
 		Clickelement(Actionitemassigneeupdate);
-		Thread.sleep(3000);
 
 		Clickelement(updatebtn);
-		Thread.sleep(3000); 
 	}
 
 
@@ -297,11 +263,8 @@ public class Actionitem_object extends Baseclass {
 	public WebElement deletebtn;
 
 	public void user_delete_Actionitem_page(String AT) throws InterruptedException {
-		Thread.sleep(3000);
-		sendkeyweb(Actionitemsearch, AT);
-		Thread.sleep(3000);
+		sendkeyweb(Actionitemsearch, AT+Keys.ENTER);
 		Clickelement(deletebtn);
-		Thread.sleep(3000);
 
 
 
@@ -328,20 +291,20 @@ public class Actionitem_object extends Baseclass {
 	@FindBy(xpath = "(//span[@class='ng-arrow-wrapper'])[2]")
 	public WebElement Taskassignedtodrpdwn;
 
-	@FindBy(xpath = "//span[normalize-space()='UMS SUPPORT']")
+	@FindBy(xpath = "//span[normalize-space()='UMS TEST']")
 	public List<WebElement> Taskassignedtodrpdwnselect;
 
 	@FindBy(xpath = "(//span[@class='ng-arrow-wrapper'])[3]")
 	public WebElement Taskreviewerdrpdwn;
 
-	@FindBy(xpath = "//span[normalize-space()='UMS SUPPORT']")
+	@FindBy(xpath = "//span[normalize-space()='UMS TEST']")
 	public List<WebElement> Taskreviewerdrpdwnselect;
 
 	@FindBy(xpath = "(//span[@class='ng-arrow-wrapper'])[4]")
 	public WebElement Taskcategorydrpdwn;
 
 
-	@FindBy(xpath = "//span[normalize-space()='jhxcvkjhgfhj']")
+	@FindBy(xpath = "//span[normalize-space()='Testing']")
 	public WebElement Taskcategorydrpdwnselect ;
 
 	@FindBy(xpath = "//textarea[@id='taskDescription']")
@@ -355,47 +318,34 @@ public class Actionitem_object extends Baseclass {
 
 	public void user_create_task_in_Actionitem_page(String AT, String TT, String TD) throws InterruptedException {
 		driver.navigate().refresh();
-		Thread.sleep(3000);
 
-		sendkeyweb(Actionitemsearch, AT);
-		Thread.sleep(4000);
+		sendkeyweb(Actionitemsearch, AT+Keys.ENTER);
+
 
 		Clickelement(Actionitemplusbtn);
-		Thread.sleep(4000);
 
 		Clickelement(Actionitemtaskplusbtn);
-		Thread.sleep(4000);
 
 		sendkeyweb(Actionitemtasktitle, TT);
-		Thread.sleep(4000);
 
 		Clickelement(Taskassignedtodrpdwn);
-		Thread.sleep(4000);
-
 
 		clickmultipleweb(Taskassignedtodrpdwnselect);
-		Thread.sleep(4000);
 
 		Clickelement(Taskreviewerdrpdwn);
-		Thread.sleep(4000);
 
 		clickmultipleweb(Taskreviewerdrpdwnselect);
-		Thread.sleep(4000);
 
 		Clickelement(Taskcategorydrpdwn);
-		Thread.sleep(4000);
 
 		Clickelement(Taskcategorydrpdwnselect);
-		Thread.sleep(4000);
 
 		sendkeyweb(ActionitemTaskdescription, TD);
-		Thread.sleep(4000);
 
 		Clickelement(ActionitemTaskcreatebtn);
-		Thread.sleep(4000);
 
 		//		driver.navigate().refresh();
-		//		Thread.sleep(3000);
+		Thread.sleep(3000);
 
 	}
 
@@ -405,21 +355,37 @@ public class Actionitem_object extends Baseclass {
 	@FindBy(xpath = "//button[@id='editIcon']//*[name()='svg']")
 	public WebElement taskediticon ;
 
-	@FindBy(xpath = "//input[@id='orgTaskTitle']")
-	public WebElement updatetasktitle ;
+	//	@FindBy(xpath = "//input[@id='orgTaskTitle']")
+	//	public WebElement updatetasktitle ;
+
+	@FindBy(xpath = "//button[@class='btn btn-primary saveButton'][normalize-space()='Update']")
+	public WebElement taskupdatebtn ;
+
+
 
 	public void user_update_task_in_Actionitem_page(String AT, String TT, String TD) throws InterruptedException {
 
 
-		sendkeyweb(tasksearch, TT);
-		Thread.sleep(4000);
+		sendkeyweb(tasksearch, TT+Keys.ENTER);
+
+		Clickelement(taskediticon);
+
+		Clickelement(taskupdatebtn);
+	}
+
+	public void user_delete_task_in_Actionitem_page(String AT, String TT, String TD) throws InterruptedException {
+
+
+		sendkeyweb(tasksearch, TT+Keys.ENTER);
+
+		Clickelement(driver.findElement(By.xpath("//tr[td[normalize-space()='" + TT + "']]//input[@type='checkbox']")));
 
 
 	}
 	@FindBy(xpath = "//div[contains(text(),'Edit Column')]")
 	public WebElement Editcolumn ;
 
-	@FindBy(xpath = "//input[@placeholder='0 of 8 selected']")
+	@FindBy(xpath = "//input[@placeholder='0 of 11 selected']")
 	public WebElement Editcolumndrpdwn;
 
 	@FindBy(xpath = "//label[normalize-space()='Select All']")
@@ -430,14 +396,10 @@ public class Actionitem_object extends Baseclass {
 	public void user_click_editcolumn_in_Actionitem_page() throws InterruptedException {
 
 		Clickelement(Editcolumn);
-		Thread.sleep(3000);
 		Clickelement(Editcolumndrpdwn);
-		Thread.sleep(3000);
 		Clickelement(Editcolumnselectall);
-		Thread.sleep(3000);
 
 		Clickelement(Editcolumnxmark);
-		Thread.sleep(3000);
 
 
 	}
@@ -475,11 +437,8 @@ public class Actionitem_object extends Baseclass {
 		//		Thread.sleep(3000);
 
 		Clickelement(Filter);
-		Thread.sleep(3000);
 		sendkeyweb(FilterApply, AT);
-		Thread.sleep(3000);
 		Clickelement(Applybtn);
-		Thread.sleep(3000);
 
 		Clickelement(Clearbtn);
 		Thread.sleep(3000);
@@ -495,10 +454,8 @@ public class Actionitem_object extends Baseclass {
 	public void user_navigates__to_All_Actionitem_page() throws InterruptedException {
 
 		Clickelement(Actionitemsdropdwnarrow);
-		Thread.sleep(3000);
 
 		Clickelement(Allactionitems);
-		Thread.sleep(3000);
 
 	}
 
@@ -508,10 +465,8 @@ public class Actionitem_object extends Baseclass {
 	public void user_navigates__to_My_Actionitem_page() throws InterruptedException {
 
 		Clickelement(Actionitemsdropdwnarrow);
-		Thread.sleep(3000);
 
 		Clickelement(Myactionitems);
-		Thread.sleep(3000);
 
 	}
 
@@ -521,10 +476,8 @@ public class Actionitem_object extends Baseclass {
 	public void user_navigates__to_Assignedto_Actionitem_page() throws InterruptedException {
 
 		Clickelement(Actionitemsdropdwnarrow);
-		Thread.sleep(3000);
 
 		Clickelement(Assignedtoactionitems);
-		Thread.sleep(3000);
 
 	}
 }

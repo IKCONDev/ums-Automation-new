@@ -328,7 +328,6 @@ public class Menuitems_object extends Baseclass {
 			System.out.println("No alert present.");
 		}
 
-		Thread.sleep(3000);
 
 		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + s1 + "']/following-sibling::td//button[@id='trashmenuIcon']")));
 

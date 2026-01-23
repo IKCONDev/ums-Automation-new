@@ -248,16 +248,13 @@ public class Team_object extends Baseclass {
 		validatetext(teamleadtitle, "Team Lead*");
 
 		Clickelement(Team_lead);
-		Thread.sleep(2000);
 
 		Clickelement(driver.findElement(By.xpath("//span[contains(text(),'Kiran Kumar')]")));
 		validatetext(teamheadtitle, "Team Head*");
 
 		Clickelement(Team_head);
-		Thread.sleep(2000);
 
 		Clickelement(driver.findElement(By.xpath("//span[contains(text(),'Ramya Reddy')]")));
-		Thread.sleep(2000);
 
 		validatetext(Save_button, "Save");
 		validatetext(cancel_button, "Cancel");
@@ -282,7 +279,6 @@ public class Team_object extends Baseclass {
 
 	public void validate_the_Team(String Team) throws InterruptedException {
 		sendkeyweb(Search, Team);
-		Thread.sleep(3000);
 		//		String TID =driver.findElements(By.xpath("//td[normalize-space()='"+Team+"']/preceding-sibling::td")).get(1).getText();
 		//		String[] s= {Team,"T12E1","Praveen Reddy","Venkatesh Udaru","Information Technology","UMS SUPPORT","","","","",""};
 		//		//String[] v= {"Team Name","Team Code","Team Lead","Team Head","Department Name","Added by","Created Date","Modified By","Modified Date","Edit","Delete"};
@@ -327,7 +323,6 @@ public class Team_object extends Baseclass {
 
 	public void Update_the_Team(String Team) throws InterruptedException {
 		sendkeyweb(Search, Team);
-		Thread.sleep(3000);
 		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='"+Team+"']/following-sibling::td//button[@id='editIcon']")));
 		//		validatetext(Title, "Team");
 		//		driver.findElement(By.xpath("//h5[@id='xlModalLabel']")).getText();
@@ -368,7 +363,6 @@ public class Team_object extends Baseclass {
 
 	public void validate_the_Updated_Team(String Team) throws InterruptedException {
 		sendkeyweb(Search, Team);
-		Thread.sleep(3000);
 		//				String TID =driver.findElements(By.xpath("//td[normalize-space()='"+Team+"']/preceding-sibling::td")).get(1).getText();
 		//				String[] s= {Team,"T12E1","Praveen Reddy","Venkatesh Udaru","Information Technology","UMS SUPPORT","","","","",""};
 		//				//String[] v= {"Team Name","Team Code","Team Lead","Team Head","Department Name","Added by","Created Date","Modified By","Modified Date","Edit","Delete"};
@@ -398,7 +392,6 @@ public class Team_object extends Baseclass {
 	//	public WebElement Delete_button;
 	public void Delete_the_Team(String Team) throws InterruptedException {
 		sendkeyweb(Search, Team);
-		Thread.sleep(3000);
 		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='"+Team+ "']/following-sibling::td//button[@id='trashIcon']")));
 		//		validatealert("Are you sure, you really want to delete selected teams ?");
 		//		driver.switchTo().alert().dismiss();
@@ -419,8 +412,6 @@ public class Team_object extends Baseclass {
 		} catch (NoAlertPresentException e) {
 			System.out.println("No alert present.");
 		}
-
-
 
 		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='"+Team+ "']/following-sibling::td//button[@id='trashIcon']")));
 

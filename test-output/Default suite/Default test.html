@@ -55,43 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<<<<<<< HEAD
-<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
-=======
-<<<<<<< HEAD
 <td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
-=======
-<td>Tests passed/Failed/Skipped:</td><td>1/6/0</td>
->>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
->>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
 </tr><tr>
-<<<<<<< HEAD
-<td>Started on:</td><td>Fri Jan 16 12:52:01 IST 2026</td>
-=======
-<<<<<<< HEAD
-<td>Started on:</td><td>Wed Jan 14 16:37:39 IST 2026</td>
-=======
-<<<<<<< HEAD
-<td>Started on:</td><td>Mon Jan 12 18:44:15 IST 2026</td>
-=======
-<td>Started on:</td><td>Mon Jan 12 18:29:11 IST 2026</td>
->>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
->>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
->>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
+<td>Started on:</td><td>Fri Jan 23 14:19:08 IST 2026</td>
 </tr>
-<<<<<<< HEAD
-<tr><td>Total time:</td><td>626 seconds (626722 ms)</td>
-=======
-<<<<<<< HEAD
-<tr><td>Total time:</td><td>67 seconds (67350 ms)</td>
-=======
-<<<<<<< HEAD
-<tr><td>Total time:</td><td>128 seconds (128409 ms)</td>
-=======
-<tr><td>Total time:</td><td>40 seconds (40111 ms)</td>
->>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
->>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
->>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
+<tr><td>Total time:</td><td>191 seconds (191372 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -99,8 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<<<<<<< HEAD
-=======
 <table width='100%' border='1' class='invocation-failed'>
 <tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -110,229 +76,66 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<<<<<<< HEAD
-<td title='Runner.Runnerclass.runScenario()'><b>runScenario</b><br>Test class: Runner.Runnerclass<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Employee page", "UMS"</td>
-<td><div><pre>org.openqa.selenium.support.ui.UnexpectedTagNameException: Element should have been &quot;select&quot; but was &quot;div&quot;
+<td title='Runner.Runnerclass.runScenario()'><b>runScenario</b><br>Test class: Runner.Runnerclass<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Created By Action items Page", "UMS"</td>
+<td><div><pre>org.openqa.selenium.InvalidSelectorException: invalid selector: Unable to locate an element with the xpath expression //tr[td[normalize-space(text())=&apos;Task241&apos;]/td[1]//input[@type=&apos;checkbox&apos;] because of the following error:
+SyntaxError: Failed to execute &apos;evaluate&apos; on &apos;Document&apos;: The string &apos;//tr[td[normalize-space(text())=&apos;Task241&apos;]/td[1]//input[@type=&apos;checkbox&apos;]&apos; is not a valid XPath expression.
+  (Session info: chrome=144.0.7559.60)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
 Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.Select.&lt;init&gt;(Select.java:46)
-	at hooks.Baseclass.Selectdropdown(Baseclass.java:141)
-	at Objectclasses.Employee_object.add_the_employee_profile(Employee_object.java:192)
-	at Stepdefinitions.Employees_steps.add_the_employee_profile(Employees_steps.java:26)
-	at ✽.add the employee profile &quot;Krunal&quot; &quot;Shekar&quot; &quot;IKMU012&quot; &quot;krunal@ikcontech.com&quot; &quot;Information Technology&quot; &quot;Human Resource&quot; &quot;Ananth raj&quot; &quot;Male&quot;(file:///C:/Users/PraveenReddyGurram/eclipsenew/UMS_NEW/src/test/resources/Features/OEmployees.feature:6)
-</pre></div><a href='#' onClick='toggleBox("stack-trace2018794816", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2018794816'><pre>org.openqa.selenium.support.ui.UnexpectedTagNameException: Element should have been &quot;select&quot; but was &quot;div&quot;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1fb0cf0b1f4df7b719dfad034d709766, findElement {value=//tr[td[normalize-space(text())=&apos;Task241&apos;]/td[1]//input[@type=&apos;checkbox&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 144.0.7559.60, chrome: {chromedriverVersion: 144.0.7559.96 (d7b80622cfab..., userDataDir: C:\Users\PRAVEE~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52381}, goog:processID: 20976, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52381/devtoo..., se:cdpVersion: 144.0.7559.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 30000, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1fb0cf0b1f4df7b719dfad034d709766
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at Objectclasses.Actionitem_object.user_delete_task_in_Actionitem_page(Actionitem_object.java:382)
+	at Stepdefinitions.Actionitem_steps.user__delete_task_in_Actionitemsspage(Actionitem_steps.java:65)
+	at ✽.user delete task in action items page &quot;Actionitem289&quot; &quot;Task241&quot; &quot;Taskdescription241&quot;(file:///C:/Users/PraveenReddyGurram/eclipsenew/UMS_NEW/src/test/resources/Features/DActionitems.feature:14)
+</pre></div><a href='#' onClick='toggleBox("stack-trace782093779", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace782093779'><pre>org.openqa.selenium.InvalidSelectorException: invalid selector: Unable to locate an element with the xpath expression //tr[td[normalize-space(text())=&apos;Task241&apos;]/td[1]//input[@type=&apos;checkbox&apos;] because of the following error:
+SyntaxError: Failed to execute &apos;evaluate&apos; on &apos;Document&apos;: The string &apos;//tr[td[normalize-space(text())=&apos;Task241&apos;]/td[1]//input[@type=&apos;checkbox&apos;]&apos; is not a valid XPath expression.
+  (Session info: chrome=144.0.7559.60)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
 Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.Select.&lt;init&gt;(Select.java:46)
-	at hooks.Baseclass.Selectdropdown(Baseclass.java:141)
-	at Objectclasses.Employee_object.add_the_employee_profile(Employee_object.java:192)
-	at Stepdefinitions.Employees_steps.add_the_employee_profile(Employees_steps.java:26)
-	at ✽.add the employee profile &quot;Krunal&quot; &quot;Shekar&quot; &quot;IKMU012&quot; &quot;krunal@ikcontech.com&quot; &quot;Information Technology&quot; &quot;Human Resource&quot; &quot;Ananth raj&quot; &quot;Male&quot;(file:///C:/Users/PraveenReddyGurram/eclipsenew/UMS_NEW/src/test/resources/Features/OEmployees.feature:6)
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1fb0cf0b1f4df7b719dfad034d709766, findElement {value=//tr[td[normalize-space(text())=&apos;Task241&apos;]/td[1]//input[@type=&apos;checkbox&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 144.0.7559.60, chrome: {chromedriverVersion: 144.0.7559.96 (d7b80622cfab..., userDataDir: C:\Users\PRAVEE~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52381}, goog:processID: 20976, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52381/devtoo..., se:cdpVersion: 144.0.7559.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 30000, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1fb0cf0b1f4df7b719dfad034d709766
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at Objectclasses.Actionitem_object.user_delete_task_in_Actionitem_page(Actionitem_object.java:382)
+	at Stepdefinitions.Actionitem_steps.user__delete_task_in_Actionitemsspage(Actionitem_steps.java:65)
+	at ✽.user delete task in action items page &quot;Actionitem289&quot; &quot;Task241&quot; &quot;Taskdescription241&quot;(file:///C:/Users/PraveenReddyGurram/eclipsenew/UMS_NEW/src/test/resources/Features/DActionitems.feature:14)
 </pre></div></td>
-<td>33</td>
+<td>149</td>
 <td>Runner.Runnerclass@2f67a4d3</td></tr>
-=======
-<td title='Runner.Runnerclass.runScenario()'><b>runScenario</b><br>Test class: Runner.Runnerclass<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Team Task Page", "UMS"</td>
-<td><div><pre>java.lang.IndexOutOfBoundsException: Index 12 out of bounds for length 12
-	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
-	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
-	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:266)
-	at java.base/java.util.Objects.checkIndex(Objects.java:361)
-	at java.base/java.util.ArrayList.get(ArrayList.java:427)
-	at java.base/jdk.internal.reflect.GeneratedMethodAccessor77.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:39)
-	at jdk.proxy2/jdk.proxy2.$Proxy32.get(Unknown Source)
-	at Objectclasses.Task_object.user_validate_Task_page(Task_object.java:58)
-	at Stepdefinitions.Task_steps.user__validate_the_task_page(Task_steps.java:19)
-	at ✽.user validates the task page &quot;invitation&quot;(file:///C:/Users/VinodKethu/Downloads/automation/ums-Automation-new/src/test/resources/Features/ETask.feature:39)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1713999849", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1713999849'><pre>java.lang.IndexOutOfBoundsException: Index 12 out of bounds for length 12
-	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
-	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
-	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:266)
-	at java.base/java.util.Objects.checkIndex(Objects.java:361)
-	at java.base/java.util.ArrayList.get(ArrayList.java:427)
-	at java.base/jdk.internal.reflect.GeneratedMethodAccessor77.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:39)
-	at jdk.proxy2/jdk.proxy2.$Proxy32.get(Unknown Source)
-	at Objectclasses.Task_object.user_validate_Task_page(Task_object.java:58)
-	at Stepdefinitions.Task_steps.user__validate_the_task_page(Task_steps.java:19)
-	at ✽.user validates the task page &quot;invitation&quot;(file:///C:/Users/VinodKethu/Downloads/automation/ums-Automation-new/src/test/resources/Features/ETask.feature:39)
-</pre></div></td>
-<td>18</td>
-<td>Runner.Runnerclass@12591ac8</td></tr>
-<tr>
-<td title='Runner.Runnerclass.runScenario()'><b>runScenario</b><br>Test class: Runner.Runnerclass<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Assigned To Page", "UMS"</td>
-<td><div><pre>java.lang.IndexOutOfBoundsException: Index 12 out of bounds for length 12
-	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
-	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
-	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:266)
-	at java.base/java.util.Objects.checkIndex(Objects.java:361)
-	at java.base/java.util.ArrayList.get(ArrayList.java:427)
-	at java.base/jdk.internal.reflect.GeneratedMethodAccessor77.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:39)
-	at jdk.proxy2/jdk.proxy2.$Proxy32.get(Unknown Source)
-	at Objectclasses.Task_object.user_validate_Task_page(Task_object.java:58)
-	at Stepdefinitions.Task_steps.user__validate_the_task_page(Task_steps.java:19)
-	at ✽.user validates the task page &quot;invitation&quot;(file:///C:/Users/VinodKethu/Downloads/automation/ums-Automation-new/src/test/resources/Features/ETask.feature:55)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1711050460", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1711050460'><pre>java.lang.IndexOutOfBoundsException: Index 12 out of bounds for length 12
-	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
-	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
-	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:266)
-	at java.base/java.util.Objects.checkIndex(Objects.java:361)
-	at java.base/java.util.ArrayList.get(ArrayList.java:427)
-	at java.base/jdk.internal.reflect.GeneratedMethodAccessor77.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:39)
-	at jdk.proxy2/jdk.proxy2.$Proxy32.get(Unknown Source)
-	at Objectclasses.Task_object.user_validate_Task_page(Task_object.java:58)
-	at Stepdefinitions.Task_steps.user__validate_the_task_page(Task_steps.java:19)
-	at ✽.user validates the task page &quot;invitation&quot;(file:///C:/Users/VinodKethu/Downloads/automation/ums-Automation-new/src/test/resources/Features/ETask.feature:55)
-</pre></div></td>
-<td>18</td>
-<td>Runner.Runnerclass@12591ac8</td></tr>
-<tr>
-<td title='Runner.Runnerclass.runScenario()'><b>runScenario</b><br>Test class: Runner.Runnerclass<br>Test method: Runs Cucumber Scenarios<br>Parameters: "All Task Page", "UMS"</td>
-<td><div><pre>java.lang.IndexOutOfBoundsException: Index 12 out of bounds for length 12
-	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
-	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
-	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:266)
-	at java.base/java.util.Objects.checkIndex(Objects.java:361)
-	at java.base/java.util.ArrayList.get(ArrayList.java:427)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:39)
-	at jdk.proxy2/jdk.proxy2.$Proxy32.get(Unknown Source)
-	at Objectclasses.Task_object.user_validate_Task_page(Task_object.java:58)
-	at Stepdefinitions.Task_steps.user__validate_the_task_page(Task_steps.java:19)
-	at ✽.user validates the task page &quot;invitation&quot;(file:///C:/Users/VinodKethu/Downloads/automation/ums-Automation-new/src/test/resources/Features/ETask.feature:5)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1436610577", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1436610577'><pre>java.lang.IndexOutOfBoundsException: Index 12 out of bounds for length 12
-	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
-	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
-	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:266)
-	at java.base/java.util.Objects.checkIndex(Objects.java:361)
-	at java.base/java.util.ArrayList.get(ArrayList.java:427)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:39)
-	at jdk.proxy2/jdk.proxy2.$Proxy32.get(Unknown Source)
-	at Objectclasses.Task_object.user_validate_Task_page(Task_object.java:58)
-	at Stepdefinitions.Task_steps.user__validate_the_task_page(Task_steps.java:19)
-	at ✽.user validates the task page &quot;invitation&quot;(file:///C:/Users/VinodKethu/Downloads/automation/ums-Automation-new/src/test/resources/Features/ETask.feature:5)
-</pre></div></td>
-<td>11</td>
-<td>Runner.Runnerclass@12591ac8</td></tr>
-<tr>
-<td title='Runner.Runnerclass.runScenario()'><b>runScenario</b><br>Test class: Runner.Runnerclass<br>Test method: Runs Cucumber Scenarios<br>Parameters: "My Task Page", "UMS"</td>
-<td><div><pre>java.lang.IndexOutOfBoundsException: Index 12 out of bounds for length 12
-	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
-	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
-	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:266)
-	at java.base/java.util.Objects.checkIndex(Objects.java:361)
-	at java.base/java.util.ArrayList.get(ArrayList.java:427)
-	at java.base/jdk.internal.reflect.GeneratedMethodAccessor77.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:39)
-	at jdk.proxy2/jdk.proxy2.$Proxy32.get(Unknown Source)
-	at Objectclasses.Task_object.user_validate_Task_page(Task_object.java:58)
-	at Stepdefinitions.Task_steps.user__validate_the_task_page(Task_steps.java:19)
-	at ✽.user validates the task page &quot;checking task&quot;(file:///C:/Users/VinodKethu/Downloads/automation/ums-Automation-new/src/test/resources/Features/ETask.feature:23)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1147411820", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1147411820'><pre>java.lang.IndexOutOfBoundsException: Index 12 out of bounds for length 12
-	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
-	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
-	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:266)
-	at java.base/java.util.Objects.checkIndex(Objects.java:361)
-	at java.base/java.util.ArrayList.get(ArrayList.java:427)
-	at java.base/jdk.internal.reflect.GeneratedMethodAccessor77.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:39)
-	at jdk.proxy2/jdk.proxy2.$Proxy32.get(Unknown Source)
-	at Objectclasses.Task_object.user_validate_Task_page(Task_object.java:58)
-	at Stepdefinitions.Task_steps.user__validate_the_task_page(Task_steps.java:19)
-	at ✽.user validates the task page &quot;checking task&quot;(file:///C:/Users/VinodKethu/Downloads/automation/ums-Automation-new/src/test/resources/Features/ETask.feature:23)
-</pre></div></td>
-<td>18</td>
-<td>Runner.Runnerclass@12591ac8</td></tr>
-<tr>
-<td title='Runner.Runnerclass.runScenario()'><b>runScenario</b><br>Test class: Runner.Runnerclass<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Created By Page", "UMS"</td>
-<td><div><pre>java.lang.IndexOutOfBoundsException: Index 12 out of bounds for length 12
-	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
-	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
-	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:266)
-	at java.base/java.util.Objects.checkIndex(Objects.java:361)
-	at java.base/java.util.ArrayList.get(ArrayList.java:427)
-	at Objectclasses.Task_object.user_validate_Task_page(Task_object.java:58)
-	at Stepdefinitions.Task_steps.user__validate_the_task_page(Task_steps.java:19)
-	at ✽.user validates the task page &quot;invitation&quot;(file:///C:/Users/VinodKethu/Downloads/automation/ums-Automation-new/src/test/resources/Features/ETask.feature:71)
-</pre></div><a href='#' onClick='toggleBox("stack-trace265845794", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace265845794'><pre>java.lang.IndexOutOfBoundsException: Index 12 out of bounds for length 12
-	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
-	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
-	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:266)
-	at java.base/java.util.Objects.checkIndex(Objects.java:361)
-	at java.base/java.util.ArrayList.get(ArrayList.java:427)
-	at Objectclasses.Task_object.user_validate_Task_page(Task_object.java:58)
-	at Stepdefinitions.Task_steps.user__validate_the_task_page(Task_steps.java:19)
-	at ✽.user validates the task page &quot;invitation&quot;(file:///C:/Users/VinodKethu/Downloads/automation/ums-Automation-new/src/test/resources/Features/ETask.feature:71)
-</pre></div></td>
-<td>18</td>
-<td>Runner.Runnerclass@12591ac8</td></tr>
-<tr>
-<td title='Runner.Runnerclass.runScenario()'><b>runScenario</b><br>Test class: Runner.Runnerclass<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Reviewer Page", "UMS"</td>
-<td><div><pre>java.lang.IndexOutOfBoundsException: Index 12 out of bounds for length 12
-	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
-	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
-	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:266)
-	at java.base/java.util.Objects.checkIndex(Objects.java:361)
-	at java.base/java.util.ArrayList.get(ArrayList.java:427)
-	at java.base/jdk.internal.reflect.GeneratedMethodAccessor77.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:39)
-	at jdk.proxy2/jdk.proxy2.$Proxy32.get(Unknown Source)
-	at Objectclasses.Task_object.user_validate_Task_page(Task_object.java:58)
-	at Stepdefinitions.Task_steps.user__validate_the_task_page(Task_steps.java:19)
-	at ✽.user validates the task page &quot;invitation&quot;(file:///C:/Users/VinodKethu/Downloads/automation/ums-Automation-new/src/test/resources/Features/ETask.feature:87)
-</pre></div><a href='#' onClick='toggleBox("stack-trace109967558", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace109967558'><pre>java.lang.IndexOutOfBoundsException: Index 12 out of bounds for length 12
-	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
-	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
-	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:266)
-	at java.base/java.util.Objects.checkIndex(Objects.java:361)
-	at java.base/java.util.ArrayList.get(ArrayList.java:427)
-	at java.base/jdk.internal.reflect.GeneratedMethodAccessor77.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:39)
-	at jdk.proxy2/jdk.proxy2.$Proxy32.get(Unknown Source)
-	at Objectclasses.Task_object.user_validate_Task_page(Task_object.java:58)
-	at Stepdefinitions.Task_steps.user__validate_the_task_page(Task_steps.java:19)
-	at ✽.user validates the task page &quot;invitation&quot;(file:///C:/Users/VinodKethu/Downloads/automation/ums-Automation-new/src/test/resources/Features/ETask.feature:87)
-</pre></div></td>
-<td>18</td>
-<td>Runner.Runnerclass@12591ac8</td></tr>
->>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
 </table><p>
->>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -342,36 +145,10 @@ Driver info: driver.version: unknown
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Runner.Runnerclass.runScenario()'><b>runScenario</b><br>Test class: Runner.Runnerclass<br>Test method: Runs Cucumber Scenarios<br>Parameters: "All Task Page", "UMS"</td>
-<td></td>
-<td>561</td>
-<td>Runner.Runnerclass@12591ac8</td></tr>
-<tr>
 <td title='Runner.Runnerclass.runScenario()'><b>runScenario</b><br>Test class: Runner.Runnerclass<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login page", "UMS"</td>
 <td></td>
-<<<<<<< HEAD
-<td>50</td>
-=======
-<<<<<<< HEAD
-<td>25</td>
-=======
-<<<<<<< HEAD
-<td>13</td>
->>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
-<td>Runner.Runnerclass@12591ac8</td></tr>
-<<<<<<< HEAD
-=======
-=======
-<td>23</td>
+<td>28</td>
 <td>Runner.Runnerclass@2f67a4d3</td></tr>
-<tr>
-<td title='Runner.Runnerclass.runScenario()'><b>runScenario</b><br>Test class: Runner.Runnerclass<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Jira Configuration page", "UMS"</td>
-<td></td>
-<td>9</td>
->>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
-<td>Runner.Runnerclass@2f67a4d3</td></tr>
->>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
->>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
 </table><p>
 </body>
 </html>

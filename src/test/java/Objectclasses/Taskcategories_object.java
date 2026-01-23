@@ -185,10 +185,7 @@ public class Taskcategories_object extends Baseclass {
 	public void add_the_category(String CN) throws InterruptedException {
 
 		driver.navigate().refresh();
-		Thread.sleep(3000);
 		Clickelement(Add);
-		Thread.sleep(3000);
-
 		validatetext(Task_cat, "Task Category");
 		validatetext(Task_Dept, "Choose Department");
 		Clickelement(Clear);
@@ -237,7 +234,6 @@ public class Taskcategories_object extends Baseclass {
 	public void update_the_category(String CN) throws InterruptedException {
 		sendkeyweb(Search, CN);
 		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + CN + "']/following-sibling::td//button[@id='editIcon']")));
-		Thread.sleep(4000);
 		Clickelement(Clear);
 		Clickelement(Task_drop);
 		Clickelement(driver.findElement(By.xpath("//span[normalize-space()='Information Technology']")));

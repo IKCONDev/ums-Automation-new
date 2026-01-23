@@ -22,7 +22,6 @@ public class loginpage_steps {
 	@When("user is validate Login page {string} {string}")
 	public void user_is_validates_loginpage(String Username,String Password ) throws Exception {
 		LO.user_validating_login_page();
-		LO.user_clicks_login_page(Username,Password);
-		
+		LO.user_clicks_login_page(Username,Password);		
 	}
 }

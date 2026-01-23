@@ -1,5 +1,5 @@
-/target/
-<<<<<<< HEAD
-=======
-/pom.xml
->>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
+# Ignore compiled Java files
+*.class
+
+# Ignore Maven build output
+target/

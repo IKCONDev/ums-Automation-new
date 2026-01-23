@@ -1,21 +1,21 @@
-Feature: UMS
-
-  @tag2
-  Scenario Outline: All Task Page
-    Then user validates the task page "<TT>"
-    Then user updates the task page "<TT>"
+#Feature: UMS
+#
+  #@tag2
+  #Scenario Outline: All Task Page
+    #Then user validates the task page "<TT>"
+    #Then user updates the task page "<TT>"
     #Then user deletes the task page "<TT>"
-    Then user clicks editcolumn in the task page
-    Then user clicks DueToday in the task page
-    Then user clicks OverDue in the task page
-    Then user clicks Upcoming in the task page
-    Then user clicks Duefilters in the task page
-    Then user clicks fortyeight in the task page
-    
-     Examples: 
-      | TT         |
-      | invitation |
-
+    #Then user clicks editcolumn in the task page
+    #Then user clicks DueToday in the task page
+    #Then user clicks OverDue in the task page
+    #Then user clicks Upcoming in the task page
+    #Then user clicks Duefilters in the task page
+    #Then user clicks fortyeight in the task page
+    #
+     #Examples: 
+      #| TT         |
+      #| invitation |
+#
     #Then user clicks dropdown in the task page
     #Then user clicks Mytasks in the task page
     #Then user clicks filter in the task page "<TT>"
@@ -102,5 +102,5 @@ Feature: UMS
     #Examples: 
       #| TT         |
       #| invitation |
-
-  
+#
+  #

@@ -299,12 +299,10 @@ public class designation_object extends Baseclass {
 		} catch (NoAlertPresentException e) {
 			System.out.println("No alert present.");
 		}
-		Thread.sleep(3000);
 
 
 		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + DSN + "']/following-sibling::td//button[@id='trashDesgIcon']")));
 
-		Thread.sleep(3000);
 
 		try {
 			Alert alert = driver.switchTo().alert();

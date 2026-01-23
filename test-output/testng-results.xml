@@ -1,95 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
-=======
-<<<<<<< HEAD
 <testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
-=======
-<testng-results ignored="0" total="7" passed="1" failed="6" skipped="0">
->>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
->>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
   <reporter-output>
   </reporter-output>
-<<<<<<< HEAD
-  <suite started-at="2026-01-16T12:52:01 IST" name="Default suite" finished-at="2026-01-16T13:02:27 IST" duration-ms="626722">
-=======
-<<<<<<< HEAD
-  <suite started-at="2026-01-14T16:37:39 IST" name="Default suite" finished-at="2026-01-14T16:38:46 IST" duration-ms="67350">
-=======
-<<<<<<< HEAD
-  <suite started-at="2026-01-12T18:44:15 IST" name="Default suite" finished-at="2026-01-12T18:46:23 IST" duration-ms="128409">
-=======
-  <suite started-at="2026-01-12T18:29:11 IST" name="Default suite" finished-at="2026-01-12T18:29:51 IST" duration-ms="40111">
->>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
->>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
->>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
+  <suite started-at="2026-01-23T14:19:08 IST" name="Default suite" finished-at="2026-01-23T14:22:19 IST" duration-ms="191372">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.Runnerclass@12591ac8]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.Runnerclass@2f67a4d3]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-<<<<<<< HEAD
-    <test started-at="2026-01-16T12:52:01 IST" name="Default test" finished-at="2026-01-16T13:02:27 IST" duration-ms="626722">
-=======
-<<<<<<< HEAD
-    <test started-at="2026-01-14T16:37:39 IST" name="Default test" finished-at="2026-01-14T16:38:46 IST" duration-ms="67350">
-=======
-<<<<<<< HEAD
-    <test started-at="2026-01-12T18:44:15 IST" name="Default test" finished-at="2026-01-12T18:46:23 IST" duration-ms="128409">
-=======
-    <test started-at="2026-01-12T18:29:11 IST" name="Default test" finished-at="2026-01-12T18:29:51 IST" duration-ms="40111">
->>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
->>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
->>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
+    <test started-at="2026-01-23T14:19:08 IST" name="Default test" finished-at="2026-01-23T14:22:19 IST" duration-ms="191372">
       <class name="Runner.Runnerclass">
-<<<<<<< HEAD
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Runner.Runnerclass@12591ac8]" started-at="2026-01-16T12:52:01 IST" name="setUpClass" finished-at="2026-01-16T12:52:10 IST" duration-ms="9373" status="PASS">
-=======
-<<<<<<< HEAD
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Runner.Runnerclass@2f67a4d3]" started-at="2026-01-14T16:37:39 IST" name="setUpClass" finished-at="2026-01-14T16:37:44 IST" duration-ms="4833" status="PASS">
-=======
-<<<<<<< HEAD
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Runner.Runnerclass@12591ac8]" started-at="2026-01-12T18:44:15 IST" name="setUpClass" finished-at="2026-01-12T18:44:23 IST" duration-ms="8425" status="PASS">
-=======
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Runner.Runnerclass@2f67a4d3]" started-at="2026-01-12T18:29:11 IST" name="setUpClass" finished-at="2026-01-12T18:29:14 IST" duration-ms="3578" status="PASS">
->>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
->>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
->>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Runner.Runnerclass@2f67a4d3]" started-at="2026-01-23T14:19:08 IST" name="setUpClass" finished-at="2026-01-23T14:19:16 IST" duration-ms="8619" status="PASS">
           <params>
             <param index="0">
               <value>
-<<<<<<< HEAD
-                <![CDATA[org.testng.TestRunner@1dd443c1]]>
-=======
-<<<<<<< HEAD
-                <![CDATA[org.testng.TestRunner@224d537d]]>
-=======
-<<<<<<< HEAD
-                <![CDATA[org.testng.TestRunner@504c415c]]>
-=======
-                <![CDATA[org.testng.TestRunner@66715ca9]]>
->>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
->>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
->>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
+                <![CDATA[org.testng.TestRunner@1fcf73b9]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-<<<<<<< HEAD
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.Runnerclass@12591ac8]" started-at="2026-01-16T12:52:10 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-16T12:53:01 IST" duration-ms="50560" status="PASS">
-=======
-<<<<<<< HEAD
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.Runnerclass@2f67a4d3]" started-at="2026-01-14T16:37:44 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-14T16:38:09 IST" duration-ms="25114" status="PASS">
-=======
-<<<<<<< HEAD
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.Runnerclass@12591ac8]" started-at="2026-01-12T18:44:23 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-12T18:44:37 IST" duration-ms="13356" status="PASS">
-=======
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.Runnerclass@2f67a4d3]" started-at="2026-01-12T18:29:14 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-12T18:29:38 IST" duration-ms="23571" status="PASS">
->>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
->>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
->>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.Runnerclass@2f67a4d3]" started-at="2026-01-23T14:19:16 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-23T14:19:45 IST" duration-ms="28354" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -105,37 +37,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-<<<<<<< HEAD
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.Runnerclass@12591ac8]" started-at="2026-01-16T12:53:01 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-16T13:02:22 IST" duration-ms="561591" status="PASS">
-=======
-<<<<<<< HEAD
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.Runnerclass@2f67a4d3]" started-at="2026-01-14T16:38:09 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-14T16:38:43 IST" duration-ms="33919" status="FAIL">
-=======
-<<<<<<< HEAD
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.Runnerclass@12591ac8]" started-at="2026-01-12T18:44:37 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-12T18:44:49 IST" duration-ms="11892" status="FAIL">
-=======
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.Runnerclass@2f67a4d3]" started-at="2026-01-12T18:29:38 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-12T18:29:48 IST" duration-ms="9715" status="PASS">
->>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
->>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
->>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.Runnerclass@2f67a4d3]" started-at="2026-01-23T14:19:45 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-23T14:22:14 IST" duration-ms="149528" status="FAIL">
           <params>
             <param index="0">
               <value>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                <![CDATA["Employee page"]]>
-=======
-<<<<<<< HEAD
->>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
-                <![CDATA["All Task Page"]]>
-<<<<<<< HEAD
-=======
-=======
-                <![CDATA["Jira Configuration page"]]>
->>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
->>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
->>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
+                <![CDATA["Created By Action items Page"]]>
               </value>
             </param>
             <param index="1">
@@ -144,256 +50,54 @@
               </value>
             </param>
           </params>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-          <exception class="org.openqa.selenium.support.ui.UnexpectedTagNameException">
+          <exception class="org.openqa.selenium.InvalidSelectorException">
             <message>
-              <![CDATA[Element should have been "select" but was "div"
+              <![CDATA[invalid selector: Unable to locate an element with the xpath expression //tr[td[normalize-space(text())='Task241']/td[1]//input[@type='checkbox'] because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//tr[td[normalize-space(text())='Task241']/td[1]//input[@type='checkbox']' is not a valid XPath expression.
+  (Session info: chrome=144.0.7559.60)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
 Build info: version: '4.20.0', revision: '866c76ca80'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
-Driver info: driver.version: unknown]]>
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1fb0cf0b1f4df7b719dfad034d709766, findElement {value=//tr[td[normalize-space(text())='Task241']/td[1]//input[@type='checkbox'], using=xpath}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 144.0.7559.60, chrome: {chromedriverVersion: 144.0.7559.96 (d7b80622cfab..., userDataDir: C:\Users\PRAVEE~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52381}, goog:processID: 20976, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52381/devtoo..., se:cdpVersion: 144.0.7559.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 30000, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1fb0cf0b1f4df7b719dfad034d709766]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.support.ui.UnexpectedTagNameException: Element should have been "select" but was "div"
+              <![CDATA[org.openqa.selenium.InvalidSelectorException: invalid selector: Unable to locate an element with the xpath expression //tr[td[normalize-space(text())='Task241']/td[1]//input[@type='checkbox'] because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//tr[td[normalize-space(text())='Task241']/td[1]//input[@type='checkbox']' is not a valid XPath expression.
+  (Session info: chrome=144.0.7559.60)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
 Build info: version: '4.20.0', revision: '866c76ca80'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
-Driver info: driver.version: unknown
-at org.openqa.selenium.support.ui.Select.<init>(Select.java:46)
-at hooks.Baseclass.Selectdropdown(Baseclass.java:141)
-at Objectclasses.Employee_object.add_the_employee_profile(Employee_object.java:192)
-at Stepdefinitions.Employees_steps.add_the_employee_profile(Employees_steps.java:26)
-at ✽.add the employee profile "Krunal" "Shekar" "IKMU012" "krunal@ikcontech.com" "Information Technology" "Human Resource" "Ananth raj" "Male"(file:///C:/Users/PraveenReddyGurram/eclipsenew/UMS_NEW/src/test/resources/Features/OEmployees.feature:6)
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1fb0cf0b1f4df7b719dfad034d709766, findElement {value=//tr[td[normalize-space(text())='Task241']/td[1]//input[@type='checkbox'], using=xpath}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 144.0.7559.60, chrome: {chromedriverVersion: 144.0.7559.96 (d7b80622cfab..., userDataDir: C:\Users\PRAVEE~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52381}, goog:processID: 20976, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52381/devtoo..., se:cdpVersion: 144.0.7559.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 30000, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1fb0cf0b1f4df7b719dfad034d709766
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+at Objectclasses.Actionitem_object.user_delete_task_in_Actionitem_page(Actionitem_object.java:382)
+at Stepdefinitions.Actionitem_steps.user__delete_task_in_Actionitemsspage(Actionitem_steps.java:65)
+at ✽.user delete task in action items page "Actionitem289" "Task241" "Taskdescription241"(file:///C:/Users/PraveenReddyGurram/eclipsenew/UMS_NEW/src/test/resources/Features/DActionitems.feature:14)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.support.ui.UnexpectedTagNameException -->
-=======
-          <exception class="java.lang.IndexOutOfBoundsException">
-            <message>
-              <![CDATA[Index 12 out of bounds for length 12]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IndexOutOfBoundsException: Index 12 out of bounds for length 12
-at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
-at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
-at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:266)
-at java.base/java.util.Objects.checkIndex(Objects.java:361)
-at java.base/java.util.ArrayList.get(ArrayList.java:427)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:39)
-at jdk.proxy2/jdk.proxy2.$Proxy32.get(Unknown Source)
-at Objectclasses.Task_object.user_validate_Task_page(Task_object.java:58)
-at Stepdefinitions.Task_steps.user__validate_the_task_page(Task_steps.java:19)
-at ✽.user validates the task page "invitation"(file:///C:/Users/VinodKethu/Downloads/automation/ums-Automation-new/src/test/resources/Features/ETask.feature:5)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IndexOutOfBoundsException -->
->>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
->>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
+          </exception> <!-- org.openqa.selenium.InvalidSelectorException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-<<<<<<< HEAD
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.Runnerclass@12591ac8]" started-at="2026-01-16T13:02:22 IST" name="tearDownClass" finished-at="2026-01-16T13:02:27 IST" duration-ms="5003" status="PASS">
-=======
-<<<<<<< HEAD
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.Runnerclass@2f67a4d3]" started-at="2026-01-14T16:38:43 IST" name="tearDownClass" finished-at="2026-01-14T16:38:46 IST" duration-ms="3398" status="PASS">
-=======
-<<<<<<< HEAD
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.Runnerclass@12591ac8]" started-at="2026-01-12T18:44:49 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-12T18:45:07 IST" duration-ms="18289" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["My Task Page"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["UMS"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.IndexOutOfBoundsException">
-            <message>
-              <![CDATA[Index 12 out of bounds for length 12]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IndexOutOfBoundsException: Index 12 out of bounds for length 12
-at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
-at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
-at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:266)
-at java.base/java.util.Objects.checkIndex(Objects.java:361)
-at java.base/java.util.ArrayList.get(ArrayList.java:427)
-at java.base/jdk.internal.reflect.GeneratedMethodAccessor77.invoke(Unknown Source)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:39)
-at jdk.proxy2/jdk.proxy2.$Proxy32.get(Unknown Source)
-at Objectclasses.Task_object.user_validate_Task_page(Task_object.java:58)
-at Stepdefinitions.Task_steps.user__validate_the_task_page(Task_steps.java:19)
-at ✽.user validates the task page "checking task"(file:///C:/Users/VinodKethu/Downloads/automation/ums-Automation-new/src/test/resources/Features/ETask.feature:23)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IndexOutOfBoundsException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.Runnerclass@12591ac8]" started-at="2026-01-12T18:45:07 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-12T18:45:25 IST" duration-ms="18026" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Team Task Page"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["UMS"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.IndexOutOfBoundsException">
-            <message>
-              <![CDATA[Index 12 out of bounds for length 12]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IndexOutOfBoundsException: Index 12 out of bounds for length 12
-at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
-at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
-at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:266)
-at java.base/java.util.Objects.checkIndex(Objects.java:361)
-at java.base/java.util.ArrayList.get(ArrayList.java:427)
-at java.base/jdk.internal.reflect.GeneratedMethodAccessor77.invoke(Unknown Source)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:39)
-at jdk.proxy2/jdk.proxy2.$Proxy32.get(Unknown Source)
-at Objectclasses.Task_object.user_validate_Task_page(Task_object.java:58)
-at Stepdefinitions.Task_steps.user__validate_the_task_page(Task_steps.java:19)
-at ✽.user validates the task page "invitation"(file:///C:/Users/VinodKethu/Downloads/automation/ums-Automation-new/src/test/resources/Features/ETask.feature:39)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IndexOutOfBoundsException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.Runnerclass@12591ac8]" started-at="2026-01-12T18:45:25 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-12T18:45:43 IST" duration-ms="18099" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Assigned To Page"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["UMS"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.IndexOutOfBoundsException">
-            <message>
-              <![CDATA[Index 12 out of bounds for length 12]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IndexOutOfBoundsException: Index 12 out of bounds for length 12
-at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
-at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
-at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:266)
-at java.base/java.util.Objects.checkIndex(Objects.java:361)
-at java.base/java.util.ArrayList.get(ArrayList.java:427)
-at java.base/jdk.internal.reflect.GeneratedMethodAccessor77.invoke(Unknown Source)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:39)
-at jdk.proxy2/jdk.proxy2.$Proxy32.get(Unknown Source)
-at Objectclasses.Task_object.user_validate_Task_page(Task_object.java:58)
-at Stepdefinitions.Task_steps.user__validate_the_task_page(Task_steps.java:19)
-at ✽.user validates the task page "invitation"(file:///C:/Users/VinodKethu/Downloads/automation/ums-Automation-new/src/test/resources/Features/ETask.feature:55)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IndexOutOfBoundsException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.Runnerclass@12591ac8]" started-at="2026-01-12T18:45:43 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-12T18:46:01 IST" duration-ms="18055" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Created By Page"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["UMS"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.IndexOutOfBoundsException">
-            <message>
-              <![CDATA[Index 12 out of bounds for length 12]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IndexOutOfBoundsException: Index 12 out of bounds for length 12
-at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
-at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
-at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:266)
-at java.base/java.util.Objects.checkIndex(Objects.java:361)
-at java.base/java.util.ArrayList.get(ArrayList.java:427)
-at Objectclasses.Task_object.user_validate_Task_page(Task_object.java:58)
-at Stepdefinitions.Task_steps.user__validate_the_task_page(Task_steps.java:19)
-at ✽.user validates the task page "invitation"(file:///C:/Users/VinodKethu/Downloads/automation/ums-Automation-new/src/test/resources/Features/ETask.feature:71)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IndexOutOfBoundsException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.Runnerclass@12591ac8]" started-at="2026-01-12T18:46:01 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-12T18:46:19 IST" duration-ms="18071" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Reviewer Page"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["UMS"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.IndexOutOfBoundsException">
-            <message>
-              <![CDATA[Index 12 out of bounds for length 12]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IndexOutOfBoundsException: Index 12 out of bounds for length 12
-at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
-at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
-at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:266)
-at java.base/java.util.Objects.checkIndex(Objects.java:361)
-at java.base/java.util.ArrayList.get(ArrayList.java:427)
-at java.base/jdk.internal.reflect.GeneratedMethodAccessor77.invoke(Unknown Source)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:39)
-at jdk.proxy2/jdk.proxy2.$Proxy32.get(Unknown Source)
-at Objectclasses.Task_object.user_validate_Task_page(Task_object.java:58)
-at Stepdefinitions.Task_steps.user__validate_the_task_page(Task_steps.java:19)
-at ✽.user validates the task page "invitation"(file:///C:/Users/VinodKethu/Downloads/automation/ums-Automation-new/src/test/resources/Features/ETask.feature:87)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IndexOutOfBoundsException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.Runnerclass@12591ac8]" started-at="2026-01-12T18:46:19 IST" name="tearDownClass" finished-at="2026-01-12T18:46:23 IST" duration-ms="3979" status="PASS">
-=======
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.Runnerclass@2f67a4d3]" started-at="2026-01-12T18:29:48 IST" name="tearDownClass" finished-at="2026-01-12T18:29:51 IST" duration-ms="3184" status="PASS">
->>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
->>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
->>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.Runnerclass@2f67a4d3]" started-at="2026-01-23T14:22:14 IST" name="tearDownClass" finished-at="2026-01-23T14:22:19 IST" duration-ms="4709" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

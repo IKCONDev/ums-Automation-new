@@ -44,15 +44,11 @@ public class Riskcategories_object extends Baseclass  {
 
 	public void validate_the_risk_category_page() throws InterruptedException {
 		Clickelement(Setup);
-		Thread.sleep(3000);
 		Clickelement(Riskcategories);
-		Thread.sleep(3000);
 
 		validatetext(Header, "Risk Categories");
-		Thread.sleep(3000);
 
 		validatetext(Add, "Add");
-		Thread.sleep(3000);
 
 		validatetext(Delete, "Delete");
 		//		String s = "null,checkbox,ID,Risk Category Title,Category Description,Created By,Created Date,Status,Modified By,Modified Date,Edit,Delete";
@@ -221,7 +217,6 @@ public class Riskcategories_object extends Baseclass  {
 		try {
 			Alert alert = driver.switchTo().alert();
 			System.out.println("Alert detected: " + alert.getText());
-			Thread.sleep(3000);
 			alert.accept();
 		} catch (NoAlertPresentException e) {
 			System.out.println("No alert present.");
