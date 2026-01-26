@@ -320,7 +320,7 @@ public class Actionitem_object extends Baseclass {
 		driver.navigate().refresh();
 
 		sendkeyweb(Actionitemsearch, AT+Keys.ENTER);
-		
+
 
 		Clickelement(Actionitemplusbtn);
 
@@ -344,8 +344,8 @@ public class Actionitem_object extends Baseclass {
 
 		Clickelement(ActionitemTaskcreatebtn);
 
-				driver.navigate().refresh();
-				Thread.sleep(3000);
+		//		driver.navigate().refresh();
+		Thread.sleep(3000);
 
 	}
 
@@ -355,20 +355,37 @@ public class Actionitem_object extends Baseclass {
 	@FindBy(xpath = "//button[@id='editIcon']//*[name()='svg']")
 	public WebElement taskediticon ;
 
-	@FindBy(xpath = "//input[@id='orgTaskTitle']")
-	public WebElement updatetasktitle ;
+	//	@FindBy(xpath = "//input[@id='orgTaskTitle']")
+	//	public WebElement updatetasktitle ;
+
+	@FindBy(xpath = "//button[@class='btn btn-primary saveButton'][normalize-space()='Update']")
+	public WebElement taskupdatebtn ;
+
+
 
 	public void user_update_task_in_Actionitem_page(String AT, String TT, String TD) throws InterruptedException {
 
 
-		sendkeyweb(tasksearch, TT);
+		sendkeyweb(tasksearch, TT+Keys.ENTER);
+
+		Clickelement(taskediticon);
+
+		Clickelement(taskupdatebtn);
+	}
+
+	public void user_delete_task_in_Actionitem_page(String AT, String TT, String TD) throws InterruptedException {
+
+
+		sendkeyweb(tasksearch, TT+Keys.ENTER);
+
+		Clickelement(driver.findElement(By.xpath("//tr[td[normalize-space()='" + TT + "']]//input[@type='checkbox']")));
 
 
 	}
 	@FindBy(xpath = "//div[contains(text(),'Edit Column')]")
 	public WebElement Editcolumn ;
 
-	@FindBy(xpath = "//input[@placeholder='0 of 8 selected']")
+	@FindBy(xpath = "//input[@placeholder='0 of 11 selected']")
 	public WebElement Editcolumndrpdwn;
 
 	@FindBy(xpath = "//label[normalize-space()='Select All']")

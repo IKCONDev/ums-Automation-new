@@ -53,7 +53,19 @@ public class Actionitem_steps {
 		AO.user_create_task_in_Actionitem_page(AT, TT,TD);
 
 	}
+	
+	@Then("user update task in action items page {string} {string} {string}")
+	public void user__update_task_in_Actionitemsspage(String AT, String TT, String TD) throws Exception {
+		AO. user_update_task_in_Actionitem_page(AT, TT,TD);
 
+	}
+	
+	@Then("user delete task in action items page {string} {string} {string}")
+	public void user__delete_task_in_Actionitemsspage(String AT, String TT, String TD) throws Exception {
+		AO. user_delete_task_in_Actionitem_page(AT, TT,TD);
+
+	}
+	
 	@Then("user click on editcolumn in action items page")
 	public void user__click_on_editcolumn_in_Actionitemsspage() throws Exception {
 		AO. user_click_editcolumn_in_Actionitem_page();
