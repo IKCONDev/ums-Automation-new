@@ -1,6 +1,6 @@
 Feature: UMS
 
-  @tag1
+  @smoke @sanity @regression
   Scenario Outline: Menuitems page
     Then Validate the menu items page
     And Add menu items "<Menuitem>"

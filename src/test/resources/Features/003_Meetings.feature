@@ -1,6 +1,6 @@
 Feature: UMS
 
-  @tag2
+  @smoke @sanity @regression
   Scenario Outline: Meetings Page
     Then user clicks and validates the meetings page
     Then user enters the meeting details in create meeting "<MT>" "<UN>"

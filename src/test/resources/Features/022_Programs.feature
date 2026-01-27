@@ -1,6 +1,6 @@
 #Feature: UMS
 #
-  #@tag1
+  #@smoke @sanity @regression
   #Scenario Outline: Programs Page
     #Then user Validates the Programs page
     #Then user Add Programs in the Programs page "<PN>" "<PC>" "<PD>"

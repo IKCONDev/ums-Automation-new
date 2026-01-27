@@ -1,6 +1,6 @@
 #Feature: UMS
 #
-  #@tag1
+  #@smoke @sanity @regression
   #Scenario Outline: ChangePassword page
     #Then Validate the Change Password page "<Oldpass>" "<Newpass>" "<ConfirmNewpass>"
 #

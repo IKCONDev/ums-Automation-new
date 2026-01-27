@@ -1,6 +1,6 @@
 #Feature: UMS
 #
-  #@tag1
+  #@smoke @sanity @regression
   #Scenario Outline: Internal notes page
     #Then Validate the Internal notes page
     #Then add the Internalnotes page "<IN>"

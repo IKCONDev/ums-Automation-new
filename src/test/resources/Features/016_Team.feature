@@ -1,6 +1,6 @@
 #Feature: UMS
 #
-  #@tag1
+  #@smoke @sanity @regression
   #Scenario Outline: Teams page
     #Then validate the teams page
     #Then add the team "<Team>"

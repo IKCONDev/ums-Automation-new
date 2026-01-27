@@ -1,5 +1,5 @@
 #Feature: UMS
 #
-  #@tag1
+  #@smoke @sanity @regression
   #Scenario Outline: Helpcenter page
     #Then Validate the helpcenter page

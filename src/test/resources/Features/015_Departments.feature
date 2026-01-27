@@ -1,6 +1,6 @@
 #Feature: UMS
 #
-  #@tag1
+  #@smoke @sanity @regression
   #Scenario Outline: Departments page
     #Then Validate the departments page
     #Then add the department "<DN>" "<FN>" "<DC>" "<DL>"

@@ -1,6 +1,6 @@
 Feature: UMS
 
-  @tag1
+  @smoke @sanity @regression
   Scenario Outline: Rolemenuitems page
     Then Validate Role Menu Items
     And add the Role Menu Items "<Role>"

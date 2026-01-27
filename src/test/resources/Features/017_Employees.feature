@@ -1,6 +1,6 @@
 #Feature: UMS
 #
-  #@tag1
+  #@smoke @sanity @regression
   #Scenario Outline: Employee page
     #Then validate the employee profile page
     #And add the employee profile "<FN>" "<LN>" "<EID>" "<Email>" "<DN>" "<DSN>" "<FNs>" "<GN>"

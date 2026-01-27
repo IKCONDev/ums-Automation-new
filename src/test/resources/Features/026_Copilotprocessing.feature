@@ -1,5 +1,5 @@
 #Feature: UMS
 #
-  #@tag1
+  #@smoke @sanity @regression
   #Scenario Outline: CopilotProcessing page
     #Then validate the copilot processing page
