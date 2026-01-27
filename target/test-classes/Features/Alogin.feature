@@ -5,9 +5,9 @@ Feature: UMS
     Given user is Navigate Login page
     When user is validate Login page "<Username>" "<Password>"
 
-    Examples: 
+    Examples:
       | Username             | Password |
       | bharat@ikcontech.com | Test@123 |
-
-      
-      
+      | bharat@ikcontech.com | Test@123 |
+      | bharat@ikcontech.com | Test@123 |
+      | bharat@ikcontech.com | Test@123 |
