@@ -24,7 +24,7 @@ public class Driver {
             WebDriverManager.chromedriver().setup();
 
             ChromeOptions options = new ChromeOptions();
-            // options.addArguments("--headless=new"); // Uncomment if headless needed
+             options.addArguments("--headless=new"); // Uncomment if headless needed
             options.setAcceptInsecureCerts(true);
             options.addArguments("force-device-scale-factor=0.70");
             options.addArguments("high-dpi-support=0.80");
