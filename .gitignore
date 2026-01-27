@@ -3,3 +3,58 @@
 
 # Ignore Maven build output
 target/
+
+####################################
+# Java / Maven / Gradle
+####################################
+target/
+build/
+out/
+*.class
+*.jar
+*.war
+*.ear
+
+####################################
+# IDE / Editor Files
+####################################
+.idea/
+.vscode/
+*.iml
+*.classpath
+*.project
+*.settings/
+
+####################################
+# OS Files
+####################################
+.DS_Store
+Thumbs.db
+
+####################################
+# Logs & Reports
+####################################
+logs/
+log/
+reports/
+extent-reports/
+test-output/
+*.log
+*.html
+
+####################################
+# Screenshots / Downloads
+####################################
+screenshots/
+downloads/
+videos/
+
+####################################
+# Environment / Secrets
+####################################
+.env
+*.env
+secrets.properties
+application-secrets.yml
+config-secret
+
