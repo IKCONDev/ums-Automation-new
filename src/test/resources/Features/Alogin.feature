@@ -5,15 +5,9 @@ Feature: UMS
     Given user is Navigate Login page
     When user is validate Login page "<Username>" "<Password>"
 
-<<<<<<< HEAD
     Examples: 
-      | Username              | Password |
-      | umstest@ikcontech.com | Test@123 |
-=======
-    Examples:
       | Username             | Password |
       | bharat@ikcontech.com | Test@123 |
       | bharat@ikcontech.com | Test@123 |
       | bharat@ikcontech.com | Test@123 |
       | bharat@ikcontech.com | Test@123 |
->>>>>>> branch 'devbranch' of https://github.com/IKCONDev/ums-Automation-new.git
