@@ -1,13 +1,48 @@
-# Maven
-target/
+UMS Onboarding(Pre process)
 
-# Test outputs
-test-output/
-Reports/
+we have three plans basic, pro and Enterprises
+User can have the hand book plan specifications
+and trail version also we have, trail period 7 days
+while choosing the trail tenant should provide card details for staring onboarding
+after completing the 7 days amount will be deducted for choosing the plan(Basic, Pro OR Enterprise) or intimate to tenant trail is expired
+if he agree amount will be deduct from his account other wise trail will expire, after trail expiry he cant access the UMS Application
+once he confirmed for further he have two options that he can continue with existing data or newly he can start onboarding
+Price should be vary if they are choosing the Teams, Zoom, Webex, Google meet in all plans(Basic, Pro OR Enterprise)
+Each organization can integrate their collaboration platform app(Teams, Zoom, Webex, Google meet) sensitive information After onboarding or before onboarding
 
-# Cucumber
-.cucumber/
-*.tmp
 
-# Compiled classes
-*.class
+
+
+UMS App Multi tenant
+
+one tenant should not see another tenant data
+subdomain should be different for each tenant
+after or onboarding complete subdomain should choose by tenant
+each tenant URL should be different
+One Tenant meetings should not show in another tenant meetings page
+One Tenant Action Item  not show in another tenant Action Item page
+One Tenant Tasks should not show in another tenant Task page
+One Tenant Risk should not show in another tenant Risk page
+One Tenant Dashboard should not show in another tenant dashboard page
+one Tenant user should not be another tenant user
+if both the tenant user accounts and details same, the data should vary as per the tenant work
+if one tenant user schedule with another tenant user, then that tenant user should be external for this tenant user it will show in meeting attendees
+Set up details should deafferent for each tenant
+All module URL should include subdomain for each tenant user
+
+
+
+
+Standardize Backend Filter Logic Across All Modules
+User Story:  I want to standardize backend filters across all modules so that filtering is consistent, secure, and performant.
+Requirements: Use a common backend filter framework for all modules; Enforce filters only at backend level; Validate and sanitize all filter inputs; Implicitly apply tenant filtering; Implicitly apply RBAC restrictions; Support standard filters including search, status, date range, pagination and sorting; Reject unsupported or invalid filters with clear errors
+Acceptance Criteria: All modules use the same filter logic; Filters cannot bypass tenant or role restrictions; No performance regression
+
+
+
+
+
+
+
+
+

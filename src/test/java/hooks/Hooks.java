@@ -1,6 +1,5 @@
 package hooks;
 
-import java.time.Duration;
 import org.openqa.selenium.WebDriver;
 import com.aventstack.extentreports.*;
 import com.aventstack.extentreports.markuputils.*;
