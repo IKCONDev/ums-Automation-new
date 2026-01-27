@@ -173,7 +173,7 @@ public class Meeting_object extends Baseclass {
 	@FindBy(xpath = "//div[@id='titleBlock']//span[@class='ng-arrow-wrapper']")
 	private WebElement Programdrpdwn;
 
-	@FindBy(xpath = "//span[normalize-space()='IKCONDIGITAL']")
+	@FindBy(xpath = "//span[normalize-space()='IKCON']")
 	private WebElement Programselect;
 
 	@FindBy(xpath = "(//button[normalize-space()='Add'])[1]")
@@ -213,11 +213,11 @@ public class Meeting_object extends Baseclass {
 		Thread.sleep(3000);
 
 
-		Clickelement(Programdrpdwn);
-		Thread.sleep(3000);
-
-		Clickelement(Programselect);
-		Thread.sleep(3000);
+//		Clickelement(Programdrpdwn);
+//		Thread.sleep(3000);
+//
+//		Clickelement(Programselect);
+//		Thread.sleep(3000);
 
 		Clickelement(Addbtn);
 
@@ -239,9 +239,21 @@ public class Meeting_object extends Baseclass {
 	@FindBy(xpath = "//ng-select[@placeholder='Choose Assignee']//span[@class='ng-arrow-wrapper']")
 	private WebElement Actionitemassignedrpdwn;
 
-	@FindBy(xpath = "//span[normalize-space()='Adam Smith']")
+	@FindBy(xpath = "//span[normalize-space()='UMS TEST']")
 	private WebElement Actitemassigneeselect;
+	
+	@FindBy(xpath = "(//span[@class='ng-arrow-wrapper'])[3]")
+	private WebElement Actionitemreviewerdrpdwn;
 
+	@FindBy(xpath = "//span[normalize-space()='Kethu Vinod']")
+	private WebElement Actitemreviewerselect;
+
+	@FindBy(xpath = "(//span[@class='ng-arrow-wrapper'])[4]")
+	private WebElement Actionitemcategorydrpdwn;
+
+	@FindBy(xpath = "//span[normalize-space()='Testing']")
+	private WebElement Actitemcategoryselect;
+	
 	@FindBy(xpath = "(//input[@name='startDate'])[1]")
 	private WebElement Actitemstartdate;
 
@@ -379,6 +391,13 @@ public class Meeting_object extends Baseclass {
 		Thread.sleep(3000);
 		Clickelement(Actionitemassignedrpdwn);
 		Clickelement(Actitemassigneeselect);
+		Clickelement(Actionitemreviewerdrpdwn);
+		Thread.sleep(3000);
+		Clickelement(Actitemreviewerselect);
+		Thread.sleep(3000);
+
+		Clickelement(Actionitemcategorydrpdwn);
+		Clickelement(Actitemcategoryselect);
 		sendkeyweb(Actitemstartdate, D.Datefun(0, 0, 0));
 
 		sendkeyweb(Actitemenddate, D.Datefun(0, 0, 0));

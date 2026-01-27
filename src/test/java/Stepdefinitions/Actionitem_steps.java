@@ -66,6 +66,12 @@ public class Actionitem_steps {
 
 	}
 	
+	@Then("user action item details in action items page {string} {string} {string}")
+	public void user__checks_actionitemsdetails_in_Actionitemsspage(String AT, String TT1, String TD1) throws Exception {
+		AO. user_checks_actionitem_details(AT, TT1, TD1);
+
+	}
+	
 	@Then("user click on editcolumn in action items page")
 	public void user__click_on_editcolumn_in_Actionitemsspage() throws Exception {
 		AO. user_click_editcolumn_in_Actionitem_page();
