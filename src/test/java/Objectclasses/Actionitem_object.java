@@ -371,6 +371,8 @@ public class Actionitem_object extends Baseclass {
 		Clickelement(taskediticon);
 
 		Clickelement(taskupdatebtn);
+		driver.navigate().refresh();
+
 	}
 
 	public void user_delete_task_in_Actionitem_page(String AT, String TT, String TD) throws InterruptedException {
@@ -380,6 +382,105 @@ public class Actionitem_object extends Baseclass {
 
 		Clickelement(driver.findElement(By.xpath("//tr[td[normalize-space()='" + TT + "']]//input[@type='checkbox']")));
 
+
+	}
+
+	@FindBy(xpath = "//h3[contains(normalize-space(),'Action Item Details')]")
+	public WebElement AD_title;
+	@FindBy(xpath = "//h6")
+	public List<WebElement> AD_head;
+	@FindBy(xpath = "//div[contains(@class,'col-sm')]//*[name()='svg']")
+	public List<WebElement> AD_edit;
+
+	@FindBy(xpath = "(//h6[normalize-space()='Details']/following::span)[1]")
+	public WebElement AD_save;
+
+	@FindBy(xpath = "//textarea[@id='addCommentDescription']")
+	public WebElement Actioncomments;
+
+	@FindBy(xpath = "//input[@placeholder='Enter Title']")
+	public WebElement Tasktitle;
+
+	@FindBy(xpath = "(//div[@role='option'][normalize-space()='Select'])[1]")
+	public WebElement Taskcatdrpdwn;
+
+	@FindBy(xpath = "//span[normalize-space()='Testing']")
+	public List<WebElement> Taskcatdrpdwnslct;
+
+	@FindBy(xpath = "(//div[@role='option'][normalize-space()='Select'])[3]")
+	public WebElement Taskassigneddtodrpdwn;
+
+	@FindBy(xpath = "//span[normalize-space()='UMS TEST']")
+	public List<WebElement> Taskassigneedrpdwnslct;
+
+	@FindBy(xpath = "(//div[@role='option'][normalize-space()='Select'])[5]")
+	public WebElement Taskreviewrdrpdwn;
+
+	@FindBy(xpath = "//span[normalize-space()='UMS TEST']")
+	public List<WebElement> Taskrwrdrpdwnslct;
+
+	@FindBy(xpath = "//textarea[@placeholder='Add Descrption']")
+	public WebElement Taskdescription;
+
+	@FindBy(xpath = "//button[normalize-space()='Save']")
+	public WebElement Tasksavebtn;
+
+	public void user_checks_actionitem_details(String AT, String TT1, String TD1) throws InterruptedException {
+		sendkeyweb(Actionitem_search,AT+Keys.ENTER);
+		WebElement Actionitem_ID=driver.findElement(By.xpath("(//td[normalize-space()='"+AT+"']/preceding-sibling::td)[2]"));
+		Clickelement(Actionitem_ID);
+		validatetext(AD_title, "Action Item Details");
+		String L="Details,Description,Comments,Add Tasks,History";
+		List<String> list = new ArrayList<String>(Arrays.asList(L.split(",")));
+		int i=0;
+		for (WebElement e : AD_head) {
+			validatetext(e, list.get(i));
+			i++;
+		}
+
+		Clickelement(AD_edit.get(0));
+
+		//		sendkeyweb(AD_title, AT);
+		//		Clickelement(RD_Assignedtodrpdwn);
+		//		Thread.sleep(3000);
+		//		clickmultipleweb(RD_Assignedtoselect);
+		//		Thread.sleep(4000);
+
+		Clickelement(AD_save);
+		Thread.sleep(3000);
+
+		sendkeyweb(Actioncomments, "gjklkjrhjsdfgh");
+		Clickelement(AD_edit.get(2));
+
+
+		Clickelement(AD_edit.get(3));
+
+		sendkeyweb(Tasktitle, TT1);
+
+		Clickelement(Taskcatdrpdwn);
+		clickmultipleweb(Taskcatdrpdwnslct);
+
+
+		Clickelement(Taskassigneddtodrpdwn);
+		clickmultipleweb(Taskassigneedrpdwnslct);
+
+
+		Clickelement(Taskreviewrdrpdwn);
+		clickmultipleweb(Taskrwrdrpdwnslct);
+
+		sendkeyweb(Taskdescription, TD1);
+
+		Clickelement(Tasksavebtn);
+
+
+
+		//		Clickelement(AD_edit.get(1));
+
+		//		sendkeyweb(RD_riskdes, RD);
+
+		//		Clickelement(RD_description_save);
+
+		driver.navigate().back();
 
 	}
 	@FindBy(xpath = "//div[contains(text(),'Edit Column')]")
