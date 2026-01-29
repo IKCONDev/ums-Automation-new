@@ -1,6 +1,6 @@
 #Feature: UMS
 #
-  #@tag1
+  #@smoke @sanity @regression
   #Scenario Outline: Task Category page
     #Then Validate the task category page
     #Then add the category "<CN>"

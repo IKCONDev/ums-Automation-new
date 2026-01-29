@@ -1,6 +1,6 @@
 #Feature: UMS
 #
-  #@tag1
+  #@smoke @sanity @regression
   #Scenario Outline: Users page
     #Then validate the users page
     #Then add the user "<RN>" "<Email>"

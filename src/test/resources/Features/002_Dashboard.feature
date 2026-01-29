@@ -1,6 +1,6 @@
 #Feature: UMS
 #
-  #@tag2
+  #@smoke @sanity @regression
   #Scenario Outline: Dashboard Page
     #Then user checks the My dashboard page
     #Then user checks the Team Dashboard page

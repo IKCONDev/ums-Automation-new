@@ -1,6 +1,6 @@
 #Feature: UMS
 #
-  #@tag1
+  #@smoke @sanity @regression
   #Scenario Outline: Roles page
     #Then validate the roles page
     #Then add the role "<RN>" "<PN>"

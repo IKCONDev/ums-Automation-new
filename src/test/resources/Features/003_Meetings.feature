@@ -1,6 +1,6 @@
 Feature: UMS
 
-  @tag2
+  @smoke @sanity @regression
   Scenario Outline: Meetings Page
     Given user is Navigate Login page "<url>"
     When user is validate Login page "<Username>" "<Password>"

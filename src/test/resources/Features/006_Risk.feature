@@ -1,6 +1,6 @@
 #Feature: UMS
 #
-  #@tag2
+  #@smoke @sanity @regression
   #Scenario Outline: Created by Risks Page
     #Then user validates risks page
     #Then user add risks page "<RT>" "<RD>"
@@ -15,7 +15,7 @@
     #Examples: 
       #| RT                          | RD               |
       #| Hardware or system failures | riskkjhgfdsdf314 |
-#
+#@smoke @sanity @regression
   #Scenario Outline: All Risks Page
     #Then user navigates to all risks page
     #Then user add risks page "<RT>" "<RD>"
@@ -30,7 +30,7 @@
     #Examples: 
       #| RT                                    | RD               |
       #| Software bugs or poor code deployment | riskkjhgfdsdf315 |
-#
+#@smoke @sanity @regression
   #Scenario Outline: My Risks Page
     #Then user navigates to my risks page
     #Then user add risks page "<RT>" "<RD>"
@@ -45,7 +45,7 @@
     #Examples: 
       #| RT                           | RD               |
       #| Inadequate change management | riskkjhgfdsdf308 |
-#
+#@smoke @sanity @regression
   #Scenario Outline: Assigned to Risks Page
     #Then user navigates to Assignedto risks page
     #Then user add risks page "<RT>" "<RD>"

@@ -1,6 +1,6 @@
 #Feature: UMS
 #
-  #@tag1
+  #@smoke @sanity @regression
   #Scenario Outline: Actionitems Category page
     #Then Validate the actionitem category page
     #Then add the actionitem category "<ACN>"

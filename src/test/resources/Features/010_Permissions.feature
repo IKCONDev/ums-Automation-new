@@ -1,6 +1,6 @@
 Feature: UMS
 
-  @tag1
+  @smoke @sanity @regression
   Scenario Outline: Permission page
     Then Validate the Permissions page
     Then Add the Permissions "<s1>"

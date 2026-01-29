@@ -1,6 +1,6 @@
 #Feature: UMS
 #
-  #@tag1
+  #@smoke @sanity @regression
   #Scenario Outline: Risk Category page
     #Then Validate the risk category page
     #Then Add the Riskcategory "<s1>"

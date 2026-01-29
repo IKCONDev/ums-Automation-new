@@ -1,6 +1,6 @@
 #Feature: UMS
 #
-  #@tag1
+  #@smoke @sanity @regression
   #Scenario Outline: Projects Page
     #Then user Validate the projects page
     #Then user Add project in the projects page "<PN>" "<PC>" "<PD>"

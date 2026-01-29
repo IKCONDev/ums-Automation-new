@@ -1,6 +1,6 @@
 #Feature: UMS
 #
-  #@tag2
+  #@smoke @sanity @regression
   #Scenario Outline: All Task Page
     #Then user validates the task page "<TT>"
     #Then user updates the task page "<TT>"
@@ -15,14 +15,14 @@
      #Examples: 
       #| TT         |
       #| invitation |
-#
+#@smoke @sanity @regression
     #Then user clicks dropdown in the task page
     #Then user clicks Mytasks in the task page
     #Then user clicks filter in the task page "<TT>"
     #Examples: 
       #| TT         |
       #| invitation |
-#
+#@smoke @sanity @regression
   #Scenario Outline: My Task Page
     #Then user clicks dropdown in the task page
     #Then user clicks Mytasks in the task page
@@ -38,7 +38,7 @@
     #Examples: 
       #| TT            |
       #| checking task |
-#
+#@smoke @sanity @regression
   #Scenario Outline: Team Task Page
     #Then user clicks dropdown in the task page
     #Then user clicks Teamtasks in the task page
@@ -54,7 +54,7 @@
     #Examples: 
       #| TT         |
       #| invitation |
-#
+#@smoke @sanity @regression
   #Scenario Outline: Assigned To Page
     #Then user clicks dropdown in the task page
     #Then user clicks Assignedto in the task page
@@ -70,7 +70,7 @@
     #Examples: 
       #| TT         |
       #| invitation |
-#
+#@smoke @sanity @regression
   #Scenario Outline: Created By Page
     #Then user clicks dropdown in the task page
     #Then user clicks Createdby in the task page
@@ -86,7 +86,7 @@
     #Examples: 
       #| TT         |
       #| invitation |
-#
+#@smoke @sanity @regression
   #Scenario Outline: Reviewer Page
     #Then user clicks dropdown in the task page
     #Then user clicks Reviewer in the task page

@@ -1,6 +1,6 @@
 Feature: UMS
 
-  @tag1
+  @smoke @sanity @regression
   Scenario Outline: Designations page
     Then validate the designations page
     Then add the designation "<DSN>"

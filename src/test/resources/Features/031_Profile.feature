@@ -1,5 +1,5 @@
 #Feature: UMS
 #
-  #@tag1
+  #@smoke @sanity @regression
   #Scenario Outline: Profile page
     #Then Validate the Profile page

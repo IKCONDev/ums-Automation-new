@@ -1,6 +1,6 @@
 #Feature: UMS
 #
-  #@tag2
+  #@smoke @sanity @regression
   #Scenario Outline: Reports Page
     #Then user checks the Meeting Reports page
     #Then user checks the Actionitem Reports page
