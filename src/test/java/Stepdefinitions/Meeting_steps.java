@@ -46,8 +46,6 @@ public class Meeting_steps {
 	@Then("user clicks edit column in meetings page")
 	public void user_clicks_editcolumn_in_Meetingspage() throws Exception {
 		MO. click_on_edit_column();
-
-
 	}
 //		@Then("user clicks filter in meetings page {string}")
 //		public void user_clicks_filter_in_Meetingspage(String MID) throws Exception {

@@ -245,7 +245,7 @@ public class Meeting_object extends Baseclass {
 	@FindBy(xpath = "(//span[@class='ng-arrow-wrapper'])[3]")
 	private WebElement Actionitemreviewerdrpdwn;
 
-	@FindBy(xpath = "//span[normalize-space()='Kethu Vinod']")
+	@FindBy(xpath = "//span[normalize-space()='UMS TEST']")
 	private WebElement Actitemreviewerselect;
 
 	@FindBy(xpath = "(//span[@class='ng-arrow-wrapper'])[4]")
