@@ -11,5 +11,5 @@ Feature: UMS
     Then validate the updated user "<URN>" "<Email>"
 
     Examples: 
-      | url                          | Username              | Password | RN    | Email                | URN         |
-      | https://129.80.90.99/#/login | umstest@ikcontech.com | Test@123 | ADMIN | sravan@ikcontech.com | TEAM_MEMBER |
+      | url                          | Username              | Password | RN    | Email                    | URN         |
+      | https://129.80.90.99/#/login | umstest@ikcontech.com | Test@123 | ADMIN | amarlokesh@ikcontech.com | TEAM_MEMBER |

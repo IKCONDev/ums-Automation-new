@@ -1,27 +1,3 @@
-//package Stepdefinitions;
-//
-//import org.openqa.selenium.WebDriver;
-//
-//import Drivemanager.Driver;
-//import Objectclasses.Assignmenuitems_object;
-//import Objectclasses.Team_object;
-//import io.cucumber.java.en.Then;
-//
-//public class Assignmenuitemspermissions_steps {
-//
-//
-//
-//	WebDriver driver = Driver.getDriver();
-//
-//	Assignmenuitems_object TO = new Assignmenuitems_object(driver);
-//
-//	@Then("user checks the Assignmenuitems page")
-//	public void user_check_the_Assignmenuitems_page() throws Exception {
-//		TO.user_checks_Assignmenuitems_page();
-//
-//	}
-//
-//}
 
 package Stepdefinitions;
 

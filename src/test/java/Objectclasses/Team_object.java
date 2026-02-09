@@ -249,12 +249,12 @@ public class Team_object extends Baseclass {
 
 		Clickelement(Team_lead);
 
-		Clickelement(driver.findElement(By.xpath("//span[contains(text(),'Kiran Kumar')]")));
+		Clickelement(driver.findElement(By.xpath("//span[contains(text(),'Kethu Vinod')]")));
 		validatetext(teamheadtitle, "Team Head*");
 
 		Clickelement(Team_head);
 
-		Clickelement(driver.findElement(By.xpath("//span[contains(text(),'Ramya Reddy')]")));
+		Clickelement(driver.findElement(By.xpath("//span[contains(text(),'Venkatesh Udaru')]")));
 
 		validatetext(Save_button, "Save");
 		validatetext(cancel_button, "Cancel");
@@ -290,8 +290,8 @@ public class Team_object extends Baseclass {
 		dispalyedattribute(Table_data.get(1), "ID");
 		validatetext(Table_data.get(2), Team);
 		validatetext(Table_data.get(3), "T12E1");
-		validatetext(Table_data.get(4), "Kiran Kumar");	
-		validatetext(Table_data.get(5), "Ramya Reddy");
+		validatetext(Table_data.get(4), "Praveen Reddy");	
+		validatetext(Table_data.get(5), "Venkatesh Udaru");
 		validatetext(Table_data.get(6), "Information Technology");
 		validatetext(Table_data.get(7), "UMS TEST");
 		//		validatetext(Table_data.get(8), "Apr 14, 2025, 7:42 PM");
@@ -339,10 +339,10 @@ public class Team_object extends Baseclass {
 		Clickelement(updatedept_drpdwn);
 		Clickelement(driver.findElement(By.xpath("//span[@class='ng-option-label ng-star-inserted'][normalize-space()='Information Technology']")));
 		Clickelement(updateteamlead_drpdwn);
-		Clickelement(driver.findElement(By.xpath("//span[normalize-space()='Sunil Kumar']")));
+		Clickelement(driver.findElement(By.xpath("//span[normalize-space()='Kethu Vinod']")));
 		Clickelement(updateteamhead_drpdwn);
 
-		Clickelement(driver.findElement(By.xpath("//span[@class='ng-option-label ng-star-inserted'][normalize-space()='Kiran Kumar']")));
+		Clickelement(driver.findElement(By.xpath("//span[@class='ng-option-label ng-star-inserted'][normalize-space()='Sashank Arun']")));
 
 		validatetext(updatesavebtn, "Save");
 		validatetext(updatecancelbtn, "Cancel");
@@ -374,8 +374,8 @@ public class Team_object extends Baseclass {
 		dispalyedattribute(Table_data1.get(1), "ID");
 		validatetext(Table_data1.get(2), Team);
 		validatetext(Table_data1.get(3), "T12E1");
-		validatetext(Table_data1.get(4), "Sunil Kumar");	
-		validatetext(Table_data1.get(5), "Sunil Kumar");
+		validatetext(Table_data1.get(4), "Kethu Vinod");	
+		validatetext(Table_data1.get(5), "Sashank Arun");
 		validatetext(Table_data1.get(6), "Information Technology");
 		validatetext(Table_data1.get(7), "UMS TEST");
 		//		validatetext(Table_data1.get(8), "Apr 14, 2025, 7:42 PM");

@@ -28,7 +28,7 @@ public class Employee_object extends Baseclass  {
 		PageFactory.initElements(RC, this);
 	}
 
-	
+
 	@FindBy(xpath = "//div[normalize-space()='Setup']")
 	public WebElement Setup;
 
@@ -40,7 +40,7 @@ public class Employee_object extends Baseclass  {
 
 	@FindBy(xpath = "//h3[@class='title']")
 	public WebElement Title;
-	
+
 
 	//	@FindBy(xpath = "//p[normalize-space()='Add']")
 	//	public WebElement Add_button;
@@ -59,10 +59,8 @@ public class Employee_object extends Baseclass  {
 		//		driver.navigate().refresh();
 
 		Clickelement(Setup);
-		Thread.sleep(3000);
 
 		Clickelement(Employee_profiles);
-		Thread.sleep(3000);
 
 		validatetext(Title, "Employees");
 		validatetext(Add_button, "Add");
@@ -107,33 +105,44 @@ public class Employee_object extends Baseclass  {
 	public WebElement RPM;
 	@FindBy(xpath = "//ng-select[@id='reportingManager']//input[@type='text']")
 	public WebElement RPM_dd;
-	
+
 	@FindBy(xpath = "//div[@id='addEmployeeModal']//label[contains(text(),'Department')]")
 	public WebElement DEP;
 	//	@FindBy(xpath = "//select[@id='employeeDept']")
 	//	public WebElement DEP_select;
 
-//	@FindBy(xpath = "//ng-select[@id='employeeDept']//span[@class='ng-arrow-wrapper']")
-//	public WebElement DEP_select;
+	@FindBy(xpath = "//ng-select[@id='employeeDept']//span[@class='ng-arrow-wrapper']")
+	public WebElement DEP_drpdwn;
 
-//		@FindBy(xpath = "//ng-select[@id='employeeDept']//input[@type='text']")
-//		public WebElement DEP_select;
-	
-	@FindBy(xpath = "//div[contains(text(),'Select Department')]")
-	public WebElement DEP_select;
+	//		@FindBy(xpath = "//ng-select[@id='employeeDept']//input[@type='text']")
+	//		public WebElement DEP_select;
+
+	//	@FindBy(xpath = "//div[contains(text(),'Select Department')]")
+	//	public WebElement DEP_select;
 	//ng-select[@id='employeeDept']//div[@class='ng-select-container']
+
+	@FindBy(xpath = "//span[normalize-space()='Information Technology']")
+	public WebElement DEP_select;
 
 	@FindBy(xpath = "//div[@id='addEmployeeModal']//label[contains(text(),'Choose Team')]")
 	public WebElement Team1;
 	@FindBy(xpath = "//ng-select[@id='employeeTeam']//span[@class='ng-arrow-wrapper']")
 	public WebElement Team_dd;
+
+	@FindBy(xpath = "//span[normalize-space()='Devolopement']")
+	public WebElement Team_select;
+
 	@FindBy(xpath = "//div[@id='addEmployeeModal']//label[contains(text(),'Designation')]")
 	public WebElement Desig;
 	//	@FindBy(xpath = "//select[@id='employeeDesgn']")
 	//	public WebElement Desig_select;
 
 	@FindBy(xpath = "//ng-select[@id='employeeDesgn']//span[@class='ng-arrow-wrapper']")
+	public WebElement Desig_drpdwn;
+
+	@FindBy(xpath = "//span[normalize-space()='Human Resource']")
 	public WebElement Desig_select;
+
 	@FindBy(xpath = "//div[@id='addEmployeeModal']//label[contains(text(),'Microsoft Teams ID')]")
 	public WebElement Team_ID;
 	@FindBy(xpath = "//div[@id='addEmployeeModal']//label[contains(text(),'Enable/Disable Batch Process')]")
@@ -147,18 +156,14 @@ public class Employee_object extends Baseclass  {
 	public void add_the_employee_profile(String FN, String LN, String EID, String Email, String DN, String DSN,
 			String FNs, String GN) throws InterruptedException {
 
-	
-		Thread.sleep(3000);
-
 		Clickelement(Add_button);
-		Thread.sleep(3000);
 
 		validatetext(Add_emp, "Add Employee");
 		validatetext(First_name, "First Name");
 		validateattribute(First_namein, "placeholder","First Name");
 		sendkeyweb(First_namein, FN);
 		validatetext(Last_name, "Last Name");
-		validateattribute(Last_namein, "placeholder","First Name");
+		validateattribute(Last_namein, "placeholder","Last Name");
 		//		sendkeyweb(Last_namein, LN+" ");
 		sendkeyweb(Last_namein, LN);
 
@@ -179,25 +184,31 @@ public class Employee_object extends Baseclass  {
 		validatetext(RPM, "Reporting Manager");
 		Clickelement(RPM_dd);
 		try {
-			Clickelement(driver.findElement(By.xpath("//span[contains(.,'" + FNs + "')]")));
+			clickmultipleweb(driver.findElements(By.xpath("//span[contains(.,'" + FNs + "')]")));
 		} catch (Exception e) {
 			Clickelement(driver.findElement(By.xpath("//span[contains(@class,'ng-option-label')]//span[contains(.,'" + FNs + "')]")));
 		}
-		Thread.sleep(3000);
-//		Clickelement(driver.findElement(By.xpath("//span[contains(@class,'ng-option-label')]//span[contains(.,'" + FNs + "')]")));
+		//		Clickelement(driver.findElement(By.xpath("//span[contains(@class,'ng-option-label')]//span[contains(.,'" + FNs + "')]")));
 
 		validatetext(DEP, "Department");
-		Thread.sleep(6000);
 
-		Selectdropdown(DEP_select, DN);
-		Thread.sleep(3000);
+		Clickelement(DEP_drpdwn);
+		Clickelement(DEP_select);
+
+
+		//		Selectdropdown(DEP_select, DN);
+		//		Thread.sleep(3000);
 
 		validatetext(Team1, "Choose Team");
 		Clickelement(Team_dd);
-		Clickelement(driver.findElement(By.xpath("//ng-select[@id='employeeTeam']//span[@title='Clear all']")));
-		Clickelement(driver.findElement(By.xpath("//span[normalize-space()='Dev Team']")));
+		//		Clickelement(driver.findElement(By.xpath("//ng-select[@id='employeeTeam']//span[@title='Clear all']")));
+		//		Clickelement(driver.findElement(By.xpath("//span[normalize-space()='Dev Team']")));
+		Clickelement(Team_select);
 		validatetext(Desig, "Designation");
-		Selectdropdown(Desig_select, DSN);
+		Clickelement(Desig_drpdwn);
+
+		Clickelement(Desig_select);
+
 		validatetext(Team_ID, "Microsoft Teams ID");
 		validatetext(Team_checkbox, "Enable/Disable Batch Process");
 		validatetext(Addemp_save, "Save");
@@ -221,19 +232,18 @@ public class Employee_object extends Baseclass  {
 	public WebElement trash_icon;
 	public void validate_the_added_employees(String FN, String LN, String EID, String Email, String DN, String DSN,
 			String FNs, String GN) throws InterruptedException {
-		Thread.sleep(4000);
-		sendkeyweb(Search, FN);
-		validatetext(Emp_Table.get(0), EID);
-		validatetext(Emp_Table.get(1), FN);
-		validatetext(Emp_Table.get(2), LN);
-		validatetext(Emp_Table.get(3), GN);
-		validatetext(Emp_Table.get(4), Email);
-		validatetext(Emp_Table.get(5), FNs);
-		validatetext(Emp_Table.get(6), "Quality");
-		validatetext(Emp_Table.get(7), DN);
-		validatetext(Emp_Table.get(8), DSN);
-		validatetext(Emp_Table.get(9), "Active");
-		validatetext(Emp_Table.get(10), "Disabled");
+		sendkeyweb(Search, Email);
+		validatetext(Emp_Table.get(1), EID);
+		validatetext(Emp_Table.get(2), FN);
+		validatetext(Emp_Table.get(3), LN);
+		validatetext(Emp_Table.get(4), GN);
+		validatetext(Emp_Table.get(5), Email);
+		validatetext(Emp_Table.get(6), FNs);
+		validatetext(Emp_Table.get(7), "Devolopement");
+		validatetext(Emp_Table.get(8), DN);
+		validatetext(Emp_Table.get(9), DSN);
+		validatetext(Emp_Table.get(10), "Active");
+		validatetext(Emp_Table.get(11), "Disabled");
 		attributeselected(Edit_icon, "Edit Icon");
 		attributeselected(trash_icon, "Delete Icon");
 
@@ -256,25 +266,24 @@ public class Employee_object extends Baseclass  {
 	@FindBy(xpath = "//div[@id='updateEmployeeModal']//button[normalize-space()='Save']")
 	public WebElement Update_Save;
 	public void update_the_employee_profile(String FN, String LN, String EID,String Email, String DN, String DSN, String FNs, String GN) throws InterruptedException {
-		sendkeyweb(Search, FN);
+		sendkeyweb(Search, Email);
 		try {
 			Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + Email + "']/following-sibling::td//button[@id='editIcon']")));
 		} catch (Exception e) {
-			Thread.sleep(4000);
 			Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + Email + "']/following-sibling::td//button[@id='editIcon']")));
 		}
 		sendkeyweb(Update_FN, FN);
-		sendkeyweb(Update_LN, LN+"  ");
+		sendkeyweb(Update_LN, LN);
 		Clickelement(driver.findElement(By.xpath("//input[@id='gender" + GN + "Update']")));
 
-		sendkeyweb(Update_DOJ, D.Datefun(1,7,6));
+		sendkeyweb(Update_DOJ, D.Datefun(1,0,0));
 		Clickelement(Update_Reportee);
-		try {
-			Clickelement(driver.findElement(By.xpath("//span[@class='ng-option-label'][contains(.,'" + FNs + "')]")));
-		} catch (Exception e) {
-			Clickelement(driver.findElement(By.xpath("(//span[contains(.,'" + FNs + "')])[2]")));
-		}
-		Selectdropdown(Update_Dept, DN);
+//		try {
+//			Clickelement(driver.findElement(By.xpath("//span[@class='ng-option-label'][contains(.,'" + FNs + "')]")));
+//		} catch (Exception e) {
+//			clickmultipleweb(driver.findElements(By.xpath("(//span[contains(.,'" + FNs + "')])[2]")));
+//		}
+//		Selectdropdown(Update_Dept, DN);
 		Selectdropdown(Update_Desig, DSN);
 		Selectdropdown(Update_Status, "Active");
 		validatetext(Update_Save, "Save");
@@ -282,20 +291,20 @@ public class Employee_object extends Baseclass  {
 
 	}
 
-	public void validate_the_updated_employess(String FN, String LN, String EID, String Email, String DN, String DSN,
+	public void validate_the_updated_employees(String FN, String LN, String EID, String Email, String DN, String DSN,
 			String FNs, String GN) throws InterruptedException {
-		sendkeyweb(Search, FN);
-		validatetext(Emp_Table.get(0), EID);
-		validatetext(Emp_Table.get(1), FN);
-		validatetext(Emp_Table.get(2), LN);
-		validatetext(Emp_Table.get(3), GN);
-		validatetext(Emp_Table.get(4), Email);
-		validatetext(Emp_Table.get(5), FNs);
-		validatetext(Emp_Table.get(6), "Quality");
-		validatetext(Emp_Table.get(7), DN);
-		validatetext(Emp_Table.get(8), DSN);
-		validatetext(Emp_Table.get(9), "Active");
-		validatetext(Emp_Table.get(10), "Disabled");
+		sendkeyweb(Search, Email);
+		validatetext(Emp_Table.get(1), EID);
+		validatetext(Emp_Table.get(2), FN);
+		validatetext(Emp_Table.get(3), LN);
+		validatetext(Emp_Table.get(4), GN);
+		validatetext(Emp_Table.get(5), Email);
+		validatetext(Emp_Table.get(6), FNs);
+		validatetext(Emp_Table.get(7), "Devolopement");
+		validatetext(Emp_Table.get(8), DN);
+		validatetext(Emp_Table.get(9), DSN);
+		validatetext(Emp_Table.get(10), "Active");
+		validatetext(Emp_Table.get(11), "Disabled");
 		attributeselected(Edit_icon, "Edit Icon");
 		attributeselected(trash_icon, "Delete Icon");
 
@@ -305,23 +314,21 @@ public class Employee_object extends Baseclass  {
 	public void delete_the_employee(String Email) throws InterruptedException {
 
 
-		try {
+//		try {
 			Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + Email + "']/following-sibling::td//button[@id='trashIcon']")));
-		} catch (Exception e) {
-			driver.findElement(By.xpath("//a[normalize-space()='2']"));
-			Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + Email + "']/following-sibling::td//button[@id='trashIcon']")));
-		}
-		driver.switchTo().alert().dismiss();
-		try {
-			Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + Email + "']/preceding-sibling::td//input[@type='checkbox']")));
-		} catch (Exception e) {
-			driver.findElement(By.xpath("//a[normalize-space()='2']"));
-			Thread.sleep(4000);
-			Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + Email + "']/preceding-sibling::td//input[@type='checkbox']")));
-		}
-		Clickelement(Delete_Button);
-		validatealert("");
-		driver.switchTo().alert().dismiss();
+//		} catch (Exception e) {
+//			driver.findElement(By.xpath("//a[normalize-space()='2']"));
+//			Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + Email + "']/following-sibling::td//button[@id='trashIcon']")));
+//		}
+		driver.switchTo().alert().accept();
+//		try {
+//			Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + Email + "']/preceding-sibling::td//input[@type='checkbox']")));
+////		} catch (Exception e) {
+////			driver.findElement(By.xpath("//a[normalize-space()='2']"));
+////			Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + Email + "']/preceding-sibling::td//input[@type='checkbox']")));
+////		}
+//		Clickelement(Delete_Button);
+//		driver.switchTo().alert().accept();
 
 	}
 

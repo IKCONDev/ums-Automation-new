@@ -40,5 +40,6 @@ public class loginpage_steps {
 
 	public static void releaseAllBrowsers() {
 		latch.countDown(); // All waiting threads will start at the same time
+
 	}
 }

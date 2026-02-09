@@ -48,11 +48,12 @@ public class Assignmenuitems_object extends Baseclass {
 
 
 		for(int i=0;i<3;i++) {
+			Thread.sleep(3000);
 			validatetext(Fields.get(i), s[i]);
 			}
 		dispalyedattribute(Assign.get(0), "Assign Menu Items Reportee dropdown");
-		validatetext(Assign.get(1), "ums-test@ikcontech.com");
-		validatetext(Assign.get(2), "SUPER_ADMIN");		
+		validatetext(Assign.get(1), "umstest@ikcontech.com");
+		validatetext(Assign.get(2), "DEPARTMENT_HEAD");		
 	}
 
 	
@@ -84,7 +85,7 @@ public class Assignmenuitems_object extends Baseclass {
 	@FindBy(xpath="//span[@class='ng-arrow-wrapper']")
 	public WebElement dropdwnclick;
 	
-	@FindBy(xpath="//span[normalize-space()='Sravan Kumar']")
+	@FindBy(xpath="//span[normalize-space()='Kethu Vinod']")
 	public WebElement dropdwnselect;
 
 	
@@ -141,9 +142,9 @@ public class Assignmenuitems_object extends Baseclass {
 		
 	@FindBy(xpath="//span[@class='ng-arrow-wrapper']")
 	public WebElement User_drop;
-	@FindBy(xpath="//span[contains(.,'Sunil Kumar')]")
+	@FindBy(xpath="//span[contains(.,'Praveen Reddy')]")
 	public WebElement User_opt;
-	@FindBy(xpath="(//span[contains(.,'Sunil Kumar')])[2]")
+	@FindBy(xpath="(//span[contains(.,'Praveen Reddy')])[2]")
 	public WebElement User_opt1;
 	@FindBy(xpath="//div[@role='alert']")
 	public WebElement alert;
@@ -158,8 +159,8 @@ public class Assignmenuitems_object extends Baseclass {
 //		} catch (Exception e) {
 //			Clickelement(User_opt1);
 //		}
-		String s = "My Dashboard,Meetings,Action Items,Tasks";
-		String v = "1,2,3,4";
+		String s = "Meetings,Action Items,Tasks";
+		String v = "1,2,3";
 		List<String> list = new ArrayList<String>(Arrays.asList(s.split(",")));
 		List<String> Jist = new ArrayList<String>(Arrays.asList(v.split(",")));
 
@@ -172,18 +173,20 @@ public class Assignmenuitems_object extends Baseclass {
 			}
 			WebElement per1 = driver.findElement(By.xpath("(//table//td[normalize-space()='" + list.get(i)	+ "']/following-sibling::td//span[@class='checkmark'])[" + Jist.get(j) + "]"));
 			if(per1.isSelected()) {
+				Thread.sleep(3000);
 				System.out.println("Check box is selected");
 			}else {
 				System.out.println("Check box is not selected");
 			}
+			Thread.sleep(3000);
 			per1.click();
 //			validatealert("Are you sure, you want to update the permission ?");
-//			Thread.sleep(3000);
+			Thread.sleep(3000);
 			driver.switchTo().alert().accept();
 			dispalyedattribute(alert, "Toaster");
 			
 		}
-		driver.navigate().back();
+//		driver.navigate().back();
 
 	}
 }

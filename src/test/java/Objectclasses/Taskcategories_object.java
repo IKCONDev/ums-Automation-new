@@ -218,6 +218,7 @@ public class Taskcategories_object extends Baseclass {
 	public void validate_the_added_task_category(String CN) throws InterruptedException {
 		sendkeyweb(Search, CN);
 		dispalyedattribute(Table_data.get(1), "ID");
+		Thread.sleep(3000);
 		validatetext(Table_data.get(2), CN);
 		validatetext(Table_data.get(3), CN + " Task");
 		validatetext(Table_data.get(4), "Information Technology");

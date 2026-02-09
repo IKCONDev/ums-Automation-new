@@ -56,8 +56,6 @@ public class Users_steps {
 		UO.validate_the_added_user(RN, Email);
 	}
 
-
-
 	@Then("update the user {string} {string}")
 	public void update_the_user(String URN, String Email) throws InterruptedException {
 		UO.update_the_user(URN, Email);

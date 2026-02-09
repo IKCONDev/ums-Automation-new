@@ -13,4 +13,4 @@ Feature: UMS
 
     Examples: 
       | url                          | Username              | Password | DN      | FN          | DC    | DL        |
-      | https://129.80.90.99/#/login | umstest@ikcontech.com | Test@123 | Harmony | Vinod Kethu | Al001 | Hyderabad |
+      | https://129.80.90.99/#/login | umstest@ikcontech.com | Test@123 | Harmony | Kethu Vinod | Al001 | Hyderabad |

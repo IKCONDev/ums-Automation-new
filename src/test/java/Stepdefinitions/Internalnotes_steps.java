@@ -20,7 +20,6 @@ public class Internalnotes_steps {
 	public void Validate_the_Internalnotes_page() throws InterruptedException {
 		IO.validate_the_Internalnotes_page();
 
-		
 	}
 	@Then("add the Internalnotes page {string}")
 	public void add_the_Internalnotes_page(String IN) throws InterruptedException, AWTException {
@@ -37,20 +36,18 @@ public class Internalnotes_steps {
 	@Then("Validate the Updated internal notes {string}")
 	public void Validate_the_Updated__Internalnotes(String IN) throws InterruptedException, AWTException {
 		IO.validate_the_updated_Internalnotes_page(IN);
-
 	}
 
 	@Then("Update the internal notes {string}")
 	public void Update_the__Internalnotes(String IN) throws InterruptedException, AWTException {
 		IO.update_the_Internalnotes_page(IN);
-
 	}
 
 	@Then("Delete the internal notes {string}")
 	public void Delete_the__Internalnotes(String IN) throws InterruptedException, AWTException {
 		IO.Delete_the_Internalnotes(IN);
 	}
-	
+
 	@Then("Edit column in internal notes")
 	public void Editcolumn_in_Internalnotes() throws InterruptedException, AWTException {
 		IO.Editcolumn_in_Internalnotes();

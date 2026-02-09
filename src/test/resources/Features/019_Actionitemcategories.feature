@@ -12,5 +12,5 @@ Feature: UMS
     Then Delete the actionitem category "<ACN>"
 
     Examples: 
-      | url                          | Username               | Password | ACN   |
-      | https://129.80.90.99/#/login | umstest@ikconetech.com | Test@123 | kjkjj |
+      | url                          | Username              | Password | ACN   |
+      | https://129.80.90.99/#/login | umstest@ikcontech.com | Test@123 | kjkjj |

@@ -133,6 +133,7 @@ public class Actionitemcategories_object extends Baseclass {
 
 	public void validate_the_added_actionitem_category(String ACN) throws InterruptedException {
 		sendkeyweb(Search, ACN);
+		Thread.sleep(3000);
 		dispalyedattribute(Table_data.get(1), "ID");
 		validatetext(Table_data.get(2), ACN);
 		validatetext(Table_data.get(3), ACN + " Task");	

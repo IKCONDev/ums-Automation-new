@@ -44,7 +44,6 @@ public class Users_object extends Baseclass  {
 
 
 	public void validate_the_users_page() throws InterruptedException {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Clickelement(Setup);
 		Clickelement(Users);
 
@@ -76,7 +75,7 @@ public class Users_object extends Baseclass  {
 	@FindBy(xpath = "//ng-select[@id='userEmail']//input[@type='text']")
 	public WebElement add_sel;
 
-	@FindBy(xpath = "//span[normalize-space()='sravan@ikcontech.com']")
+	@FindBy(xpath = "//span[normalize-space()='amarlokesh@ikcontech.com ']")
 	public WebElement email_sel;
 
 	@FindBy(xpath = "//form[@id='formId']//label[contains(text(),'Role')]")
@@ -95,7 +94,7 @@ public class Users_object extends Baseclass  {
 	public WebElement add_cancel;
 
 	public void add_the_user(String RN, String Email) throws InterruptedException {
-		driver.navigate().refresh();
+//		driver.navigate().refresh();
 
 		Clickelement(add_button);
 
@@ -135,8 +134,7 @@ public class Users_object extends Baseclass  {
 	public WebElement Edit_icon;
 
 	public void validate_the_added_user(String RN, String Email) throws InterruptedException {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		driver.navigate().refresh();
+//		driver.navigate().refresh();
 
 		sendkeyweb(Search, Email);
 
@@ -185,7 +183,6 @@ public class Users_object extends Baseclass  {
 	@FindBy(xpath = "//div[@class='modal-dialog modal-xl']//span[@aria-hidden='true'][normalize-space()='×']")
 	public WebElement Close_modal;
 	public void update_the_user(String URN, String Email) throws InterruptedException {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		driver.navigate().refresh();
 
