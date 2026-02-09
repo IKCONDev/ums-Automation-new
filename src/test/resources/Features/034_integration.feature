@@ -1,13 +1,10 @@
 Feature: UMS
 
   @smoke @sanity @regression
-  Scenario Outline: Dashboard Page
+  Scenario Outline: Integration page
     Given user is Navigate Login page "<url>"
     When user is validate Login page "<Username>" "<Password>"
-    Then user checks the My dashboard page
-    Then user checks the Team Dashboard page
-    Then user checks the Department Dashboard page
-    Then user checks the Exective Dashboard page
+    Then Validate the Integration page
 
     Examples: 
       | url                          | Username              | Password |

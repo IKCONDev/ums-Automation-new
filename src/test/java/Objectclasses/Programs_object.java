@@ -81,7 +81,7 @@ public class Programs_object extends Baseclass {
 	@FindBy(xpath="(//span[@class='ng-arrow-wrapper'])[1]")
 	public WebElement Programownerdrpdwn;
 
-	@FindBy(xpath="//span[normalize-space()='Harsha Vardhan']")
+	@FindBy(xpath="//span[normalize-space()='Praveen Reddy']")
 	public WebElement Programownerselect;
 
 
@@ -160,7 +160,7 @@ public class Programs_object extends Baseclass {
 		sendkeyweb(Search, PN);
 		attributeselected(Table_data.get(1), "ID");
 		validatetext(Table_data.get(2), PN);
-		validatetext(Table_data.get(3), "Harsha Vardhan");
+		validatetext(Table_data.get(3), "Praveen Reddy");
 		validatetext(Table_data.get(4), PC);
 		validatetext(Table_data.get(5), PD);
 		validatetext(Table_data.get(6), "");
@@ -189,7 +189,7 @@ public class Programs_object extends Baseclass {
 	@FindBy(xpath = "(//span[@class='ng-arrow-wrapper'])[2]")
 	public WebElement progrmownerdrpdwn;
 
-	@FindBy(xpath = "//span[normalize-space()='Ananth raj']")
+	@FindBy(xpath = "//span[normalize-space()='Praveen Reddy']")
 	public WebElement progrmownerselect;
 
 	@FindBy(xpath = "(//input[@id='programStartDate'])[2]")
@@ -248,7 +248,7 @@ public class Programs_object extends Baseclass {
 		sendkeyweb(Search, PN);
 		attributeselected(Table_data.get(1), "ID");
 		validatetext(Table_data.get(2), PN);
-		validatetext(Table_data.get(3), "Ananth raj");
+		validatetext(Table_data.get(3), "Praveen Reddy");
 		validatetext(Table_data.get(4), PC);
 		validatetext(Table_data.get(5), PD);
 		validatetext(Table_data.get(6), "");

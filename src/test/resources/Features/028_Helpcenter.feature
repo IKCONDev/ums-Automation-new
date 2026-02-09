@@ -1,5 +1,11 @@
-#Feature: UMS
-#
-  #@smoke @sanity @regression
-  #Scenario Outline: Helpcenter page
-    #Then Validate the helpcenter page
+Feature: UMS
+
+  @smoke @sanity @regression
+  Scenario Outline: Helpcenter page
+    Given user is Navigate Login page "<url>"
+    When user is validate Login page "<Username>" "<Password>"
+    Then Validate the helpcenter page
+
+    Examples: 
+      | url                          | Username              | Password |
+      | https://129.80.90.99/#/login | umstest@ikcontech.com | Test@123 |
