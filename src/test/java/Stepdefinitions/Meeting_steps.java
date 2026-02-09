@@ -47,11 +47,11 @@ public class Meeting_steps {
 	public void user_clicks_editcolumn_in_Meetingspage() throws Exception {
 		MO. click_on_edit_column();
 	}
-//		@Then("user clicks filter in meetings page {string}")
-//		public void user_clicks_filter_in_Meetingspage(String MID) throws Exception {
-//			MO. click_on_filter_in_meetingspage(MID);
-//	}
-	
+	//		@Then("user clicks filter in meetings page {string}")
+	//		public void user_clicks_filter_in_Meetingspage(String MID) throws Exception {
+	//			MO. click_on_filter_in_meetingspage(MID);
+	//	}
+
 	@Then("user check the meeting details page {string}")
 	public void user_check_meetingdetails_page(String MT) throws Exception {
 		MO. check_the_meeting_details_page(MT);

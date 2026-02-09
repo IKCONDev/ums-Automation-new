@@ -54,7 +54,9 @@ public class Login_object extends Baseclass {
 		sendkeyweb(emailidtextbox, Username);
 		sendkeyweb(passwordtextbox, Password);
 		Clickelement(loginbuttonclick);
-		Thread.sleep(3000);
+		
+//		popupvalidate("Logged in successfullly", "");
+//		Thread.sleep(3000);
 
 	}
 

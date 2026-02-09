@@ -153,7 +153,7 @@ public class Internalnotes_object extends Baseclass {
 		Clickelement(Createbtn);
 		//		Thread.sleep(3000);
 		popupvalidate("Note created successfully", path);
-		
+
 
 	}
 
@@ -214,7 +214,7 @@ public class Internalnotes_object extends Baseclass {
 
 
 		Clickelement(Updatebtn);
-
+		popupvalidate("Note updated successfully", IN);
 	}
 
 
@@ -263,6 +263,8 @@ public class Internalnotes_object extends Baseclass {
 		} catch (NoAlertPresentException e) {
 			System.out.println("No alert present.");
 		}
+		popupvalidate("Note deleted successfully", IN);
+
 	}
 
 

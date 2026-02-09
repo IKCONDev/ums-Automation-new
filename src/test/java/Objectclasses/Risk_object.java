@@ -66,9 +66,9 @@ public class Risk_object extends Baseclass {
 		Thread.sleep(3000);
 
 
-		String s = "checkbox,Risk ID,Meeting ID,Title,Assigned To,Planned Start Date & Time,Planned End Date & Time,Probability,Severity,Status,Priority,Over Due Days,Edit,Delete";
+		String s = "Risk ID,Meeting ID,Title,Assigned To,Planned Start Date & Time,Planned End Date & Time,Probability,Severity,Status,Priority,Over Due Days,Edit,Delete";
 		List<String> list = new ArrayList<String>(Arrays.asList(s.split(",")));
-		for (int i = 1; i < 14; i++) {
+		for (int i = 1; i < 13; i++) {
 			validatetext(risktable.get(i), list.get(i));
 		}
 	}
@@ -101,14 +101,14 @@ public class Risk_object extends Baseclass {
 	@FindBy(xpath = "//ng-select[@id='addRiskOwner']//span[@class='ng-arrow-wrapper']")
 	public WebElement RiskAssignedtodrpdwn;
 
-	@FindBy(xpath = "//span[normalize-space()='UMS SUPPORT']")
+	@FindBy(xpath = "//span[normalize-space()='UMS TEST']")
 	public List<WebElement> RiskAssignedtoselect;
 
 
 	@FindBy(xpath = "//ng-select[@id='addriskCategory']//span[@class='ng-arrow-wrapper']")
 	public WebElement Riskcategorydrpdwn;
 
-	@FindBy(xpath = "//span[normalize-space()='ABCD']")
+	@FindBy(xpath = "//span[normalize-space()='Testing']")
 	public WebElement Riskcategoryselect;
 
 	@FindBy(xpath = "(//img[@alt='Dropdown icon'])[2]")
@@ -198,11 +198,13 @@ public class Risk_object extends Baseclass {
 		sendkeyweb(Riskdescription, RD);
 
 		Clickelement(Riskcreatebtn);
+		
+		popupvalidate("Risk Created Successfully", RT);
 
 
 
 	}
-	
+
 
 	@FindBy(xpath = "//button[@id='editIcon']//*[name()='svg']")
 	public WebElement Edit_icon;
@@ -215,23 +217,23 @@ public class Risk_object extends Baseclass {
 		sendkeyweb(Risksearch,RT);
 
 		String RID = driver.findElement(By.xpath("(//td[normalize-space()='"+RT+"']/preceding-sibling::td)[2]")).getText();
-		String[] S = {"UMS SUPPORT","","","Likely","Minor","Open","Very High","NA"};
-		
+		String[] S = {"UMS TEST","","","Likely","Minor","Open","Very High","NA"};
+
 
 		List<WebElement> valid=driver.findElements(By.xpath("//td[normalize-space()='" + RT + "']/following-sibling::td"));
 		valid.size();
-		
-			try {
-				int i=0;
-				for(WebElement e:valid) {
-					
-					validatetext(e, S[i]);
-					i++;
-				}
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+
+		try {
+			int i=0;
+			for(WebElement e:valid) {
+
+				validatetext(e, S[i]);
+				i++;
 			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 
 		attributeselected(Edit_icon, "Edit icon");
@@ -306,40 +308,40 @@ public class Risk_object extends Baseclass {
 		driver.navigate().refresh();
 		sendkeyweb(Risksearch,RT);
 
-//		String RID = driver.findElement(By.xpath("(//td[normalize-space()='"+RT+"']/preceding-sibling::td)[2]")).getText();
-//		String[] S = {"NA",RT,"UMS TEST","","","Likely","Minor","Open","Very High","NA"};
-//		List<WebElement> valid=driver.findElements(By.xpath("//td[normalize-space()='" + RID + "']/following-sibling::td"));
-//		valid.size();
-//
-//		try {
-//			int i=0;
-//			for(WebElement e:valid) {
-//				validatetext(e, S[i]);
-//				i++;
-//			}
-//		} catch (Exception e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-		
+		//		String RID = driver.findElement(By.xpath("(//td[normalize-space()='"+RT+"']/preceding-sibling::td)[2]")).getText();
+		//		String[] S = {"NA",RT,"UMS TEST","","","Likely","Minor","Open","Very High","NA"};
+		//		List<WebElement> valid=driver.findElements(By.xpath("//td[normalize-space()='" + RID + "']/following-sibling::td"));
+		//		valid.size();
+		//
+		//		try {
+		//			int i=0;
+		//			for(WebElement e:valid) {
+		//				validatetext(e, S[i]);
+		//				i++;
+		//			}
+		//		} catch (Exception e) {
+		//			// TODO Auto-generated catch block
+		//			e.printStackTrace();
+		//		}
+
 		String RID = driver.findElement(By.xpath("(//td[normalize-space()='"+RT+"']/preceding-sibling::td)[2]")).getText();
 		String[] S = {"UMS TEST","","","Likely","Minor","Open","Very High","NA"};
-		
+
 
 		List<WebElement> valid=driver.findElements(By.xpath("//td[normalize-space()='" + RT + "']/following-sibling::td"));
 		valid.size();
-		
-			try {
-				int i=0;
-				for(WebElement e:valid) {
-					
-					validatetext(e, S[i]);
-					i++;
-				}
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+
+		try {
+			int i=0;
+			for(WebElement e:valid) {
+
+				validatetext(e, S[i]);
+				i++;
 			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 
 		attributeselected(Edit_icon, "Edit icon");
@@ -759,31 +761,31 @@ public class Risk_object extends Baseclass {
 
 		Clickelement(Editcolumncancel);
 	}
-	
-	
+
+
 	@FindBy(xpath = "//span[normalize-space()='All Risks']")
 	public WebElement Allrisks;
-	
+
 	public void user_clicks_on_All_risks_dropdown() throws InterruptedException {
 		Clickelement(Riskdropdwnarrow);
 		Clickelement(Allrisks);
-		
-	
-}
-	
+
+
+	}
+
 	@FindBy(xpath = "//span[normalize-space()='My Risks']")
 	public WebElement Myrisks;
-	
+
 	public void user_clicks_on_My_risks_dropdown() throws InterruptedException {
 		Clickelement(Riskdropdwnarrow);
 		Clickelement(Myrisks);
-}
-	
+	}
+
 	@FindBy(xpath = "//span[contains(text(),'Assigned To')]")
 	public WebElement AssignedTorisks;
-	
+
 	public void user_clicks_on_Assignedto_risks_dropdown() throws InterruptedException {
 		Clickelement(Riskdropdwnarrow);
 		Clickelement(AssignedTorisks);
-}
+	}
 }

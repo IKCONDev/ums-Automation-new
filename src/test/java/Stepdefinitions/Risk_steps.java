@@ -39,7 +39,7 @@ public class Risk_steps {
 
 		RO.user_update_risk_page(RT,RD);	
 	}
-	
+
 	@Then("user validate the updated risk in risks page {string} {string}")
 	public void user__validate_the_updated_risk_in_riskspage(String RT, String RD) throws Exception {
 
@@ -73,17 +73,17 @@ public class Risk_steps {
 	public void user_checks_Editcolumn_in_risk_page() throws Exception {
 		RO.user_checks_Editcolumn_in_risk_page();	
 	}
-	
+
 	@Then("user navigates to all risks page")
 	public void user_clicks_Allrisks_in_risk_page() throws Exception {
 		RO.user_clicks_on_All_risks_dropdown();	
 	}
-	
+
 	@Then("user navigates to my risks page")
 	public void user_clicks_Myrisks_in_risk_page() throws Exception {
 		RO.user_clicks_on_My_risks_dropdown();	
 	}
-	
+
 	@Then("user navigates to Assignedto risks page")
 	public void user_clicks_Assignedtorisks_in_risk_page() throws Exception {
 		RO.user_clicks_on_Assignedto_risks_dropdown();	
