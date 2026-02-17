@@ -29,6 +29,8 @@ public class loginpage_steps {
 		latch.await();
 		//		driver.get("http://132.145.186.188:4200/#/login");	
 		driver.get(url);	
+		String urlText = driver.getCurrentUrl();  // Returns "https://example.com/page"
+		System.out.println(urlText);
 		driver.manage().window().maximize();
 	}
 

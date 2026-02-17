@@ -94,7 +94,7 @@ public class Actionitemcategories_object extends Baseclass {
 	public WebElement Actionitem_cancel;
 
 
-	public void add_the_actionitem_category(String ACN) throws InterruptedException {
+	public void add_the_actionitem_category(String ACN,String Dept) throws InterruptedException {
 
 		driver.navigate().refresh();
 		Clickelement(Add);
@@ -103,7 +103,8 @@ public class Actionitemcategories_object extends Baseclass {
 		validatetext(Actionitem_Dept, "Choose Department");
 		Clickelement(Clear);
 		Clickelement(Actionitem_drop);	
-		Clickelement(driver.findElement(By.xpath("//span[normalize-space()='Information Technology']")));
+		WebElement bg=driver.findElement(By.xpath("//span[normalize-space()='"+Dept+"']"));
+		Clickelement(bg);
 		validatetext(ActionitemCat_name, "ActionItem Category Name");
 		validateattribute(ActionitemCat_name_in, "placeholder", "Category Title");
 		sendkeyweb(ActionitemCat_name_in, ACN);
@@ -131,15 +132,15 @@ public class Actionitemcategories_object extends Baseclass {
 	@FindBy(xpath = "//button[@id='trashIcon']//*[name()='svg']")
 	public WebElement Deleteicon;
 
-	public void validate_the_added_actionitem_category(String ACN) throws InterruptedException {
+	public void validate_the_added_actionitem_category(String ACN, String Dept, String CB) throws InterruptedException {
 		sendkeyweb(Search, ACN);
 		Thread.sleep(3000);
 		dispalyedattribute(Table_data.get(1), "ID");
 		validatetext(Table_data.get(2), ACN);
 		validatetext(Table_data.get(3), ACN + " Task");	
-		validatetext(Table_data.get(4), "Information Technology");	
+		validatetext(Table_data.get(4), Dept);	
 
-		validatetext(Table_data.get(5), "UMS TEST");
+		validatetext(Table_data.get(5), CB);
 		//		validatetext(Table_data.get(5), "May 20, 2024, 4:14 PM");
 		validatetext(Table_data.get(6), "");
 		validatetext(Table_data.get(7), "");
@@ -152,15 +153,15 @@ public class Actionitemcategories_object extends Baseclass {
 
 
 
-	public void update_the_actionitem_category(String ACN) throws InterruptedException {
+	public void update_the_actionitem_category(String ACN, String Dept) throws InterruptedException {
 		sendkeyweb(Search, ACN);
 		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + ACN + "']/following-sibling::td//button[@id='editIcon']")));
 		Clickelement(Clear);
 
 		Clickelement(Actionitem_drop);
 
-		Clickelement(driver.findElement(By.xpath("//span[normalize-space()='Information Technology']")));
-
+		WebElement bg=driver.findElement(By.xpath("//span[normalize-space()='"+Dept+"']"));
+		Clickelement(bg);
 		validatetext(ActionitemCat_name, "ActionItem Category Name");
 
 		validateattribute(ActionitemCat_name_in, "placeholder", "Category Title");
@@ -174,15 +175,15 @@ public class Actionitemcategories_object extends Baseclass {
 
 	}
 
-	public void validate_the_updated_actionitem_category(String ACN) throws InterruptedException {
+	public void validate_the_updated_actionitem_category(String ACN, String Dept, String CB) throws InterruptedException {
 		sendkeyweb(Search, ACN);
 		dispalyedattribute(Table_data.get(1), "ID");
 		validatetext(Table_data.get(2), ACN);
 		validatetext(Table_data.get(3), ACN + " Task");
-		validatetext(Table_data.get(4), "Information Technology");
-		validatetext(Table_data.get(5), "UMS TEST");
+		validatetext(Table_data.get(4), Dept);
+		validatetext(Table_data.get(5), CB);
 		validatetext(Table_data.get(6), " ");
-		validatetext(Table_data.get(7), "UMS TEST");
+		validatetext(Table_data.get(7), CB);
 		validatetext(Table_data.get(8), " ");
 
 

@@ -203,12 +203,12 @@ public class designation_object extends Baseclass {
 	public List<WebElement> Desig_Table1;
 
 
-	public void validate_the_added_designation(String DSN) throws InterruptedException {
+	public void validate_the_added_designation(String DSN, String CB) throws InterruptedException {
 		driver.navigate().refresh();
 		sendkeyweb(Desig_search, DSN);
 		dispalyedattribute(Desig_Table1.get(1), "ID");
 		validatetext(Desig_Table1.get(2),DSN);
-		validatetext(Desig_Table1.get(3),"UMS TEST");
+		validatetext(Desig_Table1.get(3),CB);
 		//		validatetext(Desig_Table1.get(4),"May 21, 2024, 2:19 PM");
 		dispalyedattribute(Desig_Table1.get(7),"EDIT Icon");
 		dispalyedattribute(Desig_Table1.get(8),"Delete ICON");
@@ -254,14 +254,14 @@ public class designation_object extends Baseclass {
 	public WebElement Desig_UEdit;
 	@FindBy(xpath = "//button[@id='trashDesgIcon']//*[name()='svg']")
 	public WebElement Desig_Utrash;
-	public void validate_the_updated_designation(String DSN) throws InterruptedException {
+	public void validate_the_updated_designation(String DSN, String CB) throws InterruptedException {
 		driver.navigate().refresh();
 		sendkeyweb(Desig_search, DSN);
 		dispalyedattribute(Desig_UTable.get(1), "ID");
 		validatetext(Desig_UTable.get(2),DSN);
-		validatetext(Desig_UTable.get(3),"UMS TEST");
+		validatetext(Desig_UTable.get(3),CB);
 		validatetext(Desig_UTable.get(4),"");
-		validatetext(Desig_UTable.get(5),"UMS TEST");
+		validatetext(Desig_UTable.get(5),CB);
 		validatetext(Desig_UTable.get(6),"");
 
 		//		validatetext(Desig_UTable.get(5),"Delete ICON");

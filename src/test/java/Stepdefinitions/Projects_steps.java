@@ -20,15 +20,15 @@ public class Projects_steps {
 
 	}
 
-	@Then("user Add project in the projects page {string} {string} {string}")
-	public void AddProjects_in_projects_page(String PN, String PC, String PD) throws Exception {
-		PO.Add_Projects_in_projects_page(PN,PC,PD);
+	@Then("user Add project in the projects page {string} {string} {string} {string} {string}")
+	public void AddProjects_in_projects_page(String PN, String PC, String PD, String PROGNAME, String PROJOWN) throws Exception {
+		PO.Add_Projects_in_projects_page(PN,PC,PD, PROGNAME, PROJOWN);
 
 	}
 
-	@Then("user validate the added project in projects page {string} {string} {string}")
-	public void Validate_the_Added_Project_in_projects_page(String PN, String PC, String PD) throws Exception {
-		PO.Validate_the_Added_Project_in_projects_page(PN,PC,PD);
+	@Then("user validate the added project in projects page {string} {string} {string} {string} {string} {string}")
+	public void Validate_the_Added_Project_in_projects_page(String PN, String PC, String PD, String PROGNAME, String PROJOWN, String CB) throws Exception {
+		PO.Validate_the_Added_Project_in_projects_page(PN,PC,PD,PROJOWN,PROGNAME,CB);
 
 	}
 
@@ -38,9 +38,9 @@ public class Projects_steps {
 
 	}
 
-	@Then("user validate the updated project in projects page {string} {string} {string}")
-	public void Validate_the_Updated_Project_in_projects_page(String PN, String PC, String PD) throws Exception {
-		PO.Validate_the_Updated_Project_in_projects_page(PN,PC,PD);
+	@Then("user validate the updated project in projects page {string} {string} {string} {string} {string} {string}")
+	public void Validate_the_Updated_Project_in_projects_page(String PN, String PC, String PD, String PROGNAME, String PROJOWN, String CB) throws Exception {
+		PO.Validate_the_Updated_Project_in_projects_page(PN,PC,PD,PROGNAME,PROJOWN,CB);
 
 	}
 

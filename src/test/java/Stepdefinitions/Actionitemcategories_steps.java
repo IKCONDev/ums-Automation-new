@@ -16,24 +16,24 @@ public class Actionitemcategories_steps {
 		AICO.validate_the_actionitem_category_page();
 	}
 
-	@Then("add the actionitem category {string}")
-	public void add_the_actionitemcategory(String ACN) throws InterruptedException {
-		AICO.add_the_actionitem_category(ACN);
+	@Then("add the actionitem category {string} {string}")
+	public void add_the_actionitemcategory(String ACN, String Dept) throws InterruptedException {
+		AICO.add_the_actionitem_category(ACN,Dept);
 	}
 
-	@Then("validate the added actionitem category {string}")
-	public void validate_the_added_actionitemcategory(String ACN) throws InterruptedException {
-		AICO.validate_the_added_actionitem_category(ACN);
+	@Then("validate the added actionitem category {string} {string} {string}")
+	public void validate_the_added_actionitemcategory(String ACN, String Dept, String CB) throws InterruptedException {
+		AICO.validate_the_added_actionitem_category(ACN,Dept,CB);
 	}
 
-	@Then("update the actionitem category {string}")
-	public void update_the__actionitemcategory(String ACN) throws InterruptedException {
-		AICO.update_the_actionitem_category(ACN);
+	@Then("update the actionitem category {string} {string}")
+	public void update_the__actionitemcategory(String ACN, String Dept) throws InterruptedException {
+		AICO.update_the_actionitem_category(ACN,Dept);
 	}
 
-	@Then("validate the updated actionitem category {string}")
-	public void validate_the_updated_actionitem_category(String ACN) throws InterruptedException {
-		AICO.validate_the_updated_actionitem_category(ACN);
+	@Then("validate the updated actionitem category {string} {string} {string}")
+	public void validate_the_updated_actionitem_category(String ACN, String Dept, String CB) throws InterruptedException {
+		AICO.validate_the_updated_actionitem_category(ACN,Dept,CB);
 	}
 
 	@Then("Delete the actionitem category {string}")

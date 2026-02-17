@@ -77,8 +77,8 @@ public class Projects_object extends Baseclass {
 	@FindBy(xpath="(//span[@class='ng-arrow-wrapper'])[1]")
 	public WebElement Programnamedrpdwn;
 
-	@FindBy(xpath="//span[normalize-space()='Whitebox']")
-	public WebElement Programnamedrpdwnselect;
+	//	@FindBy(xpath="//span[normalize-space()='Whitebox']")
+	//	public WebElement Programnamedrpdwnselect;
 
 	@FindBy(xpath="(//label[contains(text(),'Project Code')])[1]")
 	public WebElement Projectcode;
@@ -89,8 +89,8 @@ public class Projects_object extends Baseclass {
 	@FindBy(xpath="(//span[@class='ng-arrow-wrapper'])[2]")
 	public WebElement Projectownerdrpdwn;
 
-	@FindBy(xpath="//span[normalize-space()='Ananth raj']")
-	public WebElement Projectownerselect;
+	//	@FindBy(xpath="//span[normalize-space()='Ananth raj']")
+	//	public WebElement Projectownerselect;
 
 	@FindBy(xpath="(//label[contains(text(),'Start Date & Time')])[1]")
 	public WebElement Startdateandtime;
@@ -116,7 +116,7 @@ public class Projects_object extends Baseclass {
 	@FindBy(xpath="(//button[@type='button'][normalize-space()='Cancel'])[1]")
 	public WebElement Cancelbtn;
 
-	public void Add_Projects_in_projects_page(String PN, String PC, String PD) throws InterruptedException {
+	public void Add_Projects_in_projects_page(String PN, String PC, String PD, String PROGNAME, String PROJOWN) throws InterruptedException {
 		Clickelement(Addbtn);
 
 		validatetext(Project,"Project");
@@ -124,12 +124,16 @@ public class Projects_object extends Baseclass {
 		sendkeyweb(Projectnameplaceholder, PN);
 		validatetext(Programname, "Program Name");
 		Clickelement(Programnamedrpdwn);
-		Clickelement(Programnamedrpdwnselect);
+		//		Clickelement(Programnamedrpdwnselect);
+		WebElement dg=driver.findElement(By.xpath("//span[normalize-space()='"+PROGNAME+"']"));
+		Clickelement(dg);
 		validatetext(Projectcode,"Project Code");
 		validateattribute(Projectcodeplaceholder, "placeholder", "Project Code");
 		sendkeyweb(Projectcodeplaceholder, PC);
 		Clickelement(Projectownerdrpdwn);
-		Clickelement(Projectownerselect);
+		//		Clickelement(Projectownerselect);
+		WebElement cg=driver.findElement(By.xpath("//span[normalize-space()='"+PROJOWN+"']"));
+		Clickelement(cg);
 		validatetext(Startdateandtime, "Start Date & Time");
 		sendkeyweb(Startdateandtimeselect, D.Datefun(0, 0, 0));
 		validatetext(Enddateandtime, "End Date & Time");
@@ -140,6 +144,8 @@ public class Projects_object extends Baseclass {
 		validatetext(Savebtn, "Save");
 		validatetext(Cancelbtn, "Cancel");
 		Clickelement(Savebtn);
+		popupvalidate("Project Created Successfully", PN);
+
 
 	}
 
@@ -152,21 +158,21 @@ public class Projects_object extends Baseclass {
 	@FindBy(xpath = "//button[@id='trashIcon']//*[name()='svg']")
 	public WebElement Delete_icon;
 
-	public void Validate_the_Added_Project_in_projects_page(String PN, String PC, String PD) throws InterruptedException {
+	public void Validate_the_Added_Project_in_projects_page(String PN, String PC, String PD, String PROGNAME, String PROJOWN, String CB) throws InterruptedException {
 		driver.navigate().refresh();
 
 		sendkeyweb(Search, PN);
 		attributeselected(Table_data.get(1), "ID");
 		validatetext(Table_data.get(2), PN);
 		validatetext(Table_data.get(3), PC);
-		validatetext(Table_data.get(4), "Whitebox");
-		validatetext(Table_data.get(5), "Ananth raj");
+		validatetext(Table_data.get(4), PROGNAME);
+		validatetext(Table_data.get(5), PROJOWN);
 
 		validatetext(Table_data.get(6), PD);
 		validatetext(Table_data.get(7), "");
 		validatetext(Table_data.get(8), "");
 		validatetext(Table_data.get(9), "Active");
-		validatetext(Table_data.get(10), "UMS TEST");
+		validatetext(Table_data.get(10), CB);
 		validatetext(Table_data.get(11), "");
 		validatetext(Table_data.get(12), "");
 		validatetext(Table_data.get(13), "");
@@ -213,8 +219,8 @@ public class Projects_object extends Baseclass {
 		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + PN + "']/following-sibling::td//button[@id='editIcon']")));
 		sendkeyweb(Projectnameupdate, PN);
 		sendkeyweb(Projectcodeupdate, PC);
-		Clickelement(Programnamedrpdwnupdate);
-		Clickelement(Programnamedrpdwnupdateclick);
+		//		Clickelement(Programnamedrpdwnupdate);
+		//		Clickelement(Programnamedrpdwnupdateclick);
 
 		sendkeyweb(startdateupdateclick, D.Datefun(0, 1, 0));
 		sendkeyweb(enddateupdateclick, D.Datefun(0, 2, 0));
@@ -224,10 +230,11 @@ public class Projects_object extends Baseclass {
 
 		sendkeyweb(Projectdescriptionupdate, PD);
 		Clickelement(updatesavebtn);
+		popupvalidate("Project Updated Successfully", PN);
 
 	}
 
-	public void Validate_the_Updated_Project_in_projects_page(String PN, String PC, String PD) throws InterruptedException {
+	public void Validate_the_Updated_Project_in_projects_page(String PN, String PC, String PD, String PROGNAME, String PROJOWN, String CB) throws InterruptedException {
 
 		driver.navigate().refresh();
 
@@ -235,16 +242,16 @@ public class Projects_object extends Baseclass {
 		attributeselected(Table_data.get(1), "ID");
 		validatetext(Table_data.get(2), PN);
 		validatetext(Table_data.get(3), PC);
-		validatetext(Table_data.get(4), "Whitebox");
-		validatetext(Table_data.get(5), "Ananth raj");
+		validatetext(Table_data.get(4), PROGNAME);
+		validatetext(Table_data.get(5), PROJOWN);
 		validatetext(Table_data.get(6), PD);
 		validatetext(Table_data.get(7), "");
 		validatetext(Table_data.get(8), "");
 
 		validatetext(Table_data.get(9), "Completed");
-		validatetext(Table_data.get(10), "UMS TEST");
+		validatetext(Table_data.get(10), CB);
 		validatetext(Table_data.get(11), "");
-		validatetext(Table_data.get(12), "UMS TEST");
+		validatetext(Table_data.get(12), CB);
 		validatetext(Table_data.get(13), "");
 
 		attributeselected(Edit_icon, "Edit icon");
@@ -283,6 +290,7 @@ public class Projects_object extends Baseclass {
 			System.out.println("No alert present.");
 		}
 
-
+		popupvalidate("Project deleted Successfully", PN);
 	}
+
 }

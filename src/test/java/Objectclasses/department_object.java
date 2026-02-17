@@ -1,104 +1,3 @@
-//package Objectclasses;
-//
-//import org.openqa.selenium.WebDriver;
-//import org.openqa.selenium.WebElement;
-//import org.openqa.selenium.support.FindBy;
-//import org.openqa.selenium.support.PageFactory;
-//
-//import Drivemanager.Driver;
-//import hooks.Baseclass;
-//
-//
-//public class department_object extends Baseclass {
-//	WebDriver driver = Driver.getDriver();
-//	public department_object(WebDriver RC) {
-//		driver = RC;
-//		PageFactory.initElements(RC, this);
-//	}
-//	@FindBy(xpath = "//div[normalize-space()='Settings']")
-//	public WebElement Settingssidemenu;
-//
-//	@FindBy(xpath = "//a[normalize-space()='Departments']")
-//	public WebElement Departmentsclick;
-//
-//	@FindBy(xpath = "//div[contains(text(),'Add')]")
-//	public WebElement DepartmentsAddbtn;
-//
-//	@FindBy(xpath = "//div[@id='addModal']//input[@placeholder='Department Name']")
-//	public WebElement Departmentname;
-//
-//	@FindBy(xpath = "//ng-select[@id='deptHead']//span[@class='ng-arrow-wrapper']")
-//	public WebElement Departmentheaddrpdwn;
-//
-//	@FindBy(xpath = "//span[normalize-space()='ANURADHA GUPTA']")
-//	public WebElement Departmentheadselect;
-//
-//	@FindBy(xpath = "//div[@id='addModal']//input[@id='departmentCode']")
-//	public WebElement Departmentcode;
-//
-//	@FindBy(xpath = "//div[@id='addModal']//input[@placeholder='Department Location']")
-//	public WebElement DepartmentLocation;
-//	
-//	@FindBy(xpath = "//div[@id='addModal']//button[@type='submit'][normalize-space()='Save']")
-//	public WebElement Departmentsavebtn;
-//
-//
-//	public void user_check_the_departments_page(String str1, String str2, String str3) throws InterruptedException {
-//		Thread.sleep(3000);
-//
-//		Clickelement(Settingssidemenu);
-//		Thread.sleep(3000);
-//
-//		Clickelement(Departmentsclick);
-//		Thread.sleep(3000);
-//
-//		Clickelement(DepartmentsAddbtn);
-//		Thread.sleep(3000);
-//
-//
-//		sendkeyweb(Departmentname, str1);
-//		Thread.sleep(3000);
-//
-//		Clickelement(Departmentheaddrpdwn);
-//		Thread.sleep(3000);
-//
-//		Clickelement(Departmentheadselect);
-//		Thread.sleep(3000);
-//
-//
-//		sendkeyweb(Departmentcode, str2);
-//		Thread.sleep(3000);
-//
-//		sendkeyweb(DepartmentLocation, str3);
-//		Thread.sleep(3000);
-//
-//		Clickelement(Departmentsavebtn);
-//		Thread.sleep(3000);
-//
-//	}
-//	
-//	@FindBy(xpath = "//input[@placeholder='Search']")
-//	public WebElement departmentsearch;
-//
-//	@FindBy(xpath = "//button[@id='trashIcon']//*[name()='svg']")
-//	public WebElement Departmentdeletebtn;
-//	
-//	
-//	public void user_delete_the_departments_page(String str) throws InterruptedException {
-//		Thread.sleep(3000);
-//		
-//		sendkeyweb(departmentsearch, str);
-//
-//		Thread.sleep(3000);
-//
-//		Clickelement(Departmentdeletebtn);
-//		Thread.sleep(3000);
-//		
-//		driver.switchTo().alert().accept();
-//}
-//}
-
-
 package Objectclasses;
 
 import java.util.List;
@@ -247,7 +146,7 @@ public class department_object extends Baseclass {
 	@FindBy(xpath = "//button[@id='trashIcon']//*[name()='svg']")
 	public WebElement delete;
 
-	public void validate_the_added_department(String DN, String FN, String DC, String DL) throws InterruptedException {
+	public void validate_the_added_department(String DN, String FN, String DC, String DL, String CB) throws InterruptedException {
 		driver.navigate().refresh();
 		Thread.sleep(3000);
 		sendkeyweb(Search, DN);
@@ -259,7 +158,7 @@ public class department_object extends Baseclass {
 		validatetext(Table_data.get(3), DC);
 		validatetext(Table_data.get(4), FN);
 		validatetext(Table_data.get(5), DL);
-		validatetext(Table_data.get(6), "UMS TEST");
+		validatetext(Table_data.get(6), CB);
 		//		validatetext(Table_data.get(7), "May 21, 2024, 5:14 PM");
 		dispalyedattribute(edit, "Edit icon");
 		dispalyedattribute(delete, "Delete icon");
@@ -303,13 +202,13 @@ public class department_object extends Baseclass {
 		validatetext(Deptname1, "Department Name");
 		sendkeyweb(updateDeptname1, DN);
 		validatetext(Depthead1, "Department Head");
-		Clickelement(updatehead);
+//		Clickelement(updatehead);
 		//		try {
 		//			Clickelement(driver.findElement(By.xpath("//span[@class='ng-option-label'][contains(.,'" + FN + "')]")));
 		//		} catch (Exception e) {
 		//			Clickelement(driver.findElement(By.xpath("(//span[@class='ng-option-label'][contains(.,'" + FN + "')])[1]")));
 		//		}
-		Clickelement(driver.findElement(By.xpath("//span[normalize-space()='UMS TEST']")));
+//		Clickelement(driver.findElement(By.xpath("//span[normalize-space()='UMS TEST']")));
 
 		validatetext(dept_code, "Department Code");
 		sendkeyweb(UDC, DC);
@@ -322,7 +221,7 @@ public class department_object extends Baseclass {
 	}
 
 
-	public void validate_the_updated_department(String DN, String FN, String DC, String DL)
+	public void validate_the_updated_department(String DN, String FN, String DC, String DL, String CB)
 			throws InterruptedException {
 		driver.navigate().refresh();
 		Thread.sleep(3000);
@@ -335,9 +234,9 @@ public class department_object extends Baseclass {
 		validatetext(Table_data.get(3), DC);
 		validatetext(Table_data.get(4), FN);
 		validatetext(Table_data.get(5), DL);
-		validatetext(Table_data.get(6), "UMS TEST");
+		validatetext(Table_data.get(6), CB);
 		//		validatetext(Table_data.get(7), "May 21, 2024, 5:14 PM");
-		validatetext(Table_data.get(8), "UMS TEST");
+		validatetext(Table_data.get(8), CB);
 		//		validatetext(Table_data.get(9), "May 21, 2024, 6:56 PM");
 		dispalyedattribute(edit, "Edit icon");
 		dispalyedattribute(delete, "Delete icon");

@@ -1,90 +1,3 @@
-//package Objectclasses;
-//
-//import org.openqa.selenium.WebDriver;
-//import org.openqa.selenium.WebElement;
-//import org.openqa.selenium.support.FindBy;
-//import org.openqa.selenium.support.PageFactory;
-//
-//import Drivemanager.Driver;
-//import hooks.Baseclass;
-//
-//public class Taskcategories_object extends Baseclass {
-//
-//	WebDriver driver = Driver.getDriver();
-//	public Taskcategories_object(WebDriver RC) {
-//		driver = RC;
-//		PageFactory.initElements(RC, this);
-//	}
-//
-//	@FindBy(xpath = "//div[normalize-space()='Settings']")
-//	public WebElement Settingssidemenu;
-//
-//	@FindBy(xpath = "//a[normalize-space()='Task Categories']")
-//	public WebElement Taskcategoriesselect;
-//
-//	@FindBy(xpath = "//div[contains(text(),'Add')]")
-//	public WebElement Taskcategoriesadd;
-//
-//	@FindBy(xpath = "//div[@class='ng-select-container ng-has-value']//span[@class='ng-arrow-wrapper']")
-//	public WebElement choosedeptdrpdwn;
-//
-//	@FindBy(xpath = "//span[normalize-space()='Department 1']")
-//	public WebElement deptselect;
-//
-//	@FindBy(xpath = "//input[@id='categoryName']")
-//	public WebElement Taskcategoryname;
-//
-//	@FindBy(xpath = "//textarea[@id='categoryDesc']")
-//	public WebElement Taskcategorydescription;
-//
-//	@FindBy(xpath = "//button[normalize-space()='Save']")
-//	public WebElement Taskcategorysavebtn;
-//
-//	public void user_check_Taskcategory_page(String str1, String str2) throws InterruptedException {
-//		Clickelement(Settingssidemenu);
-//		Thread.sleep(3000);
-//
-//		Clickelement(Taskcategoriesselect);
-//		Thread.sleep(3000);
-//
-//		Clickelement(Taskcategoriesadd);
-//		Thread.sleep(3000);
-//
-//		Clickelement(choosedeptdrpdwn);
-//		Thread.sleep(3000);
-//
-//		Clickelement(deptselect);
-//		Thread.sleep(3000);
-//
-//		sendkeyweb(Taskcategoryname, str1);
-//		Thread.sleep(3000);
-//
-//
-//		sendkeyweb(Taskcategorydescription, str2);
-//		Thread.sleep(3000);
-//
-//		Clickelement(Taskcategorysavebtn);
-//		Thread.sleep(3000);
-//	}
-//
-//	@FindBy(xpath = "//input[@placeholder='Search']")
-//	public WebElement Taskcategorysearch;
-//
-//	@FindBy(xpath = "//button[@id='trashIcon']//*[name()='svg']")
-//	public WebElement Taskcategoriesdelete;
-//
-//	public void user_delete_Taskcategory_page(String str) throws InterruptedException {
-//
-//		sendkeyweb(Taskcategorysearch, str);
-//		Thread.sleep(3000);
-//
-//		Clickelement(Taskcategoriesdelete);
-//		Thread.sleep(3000);
-//
-//		driver.switchTo().alert().dismiss();
-//	}
-//}
-
 package Objectclasses;
 
 import java.util.ArrayList;
@@ -182,7 +95,7 @@ public class Taskcategories_object extends Baseclass {
 	public WebElement Task_cancel;
 
 
-	public void add_the_category(String CN) throws InterruptedException {
+	public void add_the_category(String CN, String Dept) throws InterruptedException {
 
 		driver.navigate().refresh();
 		Clickelement(Add);
@@ -190,7 +103,9 @@ public class Taskcategories_object extends Baseclass {
 		validatetext(Task_Dept, "Choose Department");
 		Clickelement(Clear);
 		Clickelement(Task_drop);	
-		Clickelement(driver.findElement(By.xpath("//span[normalize-space()='Information Technology']")));
+//		Clickelement(driver.findElement(By.xpath("//span[normalize-space()='Information Technology']")));
+		WebElement bg=driver.findElement(By.xpath("//span[normalize-space()='"+Dept+"']"));
+		Clickelement(bg);
 		validatetext(TaskCat_name, "Task Category Name");
 		validateattribute(TaskCat_name_in, "placeholder", "Category Title");
 		sendkeyweb(TaskCat_name_in, CN);
@@ -215,15 +130,15 @@ public class Taskcategories_object extends Baseclass {
 	@FindBy(xpath = "//button[@id='trashIcon']//*[name()='svg']")
 	public WebElement Deleteicon;
 
-	public void validate_the_added_task_category(String CN) throws InterruptedException {
+	public void validate_the_added_task_category(String CN, String Dept, String CB) throws InterruptedException {
 		sendkeyweb(Search, CN);
 		dispalyedattribute(Table_data.get(1), "ID");
 		Thread.sleep(3000);
 		validatetext(Table_data.get(2), CN);
 		validatetext(Table_data.get(3), CN + " Task");
-		validatetext(Table_data.get(4), "Information Technology");
+		validatetext(Table_data.get(4), Dept);
 
-		validatetext(Table_data.get(5), "UMS TEST");
+		validatetext(Table_data.get(5), CB);
 		//		validatetext(Table_data.get(5), "May 20, 2024, 4:14 PM");
 		dispalyedattribute(Editicon, "Edit icon");
 		dispalyedattribute(Deleteicon, "Delete icon");
@@ -232,12 +147,14 @@ public class Taskcategories_object extends Baseclass {
 
 
 
-	public void update_the_category(String CN) throws InterruptedException {
+	public void update_the_category(String CN, String Dept) throws InterruptedException {
 		sendkeyweb(Search, CN);
 		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + CN + "']/following-sibling::td//button[@id='editIcon']")));
 		Clickelement(Clear);
 		Clickelement(Task_drop);
-		Clickelement(driver.findElement(By.xpath("//span[normalize-space()='Information Technology']")));
+//		Clickelement(driver.findElement(By.xpath("//span[normalize-space()='Information Technology']")));
+		WebElement bg=driver.findElement(By.xpath("//span[normalize-space()='"+Dept+"']"));
+		Clickelement(bg);
 		validatetext(TaskCat_name, "Task Category Name");
 		validateattribute(TaskCat_name_in, "placeholder", "Category Title");
 		sendkeyweb(TaskCat_name_in, CN);
@@ -251,17 +168,17 @@ public class Taskcategories_object extends Baseclass {
 	}
 
 
-	public void validate_the_updated_task_category(String CN) throws InterruptedException {
+	public void validate_the_updated_task_category(String CN, String Dept, String CB) throws InterruptedException {
 		sendkeyweb(Search, CN);
 		dispalyedattribute(Table_data.get(1), "ID");
 		validatetext(Table_data.get(2), CN);
 		validatetext(Table_data.get(3), CN + " Task");
-		validatetext(Table_data.get(4), "Information Technology");
+		validatetext(Table_data.get(4), Dept);
 
-		validatetext(Table_data.get(5), "UMS TEST");
+		validatetext(Table_data.get(5), CB);
 		//		validatetext(Table_data.get(5), "May 20, 2024, 4:14 PM");
 		validatetext(Table_data.get(6), " ");
-		validatetext(Table_data.get(7), "UMS TEST");
+		validatetext(Table_data.get(7), CB);
 
 		validatetext(Table_data.get(8), " ");
 

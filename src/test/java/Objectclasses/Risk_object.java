@@ -198,7 +198,7 @@ public class Risk_object extends Baseclass {
 		sendkeyweb(Riskdescription, RD);
 
 		Clickelement(Riskcreatebtn);
-		
+
 		popupvalidate("Risk Created Successfully", RT);
 
 
@@ -212,7 +212,7 @@ public class Risk_object extends Baseclass {
 	public WebElement Delete_icon;
 
 	public void Validate_the_addedRisk(String RT) throws InterruptedException  {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		//		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		driver.navigate().refresh();
 		sendkeyweb(Risksearch,RT);
 
@@ -250,13 +250,13 @@ public class Risk_object extends Baseclass {
 	@FindBy(xpath = "//ng-select[@id='updateRiskOwner']//span[@class='ng-arrow-wrapper']")
 	public WebElement Updateriskassidedtodrpdwn;
 
-	@FindBy(xpath = "//span[contains(text(),'UMS TEST')]")
+	@FindBy(xpath = "//span[contains(text(),'Praveen Reddy')]")
 	public WebElement Updateriskassidedtoselect;
 
 	@FindBy(xpath = "//ng-select[@id='updateriskCategory']//span[@class='ng-arrow-wrapper']")
 	public WebElement Updateriskcategorydrpdwn;
 
-	@FindBy(xpath = "//span[normalize-space()='Financial Risk']")
+	@FindBy(xpath = "//span[normalize-space()='Testing")
 	public WebElement Updateriskcategoryselect;
 
 	@FindBy(xpath = "//input[@id='targetCompletionDate']")
@@ -273,6 +273,8 @@ public class Risk_object extends Baseclass {
 
 
 	public void user_update_risk_page(String RT, String RD) throws InterruptedException {
+		driver.navigate().refresh();
+
 
 		sendkeyweb(Risksearch, RT);
 
@@ -285,9 +287,9 @@ public class Risk_object extends Baseclass {
 
 		Clickelement(Updateriskassidedtoselect);
 
-		Clickelement(Updateriskcategorydrpdwn);
+		//		Clickelement(Updateriskcategorydrpdwn);
 
-		Clickelement(Updateriskcategoryselect);
+		//		Clickelement(Updateriskcategoryselect);
 
 		sendkeyweb(Risktargetdate, da.Datefun(0,2,0) );
 
@@ -301,10 +303,9 @@ public class Risk_object extends Baseclass {
 
 	public void user_validate_the_updated_risk_in_Risks_page(String RT, String RD) throws InterruptedException {
 
-		sendkeyweb(Risksearch, RT);
 
 
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		//		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		driver.navigate().refresh();
 		sendkeyweb(Risksearch,RT);
 
@@ -325,7 +326,7 @@ public class Risk_object extends Baseclass {
 		//		}
 
 		String RID = driver.findElement(By.xpath("(//td[normalize-space()='"+RT+"']/preceding-sibling::td)[2]")).getText();
-		String[] S = {"UMS TEST","","","Likely","Minor","Open","Very High","NA"};
+		String[] S = {"Praveen Reddy","","","Likely","Minor","Open","Very High","NA"};
 
 
 		List<WebElement> valid=driver.findElements(By.xpath("//td[normalize-space()='" + RT + "']/following-sibling::td"));
@@ -352,6 +353,7 @@ public class Risk_object extends Baseclass {
 
 
 	public void user_delete_risk_page(String RT) throws InterruptedException {
+		driver.navigate().refresh();
 		sendkeyweb(Risksearch, RT);
 
 
@@ -365,18 +367,18 @@ public class Risk_object extends Baseclass {
 			System.out.println("No alert present.");
 		}
 
-		//		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + RT + "']/following-sibling::td//button[@id='trashIcon']")));
-		//		Thread.sleep(3000);
-		//
-		//
-		//
-		//		try {
-		//			Alert alert = driver.switchTo().alert();
-		//			System.out.println("Alert detected: " + alert.getText());
-		//			alert.accept();
-		//		} catch (NoAlertPresentException e) {
-		//			System.out.println("No alert present.");
-		//		}
+		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='" + RT + "']/following-sibling::td//button[@id='trashIcon']")));
+		Thread.sleep(3000);
+
+
+
+		try {
+			Alert alert = driver.switchTo().alert();
+			System.out.println("Alert detected: " + alert.getText());
+			alert.accept();
+		} catch (NoAlertPresentException e) {
+			System.out.println("No alert present.");
+		}
 
 	}
 	@FindBy(xpath = "//h3[contains(normalize-space(),'Risk Details')]")
@@ -767,6 +769,9 @@ public class Risk_object extends Baseclass {
 	public WebElement Allrisks;
 
 	public void user_clicks_on_All_risks_dropdown() throws InterruptedException {
+		Clickelement(Risksidemenu);
+
+		
 		Clickelement(Riskdropdwnarrow);
 		Clickelement(Allrisks);
 
@@ -777,6 +782,8 @@ public class Risk_object extends Baseclass {
 	public WebElement Myrisks;
 
 	public void user_clicks_on_My_risks_dropdown() throws InterruptedException {
+		Clickelement(Risksidemenu);
+
 		Clickelement(Riskdropdwnarrow);
 		Clickelement(Myrisks);
 	}
@@ -785,6 +792,8 @@ public class Risk_object extends Baseclass {
 	public WebElement AssignedTorisks;
 
 	public void user_clicks_on_Assignedto_risks_dropdown() throws InterruptedException {
+		Clickelement(Risksidemenu);
+
 		Clickelement(Riskdropdwnarrow);
 		Clickelement(AssignedTorisks);
 	}

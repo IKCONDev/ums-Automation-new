@@ -53,18 +53,18 @@ public class Menuitems_steps {
 	public void Add_menu_items(String s1) throws InterruptedException {
 		MO.Add_menu_items(s1);
 	}
-	@Then("validate the added menu items {string}")
-	public void validate_the_added_menu_items(String s1) throws InterruptedException {
+	@Then("validate the added menu items {string} {string}")
+	public void validate_the_added_menu_items(String s1, String CB) throws InterruptedException {
 		Thread.sleep(4000);
-		MO.validate_the_added_menu_items(s1);
+		MO.validate_the_added_menu_items(s1,CB);
 	}
 	@Then("Update the menu item {string}")
 	public void Update_the_menu_item(String s1) throws InterruptedException {
 		MO.Update_the_menu_item(s1);
 	}
-	@Then("validate the updated menu items {string}")
-	public void validate_the_updated_menu_items(String s1) throws InterruptedException {
-		MO.validate_the_updated_menu_items(s1);
+	@Then("validate the updated menu items {string} {string}")
+	public void validate_the_updated_menu_items(String s1, String CB) throws InterruptedException {
+		MO.validate_the_updated_menu_items(s1,CB);
 	}
 	@Then("Delete the Menu item {string}")
 	public void Delete_the_Menu_item(String s1) throws InterruptedException {

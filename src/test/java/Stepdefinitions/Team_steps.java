@@ -22,9 +22,9 @@ public class Team_steps {
 		TO.Validate_Teams_page();
 
 	}
-	@Then("add the team {string}")
-	public void add_the_designation(String Team) throws InterruptedException {
-		TO.Add_the_Team(Team);
+	@Then("add the team {string} {string} {string} {string}")
+	public void add_the_designation(String Team, String Teamlead, String Teamhead, String Teamdept) throws InterruptedException {
+		TO.Add_the_Team(Team,Teamdept,Teamhead, Teamlead);
 	}
 	@Then("validate the added team {string}")
 	public void validate_the_added_team(String Team) throws InterruptedException {

@@ -54,18 +54,18 @@ public class designation_steps {
 	public void add_the_designation(String DSN) throws InterruptedException {
 		DO.add_the_designation(DSN);
 	}
-	@Then("validate the added designation {string}")
-	public void validate_the_added_designation(String DSN) throws InterruptedException {
-		DO.validate_the_added_designation(DSN);
+	@Then("validate the added designation {string} {string}")
+	public void validate_the_added_designation(String DSN, String CB) throws InterruptedException {
+		DO.validate_the_added_designation(DSN,CB);
 	}
 	@Then("update the designation {string}")
 	public void update_the_designation(String DSN) throws InterruptedException {
 		DO.update_the_designation(DSN);
 	}
 
-	@Then("validate the updated designation {string}")
-	public void validate_the_updated_designation(String DSN) throws InterruptedException {
-		DO.validate_the_updated_designation(DSN);
+	@Then("validate the updated designation {string} {string}")
+	public void validate_the_updated_designation(String DSN, String CB) throws InterruptedException {
+		DO.validate_the_updated_designation(DSN, CB);
 	}
 	@Then("delete the designation {string}")
 	public void delete_the_designation(String DSN) throws InterruptedException {

@@ -251,13 +251,13 @@ public class Menuitems_object extends Baseclass {
 	@FindBy(xpath="//button[@id='trashmenuIcon']//*[name()='svg']")
 	public WebElement Delete_icon;
 
-	public void validate_the_added_menu_items(String s1) throws InterruptedException {
+	public void validate_the_added_menu_items(String s1,String CB) throws InterruptedException {
 		sendkeyweb(Search, s1);
 		dispalyedattribute(Table_data.get(1), "Menu Item ID");
 		validatetext(Table_data.get(2), s1);
 		validatetext(Table_data.get(3), "/"+s1);
 		validatetext(Table_data.get(4), s1+" path");
-		validatetext(Table_data.get(5), "UMS TEST");	
+		validatetext(Table_data.get(5), CB);	
 		validatetext(Table_data.get(6), ",");
 		dispalyedattribute(Edit_icon, "Edit Icon");
 		dispalyedattribute(Delete_icon, "Delete Icon");
@@ -290,7 +290,7 @@ public class Menuitems_object extends Baseclass {
 		Clickelement(Save);
 	}
 
-	public void validate_the_updated_menu_items(String s1) throws InterruptedException {
+	public void validate_the_updated_menu_items(String s1, String CB) throws InterruptedException {
 
 		driver.navigate().refresh();
 		sendkeyweb(Search, s1);
@@ -299,9 +299,9 @@ public class Menuitems_object extends Baseclass {
 		validatetext(Table_data.get(2), s1);
 		validatetext(Table_data.get(3), "/"+s1);
 		validatetext(Table_data.get(4), s1+" path");
-		validatetext(Table_data.get(5), "UMS TEST");	
+		validatetext(Table_data.get(5), CB);	
 		validatetext(Table_data.get(6), ",");
-		validatetext(Table_data.get(7), "UMS TEST");
+		validatetext(Table_data.get(7), CB);
 		validatetext(Table_data.get(8), ",");
 		dispalyedattribute(Edit_icon, "Edit Icon");
 		dispalyedattribute(Delete_icon, "Delete Icon");

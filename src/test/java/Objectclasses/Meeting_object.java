@@ -180,7 +180,7 @@ public class Meeting_object extends Baseclass {
 	private WebElement Addbtn;
 
 
-	public void Add_Project_and_Program_Undermeeting(String MT) throws InterruptedException {
+	public void Add_Project_and_Program_Undermeeting(String MT, String PROJ, String PROG) throws InterruptedException {
 
 		driver.navigate().refresh();
 		Thread.sleep(8000);
@@ -209,15 +209,15 @@ public class Meeting_object extends Baseclass {
 		Clickelement(Projectdrpdwn);
 		Thread.sleep(3000);
 
-		Clickelement(Projectselect);
+		WebElement bg=driver.findElement(By.xpath("//span[normalize-space()='"+PROJ+"']"));
+		Clickelement(bg);
+
+
+		Clickelement(Programdrpdwn);
 		Thread.sleep(3000);
-
-
-		//		Clickelement(Programdrpdwn);
-		//		Thread.sleep(3000);
 		//
-		//		Clickelement(Programselect);
-		//		Thread.sleep(3000);
+		WebElement cg=driver.findElement(By.xpath("//span[normalize-space()='"+PROG+"']"));
+		Clickelement(cg);
 
 		Clickelement(Addbtn);
 

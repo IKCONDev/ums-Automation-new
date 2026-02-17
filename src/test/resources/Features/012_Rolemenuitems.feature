@@ -6,7 +6,9 @@ Feature: UMS
     When user is validate Login page "<Username>" "<Password>"
     Then Validate Role Menu Items
     And add the Role Menu Items "<Role>"
+    Then validate the Logout page
 
     Examples: 
-      | url                          | Username              | Password | Role    |
-      | https://129.80.90.99/#/login | umstest@ikcontech.com | Test@123 | SYNERGY |
+      | url                               | Username               | Password | Role    |
+      | https://ikn.ikcontech.com/#/login | ums-test@ikcontech.com | Test@123 | SYNERGY |
+      | https://icn.ikcontech.com/#/login | pa@ikcontech.com       | Test@123 | ENERGY  |

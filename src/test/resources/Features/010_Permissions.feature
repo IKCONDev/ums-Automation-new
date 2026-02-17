@@ -10,7 +10,9 @@ Feature: UMS
     Then Update the Permissions "<s1>"
     Then Validate the Updated permission data "<s1>"
     Then Delete the Permissions "<s1>"
+    Then validate the Logout page
 
     Examples: 
-      | url                          | Username              | Password | s1   |
-      | https://129.80.90.99/#/login | umstest@ikcontech.com | Test@123 | Tech |
+      | url                               | Username               | Password | s1         |
+      | https://ikn.ikcontech.com/#/login | ums-test@ikcontech.com | Test@123 | Technology |
+      | https://icn.ikcontech.com/#/login | pa@ikcontech.com       | Test@123 | Think      |

@@ -22,10 +22,10 @@ public class Meeting_steps {
 
 	}
 
-	@Then("user adds project and programs under meeting {string}")
-	public void Add_Project_and_Program_Undermeeting(String MT) throws Exception {
+	@Then("user adds project and programs under meeting {string} {string} {string}")
+	public void Add_Project_and_Program_Undermeeting(String MT,String PROJ,String PROG) throws Exception {
 
-		MO. Add_Project_and_Program_Undermeeting(MT);
+		MO. Add_Project_and_Program_Undermeeting(MT,PROJ,PROG);
 
 	}
 

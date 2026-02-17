@@ -19,15 +19,15 @@ public class Riskcategories_steps {
 
 	}
 
-	@Then("Add the Riskcategory {string}")
-	public void add_the_riskcategory(String s1) throws InterruptedException {
-		RO.add_the_riskcategory(s1);
+	@Then("Add the Riskcategory {string} {string}")
+	public void add_the_riskcategory(String s1, String Dept) throws InterruptedException {
+		RO.add_the_riskcategory(s1, Dept);
 
 	}
 
-	@Then("Validate the added risk category {string}")
-	public void validate_the_added_risk_category(String s1) throws InterruptedException {
-		RO.validate_the_added_risk_category(s1);
+	@Then("Validate the added risk category {string} {string} {string}")
+	public void validate_the_added_risk_category(String s1, String Dept, String CB) throws InterruptedException {
+		RO.validate_the_added_risk_category(s1, Dept, CB);
 	}
 
 	@Then("Update the risk cateory {string}")
@@ -35,9 +35,9 @@ public class Riskcategories_steps {
 		RO.update_the_risk_cateory(s1);
 	}
 
-	@Then("Validate the updated risk category {string}")
-	public void validate_the_updated_risk_category(String s1) throws InterruptedException {
-		RO.validate_the_updated_risk_category(s1);
+	@Then("Validate the updated risk category {string} {string} {string}")
+	public void validate_the_updated_risk_category(String s1, String Dept, String CB) throws InterruptedException {
+		RO.validate_the_updated_risk_category(s1, Dept, CB);
 	}
 
 	@Then("Delete the Risk categories {string}")

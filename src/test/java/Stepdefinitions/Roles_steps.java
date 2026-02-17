@@ -22,21 +22,22 @@ public class Roles_steps {
 	public void add_the_role(String RN, String PN) throws InterruptedException {
 		RO.add_the_role(RN, PN);
 	}
-	@Then("Validate the added role data {string}")
-	public void validate_the_added_role_data(String RN) throws InterruptedException {
-		RO.validate_the_added_role_data(RN);
+	@Then("Validate the added role data {string} {string}")
+	public void validate_the_added_role_data(String RN, String CB) throws InterruptedException {
+		RO.validate_the_added_role_data(RN,CB);
 	}
 	@Then("Update the role {string} {string}")
 	public void update_the_role(String RN, String PN) throws InterruptedException {
 		RO.update_the_role(RN, PN);
 	}
-	@Then("Validate the Updated role data {string}")
-	public void validate_the_updated_role_data(String RN) throws InterruptedException {
-		RO.validate_the_updated_role_data(RN);
+	@Then("Validate the Updated role data {string} {string}")
+	public void validate_the_updated_role_data(String RN, String CB) throws InterruptedException {
+		RO.validate_the_updated_role_data(RN,CB);
 	}
 	@Then("Delete the role {string}")
 	public void Delete_the_role(String RN) throws InterruptedException {
 		RO.Delete_the_role(RN);
+		
 	}
 }
 

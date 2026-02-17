@@ -240,13 +240,13 @@ public class Roles_object extends Baseclass {
 	public WebElement Edit_icon;
 	@FindBy(xpath = "//button[@id='trashIcon']//*[name()='svg']")
 	public WebElement Delete_icon;
-	public void validate_the_added_role_data(String RN) throws InterruptedException {
+	public void validate_the_added_role_data(String RN, String CB) throws InterruptedException {
 		driver.navigate().refresh();
 		sendkeyweb(Search, RN);
 		attributeselected(Table_data.get(1), "ID");
 		validatetext(Table_data.get(2), RN);
 		validatetext(Table_data.get(3), "View");
-		validatetext(Table_data.get(4), "UMS TEST");
+		validatetext(Table_data.get(4), CB);
 		//		validatetext(Table_data.get(5), "May 16, 2024, 4:38 PM");
 		attributeselected(Edit_icon, "Edit icon");
 
@@ -299,14 +299,14 @@ public class Roles_object extends Baseclass {
 	@FindBy(xpath = "//button[@id='trashIcon']//*[name()='svg']")
 	public WebElement UDelete_icon;
 
-	public void validate_the_updated_role_data(String RN) throws InterruptedException {
+	public void validate_the_updated_role_data(String RN, String CB) throws InterruptedException {
 		sendkeyweb(updateSearch, RN);
 		attributeselected(Table_data1.get(1), "ID");
 		validatetext(Table_data1.get(2), RN);
 		validatetext(Table_data1.get(3), "View");
-		validatetext(Table_data1.get(4), "UMS TEST");
+		validatetext(Table_data1.get(4), CB);
 		//		validatetext(Table_data1.get(5), "May 16, 2024, 4:38 PM");
-		validatetext(Table_data1.get(6), "UMS TEST");
+		validatetext(Table_data1.get(6), CB);
 		//		validatetext(Table_data1.get(7), "May 16, 2024, 4:38 PM");
 		attributeselected(UEdit_icon, "Edit icon");
 		attributeselected(UDelete_icon, "Delete icon");

@@ -72,8 +72,8 @@ public class Riskcategories_object extends Baseclass  {
 	@FindBy(xpath = "//div[@id='addRiskModal']//span[@class='ng-arrow-wrapper']")
 	public WebElement Choose_dept_drpdwn;
 
-	@FindBy(xpath = "//span[normalize-space()='Information Technology']")
-	public WebElement dept_select;
+//	@FindBy(xpath = "//span[normalize-space()='Information Technology']")
+//	public WebElement dept_select;
 
 	@FindBy(xpath = "//div[@id='addRiskModal']//label[contains(text(),'Risk Category Name')]")
 	public WebElement Risk_catname;
@@ -87,14 +87,17 @@ public class Riskcategories_object extends Baseclass  {
 	public WebElement Risk_catsave;
 	@FindBy(xpath = "//button[@id='closeModal']")
 	public WebElement Risk_catcancel;
-	public void add_the_riskcategory(String s1) throws InterruptedException {
+	public void add_the_riskcategory(String s1, String Dept) throws InterruptedException {
 		driver.navigate().refresh();
 		Clickelement(Add);
 		validatetext(Risk_cat, "Risk Category");
 		validatetext(Choose_dept, "Choose Department");
 		Clickelement(Choose_dept_drpdwn);
+		
+		WebElement bg=driver.findElement(By.xpath("//span[normalize-space()='"+Dept+"']"));
+		Clickelement(bg);
 
-		Clickelement(dept_select);
+//		Clickelement(dept_select);
 
 		validatetext(Risk_catname, "Risk Category Name");
 		validateattribute(Risk_catname_in, "placeholder", "Category Title");
@@ -119,13 +122,13 @@ public class Riskcategories_object extends Baseclass  {
 	public WebElement Edit_icon;
 	@FindBy(xpath = "//button[@id='trashIcon']//*[name()='svg']")
 	public WebElement Trash_icon;
-	public void validate_the_added_risk_category(String s1) throws InterruptedException {
+	public void validate_the_added_risk_category(String s1, String Dept, String CB) throws InterruptedException {
 		sendkeyweb(Search, s1);
 		dispalyedattribute(Table_data.get(1), "Risk category ID");
 		validatetext(Table_data.get(2), s1);
 		validatetext(Table_data.get(3), "Access permissions to " +s1);
-		validatetext(Table_data.get(4), "Information Technology");
-		validatetext(Table_data.get(5), "UMS TEST");
+		validatetext(Table_data.get(4), Dept);
+		validatetext(Table_data.get(5), CB);
 		validatetext(Table_data.get(6), "");
 
 		validatetext(Table_data.get(7), "Active");
@@ -142,7 +145,7 @@ public class Riskcategories_object extends Baseclass  {
 	public WebElement URisk_catname_in;
 	@FindBy(xpath = "//div[@id='addRiskModal']//label[contains(text(),'Risk Category Description')]")
 	public WebElement URisk_catdesc;
-	@FindBy(xpath = "//div[@id='addRiskModal']//textarea[@id='categoryDesc']")
+	@FindBy(xpath = "//div[@id='updateRiskModal']//textarea[@id='categoryDesc']")
 	public WebElement URisk_catdesc_in;
 	@FindBy(xpath = "//div[@id='updateRiskModal']//button[@type='submit'][normalize-space()='Save']")
 	public WebElement URisk_catsave;
@@ -157,7 +160,7 @@ public class Riskcategories_object extends Baseclass  {
 		sendkeyweb(URisk_catname_in, s1);
 		validatetext(Risk_catdesc, "Risk Category Description");
 		validateattribute(Risk_catdesc_in, "placeholder", "Category Description");
-		sendkeyweb(Risk_catdesc_in, "Access permissions to "+s1);
+		sendkeyweb(URisk_catdesc_in, "Access permissions to "+s1);
 		validatetext(URisk_catsave, "Save");
 		validatetext(URisk_catcancel, "Cancel");
 		Clickelement(URisk_catsave);
@@ -168,17 +171,17 @@ public class Riskcategories_object extends Baseclass  {
 
 	}
 
-	public void validate_the_updated_risk_category(String s1) throws InterruptedException {
+	public void validate_the_updated_risk_category(String s1, String Dept, String CB) throws InterruptedException {
 		sendkeyweb(Search, s1); 
 		dispalyedattribute(Table_data.get(1), "Risk category ID");
 		validatetext(Table_data.get(2), s1);
 		validatetext(Table_data.get(3), "Access permissions to " +s1);
-		validatetext(Table_data.get(4), "Information Technology");
-		validatetext(Table_data.get(5), "UMS TEST");
+		validatetext(Table_data.get(4), Dept);
+		validatetext(Table_data.get(5), CB);
 		validatetext(Table_data.get(6), "");
 
 		validatetext(Table_data.get(7), "Active");
-		validatetext(Table_data.get(8), "UMS TEST");
+		validatetext(Table_data.get(8), CB);
 		validatetext(Table_data.get(9), "");
 
 		dispalyedattribute(Edit_icon, "Edit Icon");

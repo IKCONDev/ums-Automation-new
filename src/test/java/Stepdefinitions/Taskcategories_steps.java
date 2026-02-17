@@ -51,26 +51,26 @@ public class Taskcategories_steps {
 		TO.validate_the_task_category_page();
 	}
 
-	@Then("add the category {string}")
-	public void add_the_category(String CN) throws InterruptedException {
-		TO.add_the_category(CN);
+	@Then("add the category {string} {string}")
+	public void add_the_category(String CN, String Dept) throws InterruptedException {
+		TO.add_the_category(CN,Dept);
 	}
 
 
-	@Then("validate the added task category {string}")
-	public void validate_the_added_task_category(String CN) throws InterruptedException {
-		TO.validate_the_added_task_category(CN);
+	@Then("validate the added task category {string} {string} {string}")
+	public void validate_the_added_task_category(String CN, String Dept, String CB) throws InterruptedException {
+		TO.validate_the_added_task_category(CN,Dept,CB);
 	}
 
-	@Then("update the category {string}")
-	public void update_the_category(String CN) throws InterruptedException {
-		TO.update_the_category(CN);	
+	@Then("update the category {string} {string}")
+	public void update_the_category(String CN, String Dept) throws InterruptedException {
+		TO.update_the_category(CN,Dept);	
 	}
 
 
-	@Then("validate the updated task category {string}")
-	public void validate_the_updated_task_category(String CN) throws InterruptedException {
-		TO.validate_the_updated_task_category(CN);
+	@Then("validate the updated task category {string} {string} {string}")
+	public void validate_the_updated_task_category(String CN, String Dept, String CB) throws InterruptedException {
+		TO.validate_the_updated_task_category(CN,Dept,CB);
 	}
 
 	@Then("Delete the category {string}")

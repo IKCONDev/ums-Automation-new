@@ -21,9 +21,9 @@ public class Internalnotes_steps {
 		IO.validate_the_Internalnotes_page();
 
 	}
-	@Then("add the Internalnotes page {string}")
-	public void add_the_Internalnotes_page(String IN) throws InterruptedException, AWTException {
-		IO.add_the_Internalnotes_page(IN);
+	@Then("add the Internalnotes page {string} {string} {string}")
+	public void add_the_Internalnotes_page(String IN, String Rwr, String Apr) throws InterruptedException, AWTException {
+		IO.add_the_Internalnotes_page(IN,Rwr,Apr);
 
 
 	}

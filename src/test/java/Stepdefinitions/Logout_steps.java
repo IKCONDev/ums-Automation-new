@@ -16,6 +16,7 @@ public class Logout_steps {
 	@Then("validate the Logout page")
 	public void validate_the_Logout_page() throws InterruptedException {
 		LO.user_validating_logout_page();
+		
 	}
 
 }

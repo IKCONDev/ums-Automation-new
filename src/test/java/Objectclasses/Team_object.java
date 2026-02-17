@@ -1,120 +1,3 @@
-//package Objectclasses;
-//
-//import org.openqa.selenium.WebDriver;
-//import org.openqa.selenium.WebElement;
-//import org.openqa.selenium.support.FindBy;
-//import org.openqa.selenium.support.PageFactory;
-//
-//import Drivemanager.Driver;
-//import hooks.Baseclass;
-//
-//
-//public class Team_object extends Baseclass {
-//	WebDriver driver = Driver.getDriver();
-//	public Team_object(WebDriver RC) {
-//		driver = RC;
-//		PageFactory.initElements(RC, this);
-//	}
-//
-//
-//	@FindBy(xpath = "//div[normalize-space()='Settings']")
-//	public WebElement Settingssidemenu;
-//	
-//	@FindBy(xpath = "//a[normalize-space()='Team']")
-//	public WebElement Teamselect;
-//
-//	@FindBy(xpath = "//div[contains(text(),'Add')]")
-//	public WebElement teamsaddbtn;
-//
-//	@FindBy(xpath = "//input[@id='teamName']")
-//	public WebElement Teamname;
-//
-//	@FindBy(xpath = "//input[@id='teamCode']")
-//	public WebElement Teamcode;
-//
-//	@FindBy(xpath = "//ng-select[@id='teamDept']//span[@class='ng-arrow-wrapper']")
-//	public WebElement choosedeptdrpdwn;
-//
-//	@FindBy(xpath = "//span[normalize-space()='Accounts & Finance']")
-//	public WebElement choosedeptselect;
-//
-//	@FindBy(xpath = "//ng-select[@id='teamLead']//span[@class='ng-arrow-wrapper']")
-//	public WebElement teamleaddrpdwn;
-//
-//	@FindBy(xpath = "//span[normalize-space()='Mounika Errolla']")
-//	public WebElement teamleadselect;
-//
-//	@FindBy(xpath = "//ng-select[@id='teamHead']//span[@class='ng-arrow-wrapper']")
-//	public WebElement teamheaddrpdwn;
-//
-//	@FindBy(xpath = "//span[normalize-space()='Ramasamy Durai']")
-//	public WebElement teamheadselect;
-//
-//	@FindBy(xpath = "//button[@id='saveButton']")
-//	public WebElement teamsavebtn;
-//
-//
-//	public void user_check_Team_page(String str1, String str2) throws InterruptedException {
-//		Clickelement(Settingssidemenu);
-//		Thread.sleep(3000);
-//		
-//		Clickelement(Teamselect);
-//		Thread.sleep(3000);
-//
-//		
-//		Clickelement(teamsaddbtn);
-//		Thread.sleep(3000);
-//
-//		sendkeyweb(Teamname, str1);
-//		Thread.sleep(3000);
-//
-//		sendkeyweb(Teamcode, str2);
-//		Thread.sleep(3000);
-//		
-//		Clickelement(choosedeptdrpdwn);
-//		Thread.sleep(3000);
-//
-//		Clickelement(choosedeptselect);
-//		Thread.sleep(3000);
-//		
-//		Clickelement(teamleaddrpdwn);
-//		Thread.sleep(3000);
-//		
-//		Clickelement(teamleadselect);
-//		Thread.sleep(3000);
-//		
-//		Clickelement(teamheaddrpdwn);
-//		Thread.sleep(3000);
-//
-//		Clickelement(teamheadselect);
-//		Thread.sleep(3000);
-//		
-//		Clickelement(teamsavebtn);
-//		Thread.sleep(3000);
-//	}
-//	@FindBy(xpath = "//input[@placeholder='Search']")
-//	public WebElement Teamssearch;
-//	
-//	@FindBy(xpath = "//button[@id='trashIcon']//*[name()='svg']")
-//	public WebElement Teamdeletebtn;
-//	
-//	
-//	public void user_delete_Team_page(String str) throws InterruptedException {
-//		
-//		Thread.sleep(3000);
-//		
-//		sendkeyweb(Teamssearch, str);
-//		
-//		Thread.sleep(3000);
-//
-//		Clickelement(Teamdeletebtn);
-//		Thread.sleep(3000);
-//		
-//		driver.switchTo().alert().dismiss();
-//		
-//}
-//}
-
 package Objectclasses;
 
 import java.util.ArrayList;
@@ -219,12 +102,12 @@ public class Team_object extends Baseclass {
 	@FindBy(xpath = "//ng-select[@id='teamHead']//input[@type='text']")
 	public WebElement Team_head;
 
-	@FindBy(xpath = "//button[@id='saveButton']")
+	@FindBy(xpath = "//div[@id='addModal']//button[@id='saveButton']")
 	public WebElement Save_button;
 	@FindBy(xpath = "//button[@id='closeModal']")
 	public WebElement cancel_button;
 
-	public void Add_the_Team(String Team) throws InterruptedException {
+	public void Add_the_Team(String Team, String Teamdept, String Teamlead, String Teamhead) throws InterruptedException {
 		Clickelement(Team_addbtn);
 		//		driver.findElement(By.xpath("//h5[@id='xlModalLabel']")).getText();
 		//		String[] s= {"Team Name","Team Code","Choose Department","Team Lead","Team Head"};
@@ -244,21 +127,27 @@ public class Team_object extends Baseclass {
 
 		Clickelement(Team_dept);
 
-		Clickelement(driver.findElement(By.xpath("//span[normalize-space()='Information Technology']")));
+		WebElement cg=driver.findElement(By.xpath("//span[normalize-space()='"+Teamdept+"']"));
+		Clickelement(cg);		
+		
 		validatetext(teamleadtitle, "Team Lead*");
 
 		Clickelement(Team_lead);
 
-		Clickelement(driver.findElement(By.xpath("//span[contains(text(),'Kethu Vinod')]")));
+		WebElement dg=driver.findElement(By.xpath("//span[normalize-space()='"+Teamlead+"']"));
+		Clickelement(dg);
+		
 		validatetext(teamheadtitle, "Team Head*");
 
 		Clickelement(Team_head);
 
-		Clickelement(driver.findElement(By.xpath("//span[contains(text(),'Venkatesh Udaru')]")));
-
+		WebElement pg=driver.findElement(By.xpath("//span[normalize-space()='"+Teamhead+"']"));
+		Clickelement(pg);
+		
 		validatetext(Save_button, "Save");
 		validatetext(cancel_button, "Cancel");
 		Clickelement(Save_button);
+		popupvalidate("Team Created Successfully", Team);
 	}
 
 	//	

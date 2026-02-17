@@ -6,11 +6,13 @@ Feature: UMS
     When user is validate Login page "<Username>" "<Password>"
     Then validate the roles page
     Then add the role "<RN>" "<PN>"
-    Then Validate the added role data "<RN>"
+    Then Validate the added role data "<RN>" "<CB>"
     Then Update the role "<RN>" "<PN>"
-    Then Validate the Updated role data "<RN>"
+    Then Validate the Updated role data "<RN>" "<CB>"
     Then Delete the role "<RN>"
+    Then validate the Logout page
 
     Examples: 
-      | url                          | Username              | Password | RN      | PN   |
-      | https://129.80.90.99/#/login | umstest@ikcontech.com | Test@123 | SYNERGY | View |
+      | url                               | Username               | Password | RN      | PN   | CB          |
+      | https://ikn.ikcontech.com/#/login | ums-test@ikcontech.com | Test@123 | SYNERGY | View | UMS TEST    |
+      | https://icn.ikcontech.com/#/login | pa@ikcontech.com       | Test@123 | ENERGY  | View | Pascal paul |

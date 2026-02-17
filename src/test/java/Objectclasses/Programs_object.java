@@ -81,8 +81,8 @@ public class Programs_object extends Baseclass {
 	@FindBy(xpath="(//span[@class='ng-arrow-wrapper'])[1]")
 	public WebElement Programownerdrpdwn;
 
-	@FindBy(xpath="//span[normalize-space()='Praveen Reddy']")
-	public WebElement Programownerselect;
+	//	@FindBy(xpath="//span[normalize-space()='Praveen Reddy']")
+	//	public WebElement Programownerselect;
 
 
 	@FindBy(xpath="(//label[contains(text(),'Start Date & Time')])[1]")
@@ -110,7 +110,7 @@ public class Programs_object extends Baseclass {
 	@FindBy(xpath="(//button[@type='button'][normalize-space()='Cancel'])[1]")
 	public WebElement Cancelbtn;
 
-	public void AddPrograms_in_programs_page(String PN, String PC, String PD) throws InterruptedException {
+	public void AddPrograms_in_programs_page(String PN, String PC, String PD, String PROGOWNR) throws InterruptedException {
 		Clickelement(Addbtn);
 		validatetext(Headertext,"Program");
 		validatetext(Programnametxt,"Program Name");
@@ -126,7 +126,10 @@ public class Programs_object extends Baseclass {
 		//		WebElement menu = driver.findElement(By.xpath("//span[contains(text(),'Ananth raj')]"));
 		//		actions.moveToElement(menu).perform();
 
-		Clickelement(Programownerselect);
+		WebElement bg=driver.findElement(By.xpath("//span[normalize-space()='"+PROGOWNR+"']"));
+		Clickelement(bg);
+
+		//		Clickelement(Programownerselect);
 
 		validatetext(Programstartdatetxt,"Start Date & Time");
 
@@ -154,19 +157,19 @@ public class Programs_object extends Baseclass {
 	@FindBy(xpath = "//button[@id='trashIcon']//*[name()='svg']")
 	public WebElement Delete_icon;
 
-	public void Validate_the_AddedPrograms_in_programs_page(String PN, String PC, String PD) throws InterruptedException {
+	public void Validate_the_AddedPrograms_in_programs_page(String PN, String PC, String PD, String PROGOWNR, String CB) throws InterruptedException {
 		driver.navigate().refresh();
 
 		sendkeyweb(Search, PN);
 		attributeselected(Table_data.get(1), "ID");
 		validatetext(Table_data.get(2), PN);
-		validatetext(Table_data.get(3), "Praveen Reddy");
+		validatetext(Table_data.get(3), PROGOWNR);
 		validatetext(Table_data.get(4), PC);
 		validatetext(Table_data.get(5), PD);
 		validatetext(Table_data.get(6), "");
 		validatetext(Table_data.get(7), "");
 		validatetext(Table_data.get(8), "Active");
-		validatetext(Table_data.get(9), "UMS TEST");
+		validatetext(Table_data.get(9), CB);
 		validatetext(Table_data.get(10), "");
 		validatetext(Table_data.get(11), "");
 		validatetext(Table_data.get(12), "");
@@ -189,8 +192,8 @@ public class Programs_object extends Baseclass {
 	@FindBy(xpath = "(//span[@class='ng-arrow-wrapper'])[2]")
 	public WebElement progrmownerdrpdwn;
 
-	@FindBy(xpath = "//span[normalize-space()='Praveen Reddy']")
-	public WebElement progrmownerselect;
+	//	@FindBy(xpath = "//span[normalize-space()='Praveen Reddy']")
+	//	public WebElement progrmownerselect;
 
 	@FindBy(xpath = "(//input[@id='programStartDate'])[2]")
 	public WebElement updatestartdateandtime;
@@ -210,7 +213,7 @@ public class Programs_object extends Baseclass {
 	@FindBy(xpath = "(//button[@type='submit'][normalize-space()='Save'])[2]")
 	public WebElement Updatesavebtn;
 
-	public void Update_the_Programs_in_programs_page(String PN, String PC, String PD) throws InterruptedException {
+	public void Update_the_Programs_in_programs_page(String PN, String PC, String PD, String PROGOWNR) throws InterruptedException {
 		driver.navigate().refresh();
 		sendkeyweb(Search, PN);
 
@@ -224,7 +227,9 @@ public class Programs_object extends Baseclass {
 
 		Clickelement(progrmownerdrpdwn);
 
-		Clickelement(progrmownerselect);
+		//		Clickelement(progrmownerselect);
+		WebElement dg=driver.findElement(By.xpath("//span[normalize-space()='"+PROGOWNR+"']"));
+		Clickelement(dg);
 
 
 		sendkeyweb(updatestartdateandtime, D.Datefun(0, 1, 0));
@@ -241,22 +246,22 @@ public class Programs_object extends Baseclass {
 
 
 
-	public void Validate_the_Updated_Program_in_programs_page(String PN, String PC, String PD) throws InterruptedException {
+	public void Validate_the_Updated_Program_in_programs_page(String PN, String PC, String PD, String PROGOWNR, String CB) throws InterruptedException {
 
 		driver.navigate().refresh();
 
 		sendkeyweb(Search, PN);
 		attributeselected(Table_data.get(1), "ID");
 		validatetext(Table_data.get(2), PN);
-		validatetext(Table_data.get(3), "Praveen Reddy");
+		validatetext(Table_data.get(3), PROGOWNR);
 		validatetext(Table_data.get(4), PC);
 		validatetext(Table_data.get(5), PD);
 		validatetext(Table_data.get(6), "");
 		validatetext(Table_data.get(7), "");
 		validatetext(Table_data.get(8), "Completed");
-		validatetext(Table_data.get(9), "UMS TEST");
+		validatetext(Table_data.get(9), CB);
 		validatetext(Table_data.get(10), "");
-		validatetext(Table_data.get(11), "UMS TEST");
+		validatetext(Table_data.get(11), CB);
 		validatetext(Table_data.get(12), "");
 	}
 

@@ -56,18 +56,18 @@ public class Departments_steps {
 	public void add_the_department(String DN, String FN, String DC, String DL) throws InterruptedException {
 		DO.add_the_department(DN, FN, DC, DL);
 	}
-	@Then("validate the added department  {string} {string} {string} {string}")
-	public void validate_the_added_department(String DN, String FN, String DC, String DL) throws InterruptedException {
-		DO.validate_the_added_department(DN, FN, DC, DL);
+	@Then("validate the added department  {string} {string} {string} {string} {string}")
+	public void validate_the_added_department(String DN, String FN, String DC, String DL, String CB) throws InterruptedException {
+		DO.validate_the_added_department(DN, FN, DC, DL, CB);
 	}
 
 	@Then("update the department {string} {string} {string} {string}")
 	public void update_the_department(String DN, String FN, String DC, String DL) throws InterruptedException {
 		DO.update_the_department(DN, FN, DC, DL);
 	}
-	@Then("validate the updated department  {string} {string} {string} {string}")
-	public void validate_the_updated_department(String DN, String FN, String DC, String DL) throws InterruptedException {
-		DO.validate_the_updated_department(DN, FN, DC, DL);
+	@Then("validate the updated department  {string} {string} {string} {string} {string}")
+	public void validate_the_updated_department(String DN, String FN, String DC, String DL, String CB) throws InterruptedException {
+		DO.validate_the_updated_department(DN, FN, DC, DL, CB);
 	}
 
 	@Then("delete the department {string}")
