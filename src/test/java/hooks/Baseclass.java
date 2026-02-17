@@ -43,7 +43,7 @@ public class Baseclass {
 
 	        this.wait = new FluentWait<>(driver)
 	                .withTimeout(Duration.ofSeconds(60))
-	                .pollingEvery(Duration.ofSeconds(2))
+	                .pollingEvery(Duration.ofSeconds(5))
 	                .ignoring(NoSuchElementException.class);
 	    }
 //	WebDriver driver = Driver.getDriver();
@@ -189,6 +189,7 @@ public class Baseclass {
 	// validatetext
 	public void validatetext(WebElement element, String expectedText) {
 		try {
+			wait.until(ExpectedConditions.visibilityOf(element));
 			// Check if element is displayed and text matches
 			if (element != null && element.isDisplayed()) {
 				String actualText = element.getText();

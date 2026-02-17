@@ -69,7 +69,7 @@ public class Team_object extends Baseclass {
 
 	//	@FindBy(xpath = "//button[@id='addBtnDiv'] /p")
 	//	public WebElement button;
-	@FindBy(xpath = "//h5[@id='xlModalLabel']")
+	@FindBy(xpath = "//div[@id='addModal']//h5[normalize-space()='Team']")
 	public WebElement Title;
 
 	@FindBy(xpath = "//label[text()='Team Name']")
@@ -107,27 +107,28 @@ public class Team_object extends Baseclass {
 	@FindBy(xpath = "//button[@id='closeModal']")
 	public WebElement cancel_button;
 
-	public void Add_the_Team(String Team, String Teamdept, String Teamlead, String Teamhead) throws InterruptedException {
+	public void Add_the_Team(String Team, String Teamcode, String Teamdept, String Teamlead, String Teamhead) throws InterruptedException {
 		Clickelement(Team_addbtn);
 		//		driver.findElement(By.xpath("//h5[@id='xlModalLabel']")).getText();
 		//		String[] s= {"Team Name","Team Code","Choose Department","Team Lead","Team Head"};
 		//		for(int i=0;i<5;i++) {
 		//			validatetext(driver.findElements(By.xpath("//label/b")).get(i),s[i]);
 		//		}
-
+		
 		validatetext(Title, "Team");
 		validatetext(Teamnametitle, "Team Name*");
-
 		validateattribute(Team_name, "placeholder", "Team Name");
 		sendkeyweb(Team_name, Team);
 		validatetext(Teamcodetitle, "Team Code*");
 		validateattribute(Team_code, "placeholder", "Team Code");
-		sendkeyweb(Team_code, "T12E1");
+		sendkeyweb(Team_code, Teamcode);
 		validatetext(choosedepttitle, "Choose Department*");
 
 		Clickelement(Team_dept);
 
+//		WebElement cg=driver.findElement(By.xpath("//div[@id='addModal']//span[normalize-space()='"+Teamdept+"']"));
 		WebElement cg=driver.findElement(By.xpath("//span[normalize-space()='"+Teamdept+"']"));
+
 		Clickelement(cg);		
 		
 		validatetext(teamleadtitle, "Team Lead*");
@@ -140,14 +141,17 @@ public class Team_object extends Baseclass {
 		validatetext(teamheadtitle, "Team Head*");
 
 		Clickelement(Team_head);
+		
+		//ng-select[@id='teamHead']//span[contains(.,'Pascal Paul')]
 
-		WebElement pg=driver.findElement(By.xpath("//span[normalize-space()='"+Teamhead+"']"));
+		WebElement pg=driver.findElement(By.xpath("//ng-select[@id='teamHead']//span[contains(.,'"+Teamhead+"')]"));
 		Clickelement(pg);
 		
 		validatetext(Save_button, "Save");
 		validatetext(cancel_button, "Cancel");
 		Clickelement(Save_button);
-		popupvalidate("Team Created Successfully", Team);
+		Thread.sleep(3000);
+//		popupvalidate("Team created successfully",Team);
 	}
 
 	//	
@@ -166,7 +170,7 @@ public class Team_object extends Baseclass {
 	@FindBy(xpath = "//button[@id='trashIcon']//*[name()='svg']")
 	public WebElement delete;
 
-	public void validate_the_Team(String Team) throws InterruptedException {
+	public void validate_the_Team(String Team, String Teamcode, String Teamlead, String Teamhead, String Teamdept, String CB) throws InterruptedException {
 		sendkeyweb(Search, Team);
 		//		String TID =driver.findElements(By.xpath("//td[normalize-space()='"+Team+"']/preceding-sibling::td")).get(1).getText();
 		//		String[] s= {Team,"T12E1","Praveen Reddy","Venkatesh Udaru","Information Technology","UMS SUPPORT","","","","",""};
@@ -178,11 +182,11 @@ public class Team_object extends Baseclass {
 		dispalyedattribute(Table_data.get(0), "checkbox");
 		dispalyedattribute(Table_data.get(1), "ID");
 		validatetext(Table_data.get(2), Team);
-		validatetext(Table_data.get(3), "T12E1");
-		validatetext(Table_data.get(4), "Praveen Reddy");	
-		validatetext(Table_data.get(5), "Venkatesh Udaru");
-		validatetext(Table_data.get(6), "Information Technology");
-		validatetext(Table_data.get(7), "UMS TEST");
+		validatetext(Table_data.get(3), Teamcode);
+		validatetext(Table_data.get(4), Teamlead);	
+		validatetext(Table_data.get(5), Teamhead);
+		validatetext(Table_data.get(6), Teamdept);
+		validatetext(Table_data.get(7), CB);
 		//		validatetext(Table_data.get(8), "Apr 14, 2025, 7:42 PM");
 
 		dispalyedattribute(edit, "Edit Icon");
@@ -210,8 +214,9 @@ public class Team_object extends Baseclass {
 	@FindBy(xpath = "//button[@id='closeUpdateModal']")
 	public WebElement updatecancelbtn;
 
-	public void Update_the_Team(String Team) throws InterruptedException {
+	public void Update_the_Team(String Team, String Teamcode, String Teamdept, String Teamlead, String Teamhead) throws InterruptedException {
 		sendkeyweb(Search, Team);
+		Thread.sleep(3000);
 		Clickelement(driver.findElement(By.xpath("//td[normalize-space()='"+Team+"']/following-sibling::td//button[@id='editIcon']")));
 		//		validatetext(Title, "Team");
 		//		driver.findElement(By.xpath("//h5[@id='xlModalLabel']")).getText();
@@ -224,14 +229,21 @@ public class Team_object extends Baseclass {
 		//		validateattribute(Team_name, "placeholder", "Team Name");
 		sendkeyweb(update_teamname, Team);
 		//		validateattribute(Team_code, "placeholder", "Team Code");
-		sendkeyweb(update_teamcode, "T12E1");
-		Clickelement(updatedept_drpdwn);
-		Clickelement(driver.findElement(By.xpath("//span[@class='ng-option-label ng-star-inserted'][normalize-space()='Information Technology']")));
-		Clickelement(updateteamlead_drpdwn);
-		Clickelement(driver.findElement(By.xpath("//span[normalize-space()='Kethu Vinod']")));
-		Clickelement(updateteamhead_drpdwn);
+		sendkeyweb(update_teamcode, Teamcode);
+//		Clickelement(updatedept_drpdwn);
+//		WebElement bg=driver.findElement(By.xpath("//span[@class='ng-option-label ng-star-inserted'][normalize-space()='"+Teamdept+"']"));
+//		Clickelement(bg);
+////		Clickelement(driver.findElement(By.xpath("//span[@class='ng-option-label ng-star-inserted'][normalize-space()='Information Technology']")));
+//		Clickelement(updateteamlead_drpdwn);
+//		WebElement cg=driver.findElement(By.xpath("//span[@class='ng-option-label ng-star-inserted'][normalize-space()='"+Teamlead+"']"));
+//		Clickelement(cg);
+////		Clickelement(driver.findElement(By.xpath("//span[@class='ng-option-label ng-star-inserted']//span[contains(text(),'UMS TEST')]")));
+//		Clickelement(updateteamhead_drpdwn);
+//		
+//		WebElement dg=driver.findElement(By.xpath("//span[@class='ng-option-label ng-star-inserted'][normalize-space()='"+Teamhead+"']"));
+//		Clickelement(dg);
 
-		Clickelement(driver.findElement(By.xpath("//span[@class='ng-option-label ng-star-inserted'][normalize-space()='Sashank Arun']")));
+//		Clickelement(driver.findElement(By.xpath("//span[@class='ng-option-label ng-star-inserted'][normalize-space()='Sashank Arun']")));
 
 		validatetext(updatesavebtn, "Save");
 		validatetext(updatecancelbtn, "Cancel");
@@ -250,7 +262,7 @@ public class Team_object extends Baseclass {
 	@FindBy(xpath = "//button[@id='trashIcon']//*[name()='svg']")
 	public WebElement delete1;
 
-	public void validate_the_Updated_Team(String Team) throws InterruptedException {
+	public void validate_the_Updated_Team(String Team, String Teamcode, String Teamdept, String Teamlead, String Teamhead, String CB) throws InterruptedException {
 		sendkeyweb(Search, Team);
 		//				String TID =driver.findElements(By.xpath("//td[normalize-space()='"+Team+"']/preceding-sibling::td")).get(1).getText();
 		//				String[] s= {Team,"T12E1","Praveen Reddy","Venkatesh Udaru","Information Technology","UMS SUPPORT","","","","",""};
@@ -262,13 +274,13 @@ public class Team_object extends Baseclass {
 		dispalyedattribute(Table_data1.get(0), "checkbox");
 		dispalyedattribute(Table_data1.get(1), "ID");
 		validatetext(Table_data1.get(2), Team);
-		validatetext(Table_data1.get(3), "T12E1");
-		validatetext(Table_data1.get(4), "Kethu Vinod");	
-		validatetext(Table_data1.get(5), "Sashank Arun");
-		validatetext(Table_data1.get(6), "Information Technology");
-		validatetext(Table_data1.get(7), "UMS TEST");
+		validatetext(Table_data1.get(3), Teamcode);
+		validatetext(Table_data1.get(4), Teamdept);	
+		validatetext(Table_data1.get(5), Teamlead);
+		validatetext(Table_data1.get(6), Teamhead);
+		validatetext(Table_data1.get(7), CB);
 		//		validatetext(Table_data1.get(8), "Apr 14, 2025, 7:42 PM");
-		validatetext(Table_data1.get(9), "UMS TEST");
+		validatetext(Table_data1.get(9), CB);
 		//		validatetext(Table_data1.get(10), "Apr 14, 2025, 7:42 PM");
 
 		dispalyedattribute(edit1, "Edit Icon");

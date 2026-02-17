@@ -22,22 +22,22 @@ public class Team_steps {
 		TO.Validate_Teams_page();
 
 	}
-	@Then("add the team {string} {string} {string} {string}")
-	public void add_the_designation(String Team, String Teamlead, String Teamhead, String Teamdept) throws InterruptedException {
-		TO.Add_the_Team(Team,Teamdept,Teamhead, Teamlead);
+	@Then("add the team {string} {string} {string} {string} {string}")
+	public void add_the_designation(String Team, String Teamcode,String Teamdept, String Teamlead, String Teamhead) throws InterruptedException {
+		TO.Add_the_Team(Team,Teamcode,Teamdept,Teamlead, Teamhead);
 	}
-	@Then("validate the added team {string}")
-	public void validate_the_added_team(String Team) throws InterruptedException {
-		TO.validate_the_Team(Team);
+	@Then("validate the added team {string} {string} {string} {string} {string} {string}")
+	public void validate_the_added_team(String Team, String Teamcode, String Teamdept, String Teamlead, String Teamhead, String CB) throws InterruptedException {
+		TO.validate_the_Team(Team,Teamcode,Teamlead,Teamhead,Teamdept,CB);
 	}
-	@Then("update the team {string}")
-	public void update_the_team(String Team) throws InterruptedException {
-		TO.Update_the_Team(Team);
+	@Then("update the team {string} {string} {string} {string} {string}")
+	public void update_the_team(String Team, String Teamcode, String Teamdept, String Teamlead, String Teamhead) throws InterruptedException {
+		TO.Update_the_Team(Team,Teamcode,Teamlead,Teamhead,Teamdept);
 	}
 
-	@Then("validate the updated team {string}")
-	public void validate_the_Updated_Team(String Team) throws InterruptedException {
-		TO.Update_the_Team(Team);
+	@Then("validate the updated team {string} {string} {string} {string} {string} {string}")
+	public void validate_the_Updated_Team(String Team, String Teamcode, String Teamdept, String Teamlead, String Teamhead, String CB) throws InterruptedException {
+		TO.validate_the_Updated_Team(Team,Teamcode,Teamlead,Teamhead,Teamdept,CB);
 	}
 
 	@Then("delete the team {string}")

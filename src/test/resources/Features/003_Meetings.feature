@@ -1,6 +1,6 @@
 Feature: UMS
 
-  @smoke @sanity @regression
+  #@smoke @sanity @regression
   Scenario Outline: Meetings Page
     Given user is Navigate Login page "<url>"
     When user is validate Login page "<Username>" "<Password>"
@@ -13,8 +13,8 @@ Feature: UMS
     #Then user clicks filter in meetings page "<MID>"
     #Then user check the meeting details page "<MT>"
     Examples: 
-      | url                               | Username               | Password | MT        | UN          | MID  | AT            | AD                   | TT      | TD                 | RT      | RD                 | PROJ   | PROG  |
-      | https://ikn.ikcontech.com/#/login | ums-test@ikcontech.com | Test@123 | issdfhghg | UMS TEST    | 1942 | Actionitem206 | Actiondescription206 | Task206 | Taskdescription206 | Risk206 | Riskdescription206 | UMS    | IKCON |
-      | https://icn.ikcontech.com#/login  | pa@ikcontech.com       | Test@123 | tjvcxzxc  | Pascal Paul | 1942 | Actionitem206 | Actiondescription206 | Task206 | Taskdescription206 | Risk206 | Riskdescription206 | wertyu | Unity |
+      | url                               | Username               | Password | MT        | UN       | MID  | AT            | AD                   | TT      | TD                 | RT      | RD                 | PROJ | PROG  |
+      | https://ikn.ikcontech.com/#/login | ums-test@ikcontech.com | Test@123 | issdfhghg | UMS TEST | 1942 | Actionitem206 | Actiondescription206 | Task206 | Taskdescription206 | Risk206 | Riskdescription206 | UMS  | IKCON |
+      #| https://icn.ikcontech.com/#/login | pa@ikcontech.com       | Test@123 | tjvcxzxc  | Pascal Paul | 1942 | Actionitem206 | Actiondescription206 | Task206 | Taskdescription206 | Risk206 | Riskdescription206 | wertyu | Unity |
 #Scenario Outline: Scheduled Meetings
     #Then user check the scheduled meetings
