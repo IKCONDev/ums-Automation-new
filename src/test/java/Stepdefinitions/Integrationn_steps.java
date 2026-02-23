@@ -26,22 +26,22 @@ public class Integrationn_steps {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		IO.Configure_the_Microsoft_teams_in_tool_integration_page(MSTenantID,MSClientID,MSClientsecret);
 	}
-	
+
 	@Then("Configure the Googlemeet in tool Integration page {string} {string} {string}")
 	public void Configure_the_Google_meet_in_tool_integration_page(String GmeetClientID, String GmeetClientsecret, String GmeetRefreshtoken) throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		IO.Configure_the_Google_meet_in_tool_integration_page(GmeetClientID,GmeetClientsecret,GmeetRefreshtoken);
 	}
-	
+
 	@Then("Configure the Zoom in tool Integration page {string} {string} {string}")
 	public void Configure_the_zoom_in_tool_integration_page(String ZoomAccountID, String ZoomClientID, String ZoomClientsecret) throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		IO.Configure_the_zoom_in_tool_integration_page(ZoomAccountID,ZoomClientID,ZoomClientsecret);
 	}
-	
-	@Then("Configure the webex in tool Integration page {string} {string} {string} {string} {string}")
-	public void Configure_the_webex_in_tool_integration_page(String WebexClientID, String WebexClientSecret, String Webextoken, String WebexRefreshtoken, String webexrefreshtokenexpire) throws InterruptedException {
+
+	@Then("Configure the webex in tool Integration page {string} {string} {string} {string} {string} {string}")
+	public void Configure_the_webex_in_tool_integration_page(String WebexClientID, String WebexClientSecret, String Webextoken, String WebexExpiresin, String WebexRefreshtoken, String webexrefreshtokenexpire) throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		IO.Configure_the_webex_in_tool_integration_page(WebexClientID,WebexClientSecret,Webextoken,WebexRefreshtoken,webexrefreshtokenexpire);
+		IO.Configure_the_webex_in_tool_integration_page(WebexClientID,WebexClientSecret,Webextoken,WebexExpiresin,WebexRefreshtoken,webexrefreshtokenexpire);
 	}
 }

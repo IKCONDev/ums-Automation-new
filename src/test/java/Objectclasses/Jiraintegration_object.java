@@ -26,14 +26,12 @@ public class Jiraintegration_object extends Baseclass{
 	@FindBy(xpath = "//h5[normalize-space()='Configure Jira Integration']")
 	public WebElement Jiraconfigurationheader;
 
-	@FindBy(xpath = "//select[@id='jiraConfig']")
-	public WebElement Jiraconfigurationdrpdwn;
+	@FindBy(xpath = "//input[@name='jiraEnabled']")
+	public WebElement Jiraconfigurationcheckbox;
+	
+	@FindBy(xpath = "//button[@class='btn btn-primary equal-btn ng-star-inserted']")
+	public WebElement Jiraconfigurationsavebtn;
 
-	@FindBy(xpath = "//div[@id='Jira-Modal']//button[@type='button'][normalize-space()='Update']")
-	public WebElement Jiraconfigurationupdatebtn;
-
-	@FindBy(xpath = "//button[@id='jiraModalClose']")
-	public WebElement Jiraconfigurationcancelbtn;
 
 	public void user_validates_the_Jira_integration_page() throws InterruptedException {
 		Thread.sleep(3000);
@@ -41,13 +39,12 @@ public class Jiraintegration_object extends Baseclass{
 		validatetext(Jiraconfiguration, "Jira Configuration");
 		Clickelement(Jiraconfiguration);
 		validatetext(Jiraconfigurationheader, "Configure Jira Integration");
-
-		validatetext(Jiraconfigurationupdatebtn, "Update");
-		validatetext(Jiraconfigurationcancelbtn, "Cancel");
-		Selectdropdown(Jiraconfigurationdrpdwn, "NO");
-		Clickelement(Jiraconfigurationupdatebtn);
+		Clickelement(Jiraconfigurationcheckbox);
+		validatetext(Jiraconfigurationsavebtn, "Save");
+		Clickelement(Jiraconfigurationsavebtn);
 
 		Thread.sleep(3000);
+		popupvalidate("Jira enabled and configured", "");
 
 	}
 }

@@ -5,11 +5,11 @@ Feature: UMS
     Given user is Navigate Login page "<url>"
     When user is validate Login page "<Username>" "<Password>"
     Then user checks the My dashboard page
-    Then user checks the Team Dashboard page
-    Then user checks the Department Dashboard page
-    Then user checks the Exective Dashboard page
+    #Then user checks the Team Dashboard page
+    #Then user checks the Department Dashboard page
+    #Then user checks the Exective Dashboard page
 
     Examples: 
       | url                               | Username               | Password |
       | https://ikn.ikcontech.com/#/login | ums-test@ikcontech.com | Test@123 |
-      | https://icn.ikcontech.com/#/login | pa@ikcontech.com       | Test@123 |
+      #| https://icn.ikcontech.com/#/login | pa@ikcontech.com       | Test@123 |

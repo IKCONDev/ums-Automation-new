@@ -101,7 +101,7 @@ public class integration_object extends Baseclass {
 		Thread.sleep(3000);
 	}
 
-	@FindBy(xpath="(//button[@id='button1'])[2]")
+	@FindBy(xpath="(//button[contains(text(),'Configure')])[2]")
 	public WebElement ConfigureGooglemeet;
 
 	@FindBy(xpath="//label[normalize-space()='Client ID']")
@@ -119,7 +119,7 @@ public class integration_object extends Baseclass {
 	@FindBy(xpath="//label[normalize-space()='Refresh Token']")
 	public WebElement GmeetRefreshtokentxt;
 
-	@FindBy(xpath="//input[@placeholder='Enter Tenant ID']")
+	@FindBy(xpath="//input[@placeholder='Enter Refresh Token']")
 	public WebElement GmeetRefreshtokenplaceholder;
 
 	@FindBy(xpath="//button[normalize-space()='Cancel']")
@@ -138,21 +138,21 @@ public class integration_object extends Baseclass {
 		validateattribute(GmeetClientsecretplaceholder, "placeholder", "Enter Client Secret");
 		sendkeyweb(GmeetClientsecretplaceholder, GmeetClientsecret);
 		validatetext(GmeetRefreshtokentxt, "Refresh Token");
-		validateattribute(GmeetRefreshtokenplaceholder, "placeholder", "Enter Tenant ID");
+		validateattribute(GmeetRefreshtokenplaceholder, "placeholder", "Enter Refresh Token");
 		sendkeyweb(GmeetRefreshtokenplaceholder, GmeetRefreshtoken);
 		validatetext(Gmeetcancelbtn, "Cancel");
 		validatetext(Gmeetsavebtn, "Save");
 		Clickelement(Gmeetsavebtn);		
-		popupvalidate("Googlemeet tenant details saved successfully", GmeetClientID);
+		popupvalidate("Google Meet tenant details saved successfully", GmeetClientID);
 
 	}
-	@FindBy(xpath="(//button[@id='button1'])[3]")
+	@FindBy(xpath="(//button[contains(text(),'Configure')])[3]")
 	public WebElement Configurezoom;
 
 	@FindBy(xpath="//label[normalize-space()='Account ID']")
 	public WebElement ZoomAccountIDtxt;
 
-	@FindBy(xpath="//input[@placeholder='Enter Tenant ID']")
+	@FindBy(xpath="//input[@placeholder='Enter Account ID']")
 	public WebElement ZoomTenantIDplaceholder;
 
 	@FindBy(xpath="//label[normalize-space()='Client ID']")
@@ -177,7 +177,7 @@ public class integration_object extends Baseclass {
 	public void Configure_the_zoom_in_tool_integration_page(String ZoomAccountID, String ZoomClientID, String ZoomClientsecret) throws InterruptedException {
 		Clickelement(Configurezoom);
 		validatetext(ZoomAccountIDtxt, "Account ID");
-		validateattribute(ZoomTenantIDplaceholder, "placeholder", "Enter Tenant ID");
+		validateattribute(ZoomTenantIDplaceholder, "placeholder", "Enter Account ID");
 		sendkeyweb(ZoomTenantIDplaceholder, ZoomAccountID);
 
 		validatetext(ZoomClientIDtxt, "Client ID");
@@ -191,10 +191,10 @@ public class integration_object extends Baseclass {
 		validatetext(ZoomSavebtn, "Save");
 		Clickelement(ZoomSavebtn);
 		popupvalidate("Zoom tenant details saved successfully", ZoomAccountID);
-
+		Thread.sleep(3000);
 	}
 
-	@FindBy(xpath="(//button[contains(text(),'Configure')])[4]")
+	@FindBy(xpath="(//button[@id='button1'])[4]")
 	public WebElement Configurewebex;
 
 	@FindBy(xpath="//label[normalize-space()='Client ID']")
@@ -215,6 +215,21 @@ public class integration_object extends Baseclass {
 	@FindBy(xpath="//input[@placeholder='Enter Token']")
 	public WebElement webexTokenplaceholder;
 
+	@FindBy(xpath="//label[normalize-space()='Expires In']")
+	public WebElement webexExpiresintxt;
+
+	@FindBy(xpath="(//input[@type='text'])[3]")
+	public WebElement webexExpiresinplaceholder;
+
+	@FindBy(xpath="//label[normalize-space()='Expires At']")
+	public WebElement webexExpiresattxt;
+
+	@FindBy(xpath="(//input[contains(@placeholder,'Expires At Date')])[1]")
+	public WebElement webexExpiresatplaceholder;
+
+	@FindBy(xpath="//label[normalize-space()='Token Type']")
+	public WebElement webexTokentypetxt;
+
 	@FindBy(xpath="//label[normalize-space()='Refresh Token']")
 	public WebElement webexRefreshTokentxt;
 
@@ -223,7 +238,7 @@ public class integration_object extends Baseclass {
 
 	@FindBy(xpath="//label[normalize-space()='Refresh Token Expires At Date']")
 	public WebElement webexRefreshTokenexpiresatdatetxt;
-	
+
 	@FindBy(xpath="//input[@placeholder='Refresh Token Expires At Date']")
 	public WebElement webexRefreshTokenexpiresatdateplaceholder;
 
@@ -241,8 +256,8 @@ public class integration_object extends Baseclass {
 	public WebElement webexsavebtn;
 
 
-	public void Configure_the_webex_in_tool_integration_page(String WebexClientID, String WebexClientSecret, String Webextoken, String WebexRefreshtoken, String webexrefreshtokenexpire) throws InterruptedException {
-		Clickelement(Configurezoom);
+	public void Configure_the_webex_in_tool_integration_page(String WebexClientID, String WebexClientSecret, String Webextoken, String WebexExpiresin, String WebexRefreshtoken, String webexrefreshtokenexpire) throws InterruptedException {
+		Clickelement(Configurewebex);
 		validatetext(webexClientIDtxt, "Client ID");
 		validateattribute(webexClientIDplaceholder, "placeholder", "Enter Client ID");
 		sendkeyweb(webexClientIDplaceholder, WebexClientID);
@@ -254,6 +269,15 @@ public class integration_object extends Baseclass {
 		validatetext(webexTokentxt, "Token");
 		validateattribute(webexTokenplaceholder, "placeholder", "Enter Token");
 		sendkeyweb(webexTokenplaceholder, Webextoken);
+
+		validatetext(webexExpiresintxt, "Expires in");
+		sendkeyweb(webexExpiresinplaceholder, WebexExpiresin);
+
+		validatetext(webexExpiresattxt, "Expires At");
+		sendkeyweb(webexExpiresatplaceholder, D.Datefun(1, 1, 1));
+
+		validatetext(webexTokentypetxt, "Token Type");
+
 
 		validatetext(webexRefreshTokentxt, "Refresh Token");
 		validateattribute(webexRefreshTokenplaceholder, "placeholder", "Enter Tenant ID");

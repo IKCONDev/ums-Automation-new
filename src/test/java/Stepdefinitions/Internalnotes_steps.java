@@ -25,17 +25,16 @@ public class Internalnotes_steps {
 	public void add_the_Internalnotes_page(String IN, String Rwr, String Apr) throws InterruptedException, AWTException {
 		IO.add_the_Internalnotes_page(IN,Rwr,Apr);
 
+	}
+	@Then("Validate the added internal notes {string} {string}")
+	public void validate_the_added_Internalnotes(String IN, String CB) throws InterruptedException, AWTException {
+		IO.Validate_the_Added_Internalnotes(IN,CB);
 
 	}
-	@Then("Validate the added internal notes {string}")
-	public void validate_the_added_Internalnotes(String IN) throws InterruptedException, AWTException {
-		IO.Validate_the_Added_Internalnotes(IN);
 
-	}
-
-	@Then("Validate the Updated internal notes {string}")
-	public void Validate_the_Updated__Internalnotes(String IN) throws InterruptedException, AWTException {
-		IO.validate_the_updated_Internalnotes_page(IN);
+	@Then("Validate the Updated internal notes {string} {string}")
+	public void Validate_the_Updated__Internalnotes(String IN, String CB) throws InterruptedException, AWTException {
+		IO.validate_the_updated_Internalnotes_page(IN,CB);
 	}
 
 	@Then("Update the internal notes {string}")

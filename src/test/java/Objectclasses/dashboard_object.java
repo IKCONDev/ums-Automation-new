@@ -196,13 +196,13 @@ public class dashboard_object extends Baseclass {
 		Table_prop(Count, M);
 		String D="My Meetings,My Open Action Items,My Open Risks,My Open Tasks";
 		Table_prop(Counts, D);
-		String T="Meeting ID,Title,Organizer,Meeting Type,Start Date & Time,End Date & Time,Timezone,Join";
+		String T="S.No,Title,Organizer,Department,Team,Meeting Type,Start Date & Time,End Date & Time,Time zone,Attendees,Join";
 		Table_prop(Table, T);
 		///2nd??????
 		Clickelement(buttons.get(1));
 		String M1="Total Action Items:,High:,Medium:,Low:,Total Action Items:,Yet To Start:,In Progress:,Completed:";
 		Table_prop(Count, M1);
-		String T1="ID,Title,Description,Assigned To,Department,Planned End Date & Time,Priority,Status,Over Due Days";
+		String T1="ID,Title,Description,Assigned To,Department,Team,Planned End Date & Time,Priority,Status,Days Overdue";
 		Table_prop(table0, T1);
 		//3rd??????
 		Clickelement(buttons.get(2));
@@ -223,7 +223,7 @@ public class dashboard_object extends Baseclass {
 		Clickelement(buttons.get(3));
 		String M3="Total Tasks:,High:,Medium:,Low:,Total Tasks:,Yet To Start:,In Progress:,Completed:";
 		Table_prop(Count, M3);
-		String T3="ID,Department,Title,Description,Assigned To,Planned End Date & Time,Status,Over Due Days";
+		String T3="ID,Title,Description,Assigned To,Department,Team,Planned End Date & Time,Status,Overdue (Days)";
 		Table_prop(table0, T3);
 //		Clickelement(dropdown.get(1));
 //		Clickelement(option.get(1));

@@ -67,7 +67,7 @@ public class Meeting_object extends Baseclass {
 	private WebElement Meeting_Attendees_Input;
 	@FindBy(xpath = "//button[@id='createMeeting']")
 	private WebElement Meeting_Create_Button;
-	@FindBy(xpath = "(//button[@id='closeCreateMeetingModal'])[1]")
+	@FindBy(xpath = "(//button[@id='closeCreateMeetingModal'])[2]")
 	private WebElement Meeting_Cancel_Button;
 	@FindBy(xpath = "//span[@id='errorSpan']")
 	private List<WebElement> Error_Messages;
@@ -117,8 +117,8 @@ public class Meeting_object extends Baseclass {
 		sendkeyweb(Meeting_Enddate_Input, D.Datefun(8, 0, -1));
 		//		Meeting_Enddate_Input.sendKeys(MET);// end date
 		Clickelement(Meeting_Attendees_Input);
-		WebElement Choosen_Attendee = driver.findElement(By.xpath("//span[normalize-space()='" + UN + "']"));
-		Clickelement(Choosen_Attendee);
+		List<WebElement> Choosen_Attendee = driver.findElements(By.xpath("//span[normalize-space()='" + UN + "']"));
+		clickmultipleweb(Choosen_Attendee);
 		Clickelement(Meeting_location_select);
 		Clickelement(Choose_location);
 
@@ -183,7 +183,7 @@ public class Meeting_object extends Baseclass {
 	public void Add_Project_and_Program_Undermeeting(String MT, String PROJ, String PROG) throws InterruptedException {
 
 		driver.navigate().refresh();
-		Thread.sleep(8000);
+		Thread.sleep(3000);
 		sendkeyweb(Search, MT);
 		Thread.sleep(5000);
 
